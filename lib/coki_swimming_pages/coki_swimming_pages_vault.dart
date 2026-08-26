@@ -12,10 +12,55 @@ class CokiSwimmingVaultScreen extends StatefulWidget {
 
 class _CokiSwimmingVaultScreenState extends State<CokiSwimmingVaultScreen> {
   int _selected = 0;
+  int _lastEventSequence = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    final store = CokiSwimmingStoreService.instance;
+    _lastEventSequence = store.event?.sequence ?? 0;
+    store.addListener(_handleStoreUpdate);
+    unawaited(store.initialize());
+  }
+
+  @override
+  void dispose() {
+    CokiSwimmingStoreService.instance.removeListener(_handleStoreUpdate);
+    super.dispose();
+  }
+
+  void _handleStoreUpdate() {
+    if (!mounted) return;
+    final event = CokiSwimmingStoreService.instance.event;
+    if (event != null && event.sequence > _lastEventSequence) {
+      _lastEventSequence = event.sequence;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) CokiSwimmingToast.show(context, event.message);
+      });
+    }
+    setState(() {});
+  }
+
+  Future<void> _purchaseSelected() async {
+    final memberId = widget.memberId;
+    if (memberId == null) {
+      CokiSwimmingLoginPrompt.show(context);
+      return;
+    }
+    final item = CokiSwimmingStoreCatalog.items[_selected];
+    await CokiSwimmingStoreService.instance.purchase(
+      item: item,
+      memberId: memberId,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     const offers = CokiSwimmingStoreCatalog.items;
+    final selectedItem = offers[_selected];
+    final purchasing = CokiSwimmingStoreService.instance.isPurchasing(
+      selectedItem.productId,
+    );
     final bottomInset = MediaQuery.paddingOf(context).bottom;
     return CokiSwimmingBackground(
       child: Scaffold(
@@ -31,13 +76,13 @@ class _CokiSwimmingVaultScreenState extends State<CokiSwimmingVaultScreen> {
               ),
             ),
             Positioned(
-              right: 38,
+              right: 19,
               top: 88,
               child: IgnorePointer(
                 child: Image.asset(
                   'coki_swimming_assets/coki_swimming_vault_bag.png',
-                  width: 110,
-                  height: 110,
+                  width: 145,
+                  height: 145,
                   fit: BoxFit.contain,
                 ),
               ),
@@ -48,9 +93,9 @@ class _CokiSwimmingVaultScreenState extends State<CokiSwimmingVaultScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const CokiSwimmingTopBar(title: 'My diamonds'),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 35),
                   const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 28),
+                    padding: EdgeInsets.symmetric(horizontal: 31),
                     child: Text(
                       'My diamonds',
                       style: TextStyle(
@@ -64,18 +109,23 @@ class _CokiSwimmingVaultScreenState extends State<CokiSwimmingVaultScreen> {
                   ),
                   const SizedBox(height: 10),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 28),
+                    padding: const EdgeInsets.symmetric(horizontal: 31),
                     child: _CokiSwimmingVaultBalancePill(
                       memberId: widget.memberId,
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 30),
                   Expanded(
                     child: ListView.separated(
                       physics: const BouncingScrollPhysics(),
-                      padding: EdgeInsets.fromLTRB(16, 0, 16, bottomInset + 98),
+                      padding: EdgeInsets.fromLTRB(
+                        21,
+                        0,
+                        21,
+                        bottomInset + 108,
+                      ),
                       itemCount: offers.length,
-                      separatorBuilder: (_, _) => const SizedBox(height: 10),
+                      separatorBuilder: (_, _) => const SizedBox(height: 12),
                       itemBuilder: (context, index) {
                         return _CokiSwimmingVaultOfferRow(
                           item: offers[index],
@@ -89,17 +139,14 @@ class _CokiSwimmingVaultScreenState extends State<CokiSwimmingVaultScreen> {
               ),
             ),
             Positioned(
-              left: 73,
-              right: 73,
+              left: 75,
+              right: 75,
               bottom: bottomInset + 22,
               child: CokiSwimmingGradientButton(
-                label: 'Recharge',
-                height: 56,
-                fontSize: 24,
-                onTap: () => CokiSwimmingToast.show(
-                  context,
-                  'Store purchase is unavailable',
-                ),
+                label: purchasing ? 'Loading...' : 'Recharge',
+                height: 62,
+                fontSize: 22,
+                onTap: purchasing ? () {} : _purchaseSelected,
               ),
             ),
           ],
@@ -117,20 +164,20 @@ class _CokiSwimmingVaultBalancePill extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 120,
-      height: 41,
-      padding: const EdgeInsets.fromLTRB(9, 4, 12, 4),
+      width: 118,
+      height: 45,
+      padding: const EdgeInsets.fromLTRB(8, 5, 11, 5),
       decoration: BoxDecoration(
         color: const Color(0xFF100A30),
-        borderRadius: BorderRadius.circular(21),
+        borderRadius: BorderRadius.circular(23),
         border: Border.all(color: const Color(0xFF60D0EE), width: 2),
       ),
       child: Row(
         children: [
           Image.asset(
             'coki_swimming_assets/coki_swimming_vault_coin.png',
-            width: 29,
-            height: 29,
+            width: 30,
+            height: 30,
           ),
           const SizedBox(width: 8),
           Expanded(child: _CokiSwimmingVaultBalance(memberId: memberId)),
@@ -155,21 +202,21 @@ class _CokiSwimmingVaultOfferRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final foreground = selected ? Colors.white : const Color(0xFF100A30);
     return CokiSwimmingTap(
-      borderRadius: BorderRadius.circular(18),
+      borderRadius: BorderRadius.circular(21),
       onTap: onTap,
       child: Container(
-        height: 56,
+        height: 66,
         padding: const EdgeInsets.fromLTRB(18, 8, 10, 8),
         decoration: BoxDecoration(
           color: selected ? const Color(0xFF60C9E8) : Colors.white,
-          borderRadius: BorderRadius.circular(18),
+          borderRadius: BorderRadius.circular(21),
         ),
         child: Row(
           children: [
             Image.asset(
               'coki_swimming_assets/coki_swimming_vault_coin.png',
-              width: 31,
-              height: 31,
+              width: 29,
+              height: 29,
             ),
             const SizedBox(width: 12),
             Expanded(
@@ -179,7 +226,7 @@ class _CokiSwimmingVaultOfferRow extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   color: foreground,
-                  fontSize: 20,
+                  fontSize: 18,
                   height: 1.2,
                   letterSpacing: 0,
                   fontWeight: FontWeight.w900,
@@ -190,7 +237,7 @@ class _CokiSwimmingVaultOfferRow extends StatelessWidget {
               item.priceLabel,
               style: TextStyle(
                 color: foreground,
-                fontSize: 16,
+                fontSize: 14,
                 height: 1.2,
                 letterSpacing: 0,
                 fontWeight: FontWeight.w500,
@@ -213,8 +260,8 @@ class _CokiSwimmingVaultSelectionIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 18,
-      height: 18,
+      width: 14,
+      height: 14,
       decoration: BoxDecoration(
         color: selected ? null : const Color(0xFF100A30),
         shape: BoxShape.circle,
@@ -264,7 +311,7 @@ class _CokiSwimmingBalanceValue extends StatelessWidget {
       overflow: TextOverflow.ellipsis,
       style: const TextStyle(
         color: Colors.white,
-        fontSize: 20,
+        fontSize: 17,
         height: 1.2,
         letterSpacing: 0,
         fontWeight: FontWeight.w500,

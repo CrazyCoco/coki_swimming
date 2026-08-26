@@ -1037,6 +1037,386 @@ class CokiSwimmingGuideLinesCompanion
   }
 }
 
+class $CokiSwimmingStoreReceiptsTable extends CokiSwimmingStoreReceipts
+    with TableInfo<$CokiSwimmingStoreReceiptsTable, CokiSwimmingStoreReceipt> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $CokiSwimmingStoreReceiptsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _transactionKeyMeta = const VerificationMeta(
+    'transactionKey',
+  );
+  @override
+  late final GeneratedColumn<String> transactionKey = GeneratedColumn<String>(
+    'transaction_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _memberIdMeta = const VerificationMeta(
+    'memberId',
+  );
+  @override
+  late final GeneratedColumn<int> memberId = GeneratedColumn<int>(
+    'member_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _productIdMeta = const VerificationMeta(
+    'productId',
+  );
+  @override
+  late final GeneratedColumn<String> productId = GeneratedColumn<String>(
+    'product_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _quantityMeta = const VerificationMeta(
+    'quantity',
+  );
+  @override
+  late final GeneratedColumn<int> quantity = GeneratedColumn<int>(
+    'quantity',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    transactionKey,
+    memberId,
+    productId,
+    quantity,
+    createdAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'coki_swimming_store_receipts';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<CokiSwimmingStoreReceipt> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('transaction_key')) {
+      context.handle(
+        _transactionKeyMeta,
+        transactionKey.isAcceptableOrUnknown(
+          data['transaction_key']!,
+          _transactionKeyMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_transactionKeyMeta);
+    }
+    if (data.containsKey('member_id')) {
+      context.handle(
+        _memberIdMeta,
+        memberId.isAcceptableOrUnknown(data['member_id']!, _memberIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_memberIdMeta);
+    }
+    if (data.containsKey('product_id')) {
+      context.handle(
+        _productIdMeta,
+        productId.isAcceptableOrUnknown(data['product_id']!, _productIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_productIdMeta);
+    }
+    if (data.containsKey('quantity')) {
+      context.handle(
+        _quantityMeta,
+        quantity.isAcceptableOrUnknown(data['quantity']!, _quantityMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_quantityMeta);
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {transactionKey};
+  @override
+  CokiSwimmingStoreReceipt map(
+    Map<String, dynamic> data, {
+    String? tablePrefix,
+  }) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return CokiSwimmingStoreReceipt(
+      transactionKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}transaction_key'],
+      )!,
+      memberId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}member_id'],
+      )!,
+      productId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}product_id'],
+      )!,
+      quantity: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}quantity'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+    );
+  }
+
+  @override
+  $CokiSwimmingStoreReceiptsTable createAlias(String alias) {
+    return $CokiSwimmingStoreReceiptsTable(attachedDatabase, alias);
+  }
+}
+
+class CokiSwimmingStoreReceipt extends DataClass
+    implements Insertable<CokiSwimmingStoreReceipt> {
+  final String transactionKey;
+  final int memberId;
+  final String productId;
+  final int quantity;
+  final DateTime createdAt;
+  const CokiSwimmingStoreReceipt({
+    required this.transactionKey,
+    required this.memberId,
+    required this.productId,
+    required this.quantity,
+    required this.createdAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['transaction_key'] = Variable<String>(transactionKey);
+    map['member_id'] = Variable<int>(memberId);
+    map['product_id'] = Variable<String>(productId);
+    map['quantity'] = Variable<int>(quantity);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  CokiSwimmingStoreReceiptsCompanion toCompanion(bool nullToAbsent) {
+    return CokiSwimmingStoreReceiptsCompanion(
+      transactionKey: Value(transactionKey),
+      memberId: Value(memberId),
+      productId: Value(productId),
+      quantity: Value(quantity),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory CokiSwimmingStoreReceipt.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return CokiSwimmingStoreReceipt(
+      transactionKey: serializer.fromJson<String>(json['transactionKey']),
+      memberId: serializer.fromJson<int>(json['memberId']),
+      productId: serializer.fromJson<String>(json['productId']),
+      quantity: serializer.fromJson<int>(json['quantity']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'transactionKey': serializer.toJson<String>(transactionKey),
+      'memberId': serializer.toJson<int>(memberId),
+      'productId': serializer.toJson<String>(productId),
+      'quantity': serializer.toJson<int>(quantity),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  CokiSwimmingStoreReceipt copyWith({
+    String? transactionKey,
+    int? memberId,
+    String? productId,
+    int? quantity,
+    DateTime? createdAt,
+  }) => CokiSwimmingStoreReceipt(
+    transactionKey: transactionKey ?? this.transactionKey,
+    memberId: memberId ?? this.memberId,
+    productId: productId ?? this.productId,
+    quantity: quantity ?? this.quantity,
+    createdAt: createdAt ?? this.createdAt,
+  );
+  CokiSwimmingStoreReceipt copyWithCompanion(
+    CokiSwimmingStoreReceiptsCompanion data,
+  ) {
+    return CokiSwimmingStoreReceipt(
+      transactionKey: data.transactionKey.present
+          ? data.transactionKey.value
+          : this.transactionKey,
+      memberId: data.memberId.present ? data.memberId.value : this.memberId,
+      productId: data.productId.present ? data.productId.value : this.productId,
+      quantity: data.quantity.present ? data.quantity.value : this.quantity,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('CokiSwimmingStoreReceipt(')
+          ..write('transactionKey: $transactionKey, ')
+          ..write('memberId: $memberId, ')
+          ..write('productId: $productId, ')
+          ..write('quantity: $quantity, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(transactionKey, memberId, productId, quantity, createdAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is CokiSwimmingStoreReceipt &&
+          other.transactionKey == this.transactionKey &&
+          other.memberId == this.memberId &&
+          other.productId == this.productId &&
+          other.quantity == this.quantity &&
+          other.createdAt == this.createdAt);
+}
+
+class CokiSwimmingStoreReceiptsCompanion
+    extends UpdateCompanion<CokiSwimmingStoreReceipt> {
+  final Value<String> transactionKey;
+  final Value<int> memberId;
+  final Value<String> productId;
+  final Value<int> quantity;
+  final Value<DateTime> createdAt;
+  final Value<int> rowid;
+  const CokiSwimmingStoreReceiptsCompanion({
+    this.transactionKey = const Value.absent(),
+    this.memberId = const Value.absent(),
+    this.productId = const Value.absent(),
+    this.quantity = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  CokiSwimmingStoreReceiptsCompanion.insert({
+    required String transactionKey,
+    required int memberId,
+    required String productId,
+    required int quantity,
+    required DateTime createdAt,
+    this.rowid = const Value.absent(),
+  }) : transactionKey = Value(transactionKey),
+       memberId = Value(memberId),
+       productId = Value(productId),
+       quantity = Value(quantity),
+       createdAt = Value(createdAt);
+  static Insertable<CokiSwimmingStoreReceipt> custom({
+    Expression<String>? transactionKey,
+    Expression<int>? memberId,
+    Expression<String>? productId,
+    Expression<int>? quantity,
+    Expression<DateTime>? createdAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (transactionKey != null) 'transaction_key': transactionKey,
+      if (memberId != null) 'member_id': memberId,
+      if (productId != null) 'product_id': productId,
+      if (quantity != null) 'quantity': quantity,
+      if (createdAt != null) 'created_at': createdAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  CokiSwimmingStoreReceiptsCompanion copyWith({
+    Value<String>? transactionKey,
+    Value<int>? memberId,
+    Value<String>? productId,
+    Value<int>? quantity,
+    Value<DateTime>? createdAt,
+    Value<int>? rowid,
+  }) {
+    return CokiSwimmingStoreReceiptsCompanion(
+      transactionKey: transactionKey ?? this.transactionKey,
+      memberId: memberId ?? this.memberId,
+      productId: productId ?? this.productId,
+      quantity: quantity ?? this.quantity,
+      createdAt: createdAt ?? this.createdAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (transactionKey.present) {
+      map['transaction_key'] = Variable<String>(transactionKey.value);
+    }
+    if (memberId.present) {
+      map['member_id'] = Variable<int>(memberId.value);
+    }
+    if (productId.present) {
+      map['product_id'] = Variable<String>(productId.value);
+    }
+    if (quantity.present) {
+      map['quantity'] = Variable<int>(quantity.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('CokiSwimmingStoreReceiptsCompanion(')
+          ..write('transactionKey: $transactionKey, ')
+          ..write('memberId: $memberId, ')
+          ..write('productId: $productId, ')
+          ..write('quantity: $quantity, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$CokiSwimmingDatabase extends GeneratedDatabase {
   _$CokiSwimmingDatabase(QueryExecutor e) : super(e);
   $CokiSwimmingDatabaseManager get managers =>
@@ -1045,6 +1425,8 @@ abstract class _$CokiSwimmingDatabase extends GeneratedDatabase {
       $CokiSwimmingMembersTable(this);
   late final $CokiSwimmingGuideLinesTable cokiSwimmingGuideLines =
       $CokiSwimmingGuideLinesTable(this);
+  late final $CokiSwimmingStoreReceiptsTable cokiSwimmingStoreReceipts =
+      $CokiSwimmingStoreReceiptsTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -1052,6 +1434,7 @@ abstract class _$CokiSwimmingDatabase extends GeneratedDatabase {
   List<DatabaseSchemaEntity> get allSchemaEntities => [
     cokiSwimmingMembers,
     cokiSwimmingGuideLines,
+    cokiSwimmingStoreReceipts,
   ];
 }
 
@@ -1604,6 +1987,227 @@ typedef $$CokiSwimmingGuideLinesTableProcessedTableManager =
       CokiSwimmingGuideLine,
       PrefetchHooks Function()
     >;
+typedef $$CokiSwimmingStoreReceiptsTableCreateCompanionBuilder =
+    CokiSwimmingStoreReceiptsCompanion Function({
+      required String transactionKey,
+      required int memberId,
+      required String productId,
+      required int quantity,
+      required DateTime createdAt,
+      Value<int> rowid,
+    });
+typedef $$CokiSwimmingStoreReceiptsTableUpdateCompanionBuilder =
+    CokiSwimmingStoreReceiptsCompanion Function({
+      Value<String> transactionKey,
+      Value<int> memberId,
+      Value<String> productId,
+      Value<int> quantity,
+      Value<DateTime> createdAt,
+      Value<int> rowid,
+    });
+
+class $$CokiSwimmingStoreReceiptsTableFilterComposer
+    extends Composer<_$CokiSwimmingDatabase, $CokiSwimmingStoreReceiptsTable> {
+  $$CokiSwimmingStoreReceiptsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get transactionKey => $composableBuilder(
+    column: $table.transactionKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get memberId => $composableBuilder(
+    column: $table.memberId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get productId => $composableBuilder(
+    column: $table.productId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get quantity => $composableBuilder(
+    column: $table.quantity,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$CokiSwimmingStoreReceiptsTableOrderingComposer
+    extends Composer<_$CokiSwimmingDatabase, $CokiSwimmingStoreReceiptsTable> {
+  $$CokiSwimmingStoreReceiptsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get transactionKey => $composableBuilder(
+    column: $table.transactionKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get memberId => $composableBuilder(
+    column: $table.memberId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get productId => $composableBuilder(
+    column: $table.productId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get quantity => $composableBuilder(
+    column: $table.quantity,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$CokiSwimmingStoreReceiptsTableAnnotationComposer
+    extends Composer<_$CokiSwimmingDatabase, $CokiSwimmingStoreReceiptsTable> {
+  $$CokiSwimmingStoreReceiptsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get transactionKey => $composableBuilder(
+    column: $table.transactionKey,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get memberId =>
+      $composableBuilder(column: $table.memberId, builder: (column) => column);
+
+  GeneratedColumn<String> get productId =>
+      $composableBuilder(column: $table.productId, builder: (column) => column);
+
+  GeneratedColumn<int> get quantity =>
+      $composableBuilder(column: $table.quantity, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$CokiSwimmingStoreReceiptsTableTableManager
+    extends
+        RootTableManager<
+          _$CokiSwimmingDatabase,
+          $CokiSwimmingStoreReceiptsTable,
+          CokiSwimmingStoreReceipt,
+          $$CokiSwimmingStoreReceiptsTableFilterComposer,
+          $$CokiSwimmingStoreReceiptsTableOrderingComposer,
+          $$CokiSwimmingStoreReceiptsTableAnnotationComposer,
+          $$CokiSwimmingStoreReceiptsTableCreateCompanionBuilder,
+          $$CokiSwimmingStoreReceiptsTableUpdateCompanionBuilder,
+          (
+            CokiSwimmingStoreReceipt,
+            BaseReferences<
+              _$CokiSwimmingDatabase,
+              $CokiSwimmingStoreReceiptsTable,
+              CokiSwimmingStoreReceipt
+            >,
+          ),
+          CokiSwimmingStoreReceipt,
+          PrefetchHooks Function()
+        > {
+  $$CokiSwimmingStoreReceiptsTableTableManager(
+    _$CokiSwimmingDatabase db,
+    $CokiSwimmingStoreReceiptsTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$CokiSwimmingStoreReceiptsTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$CokiSwimmingStoreReceiptsTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$CokiSwimmingStoreReceiptsTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<String> transactionKey = const Value.absent(),
+                Value<int> memberId = const Value.absent(),
+                Value<String> productId = const Value.absent(),
+                Value<int> quantity = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => CokiSwimmingStoreReceiptsCompanion(
+                transactionKey: transactionKey,
+                memberId: memberId,
+                productId: productId,
+                quantity: quantity,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String transactionKey,
+                required int memberId,
+                required String productId,
+                required int quantity,
+                required DateTime createdAt,
+                Value<int> rowid = const Value.absent(),
+              }) => CokiSwimmingStoreReceiptsCompanion.insert(
+                transactionKey: transactionKey,
+                memberId: memberId,
+                productId: productId,
+                quantity: quantity,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$CokiSwimmingStoreReceiptsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$CokiSwimmingDatabase,
+      $CokiSwimmingStoreReceiptsTable,
+      CokiSwimmingStoreReceipt,
+      $$CokiSwimmingStoreReceiptsTableFilterComposer,
+      $$CokiSwimmingStoreReceiptsTableOrderingComposer,
+      $$CokiSwimmingStoreReceiptsTableAnnotationComposer,
+      $$CokiSwimmingStoreReceiptsTableCreateCompanionBuilder,
+      $$CokiSwimmingStoreReceiptsTableUpdateCompanionBuilder,
+      (
+        CokiSwimmingStoreReceipt,
+        BaseReferences<
+          _$CokiSwimmingDatabase,
+          $CokiSwimmingStoreReceiptsTable,
+          CokiSwimmingStoreReceipt
+        >,
+      ),
+      CokiSwimmingStoreReceipt,
+      PrefetchHooks Function()
+    >;
 
 class $CokiSwimmingDatabaseManager {
   final _$CokiSwimmingDatabase _db;
@@ -1614,5 +2218,10 @@ class $CokiSwimmingDatabaseManager {
       $$CokiSwimmingGuideLinesTableTableManager(
         _db,
         _db.cokiSwimmingGuideLines,
+      );
+  $$CokiSwimmingStoreReceiptsTableTableManager get cokiSwimmingStoreReceipts =>
+      $$CokiSwimmingStoreReceiptsTableTableManager(
+        _db,
+        _db.cokiSwimmingStoreReceipts,
       );
 }

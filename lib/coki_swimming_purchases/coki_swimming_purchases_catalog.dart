@@ -15,7 +15,46 @@ class CokiSwimmingStoreItem {
 class CokiSwimmingStoreCatalog {
   const CokiSwimmingStoreCatalog._();
 
-  static const List<CokiSwimmingStoreItem> items = [
+  static const bool useTestCatalog = true;
+
+  static const List<CokiSwimmingStoreItem> items = useTestCatalog
+      ? testItems
+      : productionItems;
+
+  static const List<CokiSwimmingStoreItem> testItems = [
+    CokiSwimmingStoreItem(
+      productId: 'lvbsvhxcgcrvesor',
+      priceLabel: r'$0.99',
+      quantity: 400,
+    ),
+    CokiSwimmingStoreItem(
+      productId: 'dxismgcwewhrtezo',
+      priceLabel: r'$4.99',
+      quantity: 2450,
+    ),
+    CokiSwimmingStoreItem(
+      productId: 'khtxlcejaxmqcsra',
+      priceLabel: r'$9.99',
+      quantity: 5150,
+    ),
+    CokiSwimmingStoreItem(
+      productId: 'yadwwvxspgxwlndb',
+      priceLabel: r'$19.99',
+      quantity: 10800,
+    ),
+    CokiSwimmingStoreItem(
+      productId: 'qnrcuelbtiuflyky',
+      priceLabel: r'$49.99',
+      quantity: 29400,
+    ),
+    CokiSwimmingStoreItem(
+      productId: 'ymohxnvpkqxutvab',
+      priceLabel: r'$99.99',
+      quantity: 63700,
+    ),
+  ];
+
+  static const List<CokiSwimmingStoreItem> productionItems = [
     CokiSwimmingStoreItem(
       productId: 'galmmdjtkcfebmhc',
       priceLabel: r'$0.99',
@@ -71,4 +110,11 @@ class CokiSwimmingStoreCatalog {
   static Set<String> get productIds => {
     for (final item in items) item.productId,
   };
+
+  static CokiSwimmingStoreItem? itemForProductId(String productId) {
+    for (final item in items) {
+      if (item.productId == productId) return item;
+    }
+    return null;
+  }
 }

@@ -31,6 +31,17 @@ class CokiSwimmingGuideLines extends Table {
   DateTimeColumn get createdAt => dateTime()();
 }
 
+class CokiSwimmingStoreReceipts extends Table {
+  TextColumn get transactionKey => text()();
+  IntColumn get memberId => integer()();
+  TextColumn get productId => text()();
+  IntColumn get quantity => integer()();
+  DateTimeColumn get createdAt => dateTime()();
+
+  @override
+  Set<Column<Object>> get primaryKey => {transactionKey};
+}
+
 class CokiSwimmingStorageException implements Exception {
   const CokiSwimmingStorageException(this.message);
 
@@ -40,7 +51,13 @@ class CokiSwimmingStorageException implements Exception {
   String toString() => message;
 }
 
-@DriftDatabase(tables: [CokiSwimmingMembers, CokiSwimmingGuideLines])
+@DriftDatabase(
+  tables: [
+    CokiSwimmingMembers,
+    CokiSwimmingGuideLines,
+    CokiSwimmingStoreReceipts,
+  ],
+)
 class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
   CokiSwimmingDatabase._()
     : super(driftDatabase(name: 'coki_swimming_members'));
@@ -48,7 +65,7 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
   static final CokiSwimmingDatabase instance = CokiSwimmingDatabase._();
 
   @override
-  int get schemaVersion => 3;
+  int get schemaVersion => 4;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -62,6 +79,9 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
       }
       if (from < 3) {
         await migrator.createTable(cokiSwimmingGuideLines);
+      }
+      if (from < 4) {
+        await migrator.createTable(cokiSwimmingStoreReceipts);
       }
     },
   );
@@ -180,6 +200,9 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
         cokiSwimmingGuideLines,
       )..where((row) => row.memberId.equals(memberId))).go();
       await (delete(
+        cokiSwimmingStoreReceipts,
+      )..where((row) => row.memberId.equals(memberId))).go();
+      await (delete(
         cokiSwimmingMembers,
       )..where((row) => row.id.equals(memberId))).go();
     });
@@ -235,6 +258,47 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
     return (delete(
       cokiSwimmingGuideLines,
     )..where((row) => row.memberId.equals(memberId))).go();
+  }
+
+  Future<bool> applyStoreDelivery({
+    required int memberId,
+    required String transactionKey,
+    required String productId,
+    required int quantity,
+  }) async {
+    if (transactionKey.isEmpty || quantity <= 0) {
+      throw const CokiSwimmingStorageException(
+        'The App Store transaction is invalid',
+      );
+    }
+    return transaction(() async {
+      final member = await memberById(memberId);
+      if (member == null) {
+        throw const CokiSwimmingStorageException(
+          'Sign in before completing this purchase',
+        );
+      }
+      final inserted = await into(cokiSwimmingStoreReceipts).insert(
+        CokiSwimmingStoreReceiptsCompanion.insert(
+          transactionKey: transactionKey,
+          memberId: memberId,
+          productId: productId,
+          quantity: quantity,
+          createdAt: DateTime.now(),
+        ),
+        mode: InsertMode.insertOrIgnore,
+      );
+      if (inserted == 0) return false;
+      await (update(
+        cokiSwimmingMembers,
+      )..where((row) => row.id.equals(memberId))).write(
+        CokiSwimmingMembersCompanion(
+          coinBalance: Value(member.coinBalance + quantity),
+          updatedAt: Value(DateTime.now()),
+        ),
+      );
+      return true;
+    });
   }
 
   Future<CokiSwimmingMember?> _memberByEmail(String email) {

@@ -149,37 +149,48 @@ class _CokiSwimmingLandingPaneState extends State<CokiSwimmingLandingPane> {
                         left: 110,
                         right: 39,
                         top: 250,
-                        child: CokiSwimmingTap(
+                        child: ClipRRect(
                           borderRadius: BorderRadius.circular(24),
-                          onTap: _openCompanion,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(24),
-                            child: BackdropFilter(
-                              filter: ImageFilter.blur(sigmaX: 7, sigmaY: 7),
-                              child: Container(
-                                height: 46,
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 12,
-                                ),
-                                alignment: Alignment.center,
-                                color: const Color(
-                                  0xFFB5A4B9,
-                                ).withValues(alpha: 0.34),
-                                child: const Text(
-                                  'Chat with AI to unlock swimming tips,\ntechniques, and more.',
-                                  textAlign: TextAlign.center,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 13,
-                                    height: 1.22,
-                                    letterSpacing: 0,
-                                    fontWeight: FontWeight.w400,
-                                  ),
+                          child: BackdropFilter(
+                            filter: ImageFilter.blur(sigmaX: 7, sigmaY: 7),
+                            child: Container(
+                              height: 46,
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                              ),
+                              alignment: Alignment.center,
+                              color: const Color(
+                                0xFFB5A4B9,
+                              ).withValues(alpha: 0.34),
+                              child: const Text(
+                                'Chat with AI to unlock swimming tips,\ntechniques, and more.',
+                                textAlign: TextAlign.center,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 13,
+                                  height: 1.22,
+                                  letterSpacing: 0,
+                                  fontWeight: FontWeight.w400,
                                 ),
                               ),
                             ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 20,
+                        right: 20,
+                        top: 70,
+                        bottom: 0,
+                        child: Semantics(
+                          button: true,
+                          label: 'Open Coki AI chat',
+                          child: GestureDetector(
+                            behavior: HitTestBehavior.opaque,
+                            onTap: _openCompanion,
+                            child: const SizedBox.expand(),
                           ),
                         ),
                       ),
