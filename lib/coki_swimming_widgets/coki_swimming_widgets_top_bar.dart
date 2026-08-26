@@ -10,6 +10,7 @@ class CokiSwimmingTopBar extends StatelessWidget {
     this.horizontalPadding = 15,
     this.showReturnButton = true,
     this.centerTitle = false,
+    this.gradientTitle = true,
   });
 
   final String title;
@@ -19,10 +20,11 @@ class CokiSwimmingTopBar extends StatelessWidget {
   final double horizontalPadding;
   final bool showReturnButton;
   final bool centerTitle;
+  final bool gradientTitle;
 
   @override
   Widget build(BuildContext context) {
-    final titleWidget = Text(
+    final titleText = Text(
       title,
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
@@ -35,6 +37,13 @@ class CokiSwimmingTopBar extends StatelessWidget {
         fontWeight: FontWeight.w900,
       ),
     );
+    final titleWidget = gradientTitle
+        ? CokiSwimmingGradientText(
+            title,
+            textAlign: centerTitle ? TextAlign.center : TextAlign.start,
+            style: titleText.style!,
+          )
+        : titleText;
 
     return Padding(
       padding: EdgeInsets.fromLTRB(horizontalPadding, 8, horizontalPadding, 0),
@@ -68,7 +77,12 @@ class CokiSwimmingTopBar extends StatelessWidget {
                   ),
                 if (title.isNotEmpty) ...[
                   if (showReturnButton) const SizedBox(width: 12),
-                  Expanded(child: titleWidget),
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: titleWidget,
+                    ),
+                  ),
                 ] else
                   const Spacer(),
                 ?trailing,

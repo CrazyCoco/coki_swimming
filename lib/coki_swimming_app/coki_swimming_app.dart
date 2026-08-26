@@ -192,7 +192,9 @@ class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
           CokiSwimmingRoutesPaths.clip => CokiSwimmingClipScreen(
             isVisitor: _isVisitor,
           ),
-          CokiSwimmingRoutesPaths.vault => const CokiSwimmingVaultScreen(),
+          CokiSwimmingRoutesPaths.vault => CokiSwimmingVaultScreen(
+            memberId: _currentMember?.id,
+          ),
           CokiSwimmingRoutesPaths.edit =>
             _currentMember == null
                 ? CokiSwimmingWelcomeScreen(

@@ -15,7 +15,7 @@ class CokiSwimmingAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final face = ClipOval(
-      child: CokiSwimmingAvatarImage(path: image, size: size),
+      child: CokiSwimmingAvatarImage(path: image, width: size, height: size),
     );
     if (onTap == null) return face;
     return CokiSwimmingTap(

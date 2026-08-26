@@ -7,24 +7,28 @@ class CokiSwimmingPlainButton extends StatelessWidget {
     required this.color,
     required this.onTap,
     this.textColor = Colors.white,
+    this.height = 56,
+    this.fontSize = 16,
   });
 
   final String label;
   final Color color;
   final VoidCallback onTap;
   final Color textColor;
+  final double height;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
     return CokiSwimmingTap(
-      borderRadius: BorderRadius.circular(28),
+      borderRadius: BorderRadius.circular(height / 2),
       onTap: onTap,
       child: Container(
-        height: 56,
+        height: height,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: color,
-          borderRadius: BorderRadius.circular(28),
+          borderRadius: BorderRadius.circular(height / 2),
         ),
         child: Text(
           label,
@@ -32,7 +36,7 @@ class CokiSwimmingPlainButton extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           style: TextStyle(
             color: textColor,
-            fontSize: 16,
+            fontSize: fontSize,
             height: 1.2,
             letterSpacing: 0,
             fontWeight: FontWeight.w900,

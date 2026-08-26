@@ -189,6 +189,7 @@ class _CokiSwimmingEditScreenState extends State<CokiSwimmingEditScreen> {
                   title: widget.registrationMode ? 'Complete profile' : 'Edit',
                   showReturnButton: !widget.registrationMode,
                   centerTitle: widget.registrationMode,
+                  gradientTitle: true,
                   onReturn: widget.registrationMode
                       ? null
                       : () => Navigator.of(context).maybePop(),

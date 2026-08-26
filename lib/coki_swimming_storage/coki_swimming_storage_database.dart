@@ -16,6 +16,7 @@ class CokiSwimmingMembers extends Table {
   TextColumn get displayName => text().nullable()();
   TextColumn get avatarPath => text().nullable()();
   TextColumn get biography => text().nullable()();
+  IntColumn get coinBalance => integer().withDefault(const Constant(0))();
   BoolColumn get profileCompleted =>
       boolean().withDefault(const Constant(false))();
   DateTimeColumn get createdAt => dateTime()();
@@ -39,12 +40,31 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
   static final CokiSwimmingDatabase instance = CokiSwimmingDatabase._();
 
   @override
-  int get schemaVersion => 1;
+  int get schemaVersion => 2;
+
+  @override
+  MigrationStrategy get migration => MigrationStrategy(
+    onCreate: (migrator) => migrator.createAll(),
+    onUpgrade: (migrator, from, to) async {
+      if (from < 2) {
+        await migrator.addColumn(
+          cokiSwimmingMembers,
+          cokiSwimmingMembers.coinBalance,
+        );
+      }
+    },
+  );
 
   Future<CokiSwimmingMember?> memberById(int id) {
     return (select(
       cokiSwimmingMembers,
     )..where((row) => row.id.equals(id))).getSingleOrNull();
+  }
+
+  Stream<CokiSwimmingMember?> watchMemberById(int id) {
+    return (select(
+      cokiSwimmingMembers,
+    )..where((row) => row.id.equals(id))).watchSingleOrNull();
   }
 
   Future<int> createPendingMember({

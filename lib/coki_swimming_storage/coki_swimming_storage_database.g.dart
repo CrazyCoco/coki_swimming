@@ -87,6 +87,18 @@ class $CokiSwimmingMembersTable extends CokiSwimmingMembers
     type: DriftSqlType.string,
     requiredDuringInsert: false,
   );
+  static const VerificationMeta _coinBalanceMeta = const VerificationMeta(
+    'coinBalance',
+  );
+  @override
+  late final GeneratedColumn<int> coinBalance = GeneratedColumn<int>(
+    'coin_balance',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
   static const VerificationMeta _profileCompletedMeta = const VerificationMeta(
     'profileCompleted',
   );
@@ -133,6 +145,7 @@ class $CokiSwimmingMembersTable extends CokiSwimmingMembers
     displayName,
     avatarPath,
     biography,
+    coinBalance,
     profileCompleted,
     createdAt,
     updatedAt,
@@ -203,6 +216,15 @@ class $CokiSwimmingMembersTable extends CokiSwimmingMembers
         biography.isAcceptableOrUnknown(data['biography']!, _biographyMeta),
       );
     }
+    if (data.containsKey('coin_balance')) {
+      context.handle(
+        _coinBalanceMeta,
+        coinBalance.isAcceptableOrUnknown(
+          data['coin_balance']!,
+          _coinBalanceMeta,
+        ),
+      );
+    }
     if (data.containsKey('profile_completed')) {
       context.handle(
         _profileCompletedMeta,
@@ -265,6 +287,10 @@ class $CokiSwimmingMembersTable extends CokiSwimmingMembers
         DriftSqlType.string,
         data['${effectivePrefix}biography'],
       ),
+      coinBalance: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}coin_balance'],
+      )!,
       profileCompleted: attachedDatabase.typeMapping.read(
         DriftSqlType.bool,
         data['${effectivePrefix}profile_completed'],
@@ -295,6 +321,7 @@ class CokiSwimmingMember extends DataClass
   final String? displayName;
   final String? avatarPath;
   final String? biography;
+  final int coinBalance;
   final bool profileCompleted;
   final DateTime createdAt;
   final DateTime updatedAt;
@@ -306,6 +333,7 @@ class CokiSwimmingMember extends DataClass
     this.displayName,
     this.avatarPath,
     this.biography,
+    required this.coinBalance,
     required this.profileCompleted,
     required this.createdAt,
     required this.updatedAt,
@@ -326,6 +354,7 @@ class CokiSwimmingMember extends DataClass
     if (!nullToAbsent || biography != null) {
       map['biography'] = Variable<String>(biography);
     }
+    map['coin_balance'] = Variable<int>(coinBalance);
     map['profile_completed'] = Variable<bool>(profileCompleted);
     map['created_at'] = Variable<DateTime>(createdAt);
     map['updated_at'] = Variable<DateTime>(updatedAt);
@@ -347,6 +376,7 @@ class CokiSwimmingMember extends DataClass
       biography: biography == null && nullToAbsent
           ? const Value.absent()
           : Value(biography),
+      coinBalance: Value(coinBalance),
       profileCompleted: Value(profileCompleted),
       createdAt: Value(createdAt),
       updatedAt: Value(updatedAt),
@@ -366,6 +396,7 @@ class CokiSwimmingMember extends DataClass
       displayName: serializer.fromJson<String?>(json['displayName']),
       avatarPath: serializer.fromJson<String?>(json['avatarPath']),
       biography: serializer.fromJson<String?>(json['biography']),
+      coinBalance: serializer.fromJson<int>(json['coinBalance']),
       profileCompleted: serializer.fromJson<bool>(json['profileCompleted']),
       createdAt: serializer.fromJson<DateTime>(json['createdAt']),
       updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
@@ -382,6 +413,7 @@ class CokiSwimmingMember extends DataClass
       'displayName': serializer.toJson<String?>(displayName),
       'avatarPath': serializer.toJson<String?>(avatarPath),
       'biography': serializer.toJson<String?>(biography),
+      'coinBalance': serializer.toJson<int>(coinBalance),
       'profileCompleted': serializer.toJson<bool>(profileCompleted),
       'createdAt': serializer.toJson<DateTime>(createdAt),
       'updatedAt': serializer.toJson<DateTime>(updatedAt),
@@ -396,6 +428,7 @@ class CokiSwimmingMember extends DataClass
     Value<String?> displayName = const Value.absent(),
     Value<String?> avatarPath = const Value.absent(),
     Value<String?> biography = const Value.absent(),
+    int? coinBalance,
     bool? profileCompleted,
     DateTime? createdAt,
     DateTime? updatedAt,
@@ -407,6 +440,7 @@ class CokiSwimmingMember extends DataClass
     displayName: displayName.present ? displayName.value : this.displayName,
     avatarPath: avatarPath.present ? avatarPath.value : this.avatarPath,
     biography: biography.present ? biography.value : this.biography,
+    coinBalance: coinBalance ?? this.coinBalance,
     profileCompleted: profileCompleted ?? this.profileCompleted,
     createdAt: createdAt ?? this.createdAt,
     updatedAt: updatedAt ?? this.updatedAt,
@@ -428,6 +462,9 @@ class CokiSwimmingMember extends DataClass
           ? data.avatarPath.value
           : this.avatarPath,
       biography: data.biography.present ? data.biography.value : this.biography,
+      coinBalance: data.coinBalance.present
+          ? data.coinBalance.value
+          : this.coinBalance,
       profileCompleted: data.profileCompleted.present
           ? data.profileCompleted.value
           : this.profileCompleted,
@@ -446,6 +483,7 @@ class CokiSwimmingMember extends DataClass
           ..write('displayName: $displayName, ')
           ..write('avatarPath: $avatarPath, ')
           ..write('biography: $biography, ')
+          ..write('coinBalance: $coinBalance, ')
           ..write('profileCompleted: $profileCompleted, ')
           ..write('createdAt: $createdAt, ')
           ..write('updatedAt: $updatedAt')
@@ -462,6 +500,7 @@ class CokiSwimmingMember extends DataClass
     displayName,
     avatarPath,
     biography,
+    coinBalance,
     profileCompleted,
     createdAt,
     updatedAt,
@@ -477,6 +516,7 @@ class CokiSwimmingMember extends DataClass
           other.displayName == this.displayName &&
           other.avatarPath == this.avatarPath &&
           other.biography == this.biography &&
+          other.coinBalance == this.coinBalance &&
           other.profileCompleted == this.profileCompleted &&
           other.createdAt == this.createdAt &&
           other.updatedAt == this.updatedAt);
@@ -490,6 +530,7 @@ class CokiSwimmingMembersCompanion extends UpdateCompanion<CokiSwimmingMember> {
   final Value<String?> displayName;
   final Value<String?> avatarPath;
   final Value<String?> biography;
+  final Value<int> coinBalance;
   final Value<bool> profileCompleted;
   final Value<DateTime> createdAt;
   final Value<DateTime> updatedAt;
@@ -501,6 +542,7 @@ class CokiSwimmingMembersCompanion extends UpdateCompanion<CokiSwimmingMember> {
     this.displayName = const Value.absent(),
     this.avatarPath = const Value.absent(),
     this.biography = const Value.absent(),
+    this.coinBalance = const Value.absent(),
     this.profileCompleted = const Value.absent(),
     this.createdAt = const Value.absent(),
     this.updatedAt = const Value.absent(),
@@ -513,6 +555,7 @@ class CokiSwimmingMembersCompanion extends UpdateCompanion<CokiSwimmingMember> {
     this.displayName = const Value.absent(),
     this.avatarPath = const Value.absent(),
     this.biography = const Value.absent(),
+    this.coinBalance = const Value.absent(),
     this.profileCompleted = const Value.absent(),
     required DateTime createdAt,
     required DateTime updatedAt,
@@ -529,6 +572,7 @@ class CokiSwimmingMembersCompanion extends UpdateCompanion<CokiSwimmingMember> {
     Expression<String>? displayName,
     Expression<String>? avatarPath,
     Expression<String>? biography,
+    Expression<int>? coinBalance,
     Expression<bool>? profileCompleted,
     Expression<DateTime>? createdAt,
     Expression<DateTime>? updatedAt,
@@ -541,6 +585,7 @@ class CokiSwimmingMembersCompanion extends UpdateCompanion<CokiSwimmingMember> {
       if (displayName != null) 'display_name': displayName,
       if (avatarPath != null) 'avatar_path': avatarPath,
       if (biography != null) 'biography': biography,
+      if (coinBalance != null) 'coin_balance': coinBalance,
       if (profileCompleted != null) 'profile_completed': profileCompleted,
       if (createdAt != null) 'created_at': createdAt,
       if (updatedAt != null) 'updated_at': updatedAt,
@@ -555,6 +600,7 @@ class CokiSwimmingMembersCompanion extends UpdateCompanion<CokiSwimmingMember> {
     Value<String?>? displayName,
     Value<String?>? avatarPath,
     Value<String?>? biography,
+    Value<int>? coinBalance,
     Value<bool>? profileCompleted,
     Value<DateTime>? createdAt,
     Value<DateTime>? updatedAt,
@@ -567,6 +613,7 @@ class CokiSwimmingMembersCompanion extends UpdateCompanion<CokiSwimmingMember> {
       displayName: displayName ?? this.displayName,
       avatarPath: avatarPath ?? this.avatarPath,
       biography: biography ?? this.biography,
+      coinBalance: coinBalance ?? this.coinBalance,
       profileCompleted: profileCompleted ?? this.profileCompleted,
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
@@ -597,6 +644,9 @@ class CokiSwimmingMembersCompanion extends UpdateCompanion<CokiSwimmingMember> {
     if (biography.present) {
       map['biography'] = Variable<String>(biography.value);
     }
+    if (coinBalance.present) {
+      map['coin_balance'] = Variable<int>(coinBalance.value);
+    }
     if (profileCompleted.present) {
       map['profile_completed'] = Variable<bool>(profileCompleted.value);
     }
@@ -619,6 +669,7 @@ class CokiSwimmingMembersCompanion extends UpdateCompanion<CokiSwimmingMember> {
           ..write('displayName: $displayName, ')
           ..write('avatarPath: $avatarPath, ')
           ..write('biography: $biography, ')
+          ..write('coinBalance: $coinBalance, ')
           ..write('profileCompleted: $profileCompleted, ')
           ..write('createdAt: $createdAt, ')
           ..write('updatedAt: $updatedAt')
@@ -649,6 +700,7 @@ typedef $$CokiSwimmingMembersTableCreateCompanionBuilder =
       Value<String?> displayName,
       Value<String?> avatarPath,
       Value<String?> biography,
+      Value<int> coinBalance,
       Value<bool> profileCompleted,
       required DateTime createdAt,
       required DateTime updatedAt,
@@ -662,6 +714,7 @@ typedef $$CokiSwimmingMembersTableUpdateCompanionBuilder =
       Value<String?> displayName,
       Value<String?> avatarPath,
       Value<String?> biography,
+      Value<int> coinBalance,
       Value<bool> profileCompleted,
       Value<DateTime> createdAt,
       Value<DateTime> updatedAt,
@@ -708,6 +761,11 @@ class $$CokiSwimmingMembersTableFilterComposer
 
   ColumnFilters<String> get biography => $composableBuilder(
     column: $table.biography,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get coinBalance => $composableBuilder(
+    column: $table.coinBalance,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -771,6 +829,11 @@ class $$CokiSwimmingMembersTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<int> get coinBalance => $composableBuilder(
+    column: $table.coinBalance,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<bool> get profileCompleted => $composableBuilder(
     column: $table.profileCompleted,
     builder: (column) => ColumnOrderings(column),
@@ -824,6 +887,11 @@ class $$CokiSwimmingMembersTableAnnotationComposer
 
   GeneratedColumn<String> get biography =>
       $composableBuilder(column: $table.biography, builder: (column) => column);
+
+  GeneratedColumn<int> get coinBalance => $composableBuilder(
+    column: $table.coinBalance,
+    builder: (column) => column,
+  );
 
   GeneratedColumn<bool> get profileCompleted => $composableBuilder(
     column: $table.profileCompleted,
@@ -887,6 +955,7 @@ class $$CokiSwimmingMembersTableTableManager
                 Value<String?> displayName = const Value.absent(),
                 Value<String?> avatarPath = const Value.absent(),
                 Value<String?> biography = const Value.absent(),
+                Value<int> coinBalance = const Value.absent(),
                 Value<bool> profileCompleted = const Value.absent(),
                 Value<DateTime> createdAt = const Value.absent(),
                 Value<DateTime> updatedAt = const Value.absent(),
@@ -898,6 +967,7 @@ class $$CokiSwimmingMembersTableTableManager
                 displayName: displayName,
                 avatarPath: avatarPath,
                 biography: biography,
+                coinBalance: coinBalance,
                 profileCompleted: profileCompleted,
                 createdAt: createdAt,
                 updatedAt: updatedAt,
@@ -911,6 +981,7 @@ class $$CokiSwimmingMembersTableTableManager
                 Value<String?> displayName = const Value.absent(),
                 Value<String?> avatarPath = const Value.absent(),
                 Value<String?> biography = const Value.absent(),
+                Value<int> coinBalance = const Value.absent(),
                 Value<bool> profileCompleted = const Value.absent(),
                 required DateTime createdAt,
                 required DateTime updatedAt,
@@ -922,6 +993,7 @@ class $$CokiSwimmingMembersTableTableManager
                 displayName: displayName,
                 avatarPath: avatarPath,
                 biography: biography,
+                coinBalance: coinBalance,
                 profileCompleted: profileCompleted,
                 createdAt: createdAt,
                 updatedAt: updatedAt,

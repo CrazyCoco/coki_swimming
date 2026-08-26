@@ -13,8 +13,17 @@ class CokiSwimmingSettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final rows = [
-      ('Privacy Policy', () => _text(context, 'Privacy Policy')),
-      ('User Agreement', () => _text(context, 'User Agreement')),
+      (
+        'Privacy Policy',
+        () => Navigator.of(
+          context,
+        ).pushNamed(CokiSwimmingRoutesPaths.privacyPolicy),
+      ),
+      (
+        'User Agreement',
+        () =>
+            Navigator.of(context).pushNamed(CokiSwimmingRoutesPaths.termsOfUse),
+      ),
       (
         'Blacklist',
         () => Navigator.of(context).pushNamed(CokiSwimmingRoutesPaths.shield),
@@ -33,55 +42,63 @@ class CokiSwimmingSettingScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(20, 8, 20, 20),
-            child: Column(
-              children: [
-                const CokiSwimmingTopBar(
-                  title: 'Setting',
-                  horizontalPadding: 0,
-                ),
-                const SizedBox(height: 22),
-                for (final row in rows) ...[
-                  CokiSwimmingSettingRow(label: row.$1, onTap: row.$2),
-                  const SizedBox(height: 16),
-                ],
-                const Spacer(),
-                SizedBox(
-                  width: 190,
-                  child: CokiSwimmingPlainButton(
-                    label: 'Delete account',
-                    color: const Color(0xFFD43161),
-                    onTap: () => CokiSwimmingConfirm.show(context, onDelete),
+            padding: const EdgeInsets.fromLTRB(20, 4, 20, 20),
+            child: LayoutBuilder(
+              builder: (context, constraints) => SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                  child: IntrinsicHeight(
+                    child: Column(
+                      children: [
+                        const CokiSwimmingTopBar(
+                          title: 'Setting',
+                          horizontalPadding: 0,
+                        ),
+                        const SizedBox(height: 18),
+                        for (final row in rows) ...[
+                          CokiSwimmingSettingRow(label: row.$1, onTap: row.$2),
+                          const SizedBox(height: 16),
+                        ],
+                        const Spacer(),
+                        SizedBox(
+                          width: 229,
+                          child: CokiSwimmingPlainButton(
+                            label: 'Delete account',
+                            color: const Color(0xFFD43161),
+                            height: 62,
+                            fontSize: 22,
+                            onTap: () =>
+                                CokiSwimmingConfirm.show(context, onDelete),
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        SizedBox(
+                          width: 229,
+                          child: CokiSwimmingPlainButton(
+                            label: 'Log out',
+                            color: const Color(0xFF60D0EE),
+                            textColor: const Color(0xFF100A30),
+                            height: 62,
+                            fontSize: 22,
+                            onTap: () {
+                              onExit();
+                              Navigator.of(context).pushNamedAndRemoveUntil(
+                                CokiSwimmingRoutesPaths.welcome,
+                                (route) => false,
+                              );
+                            },
+                          ),
+                        ),
+                        const SizedBox(height: 29),
+                      ],
+                    ),
                   ),
                 ),
-                const SizedBox(height: 14),
-                SizedBox(
-                  width: 190,
-                  child: CokiSwimmingPlainButton(
-                    label: 'Log out',
-                    color: const Color(0xFF60D0EE),
-                    textColor: const Color(0xFF100A30),
-                    onTap: () {
-                      onExit();
-                      Navigator.of(context).pushNamedAndRemoveUntil(
-                        CokiSwimmingRoutesPaths.welcome,
-                        (route) => false,
-                      );
-                    },
-                  ),
-                ),
-              ],
+              ),
             ),
           ),
         ),
-      ),
-    );
-  }
-
-  void _text(BuildContext context, String title) {
-    Navigator.of(context).push(
-      CupertinoPageRoute<void>(
-        builder: (_) => CokiSwimmingTextScreen(title: title),
       ),
     );
   }

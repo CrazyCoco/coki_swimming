@@ -34,10 +34,9 @@ class CokiSwimmingMediaScreen extends StatelessWidget {
                         onTap: () => Navigator.of(context).maybePop(),
                       ),
                       const SizedBox(width: 10),
-                      const Text(
+                      const CokiSwimmingGradientText(
                         'Apien',
                         style: TextStyle(
-                          color: Colors.white,
                           fontSize: 16,
                           height: 1.2,
                           letterSpacing: 0,

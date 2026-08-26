@@ -1,7 +1,9 @@
 part of '../main.dart';
 
 class CokiSwimmingVaultScreen extends StatefulWidget {
-  const CokiSwimmingVaultScreen({super.key});
+  const CokiSwimmingVaultScreen({super.key, this.memberId});
+
+  final int? memberId;
 
   @override
   State<CokiSwimmingVaultScreen> createState() =>
@@ -41,16 +43,7 @@ class _CokiSwimmingVaultScreenState extends State<CokiSwimmingVaultScreen> {
                       height: 29,
                     ),
                     const SizedBox(width: 7),
-                    const Text(
-                      '99999',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        height: 1.2,
-                        letterSpacing: 0,
-                        fontWeight: FontWeight.w900,
-                      ),
-                    ),
+                    _CokiSwimmingVaultBalance(memberId: widget.memberId),
                   ],
                 ),
               ),
@@ -126,6 +119,43 @@ class _CokiSwimmingVaultScreenState extends State<CokiSwimmingVaultScreen> {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _CokiSwimmingVaultBalance extends StatelessWidget {
+  const _CokiSwimmingVaultBalance({required this.memberId});
+
+  final int? memberId;
+
+  @override
+  Widget build(BuildContext context) {
+    final memberId = this.memberId;
+    if (memberId == null) return const _CokiSwimmingBalanceValue(value: 0);
+    return StreamBuilder<CokiSwimmingMember?>(
+      stream: CokiSwimmingDatabase.instance.watchMemberById(memberId),
+      builder: (context, snapshot) =>
+          _CokiSwimmingBalanceValue(value: snapshot.data?.coinBalance ?? 0),
+    );
+  }
+}
+
+class _CokiSwimmingBalanceValue extends StatelessWidget {
+  const _CokiSwimmingBalanceValue({required this.value});
+
+  final int value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      value.toString(),
+      style: const TextStyle(
+        color: Colors.white,
+        fontSize: 14,
+        height: 1.2,
+        letterSpacing: 0,
+        fontWeight: FontWeight.w900,
       ),
     );
   }

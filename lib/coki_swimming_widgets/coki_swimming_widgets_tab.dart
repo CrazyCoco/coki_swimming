@@ -23,7 +23,12 @@ class CokiSwimmingTab extends StatelessWidget {
         child: SizedBox(
           width: 48,
           height: 44,
-          child: Center(child: Image.asset(image, width: 24, height: 24)),
+          child: Center(
+            child: Transform.translate(
+              offset: const Offset(0, 3),
+              child: Image.asset(image, width: 24, height: 24),
+            ),
+          ),
         ),
       ),
     );

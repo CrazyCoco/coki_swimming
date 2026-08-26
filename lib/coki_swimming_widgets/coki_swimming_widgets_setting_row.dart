@@ -13,14 +13,14 @@ class CokiSwimmingSettingRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CokiSwimmingTap(
-      borderRadius: BorderRadius.circular(8),
+      borderRadius: BorderRadius.circular(18),
       onTap: onTap,
       child: Container(
-        height: 46,
-        padding: const EdgeInsets.symmetric(horizontal: 13),
+        height: 52,
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
           color: const Color(0xFF2B254D),
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(18),
         ),
         child: Row(
           children: [
@@ -31,14 +31,18 @@ class CokiSwimmingSettingRow extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 12,
+                  fontSize: 16,
                   height: 1.2,
                   letterSpacing: 0,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
             ),
-            const Icon(Icons.arrow_forward_ios, color: Colors.white, size: 12),
+            Image.asset(
+              'coki_swimming_assets/coki_swimming_setting_arrow.png',
+              width: 16,
+              height: 6,
+            ),
           ],
         ),
       ),

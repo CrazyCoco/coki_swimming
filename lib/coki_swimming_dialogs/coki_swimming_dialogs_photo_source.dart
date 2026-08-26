@@ -68,6 +68,7 @@ class _CokiSwimmingPhotoSourceContent extends StatelessWidget {
             CokiSwimmingPlainButton(
               label: 'Cancel',
               color: Colors.white,
+              textColor: const Color(0xFF100A30),
               onTap: () => Navigator.of(context).pop(),
             ),
           ],

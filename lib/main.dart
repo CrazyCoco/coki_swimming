@@ -58,6 +58,7 @@ part 'coki_swimming_widgets/coki_swimming_widgets_chip.dart';
 part 'coki_swimming_widgets/coki_swimming_widgets_circle.dart';
 part 'coki_swimming_widgets/coki_swimming_widgets_float_tool.dart';
 part 'coki_swimming_widgets/coki_swimming_widgets_gradient_button.dart';
+part 'coki_swimming_widgets/coki_swimming_widgets_gradient_text.dart';
 part 'coki_swimming_widgets/coki_swimming_widgets_hero_stat.dart';
 part 'coki_swimming_widgets/coki_swimming_widgets_input_dock.dart';
 part 'coki_swimming_widgets/coki_swimming_widgets_named_field.dart';
