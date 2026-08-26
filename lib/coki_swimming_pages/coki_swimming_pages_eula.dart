@@ -84,25 +84,25 @@ class _CokiSwimmingEulaScreenState extends State<CokiSwimmingEulaScreen> {
                               left: 43,
                               right: 43,
                               child: Text(
-                                'Welcome to Coki! To make a better place,the\n'
-                                'following content is not allowed in the app in\n'
-                                'particular.\n\n'
-                                '1. Any content about child harm,pornography\n'
-                                'related detrimental to children.\n'
-                                '2. Fake and harmful messages about recent\n'
-                                'or current events.\n'
-                                '3. Any violence,bullying content, publicly\n'
-                                'promotes pornography and other content.\n\n'
-                                'If we find any content including and not\n'
-                                'limited to the above violations your content\n'
-                                'will be deleted and account will be\n'
-                                'banned.By clicking the above button,you\n'
-                                'agreeto the Terms of Use and Privacy Policy',
-                                softWrap: false,
+                                'Welcome to Coki! To make a better place, the '
+                                'following content is not allowed in the app, '
+                                'in particular.\n\n'
+                                '1. Any content about child harm or pornography '
+                                'that is detrimental to children.\n'
+                                '2. Fake and harmful messages about recent or '
+                                'current events.\n'
+                                '3. Any violent or bullying content, public '
+                                'pornography, or other harmful content.\n\n'
+                                'If we find content including, but not limited '
+                                'to, the violations above, your content will be '
+                                'deleted and your account will be banned. By '
+                                'clicking the button below, you agree to the '
+                                'Terms of Use and Privacy Policy.',
+                                softWrap: true,
                                 style: TextStyle(
                                   color: Color(0xFF100A30),
-                                  fontSize: 14,
-                                  height: 1.42,
+                                  fontSize: 13,
+                                  height: 1.36,
                                   letterSpacing: 0,
                                   fontWeight: FontWeight.w400,
                                 ),
@@ -110,8 +110,8 @@ class _CokiSwimmingEulaScreenState extends State<CokiSwimmingEulaScreen> {
                             ),
                             Positioned(
                               top: 516,
-                              left: 77,
-                              right: 76,
+                              left: 56,
+                              right: 56,
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -163,7 +163,7 @@ class _CokiSwimmingEulaScreenState extends State<CokiSwimmingEulaScreen> {
                             ),
                             Positioned(
                               top: 562,
-                              right: 55,
+                              right: 56,
                               child: _CokiSwimmingEulaButton(
                                 label: _isSaving ? 'Saving...' : 'I agree',
                                 color: const Color(0xFF58CBE9),

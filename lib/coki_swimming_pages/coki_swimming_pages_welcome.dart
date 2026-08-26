@@ -17,14 +17,33 @@ class CokiSwimmingWelcomeScreen extends StatefulWidget {
 
 class _CokiSwimmingWelcomeScreenState extends State<CokiSwimmingWelcomeScreen> {
   bool _isAgreementOn = true;
+  late bool _hasAcceptedEula = widget.hasAcceptedEula;
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (!mounted || widget.hasAcceptedEula) return;
-      Navigator.of(context).pushNamed(CokiSwimmingRoutesPaths.eula);
+      if (!mounted || _hasAcceptedEula) return;
+      unawaited(_openEula());
     });
+  }
+
+  @override
+  void didUpdateWidget(covariant CokiSwimmingWelcomeScreen oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (!_hasAcceptedEula && widget.hasAcceptedEula) {
+      _hasAcceptedEula = true;
+    }
+  }
+
+  Future<void> _openEula() async {
+    await Navigator.of(context).pushNamed(CokiSwimmingRoutesPaths.eula);
+    if (!mounted) return;
+    final revision = await SharedPreferencesAsync().getString(
+      CokiSwimmingApp._eulaStorageKey,
+    );
+    if (!mounted || revision != CokiSwimmingApp._eulaRevision) return;
+    setState(() => _hasAcceptedEula = true);
   }
 
   void _enter(VoidCallback action) {
@@ -32,8 +51,8 @@ class _CokiSwimmingWelcomeScreenState extends State<CokiSwimmingWelcomeScreen> {
       CokiSwimmingAgreementPrompt.show(context);
       return;
     }
-    if (!widget.hasAcceptedEula) {
-      Navigator.of(context).pushNamed(CokiSwimmingRoutesPaths.eula);
+    if (!_hasAcceptedEula) {
+      unawaited(_openEula());
       return;
     }
     action();
@@ -69,9 +88,7 @@ class _CokiSwimmingWelcomeScreenState extends State<CokiSwimmingWelcomeScreen> {
                   top: 34,
                   child: CokiSwimmingTap(
                     borderRadius: BorderRadius.circular(15),
-                    onTap: () => Navigator.of(
-                      context,
-                    ).pushNamed(CokiSwimmingRoutesPaths.eula),
+                    onTap: _openEula,
                     child: Image.asset(
                       'coki_swimming_assets/coki_swimming_eula_button.png',
                       width: 61,

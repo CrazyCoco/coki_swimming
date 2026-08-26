@@ -51,10 +51,7 @@ class CokiSwimmingSettingScreen extends StatelessWidget {
                   child: CokiSwimmingPlainButton(
                     label: 'Delete account',
                     color: const Color(0xFFD43161),
-                    onTap: () => CokiSwimmingConfirm.show(
-                      context,
-                      () => unawaited(onDelete()),
-                    ),
+                    onTap: () => CokiSwimmingConfirm.show(context, onDelete),
                   ),
                 ),
                 const SizedBox(height: 14),
