@@ -10,12 +10,16 @@ class CokiSwimmingRoutesPaths {
   static const String hub = '/hub';
   static const String detail = '/detail';
   static const String compose = '/compose';
+  static const String motionCompose = '/motion-compose';
   static const String clip = '/clip';
   static const String vault = '/vault';
   static const String edit = '/edit';
   static const String setting = '/setting';
   static const String fans = '/fans';
+  static const String circle = '/circle';
   static const String shield = '/shield';
+  static const String swimmer = '/swimmer';
+  static const String concern = '/concern';
   static const String companion = '/companion';
   static const String dialogue = '/dialogue';
   static const String call = '/call';
