@@ -5,10 +5,14 @@ class CokiSwimmingNamedField extends StatelessWidget {
     super.key,
     required this.label,
     required this.maxLines,
+    required this.controller,
+    this.hintText = 'Please enter',
   });
 
   final String label;
   final int maxLines;
+  final TextEditingController controller;
+  final String hintText;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +31,7 @@ class CokiSwimmingNamedField extends StatelessWidget {
         ),
         const SizedBox(height: 9),
         TextField(
+          controller: controller,
           maxLines: maxLines,
           style: const TextStyle(
             color: Color(0xFF100A30),
@@ -35,7 +40,7 @@ class CokiSwimmingNamedField extends StatelessWidget {
             letterSpacing: 0,
           ),
           decoration: InputDecoration(
-            hintText: 'Please enter',
+            hintText: hintText,
             hintStyle: TextStyle(
               color: const Color(0xFF100A30).withValues(alpha: 0.42),
               fontSize: 12,

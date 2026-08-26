@@ -1,7 +1,9 @@
 part of '../main.dart';
 
 class CokiSwimmingPersonaPane extends StatelessWidget {
-  const CokiSwimmingPersonaPane({super.key});
+  const CokiSwimmingPersonaPane({super.key, this.member});
+
+  final CokiSwimmingMember? member;
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +64,7 @@ class CokiSwimmingPersonaPane extends StatelessWidget {
                     children: [
                       CokiSwimmingAvatar(
                         image:
+                            member?.avatarPath ??
                             'coki_swimming_assets/coki_swimming_avatar_coki.png',
                         size: 88,
                         onTap: () => Navigator.of(
@@ -69,9 +72,11 @@ class CokiSwimmingPersonaPane extends StatelessWidget {
                         ).pushNamed(CokiSwimmingRoutesPaths.edit),
                       ),
                       const SizedBox(height: 8),
-                      const Text(
-                        'Apien',
-                        style: TextStyle(
+                      Text(
+                        member?.displayName ?? 'Apien',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 24,
                           height: 1.1,

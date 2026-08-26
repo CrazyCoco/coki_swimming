@@ -35,7 +35,14 @@ class _CokiSwimmingPolicyWebViewScreenState
           },
           onPageStarted: (_) {
             if (!mounted) return;
-            setState(() => _hasLoadError = false);
+            setState(() {
+              _hasLoadError = false;
+              _loadingProgress = 0;
+            });
+          },
+          onPageFinished: (_) {
+            if (!mounted) return;
+            setState(() => _loadingProgress = 100);
           },
           onWebResourceError: (error) {
             if (error.isForMainFrame == false || !mounted) return;
@@ -47,11 +54,22 @@ class _CokiSwimmingPolicyWebViewScreenState
                 uri?.host == CokiSwimmingNetworkConfig.officialWebsiteHost) {
               return NavigationDecision.navigate;
             }
+            if (mounted) {
+              CokiSwimmingToast.show(context, 'This link cannot open here');
+            }
             return NavigationDecision.prevent;
           },
         ),
       )
       ..loadRequest(Uri.parse(widget.url));
+  }
+
+  Future<void> _reload() async {
+    setState(() {
+      _hasLoadError = false;
+      _loadingProgress = 0;
+    });
+    await _controller.reload();
   }
 
   @override
@@ -66,38 +84,68 @@ class _CokiSwimmingPolicyWebViewScreenState
                 title: widget.title,
                 onReturn: () => Navigator.of(context).maybePop(),
               ),
-              if (_loadingProgress < 100 && !_hasLoadError)
-                LinearProgressIndicator(
-                  value: _loadingProgress / 100,
-                  minHeight: 2,
-                  color: const Color(0xFF58CBE9),
-                  backgroundColor: Colors.white.withValues(alpha: 0.22),
+              SizedBox(
+                height: 2,
+                child: AnimatedOpacity(
+                  duration: const Duration(milliseconds: 180),
+                  opacity: _loadingProgress < 100 && !_hasLoadError ? 1 : 0,
+                  child: LinearProgressIndicator(
+                    value: _loadingProgress / 100,
+                    minHeight: 2,
+                    color: const Color(0xFF58CBE9),
+                    backgroundColor: Colors.white.withValues(alpha: 0.22),
+                  ),
                 ),
+              ),
               Expanded(
                 child: _hasLoadError
                     ? Center(
-                        child: CokiSwimmingTap(
-                          borderRadius: BorderRadius.circular(21),
-                          onTap: () => _controller.reload(),
-                          child: Container(
-                            height: 42,
-                            padding: const EdgeInsets.symmetric(horizontal: 24),
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: const Color(0xFF58CBE9),
-                              borderRadius: BorderRadius.circular(21),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Icon(
+                              Icons.wifi_off_rounded,
+                              color: Colors.white,
+                              size: 42,
                             ),
-                            child: const Text(
-                              'Retry',
+                            const SizedBox(height: 12),
+                            const Text(
+                              'Unable to load page',
                               style: TextStyle(
-                                color: Color(0xFF100A30),
+                                color: Colors.white,
                                 fontSize: 16,
                                 height: 1.2,
                                 letterSpacing: 0,
                                 fontWeight: FontWeight.w900,
                               ),
                             ),
-                          ),
+                            const SizedBox(height: 18),
+                            CokiSwimmingTap(
+                              borderRadius: BorderRadius.circular(21),
+                              onTap: _reload,
+                              child: Container(
+                                height: 42,
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 24,
+                                ),
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF58CBE9),
+                                  borderRadius: BorderRadius.circular(21),
+                                ),
+                                child: const Text(
+                                  'Retry',
+                                  style: TextStyle(
+                                    color: Color(0xFF100A30),
+                                    fontSize: 16,
+                                    height: 1.2,
+                                    letterSpacing: 0,
+                                    fontWeight: FontWeight.w900,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       )
                     : WebViewWidget(controller: _controller),

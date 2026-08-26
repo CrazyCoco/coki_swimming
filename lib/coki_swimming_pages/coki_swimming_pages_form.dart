@@ -1,6 +1,6 @@
 part of '../main.dart';
 
-class CokiSwimmingFormScreen extends StatelessWidget {
+class CokiSwimmingFormScreen extends StatefulWidget {
   const CokiSwimmingFormScreen({
     super.key,
     required this.fields,
@@ -11,8 +11,44 @@ class CokiSwimmingFormScreen extends StatelessWidget {
 
   final List<(String, String)> fields;
   final String buttonLabel;
-  final VoidCallback onSubmit;
+  final Future<void> Function(List<String> values) onSubmit;
   final Widget? lower;
+
+  @override
+  State<CokiSwimmingFormScreen> createState() => _CokiSwimmingFormScreenState();
+}
+
+class _CokiSwimmingFormScreenState extends State<CokiSwimmingFormScreen> {
+  late final List<TextEditingController> _controllers = List.generate(
+    widget.fields.length,
+    (_) => TextEditingController(),
+  );
+  bool _isSubmitting = false;
+
+  @override
+  void dispose() {
+    for (final controller in _controllers) {
+      controller.dispose();
+    }
+    super.dispose();
+  }
+
+  Future<void> _submit() async {
+    if (_isSubmitting) return;
+    FocusManager.instance.primaryFocus?.unfocus();
+    setState(() => _isSubmitting = true);
+    try {
+      await widget.onSubmit(
+        _controllers.map((controller) => controller.text).toList(),
+      );
+    } on CokiSwimmingStorageException catch (error) {
+      if (mounted) CokiSwimmingToast.show(context, error.message);
+    } catch (_) {
+      if (mounted) CokiSwimmingToast.show(context, 'Please try again');
+    } finally {
+      if (mounted) setState(() => _isSubmitting = false);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +66,13 @@ class CokiSwimmingFormScreen extends StatelessWidget {
                       ScrollViewKeyboardDismissBehavior.onDrag,
                   padding: const EdgeInsets.fromLTRB(20, 92, 20, 24),
                   children: [
-                    for (final field in fields) ...[
+                    for (
+                      var index = 0;
+                      index < widget.fields.length;
+                      index++
+                    ) ...[
                       Text(
-                        field.$1,
+                        widget.fields[index].$1,
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 18,
@@ -43,7 +83,23 @@ class CokiSwimmingFormScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 9),
                       TextField(
-                        obscureText: field.$1.contains('Password'),
+                        controller: _controllers[index],
+                        enabled: !_isSubmitting,
+                        obscureText: widget.fields[index].$1.contains(
+                          'Password',
+                        ),
+                        keyboardType: index == 0
+                            ? TextInputType.emailAddress
+                            : TextInputType.text,
+                        textInputAction: index == widget.fields.length - 1
+                            ? TextInputAction.done
+                            : TextInputAction.next,
+                        autofillHints: index == 0
+                            ? const [AutofillHints.email]
+                            : const [AutofillHints.password],
+                        onSubmitted: index == widget.fields.length - 1
+                            ? (_) => _submit()
+                            : null,
                         style: const TextStyle(
                           color: Color(0xFF100A30),
                           fontSize: 16,
@@ -51,7 +107,7 @@ class CokiSwimmingFormScreen extends StatelessWidget {
                           letterSpacing: 0,
                         ),
                         decoration: InputDecoration(
-                          hintText: field.$2,
+                          hintText: widget.fields[index].$2,
                           hintStyle: TextStyle(
                             color: const Color(
                               0xFF100A30,
@@ -73,6 +129,15 @@ class CokiSwimmingFormScreen extends StatelessWidget {
                               width: 2,
                             ),
                           ),
+                          disabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(26),
+                            borderSide: BorderSide(
+                              color: const Color(
+                                0xFFD43161,
+                              ).withValues(alpha: 0.5),
+                              width: 2,
+                            ),
+                          ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(26),
                             borderSide: const BorderSide(
@@ -84,14 +149,16 @@ class CokiSwimmingFormScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 17),
                     ],
-                    ?lower,
+                    ?widget.lower,
                     const SizedBox(height: 72),
                     Center(
                       child: SizedBox(
                         width: 190,
                         child: CokiSwimmingGradientButton(
-                          label: buttonLabel,
-                          onTap: onSubmit,
+                          label: _isSubmitting
+                              ? 'Loading...'
+                              : widget.buttonLabel,
+                          onTap: _isSubmitting ? () {} : _submit,
                         ),
                       ),
                     ),

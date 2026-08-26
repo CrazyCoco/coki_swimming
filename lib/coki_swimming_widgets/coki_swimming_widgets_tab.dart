@@ -14,26 +14,16 @@ class CokiSwimmingTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CokiSwimmingTap(
-      borderRadius: BorderRadius.circular(24),
-      onTap: onTap,
-      child: SizedBox(
-        width: 54,
-        height: 54,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(image, width: 24, height: 24),
-            const SizedBox(height: 5),
-            Container(
-              width: active ? 18 : 0,
-              height: 3,
-              decoration: BoxDecoration(
-                color: const Color(0xFFD43161),
-                borderRadius: BorderRadius.circular(2),
-              ),
-            ),
-          ],
+    return Semantics(
+      selected: active,
+      button: true,
+      child: CokiSwimmingTap(
+        borderRadius: BorderRadius.circular(22),
+        onTap: onTap,
+        child: SizedBox(
+          width: 48,
+          height: 44,
+          child: Center(child: Image.asset(image, width: 24, height: 24)),
         ),
       ),
     );

@@ -1,7 +1,9 @@
 part of '../main.dart';
 
 class CokiSwimmingSplashScreen extends StatefulWidget {
-  const CokiSwimmingSplashScreen({super.key});
+  const CokiSwimmingSplashScreen({super.key, required this.nextRoute});
+
+  final String nextRoute;
 
   @override
   State<CokiSwimmingSplashScreen> createState() =>
@@ -14,9 +16,7 @@ class _CokiSwimmingSplashScreenState extends State<CokiSwimmingSplashScreen> {
     super.initState();
     Timer(const Duration(milliseconds: 900), () {
       if (!mounted) return;
-      Navigator.of(
-        context,
-      ).pushReplacementNamed(CokiSwimmingRoutesPaths.welcome);
+      Navigator.of(context).pushReplacementNamed(widget.nextRoute);
     });
   }
 

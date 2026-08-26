@@ -1,9 +1,14 @@
 part of '../main.dart';
 
 class CokiSwimmingSettingScreen extends StatelessWidget {
-  const CokiSwimmingSettingScreen({super.key, required this.onExit});
+  const CokiSwimmingSettingScreen({
+    super.key,
+    required this.onExit,
+    required this.onDelete,
+  });
 
   final VoidCallback onExit;
+  final Future<void> Function() onDelete;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +51,10 @@ class CokiSwimmingSettingScreen extends StatelessWidget {
                   child: CokiSwimmingPlainButton(
                     label: 'Delete account',
                     color: const Color(0xFFD43161),
-                    onTap: () => CokiSwimmingConfirm.show(context, onExit),
+                    onTap: () => CokiSwimmingConfirm.show(
+                      context,
+                      () => unawaited(onDelete()),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 14),

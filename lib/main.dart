@@ -11,6 +11,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import 'coki_swimming_app/coki_swimming_app_routes/coki_swimming_app_routes_paths.dart';
+import 'coki_swimming_storage/coki_swimming_storage_database.dart';
 
 part 'coki_swimming_app/coki_swimming_app.dart';
 part 'coki_swimming_app/coki_swimming_app_access_gate.dart';

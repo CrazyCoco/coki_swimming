@@ -1,9 +1,9 @@
 part of '../main.dart';
 
 class CokiSwimmingAccessScreen extends StatelessWidget {
-  const CokiSwimmingAccessScreen({super.key, required this.onAuthorized});
+  const CokiSwimmingAccessScreen({super.key, required this.onAuthenticated});
 
-  final VoidCallback onAuthorized;
+  final Future<void> Function(CokiSwimmingMember member) onAuthenticated;
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +30,23 @@ class CokiSwimmingAccessScreen extends StatelessWidget {
           ),
         ),
       ),
-      onSubmit: () {
-        onAuthorized();
-        Navigator.of(context).pushReplacementNamed(CokiSwimmingRoutesPaths.hub);
+      onSubmit: (values) async {
+        final member = await CokiSwimmingDatabase.instance.authenticate(
+          email: values[0],
+          password: values[1],
+        );
+        if (member == null) {
+          throw const CokiSwimmingStorageException(
+            'Incorrect email or password',
+          );
+        }
+        await onAuthenticated(member);
+        if (!context.mounted) return;
+        Navigator.of(context).pushReplacementNamed(
+          member.profileCompleted
+              ? CokiSwimmingRoutesPaths.hub
+              : CokiSwimmingRoutesPaths.edit,
+        );
       },
     );
   }

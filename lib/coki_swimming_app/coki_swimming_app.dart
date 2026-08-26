@@ -1,23 +1,50 @@
 part of '../main.dart';
 
 class CokiSwimmingApp extends StatefulWidget {
-  const CokiSwimmingApp({super.key, required this.hasAcceptedEula});
+  const CokiSwimmingApp({
+    super.key,
+    required this.hasAcceptedEula,
+    this.restoredMember,
+  });
 
   static const String _eulaRevision = '1';
   static const String _eulaStorageKey = 'coki_swimming_eula_revision';
 
   final bool hasAcceptedEula;
+  final CokiSwimmingMember? restoredMember;
 
   static Future<CokiSwimmingApp> create() async {
     unawaited(CokiSwimmingStoreService.instance.initialize());
+
+    var hasAcceptedEula = false;
     try {
       final storedRevision = await SharedPreferencesAsync().getString(
         _eulaStorageKey,
       );
-      return CokiSwimmingApp(hasAcceptedEula: storedRevision == _eulaRevision);
+      hasAcceptedEula = storedRevision == _eulaRevision;
     } catch (_) {
-      return const CokiSwimmingApp(hasAcceptedEula: false);
+      hasAcceptedEula = false;
     }
+
+    CokiSwimmingMember? restoredMember;
+    try {
+      final memberId = await CokiSwimmingSessionStore.readMemberId();
+      if (memberId != null) {
+        restoredMember = await CokiSwimmingDatabase.instance.memberById(
+          memberId,
+        );
+        if (restoredMember == null) {
+          await CokiSwimmingSessionStore.clear();
+        }
+      }
+    } catch (_) {
+      await CokiSwimmingSessionStore.clear();
+    }
+
+    return CokiSwimmingApp(
+      hasAcceptedEula: hasAcceptedEula,
+      restoredMember: restoredMember,
+    );
   }
 
   @override
@@ -26,6 +53,7 @@ class CokiSwimmingApp extends StatefulWidget {
 
 class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
   late bool _hasAcceptedEula = widget.hasAcceptedEula;
+  late CokiSwimmingMember? _currentMember = widget.restoredMember;
   bool _isVisitor = false;
 
   Future<void> _acceptEula() async {
@@ -35,6 +63,77 @@ class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
     );
     if (!mounted) return;
     setState(() => _hasAcceptedEula = true);
+  }
+
+  Future<void> _authenticate(CokiSwimmingMember member) async {
+    await CokiSwimmingSessionStore.writeMemberId(member.id);
+    if (!mounted) return;
+    setState(() {
+      _currentMember = member;
+      _isVisitor = false;
+    });
+  }
+
+  Future<void> _startRegistration(int memberId) async {
+    await CokiSwimmingSessionStore.writeMemberId(memberId);
+    final member = await CokiSwimmingDatabase.instance.memberById(memberId);
+    if (!mounted) return;
+    setState(() {
+      _currentMember = member;
+      _isVisitor = false;
+    });
+  }
+
+  Future<void> _profileSaved() async {
+    final memberId = _currentMember?.id;
+    if (memberId == null) return;
+    final member = await CokiSwimmingDatabase.instance.memberById(memberId);
+    if (member == null) {
+      throw const CokiSwimmingStorageException('Account no longer exists');
+    }
+    await CokiSwimmingSessionStore.writeMemberId(member.id);
+    if (!mounted) return;
+    setState(() {
+      _currentMember = member;
+      _isVisitor = false;
+    });
+  }
+
+  void _enterVisitor() {
+    unawaited(CokiSwimmingSessionStore.clear());
+    setState(() {
+      _currentMember = null;
+      _isVisitor = true;
+    });
+  }
+
+  void _exitAccount() {
+    unawaited(CokiSwimmingSessionStore.clear());
+    setState(() {
+      _currentMember = null;
+      _isVisitor = false;
+    });
+  }
+
+  Future<void> _deleteAccount() async {
+    final memberId = _currentMember?.id;
+    if (memberId != null) {
+      await CokiSwimmingDatabase.instance.deleteMember(memberId);
+    }
+    await CokiSwimmingSessionStore.clear();
+    if (!mounted) return;
+    setState(() {
+      _currentMember = null;
+      _isVisitor = false;
+    });
+  }
+
+  String get _routeAfterSplash {
+    final member = _currentMember;
+    if (member == null) return CokiSwimmingRoutesPaths.welcome;
+    return member.profileCompleted
+        ? CokiSwimmingRoutesPaths.hub
+        : CokiSwimmingRoutesPaths.edit;
   }
 
   @override
@@ -57,7 +156,7 @@ class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
         final page = switch (settings.name) {
           CokiSwimmingRoutesPaths.welcome => CokiSwimmingWelcomeScreen(
             hasAcceptedEula: _hasAcceptedEula,
-            onVisitorMode: () => setState(() => _isVisitor = true),
+            onVisitorMode: _enterVisitor,
           ),
           CokiSwimmingRoutesPaths.eula => CokiSwimmingEulaScreen(
             onAccept: _acceptEula,
@@ -73,15 +172,16 @@ class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
               url: CokiSwimmingNetworkConfig.privacyPolicyUrl,
             ),
           CokiSwimmingRoutesPaths.access => CokiSwimmingAccessScreen(
-            onAuthorized: () => setState(() => _isVisitor = false),
+            onAuthenticated: _authenticate,
           ),
           CokiSwimmingRoutesPaths.signup => CokiSwimmingSignupScreen(
-            onAuthorized: () => setState(() => _isVisitor = false),
+            onRegistrationStarted: _startRegistration,
           ),
           CokiSwimmingRoutesPaths.recover => const CokiSwimmingRecoverScreen(),
           CokiSwimmingRoutesPaths.hub => CokiSwimmingHubScreen(
             isVisitor: _isVisitor,
-            onExit: () => setState(() => _isVisitor = false),
+            onExit: _exitAccount,
+            member: _currentMember,
           ),
           CokiSwimmingRoutesPaths.detail => CokiSwimmingDetailScreen(
             isVisitor: _isVisitor,
@@ -93,9 +193,20 @@ class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
             isVisitor: _isVisitor,
           ),
           CokiSwimmingRoutesPaths.vault => const CokiSwimmingVaultScreen(),
-          CokiSwimmingRoutesPaths.edit => const CokiSwimmingEditScreen(),
+          CokiSwimmingRoutesPaths.edit =>
+            _currentMember == null
+                ? CokiSwimmingWelcomeScreen(
+                    hasAcceptedEula: _hasAcceptedEula,
+                    onVisitorMode: _enterVisitor,
+                  )
+                : CokiSwimmingEditScreen(
+                    memberId: _currentMember!.id,
+                    registrationMode: !_currentMember!.profileCompleted,
+                    onSaved: _profileSaved,
+                  ),
           CokiSwimmingRoutesPaths.setting => CokiSwimmingSettingScreen(
-            onExit: () => setState(() => _isVisitor = false),
+            onExit: _exitAccount,
+            onDelete: _deleteAccount,
           ),
           CokiSwimmingRoutesPaths.fans => const CokiSwimmingPeopleScreen(
             title: 'Fans',
@@ -118,7 +229,7 @@ class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
           CokiSwimmingRoutesPaths.dialogue =>
             const CokiSwimmingDialogueScreen(),
           CokiSwimmingRoutesPaths.call => const CokiSwimmingCallScreen(),
-          _ => const CokiSwimmingSplashScreen(),
+          _ => CokiSwimmingSplashScreen(nextRoute: _routeAfterSplash),
         };
         return CupertinoPageRoute<void>(
           builder: (_) => page,

@@ -1,51 +1,269 @@
 part of '../main.dart';
 
-class CokiSwimmingHomePane extends StatelessWidget {
+class CokiSwimmingHomePane extends StatefulWidget {
   const CokiSwimmingHomePane({super.key, required this.isVisitor});
 
   final bool isVisitor;
 
   @override
+  State<CokiSwimmingHomePane> createState() => _CokiSwimmingHomePaneState();
+}
+
+class _CokiSwimmingHomePaneState extends State<CokiSwimmingHomePane> {
+  int _selectedSection = 0;
+
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
+      bottom: false,
       child: ListView(
         physics: const BouncingScrollPhysics(
           parent: AlwaysScrollableScrollPhysics(),
         ),
-        padding: const EdgeInsets.fromLTRB(16, 12, 16, 18),
+        padding: const EdgeInsets.fromLTRB(20, 12, 20, 18),
         children: [
           Row(
             children: [
-              const CokiSwimmingChip(text: 'For you'),
-              const SizedBox(width: 12),
-              const Text(
-                'Trending',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  height: 1.2,
-                  letterSpacing: 0,
-                  fontWeight: FontWeight.w800,
+              CokiSwimmingTap(
+                borderRadius: BorderRadius.circular(24),
+                onTap: () => setState(() => _selectedSection = 0),
+                child: Image.asset(
+                  'coki_swimming_assets/coki_swimming_community_for_you.png',
+                  width: 107,
+                  height: 47,
                 ),
               ),
               const Spacer(),
-              CokiSwimmingCircle(
-                child: const Icon(Icons.add, color: Color(0xFFD43161)),
+              CokiSwimmingTap(
+                borderRadius: BorderRadius.circular(22),
                 onTap: () => CokiSwimmingAccessGate.run(
                   context,
-                  isVisitor: isVisitor,
+                  isVisitor: widget.isVisitor,
                   action: () => CokiSwimmingReleaseSheet.show(context),
+                ),
+                child: Image.asset(
+                  'coki_swimming_assets/coki_swimming_community_add.png',
+                  width: 44,
+                  height: 44,
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 18),
-          CokiSwimmingPromoCard(isVisitor: isVisitor),
-          const SizedBox(height: 16),
-          CokiSwimmingEntryCard(isVisitor: isVisitor),
-          const SizedBox(height: 16),
-          CokiSwimmingEntryCard(second: true, isVisitor: isVisitor),
+          const SizedBox(height: 19),
+          SizedBox(
+            height: 32,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CokiSwimmingTap(
+                  borderRadius: BorderRadius.circular(6),
+                  onTap: () => setState(() => _selectedSection = 0),
+                  child: SizedBox(
+                    width: 118,
+                    height: 32,
+                    child: Stack(
+                      children: [
+                        const Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Text(
+                            'Trending',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              height: 1.2,
+                              letterSpacing: 0,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 92,
+                          top: 0,
+                          child: Image.asset(
+                            'coki_swimming_assets/coki_swimming_community_sparkles.png',
+                            width: 18,
+                            height: 14,
+                          ),
+                        ),
+                        if (_selectedSection == 0)
+                          Positioned(
+                            left: 0,
+                            bottom: 0,
+                            child: Image.asset(
+                              'coki_swimming_assets/coki_swimming_community_underline.png',
+                              width: 54,
+                              height: 4,
+                            ),
+                          ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 15),
+                CokiSwimmingTap(
+                  borderRadius: BorderRadius.circular(6),
+                  onTap: () => setState(() => _selectedSection = 1),
+                  child: SizedBox(
+                    width: 54,
+                    height: 32,
+                    child: Stack(
+                      children: [
+                        Text(
+                          'New',
+                          style: TextStyle(
+                            color: _selectedSection == 1
+                                ? Colors.white
+                                : const Color(0xFF817B96),
+                            fontSize: 20,
+                            height: 1.2,
+                            letterSpacing: 0,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                        if (_selectedSection == 1)
+                          Positioned(
+                            left: 0,
+                            bottom: 0,
+                            child: Image.asset(
+                              'coki_swimming_assets/coki_swimming_community_underline.png',
+                              width: 54,
+                              height: 4,
+                            ),
+                          ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 14),
+          CokiSwimmingCommunityCard(
+            key: ValueKey('community-${_selectedSection == 0 ? 0 : 1}'),
+            image: _selectedSection == 0
+                ? 'coki_swimming_assets/coki_swimming_community_primary_card.png'
+                : 'coki_swimming_assets/coki_swimming_community_secondary_card.png',
+            isVisitor: widget.isVisitor,
+          ),
+          const SizedBox(height: 14),
+          CokiSwimmingCommunityCard(
+            key: ValueKey('community-${_selectedSection == 0 ? 1 : 0}'),
+            image: _selectedSection == 0
+                ? 'coki_swimming_assets/coki_swimming_community_secondary_card.png'
+                : 'coki_swimming_assets/coki_swimming_community_primary_card.png',
+            isVisitor: widget.isVisitor,
+          ),
         ],
+      ),
+    );
+  }
+}
+
+class CokiSwimmingCommunityCard extends StatefulWidget {
+  const CokiSwimmingCommunityCard({
+    super.key,
+    required this.image,
+    required this.isVisitor,
+  });
+
+  final String image;
+  final bool isVisitor;
+
+  @override
+  State<CokiSwimmingCommunityCard> createState() =>
+      _CokiSwimmingCommunityCardState();
+}
+
+class _CokiSwimmingCommunityCardState extends State<CokiSwimmingCommunityCard> {
+  bool _isLiked = false;
+
+  void _openDetail() {
+    Navigator.of(context).pushNamed(CokiSwimmingRoutesPaths.detail);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 359,
+      child: CokiSwimmingTap(
+        borderRadius: BorderRadius.circular(19),
+        onTap: _openDetail,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(19),
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              Image.asset(widget.image, fit: BoxFit.cover),
+              Positioned(
+                left: 0,
+                top: 0,
+                width: 72,
+                height: 58,
+                child: CokiSwimmingTap(
+                  borderRadius: BorderRadius.circular(19),
+                  onTap: () => Navigator.of(
+                    context,
+                  ).pushNamed(CokiSwimmingRoutesPaths.swimmer),
+                  child: const SizedBox.expand(),
+                ),
+              ),
+              Positioned(
+                right: 0,
+                top: 0,
+                child: CokiSwimmingTap(
+                  borderRadius: BorderRadius.circular(22),
+                  onTap: () => CokiSwimmingAccessGate.run(
+                    context,
+                    isVisitor: widget.isVisitor,
+                    action: () => CokiSwimmingReportSheet.show(context),
+                  ),
+                  child: SizedBox(
+                    width: 48,
+                    height: 48,
+                    child: Center(
+                      child: Image.asset(
+                        'coki_swimming_assets/coki_swimming_community_more.png',
+                        width: 24,
+                        height: 24,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Center(
+                child: CokiSwimmingTap(
+                  borderRadius: BorderRadius.circular(22),
+                  onTap: _openDetail,
+                  child: Image.asset(
+                    'coki_swimming_assets/coki_swimming_community_play.png',
+                    width: 44,
+                    height: 44,
+                  ),
+                ),
+              ),
+              Positioned(
+                right: 12,
+                bottom: 15,
+                child: CokiSwimmingTap(
+                  borderRadius: BorderRadius.circular(25),
+                  onTap: () => CokiSwimmingAccessGate.run(
+                    context,
+                    isVisitor: widget.isVisitor,
+                    action: () => setState(() => _isLiked = !_isLiked),
+                  ),
+                  child: Image.asset(
+                    _isLiked
+                        ? 'coki_swimming_assets/coki_swimming_community_like_selected.png'
+                        : 'coki_swimming_assets/coki_swimming_community_like_idle.png',
+                    width: 50,
+                    height: 50,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
