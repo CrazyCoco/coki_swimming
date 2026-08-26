@@ -16,8 +16,8 @@ class CokiSwimmingBackButton extends StatelessWidget {
         child: Center(
           child: Image.asset(
             'coki_swimming_assets/coki_swimming_nav_return.png',
-            width: 32,
-            height: 32,
+            width: 40,
+            height: 40,
           ),
         ),
       ),

@@ -16,7 +16,7 @@ class CokiSwimmingWelcomeScreen extends StatefulWidget {
 }
 
 class _CokiSwimmingWelcomeScreenState extends State<CokiSwimmingWelcomeScreen> {
-  late bool _isAgreementOn = widget.hasAcceptedEula;
+  bool _isAgreementOn = true;
 
   @override
   void initState() {
@@ -27,15 +27,11 @@ class _CokiSwimmingWelcomeScreenState extends State<CokiSwimmingWelcomeScreen> {
     });
   }
 
-  @override
-  void didUpdateWidget(covariant CokiSwimmingWelcomeScreen oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (!oldWidget.hasAcceptedEula && widget.hasAcceptedEula) {
-      _isAgreementOn = true;
-    }
-  }
-
   void _enter(VoidCallback action) {
+    if (!_isAgreementOn) {
+      CokiSwimmingAgreementPrompt.show(context);
+      return;
+    }
     if (!widget.hasAcceptedEula) {
       Navigator.of(context).pushNamed(CokiSwimmingRoutesPaths.eula);
       return;
@@ -205,48 +201,91 @@ class _CokiSwimmingWelcomeScreenState extends State<CokiSwimmingWelcomeScreen> {
             left: 22,
             right: 18,
             bottom: 17,
-            child: CokiSwimmingTap(
-              borderRadius: BorderRadius.circular(10),
-              onTap: () => setState(() => _isAgreementOn = !_isAgreementOn),
-              child: SizedBox(
-                height: 44,
-                child: Row(
-                  children: [
-                    Image.asset(
-                      _isAgreementOn
-                          ? 'coki_swimming_assets/coki_swimming_agreement_on.png'
-                          : 'coki_swimming_assets/coki_swimming_agreement_idle.png',
-                      width: 19,
-                      height: 19,
-                    ),
-                    const SizedBox(width: 8),
-                    const Expanded(
-                      child: Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(text: 'Agree with  '),
-                            TextSpan(
-                              text: 'User Agreement and Privacy Policy',
-                              style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                decorationColor: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 13,
-                          height: 1.2,
-                          letterSpacing: 0,
-                          fontWeight: FontWeight.w400,
+            child: SizedBox(
+              height: 44,
+              child: Row(
+                children: [
+                  CokiSwimmingTap(
+                    borderRadius: BorderRadius.circular(10),
+                    onTap: () =>
+                        setState(() => _isAgreementOn = !_isAgreementOn),
+                    child: SizedBox(
+                      width: 27,
+                      height: 44,
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Image.asset(
+                          _isAgreementOn
+                              ? 'coki_swimming_assets/coki_swimming_agreement_on.png'
+                              : 'coki_swimming_assets/coki_swimming_agreement_idle.png',
+                          width: 19,
+                          height: 19,
                         ),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                  const Text(
+                    'Agree with ',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
+                      height: 1.2,
+                      letterSpacing: 0,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  CokiSwimmingTap(
+                    onTap: () => Navigator.of(
+                      context,
+                    ).pushNamed(CokiSwimmingRoutesPaths.termsOfUse),
+                    child: const Text(
+                      'Agreement',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 13,
+                        height: 1.2,
+                        letterSpacing: 0,
+                        fontWeight: FontWeight.w400,
+                        decoration: TextDecoration.underline,
+                        decorationColor: Colors.white,
+                      ),
+                    ),
+                  ),
+                  const Text(
+                    ' and ',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
+                      height: 1.2,
+                      letterSpacing: 0,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: CokiSwimmingTap(
+                        onTap: () => Navigator.of(
+                          context,
+                        ).pushNamed(CokiSwimmingRoutesPaths.privacyPolicy),
+                        child: const Text(
+                          'Privacy Policy',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 13,
+                            height: 1.2,
+                            letterSpacing: 0,
+                            fontWeight: FontWeight.w400,
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

@@ -4,6 +4,8 @@ class CokiSwimmingRoutesPaths {
   static const String splash = '/';
   static const String welcome = '/welcome';
   static const String eula = '/eula';
+  static const String termsOfUse = '/terms-of-use';
+  static const String privacyPolicy = '/privacy-policy';
   static const String access = '/access';
   static const String signup = '/signup';
   static const String recover = '/recover';

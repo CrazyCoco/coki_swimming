@@ -2,14 +2,22 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:in_app_purchase/in_app_purchase.dart';
+import 'package:in_app_purchase_storekit/in_app_purchase_storekit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 import 'coki_swimming_app/coki_swimming_app_routes/coki_swimming_app_routes_paths.dart';
 
 part 'coki_swimming_app/coki_swimming_app.dart';
 part 'coki_swimming_app/coki_swimming_app_access_gate.dart';
+part 'coki_swimming_network/coki_swimming_network_config.dart';
+part 'coki_swimming_purchases/coki_swimming_purchases_catalog.dart';
+part 'coki_swimming_purchases/coki_swimming_purchases_store_service.dart';
+part 'coki_swimming_security/coki_swimming_security_crypto_config.dart';
 part 'coki_swimming_pages/coki_swimming_pages_access.dart';
 part 'coki_swimming_pages/coki_swimming_pages_call.dart';
 part 'coki_swimming_pages/coki_swimming_pages_clip.dart';
@@ -30,6 +38,7 @@ part 'coki_swimming_pages/coki_swimming_pages_motion_compose.dart';
 part 'coki_swimming_pages/coki_swimming_pages_ocean.dart';
 part 'coki_swimming_pages/coki_swimming_pages_people.dart';
 part 'coki_swimming_pages/coki_swimming_pages_persona.dart';
+part 'coki_swimming_pages/coki_swimming_pages_policy_webview.dart';
 part 'coki_swimming_pages/coki_swimming_pages_pulse.dart';
 part 'coki_swimming_pages/coki_swimming_pages_recover.dart';
 part 'coki_swimming_pages/coki_swimming_pages_setting.dart';
@@ -58,6 +67,7 @@ part 'coki_swimming_widgets/coki_swimming_widgets_tab.dart';
 part 'coki_swimming_widgets/coki_swimming_widgets_tap.dart';
 part 'coki_swimming_widgets/coki_swimming_widgets_text_box.dart';
 part 'coki_swimming_widgets/coki_swimming_widgets_top_bar.dart';
+part 'coki_swimming_dialogs/coki_swimming_dialogs_agreement_prompt.dart';
 part 'coki_swimming_dialogs/coki_swimming_dialogs_confirm.dart';
 part 'coki_swimming_dialogs/coki_swimming_dialogs_login_prompt.dart';
 part 'coki_swimming_dialogs/coki_swimming_dialogs_notes_sheet.dart';

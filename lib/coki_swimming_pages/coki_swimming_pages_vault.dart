@@ -13,18 +13,7 @@ class _CokiSwimmingVaultScreenState extends State<CokiSwimmingVaultScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const offers = [
-      ('400', '\$0.99'),
-      ('800', '\$1.99'),
-      ('2190', '\$3.99'),
-      ('2450', '\$4.99'),
-      ('3950', '\$8.99'),
-      ('5150', '\$9.99'),
-      ('5700', '\$13.99'),
-      ('10800', '\$19.99'),
-      ('29400', '\$49.99'),
-      ('63700', '\$99.99'),
-    ];
+    const offers = CokiSwimmingStoreCatalog.items;
     return CokiSwimmingBackground(
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -94,7 +83,7 @@ class _CokiSwimmingVaultScreenState extends State<CokiSwimmingVaultScreen> {
                             ),
                             const SizedBox(width: 7),
                             Text(
-                              offers[index].$1,
+                              offers[index].quantity.toString(),
                               style: TextStyle(
                                 color: chosen
                                     ? Colors.white
@@ -107,7 +96,7 @@ class _CokiSwimmingVaultScreenState extends State<CokiSwimmingVaultScreen> {
                             ),
                             const Spacer(),
                             Text(
-                              offers[index].$2,
+                              offers[index].priceLabel,
                               style: TextStyle(
                                 color: chosen
                                     ? Colors.white

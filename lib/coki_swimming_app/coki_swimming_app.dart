@@ -9,6 +9,7 @@ class CokiSwimmingApp extends StatefulWidget {
   final bool hasAcceptedEula;
 
   static Future<CokiSwimmingApp> create() async {
+    unawaited(CokiSwimmingStoreService.instance.initialize());
     try {
       final storedRevision = await SharedPreferencesAsync().getString(
         _eulaStorageKey,
@@ -61,6 +62,16 @@ class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
           CokiSwimmingRoutesPaths.eula => CokiSwimmingEulaScreen(
             onAccept: _acceptEula,
           ),
+          CokiSwimmingRoutesPaths.termsOfUse =>
+            const CokiSwimmingPolicyWebViewScreen(
+              title: 'Agreement',
+              url: CokiSwimmingNetworkConfig.userAgreementUrl,
+            ),
+          CokiSwimmingRoutesPaths.privacyPolicy =>
+            const CokiSwimmingPolicyWebViewScreen(
+              title: 'Privacy Policy',
+              url: CokiSwimmingNetworkConfig.privacyPolicyUrl,
+            ),
           CokiSwimmingRoutesPaths.access => CokiSwimmingAccessScreen(
             onAuthorized: () => setState(() => _isVisitor = false),
           ),

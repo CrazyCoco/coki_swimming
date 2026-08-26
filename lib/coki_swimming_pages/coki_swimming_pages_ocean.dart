@@ -11,7 +11,7 @@ class CokiSwimmingOceanPane extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            'coki_swimming_assets/coki_swimming_pool_muse.png',
+            'coki_swimming_assets/coki_swimming_aqua_portrait.png',
             fit: BoxFit.cover,
           ),
           Container(color: Colors.black.withValues(alpha: 0.18)),

@@ -22,7 +22,7 @@ class CokiSwimmingPersonaPane extends StatelessWidget {
                     bottom: Radius.circular(28),
                   ),
                   child: Image.asset(
-                    'coki_swimming_assets/coki_swimming_pool_muse.png',
+                    'coki_swimming_assets/coki_swimming_aqua_portrait.png',
                     fit: BoxFit.cover,
                   ),
                 ),
