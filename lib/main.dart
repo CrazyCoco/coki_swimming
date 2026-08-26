@@ -11,7 +11,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import 'coki_swimming_app/coki_swimming_app_routes/coki_swimming_app_routes_paths.dart';
+import 'coki_swimming_media/coki_swimming_media_avatar_service.dart';
 import 'coki_swimming_storage/coki_swimming_storage_database.dart';
+import 'coki_swimming_widgets/coki_swimming_widgets_avatar_image.dart';
 
 part 'coki_swimming_app/coki_swimming_app.dart';
 part 'coki_swimming_app/coki_swimming_app_access_gate.dart';
@@ -73,6 +75,8 @@ part 'coki_swimming_dialogs/coki_swimming_dialogs_confirm.dart';
 part 'coki_swimming_dialogs/coki_swimming_dialogs_login_prompt.dart';
 part 'coki_swimming_dialogs/coki_swimming_dialogs_notes_sheet.dart';
 part 'coki_swimming_dialogs/coki_swimming_dialogs_panel.dart';
+part 'coki_swimming_dialogs/coki_swimming_dialogs_permission_prompt.dart';
+part 'coki_swimming_dialogs/coki_swimming_dialogs_photo_source.dart';
 part 'coki_swimming_dialogs/coki_swimming_dialogs_release_sheet.dart';
 part 'coki_swimming_dialogs/coki_swimming_dialogs_report_sheet.dart';
 part 'coki_swimming_dialogs/coki_swimming_dialogs_toast.dart';

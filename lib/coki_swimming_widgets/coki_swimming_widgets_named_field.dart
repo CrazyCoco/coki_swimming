@@ -49,8 +49,22 @@ class CokiSwimmingNamedField extends StatelessWidget {
             ),
             filled: true,
             fillColor: Colors.white,
+            contentPadding: EdgeInsets.fromLTRB(
+              15,
+              maxLines > 1 ? 15 : 17,
+              15,
+              maxLines > 1 ? 15 : 17,
+            ),
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(maxLines > 1 ? 8 : 6),
+              borderRadius: BorderRadius.circular(16),
+              borderSide: BorderSide.none,
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16),
+              borderSide: BorderSide.none,
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16),
               borderSide: BorderSide.none,
             ),
           ),

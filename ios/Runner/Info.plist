@@ -31,6 +31,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Used to take a profile photo for your Coki swimming account.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Used to choose a profile photo for your Coki swimming account.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Used to record audio when you create swimming videos or voice content in Coki.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
