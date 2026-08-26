@@ -116,9 +116,17 @@ class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
   }
 
   Future<void> _deleteAccount() async {
-    final memberId = _currentMember?.id;
-    if (memberId != null) {
-      await CokiSwimmingDatabase.instance.deleteMember(memberId);
+    final member = _currentMember;
+    if (member != null) {
+      await CokiSwimmingDatabase.instance.deleteMember(member.id);
+      try {
+        await CokiSwimmingAvatarService.instance.deleteOwnedAvatar(
+          member.avatarPath,
+          member.id,
+        );
+      } on Object {
+        // The account is already removed; a stale local file must not restore it.
+      }
     }
     await CokiSwimmingSessionStore.clear();
     if (!mounted) return;
@@ -208,8 +216,9 @@ class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
                   ),
           CokiSwimmingRoutesPaths.setting => CokiSwimmingSettingScreen(
             onExit: _exitAccount,
-            onDelete: _deleteAccount,
           ),
+          CokiSwimmingRoutesPaths.deleteAccount =>
+            CokiSwimmingDeleteAccountScreen(onDelete: _deleteAccount),
           CokiSwimmingRoutesPaths.fans => const CokiSwimmingPeopleScreen(
             title: 'Fans',
             actionLabel: 'Follow',
@@ -226,8 +235,16 @@ class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
             isVisitor: _isVisitor,
           ),
           CokiSwimmingRoutesPaths.concern => const CokiSwimmingConcernScreen(),
-          CokiSwimmingRoutesPaths.companion =>
-            const CokiSwimmingCompanionScreen(),
+          CokiSwimmingRoutesPaths.companion => CokiSwimmingCompanionScreen(
+            memberId: _currentMember?.id,
+          ),
+          CokiSwimmingRoutesPaths.guideDialogue =>
+            _currentMember == null
+                ? CokiSwimmingWelcomeScreen(
+                    hasAcceptedEula: _hasAcceptedEula,
+                    onVisitorMode: _enterVisitor,
+                  )
+                : CokiSwimmingGuideDialogueScreen(memberId: _currentMember!.id),
           CokiSwimmingRoutesPaths.dialogue =>
             const CokiSwimmingDialogueScreen(),
           CokiSwimmingRoutesPaths.call => const CokiSwimmingCallScreen(),

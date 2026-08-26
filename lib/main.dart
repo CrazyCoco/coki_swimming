@@ -1,23 +1,33 @@
 import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
+import 'dart:math' as math;
 import 'dart:ui';
 
+import 'package:convert/convert.dart';
+import 'package:dio/dio.dart';
+import 'package:encrypt/encrypt.dart' as coki_crypto;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_storekit/in_app_purchase_storekit.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import 'coki_swimming_app/coki_swimming_app_routes/coki_swimming_app_routes_paths.dart';
 import 'coki_swimming_media/coki_swimming_media_avatar_service.dart';
+import 'coki_swimming_services/coki_swimming_services_device.dart';
 import 'coki_swimming_storage/coki_swimming_storage_database.dart';
 import 'coki_swimming_widgets/coki_swimming_widgets_avatar_image.dart';
 
 part 'coki_swimming_app/coki_swimming_app.dart';
 part 'coki_swimming_app/coki_swimming_app_access_gate.dart';
 part 'coki_swimming_network/coki_swimming_network_config.dart';
+part 'coki_swimming_network/coki_swimming_network_guide_codec.dart';
+part 'coki_swimming_network/coki_swimming_network_guide_service.dart';
 part 'coki_swimming_purchases/coki_swimming_purchases_catalog.dart';
 part 'coki_swimming_purchases/coki_swimming_purchases_store_service.dart';
 part 'coki_swimming_security/coki_swimming_security_crypto_config.dart';
@@ -27,11 +37,13 @@ part 'coki_swimming_pages/coki_swimming_pages_clip.dart';
 part 'coki_swimming_pages/coki_swimming_pages_companion.dart';
 part 'coki_swimming_pages/coki_swimming_pages_compose.dart';
 part 'coki_swimming_pages/coki_swimming_pages_concern.dart';
+part 'coki_swimming_pages/coki_swimming_pages_delete_account.dart';
 part 'coki_swimming_pages/coki_swimming_pages_detail.dart';
 part 'coki_swimming_pages/coki_swimming_pages_dialogue.dart';
 part 'coki_swimming_pages/coki_swimming_pages_edit.dart';
 part 'coki_swimming_pages/coki_swimming_pages_eula.dart';
 part 'coki_swimming_pages/coki_swimming_pages_form.dart';
+part 'coki_swimming_pages/coki_swimming_pages_guide_dialogue.dart';
 part 'coki_swimming_pages/coki_swimming_pages_home.dart';
 part 'coki_swimming_pages/coki_swimming_pages_hub.dart';
 part 'coki_swimming_pages/coki_swimming_pages_inbox.dart';

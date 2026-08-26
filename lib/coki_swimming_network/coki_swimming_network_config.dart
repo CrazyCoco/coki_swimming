@@ -10,4 +10,5 @@ class CokiSwimmingNetworkConfig {
   static const String userAgreementUrl = '$officialWebsiteUrl/users/';
   static const String privacyPolicyUrl = '$officialWebsiteUrl/privacy/';
   static const String baseUrl = 'https://$apiHost';
+  static const String guidePath = '/opi/v1/cokiswimmingais';
 }

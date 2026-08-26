@@ -1,14 +1,9 @@
 part of '../main.dart';
 
 class CokiSwimmingSettingScreen extends StatelessWidget {
-  const CokiSwimmingSettingScreen({
-    super.key,
-    required this.onExit,
-    required this.onDelete,
-  });
+  const CokiSwimmingSettingScreen({super.key, required this.onExit});
 
   final VoidCallback onExit;
-  final Future<void> Function() onDelete;
 
   @override
   Widget build(BuildContext context) {
@@ -68,8 +63,9 @@ class CokiSwimmingSettingScreen extends StatelessWidget {
                             color: const Color(0xFFD43161),
                             height: 62,
                             fontSize: 22,
-                            onTap: () =>
-                                CokiSwimmingConfirm.show(context, onDelete),
+                            onTap: () => Navigator.of(
+                              context,
+                            ).pushNamed(CokiSwimmingRoutesPaths.deleteAccount),
                           ),
                         ),
                         const SizedBox(height: 20),

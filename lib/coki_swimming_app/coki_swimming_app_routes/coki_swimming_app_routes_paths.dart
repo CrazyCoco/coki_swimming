@@ -17,12 +17,14 @@ class CokiSwimmingRoutesPaths {
   static const String vault = '/vault';
   static const String edit = '/edit';
   static const String setting = '/setting';
+  static const String deleteAccount = '/delete-account';
   static const String fans = '/fans';
   static const String circle = '/circle';
   static const String shield = '/shield';
   static const String swimmer = '/swimmer';
   static const String concern = '/concern';
   static const String companion = '/companion';
+  static const String guideDialogue = '/guide-dialogue';
   static const String dialogue = '/dialogue';
   static const String call = '/call';
 }

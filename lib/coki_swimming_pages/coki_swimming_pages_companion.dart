@@ -1,7 +1,9 @@
 part of '../main.dart';
 
 class CokiSwimmingCompanionScreen extends StatelessWidget {
-  const CokiSwimmingCompanionScreen({super.key});
+  const CokiSwimmingCompanionScreen({super.key, required this.memberId});
+
+  final int? memberId;
 
   @override
   Widget build(BuildContext context) {
@@ -86,9 +88,15 @@ class CokiSwimmingCompanionScreen extends StatelessWidget {
                             width: 22,
                             height: 22,
                           ),
-                          onTap: () => Navigator.of(
-                            context,
-                          ).pushNamed(CokiSwimmingRoutesPaths.dialogue),
+                          onTap: () {
+                            if (memberId == null) {
+                              CokiSwimmingLoginPrompt.show(context);
+                              return;
+                            }
+                            Navigator.of(
+                              context,
+                            ).pushNamed(CokiSwimmingRoutesPaths.guideDialogue);
+                          },
                         ),
                       ),
                     ],

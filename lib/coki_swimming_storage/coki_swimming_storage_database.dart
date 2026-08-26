@@ -23,6 +23,14 @@ class CokiSwimmingMembers extends Table {
   DateTimeColumn get updatedAt => dateTime()();
 }
 
+class CokiSwimmingGuideLines extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  IntColumn get memberId => integer()();
+  TextColumn get content => text()();
+  BoolColumn get fromGuide => boolean()();
+  DateTimeColumn get createdAt => dateTime()();
+}
+
 class CokiSwimmingStorageException implements Exception {
   const CokiSwimmingStorageException(this.message);
 
@@ -32,7 +40,7 @@ class CokiSwimmingStorageException implements Exception {
   String toString() => message;
 }
 
-@DriftDatabase(tables: [CokiSwimmingMembers])
+@DriftDatabase(tables: [CokiSwimmingMembers, CokiSwimmingGuideLines])
 class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
   CokiSwimmingDatabase._()
     : super(driftDatabase(name: 'coki_swimming_members'));
@@ -40,7 +48,7 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
   static final CokiSwimmingDatabase instance = CokiSwimmingDatabase._();
 
   @override
-  int get schemaVersion => 2;
+  int get schemaVersion => 3;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -51,6 +59,9 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
           cokiSwimmingMembers,
           cokiSwimmingMembers.coinBalance,
         );
+      }
+      if (from < 3) {
+        await migrator.createTable(cokiSwimmingGuideLines);
       }
     },
   );
@@ -164,9 +175,66 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
   }
 
   Future<void> deleteMember(int memberId) async {
-    await (delete(
-      cokiSwimmingMembers,
-    )..where((row) => row.id.equals(memberId))).go();
+    await transaction(() async {
+      await (delete(
+        cokiSwimmingGuideLines,
+      )..where((row) => row.memberId.equals(memberId))).go();
+      await (delete(
+        cokiSwimmingMembers,
+      )..where((row) => row.id.equals(memberId))).go();
+    });
+  }
+
+  Stream<List<CokiSwimmingGuideLine>> watchGuideLines(int memberId) {
+    return (select(cokiSwimmingGuideLines)
+          ..where((row) => row.memberId.equals(memberId))
+          ..orderBy([
+            (row) => OrderingTerm.asc(row.createdAt),
+            (row) => OrderingTerm.asc(row.id),
+          ]))
+        .watch();
+  }
+
+  Future<List<CokiSwimmingGuideLine>> recentGuideLines(
+    int memberId, {
+    int limit = 24,
+  }) async {
+    final rows =
+        await (select(cokiSwimmingGuideLines)
+              ..where((row) => row.memberId.equals(memberId))
+              ..orderBy([
+                (row) => OrderingTerm.desc(row.createdAt),
+                (row) => OrderingTerm.desc(row.id),
+              ])
+              ..limit(limit))
+            .get();
+    return rows.reversed.toList(growable: false);
+  }
+
+  Future<void> addGuideLine({
+    required int memberId,
+    required String content,
+    required bool fromGuide,
+  }) async {
+    final normalized = content.trim();
+    if (normalized.isEmpty) return;
+    if (await memberById(memberId) == null) {
+      throw const CokiSwimmingStorageException('Account no longer exists');
+    }
+    await into(cokiSwimmingGuideLines).insert(
+      CokiSwimmingGuideLinesCompanion.insert(
+        memberId: memberId,
+        content: normalized,
+        fromGuide: fromGuide,
+        createdAt: DateTime.now(),
+      ),
+    );
+  }
+
+  Future<void> clearGuideLines(int memberId) {
+    return (delete(
+      cokiSwimmingGuideLines,
+    )..where((row) => row.memberId.equals(memberId))).go();
   }
 
   Future<CokiSwimmingMember?> _memberByEmail(String email) {

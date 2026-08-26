@@ -13,7 +13,7 @@ class CokiSwimmingConfirm {
         child: _CokiSwimmingDialogPanel(
           title: 'Delete account',
           detail:
-              'This will remove your profile from this device and return to login.',
+              'This permanently deletes your account and its associated data. This action cannot be undone.',
           actionLabel: 'OK',
           onAction: () async {
             Navigator.of(context).pop();

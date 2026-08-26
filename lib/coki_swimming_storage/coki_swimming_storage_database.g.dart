@@ -678,17 +678,381 @@ class CokiSwimmingMembersCompanion extends UpdateCompanion<CokiSwimmingMember> {
   }
 }
 
+class $CokiSwimmingGuideLinesTable extends CokiSwimmingGuideLines
+    with TableInfo<$CokiSwimmingGuideLinesTable, CokiSwimmingGuideLine> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $CokiSwimmingGuideLinesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _memberIdMeta = const VerificationMeta(
+    'memberId',
+  );
+  @override
+  late final GeneratedColumn<int> memberId = GeneratedColumn<int>(
+    'member_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _contentMeta = const VerificationMeta(
+    'content',
+  );
+  @override
+  late final GeneratedColumn<String> content = GeneratedColumn<String>(
+    'content',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _fromGuideMeta = const VerificationMeta(
+    'fromGuide',
+  );
+  @override
+  late final GeneratedColumn<bool> fromGuide = GeneratedColumn<bool>(
+    'from_guide',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("from_guide" IN (0, 1))',
+    ),
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    memberId,
+    content,
+    fromGuide,
+    createdAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'coki_swimming_guide_lines';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<CokiSwimmingGuideLine> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('member_id')) {
+      context.handle(
+        _memberIdMeta,
+        memberId.isAcceptableOrUnknown(data['member_id']!, _memberIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_memberIdMeta);
+    }
+    if (data.containsKey('content')) {
+      context.handle(
+        _contentMeta,
+        content.isAcceptableOrUnknown(data['content']!, _contentMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_contentMeta);
+    }
+    if (data.containsKey('from_guide')) {
+      context.handle(
+        _fromGuideMeta,
+        fromGuide.isAcceptableOrUnknown(data['from_guide']!, _fromGuideMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_fromGuideMeta);
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  CokiSwimmingGuideLine map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return CokiSwimmingGuideLine(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      memberId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}member_id'],
+      )!,
+      content: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}content'],
+      )!,
+      fromGuide: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}from_guide'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+    );
+  }
+
+  @override
+  $CokiSwimmingGuideLinesTable createAlias(String alias) {
+    return $CokiSwimmingGuideLinesTable(attachedDatabase, alias);
+  }
+}
+
+class CokiSwimmingGuideLine extends DataClass
+    implements Insertable<CokiSwimmingGuideLine> {
+  final int id;
+  final int memberId;
+  final String content;
+  final bool fromGuide;
+  final DateTime createdAt;
+  const CokiSwimmingGuideLine({
+    required this.id,
+    required this.memberId,
+    required this.content,
+    required this.fromGuide,
+    required this.createdAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['member_id'] = Variable<int>(memberId);
+    map['content'] = Variable<String>(content);
+    map['from_guide'] = Variable<bool>(fromGuide);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  CokiSwimmingGuideLinesCompanion toCompanion(bool nullToAbsent) {
+    return CokiSwimmingGuideLinesCompanion(
+      id: Value(id),
+      memberId: Value(memberId),
+      content: Value(content),
+      fromGuide: Value(fromGuide),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory CokiSwimmingGuideLine.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return CokiSwimmingGuideLine(
+      id: serializer.fromJson<int>(json['id']),
+      memberId: serializer.fromJson<int>(json['memberId']),
+      content: serializer.fromJson<String>(json['content']),
+      fromGuide: serializer.fromJson<bool>(json['fromGuide']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'memberId': serializer.toJson<int>(memberId),
+      'content': serializer.toJson<String>(content),
+      'fromGuide': serializer.toJson<bool>(fromGuide),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  CokiSwimmingGuideLine copyWith({
+    int? id,
+    int? memberId,
+    String? content,
+    bool? fromGuide,
+    DateTime? createdAt,
+  }) => CokiSwimmingGuideLine(
+    id: id ?? this.id,
+    memberId: memberId ?? this.memberId,
+    content: content ?? this.content,
+    fromGuide: fromGuide ?? this.fromGuide,
+    createdAt: createdAt ?? this.createdAt,
+  );
+  CokiSwimmingGuideLine copyWithCompanion(
+    CokiSwimmingGuideLinesCompanion data,
+  ) {
+    return CokiSwimmingGuideLine(
+      id: data.id.present ? data.id.value : this.id,
+      memberId: data.memberId.present ? data.memberId.value : this.memberId,
+      content: data.content.present ? data.content.value : this.content,
+      fromGuide: data.fromGuide.present ? data.fromGuide.value : this.fromGuide,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('CokiSwimmingGuideLine(')
+          ..write('id: $id, ')
+          ..write('memberId: $memberId, ')
+          ..write('content: $content, ')
+          ..write('fromGuide: $fromGuide, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(id, memberId, content, fromGuide, createdAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is CokiSwimmingGuideLine &&
+          other.id == this.id &&
+          other.memberId == this.memberId &&
+          other.content == this.content &&
+          other.fromGuide == this.fromGuide &&
+          other.createdAt == this.createdAt);
+}
+
+class CokiSwimmingGuideLinesCompanion
+    extends UpdateCompanion<CokiSwimmingGuideLine> {
+  final Value<int> id;
+  final Value<int> memberId;
+  final Value<String> content;
+  final Value<bool> fromGuide;
+  final Value<DateTime> createdAt;
+  const CokiSwimmingGuideLinesCompanion({
+    this.id = const Value.absent(),
+    this.memberId = const Value.absent(),
+    this.content = const Value.absent(),
+    this.fromGuide = const Value.absent(),
+    this.createdAt = const Value.absent(),
+  });
+  CokiSwimmingGuideLinesCompanion.insert({
+    this.id = const Value.absent(),
+    required int memberId,
+    required String content,
+    required bool fromGuide,
+    required DateTime createdAt,
+  }) : memberId = Value(memberId),
+       content = Value(content),
+       fromGuide = Value(fromGuide),
+       createdAt = Value(createdAt);
+  static Insertable<CokiSwimmingGuideLine> custom({
+    Expression<int>? id,
+    Expression<int>? memberId,
+    Expression<String>? content,
+    Expression<bool>? fromGuide,
+    Expression<DateTime>? createdAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (memberId != null) 'member_id': memberId,
+      if (content != null) 'content': content,
+      if (fromGuide != null) 'from_guide': fromGuide,
+      if (createdAt != null) 'created_at': createdAt,
+    });
+  }
+
+  CokiSwimmingGuideLinesCompanion copyWith({
+    Value<int>? id,
+    Value<int>? memberId,
+    Value<String>? content,
+    Value<bool>? fromGuide,
+    Value<DateTime>? createdAt,
+  }) {
+    return CokiSwimmingGuideLinesCompanion(
+      id: id ?? this.id,
+      memberId: memberId ?? this.memberId,
+      content: content ?? this.content,
+      fromGuide: fromGuide ?? this.fromGuide,
+      createdAt: createdAt ?? this.createdAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (memberId.present) {
+      map['member_id'] = Variable<int>(memberId.value);
+    }
+    if (content.present) {
+      map['content'] = Variable<String>(content.value);
+    }
+    if (fromGuide.present) {
+      map['from_guide'] = Variable<bool>(fromGuide.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('CokiSwimmingGuideLinesCompanion(')
+          ..write('id: $id, ')
+          ..write('memberId: $memberId, ')
+          ..write('content: $content, ')
+          ..write('fromGuide: $fromGuide, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$CokiSwimmingDatabase extends GeneratedDatabase {
   _$CokiSwimmingDatabase(QueryExecutor e) : super(e);
   $CokiSwimmingDatabaseManager get managers =>
       $CokiSwimmingDatabaseManager(this);
   late final $CokiSwimmingMembersTable cokiSwimmingMembers =
       $CokiSwimmingMembersTable(this);
+  late final $CokiSwimmingGuideLinesTable cokiSwimmingGuideLines =
+      $CokiSwimmingGuideLinesTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
   @override
-  List<DatabaseSchemaEntity> get allSchemaEntities => [cokiSwimmingMembers];
+  List<DatabaseSchemaEntity> get allSchemaEntities => [
+    cokiSwimmingMembers,
+    cokiSwimmingGuideLines,
+  ];
 }
 
 typedef $$CokiSwimmingMembersTableCreateCompanionBuilder =
@@ -1027,10 +1391,228 @@ typedef $$CokiSwimmingMembersTableProcessedTableManager =
       CokiSwimmingMember,
       PrefetchHooks Function()
     >;
+typedef $$CokiSwimmingGuideLinesTableCreateCompanionBuilder =
+    CokiSwimmingGuideLinesCompanion Function({
+      Value<int> id,
+      required int memberId,
+      required String content,
+      required bool fromGuide,
+      required DateTime createdAt,
+    });
+typedef $$CokiSwimmingGuideLinesTableUpdateCompanionBuilder =
+    CokiSwimmingGuideLinesCompanion Function({
+      Value<int> id,
+      Value<int> memberId,
+      Value<String> content,
+      Value<bool> fromGuide,
+      Value<DateTime> createdAt,
+    });
+
+class $$CokiSwimmingGuideLinesTableFilterComposer
+    extends Composer<_$CokiSwimmingDatabase, $CokiSwimmingGuideLinesTable> {
+  $$CokiSwimmingGuideLinesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get memberId => $composableBuilder(
+    column: $table.memberId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get content => $composableBuilder(
+    column: $table.content,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get fromGuide => $composableBuilder(
+    column: $table.fromGuide,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$CokiSwimmingGuideLinesTableOrderingComposer
+    extends Composer<_$CokiSwimmingDatabase, $CokiSwimmingGuideLinesTable> {
+  $$CokiSwimmingGuideLinesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get memberId => $composableBuilder(
+    column: $table.memberId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get content => $composableBuilder(
+    column: $table.content,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get fromGuide => $composableBuilder(
+    column: $table.fromGuide,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$CokiSwimmingGuideLinesTableAnnotationComposer
+    extends Composer<_$CokiSwimmingDatabase, $CokiSwimmingGuideLinesTable> {
+  $$CokiSwimmingGuideLinesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<int> get memberId =>
+      $composableBuilder(column: $table.memberId, builder: (column) => column);
+
+  GeneratedColumn<String> get content =>
+      $composableBuilder(column: $table.content, builder: (column) => column);
+
+  GeneratedColumn<bool> get fromGuide =>
+      $composableBuilder(column: $table.fromGuide, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$CokiSwimmingGuideLinesTableTableManager
+    extends
+        RootTableManager<
+          _$CokiSwimmingDatabase,
+          $CokiSwimmingGuideLinesTable,
+          CokiSwimmingGuideLine,
+          $$CokiSwimmingGuideLinesTableFilterComposer,
+          $$CokiSwimmingGuideLinesTableOrderingComposer,
+          $$CokiSwimmingGuideLinesTableAnnotationComposer,
+          $$CokiSwimmingGuideLinesTableCreateCompanionBuilder,
+          $$CokiSwimmingGuideLinesTableUpdateCompanionBuilder,
+          (
+            CokiSwimmingGuideLine,
+            BaseReferences<
+              _$CokiSwimmingDatabase,
+              $CokiSwimmingGuideLinesTable,
+              CokiSwimmingGuideLine
+            >,
+          ),
+          CokiSwimmingGuideLine,
+          PrefetchHooks Function()
+        > {
+  $$CokiSwimmingGuideLinesTableTableManager(
+    _$CokiSwimmingDatabase db,
+    $CokiSwimmingGuideLinesTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$CokiSwimmingGuideLinesTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$CokiSwimmingGuideLinesTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$CokiSwimmingGuideLinesTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> memberId = const Value.absent(),
+                Value<String> content = const Value.absent(),
+                Value<bool> fromGuide = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+              }) => CokiSwimmingGuideLinesCompanion(
+                id: id,
+                memberId: memberId,
+                content: content,
+                fromGuide: fromGuide,
+                createdAt: createdAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required int memberId,
+                required String content,
+                required bool fromGuide,
+                required DateTime createdAt,
+              }) => CokiSwimmingGuideLinesCompanion.insert(
+                id: id,
+                memberId: memberId,
+                content: content,
+                fromGuide: fromGuide,
+                createdAt: createdAt,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$CokiSwimmingGuideLinesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$CokiSwimmingDatabase,
+      $CokiSwimmingGuideLinesTable,
+      CokiSwimmingGuideLine,
+      $$CokiSwimmingGuideLinesTableFilterComposer,
+      $$CokiSwimmingGuideLinesTableOrderingComposer,
+      $$CokiSwimmingGuideLinesTableAnnotationComposer,
+      $$CokiSwimmingGuideLinesTableCreateCompanionBuilder,
+      $$CokiSwimmingGuideLinesTableUpdateCompanionBuilder,
+      (
+        CokiSwimmingGuideLine,
+        BaseReferences<
+          _$CokiSwimmingDatabase,
+          $CokiSwimmingGuideLinesTable,
+          CokiSwimmingGuideLine
+        >,
+      ),
+      CokiSwimmingGuideLine,
+      PrefetchHooks Function()
+    >;
 
 class $CokiSwimmingDatabaseManager {
   final _$CokiSwimmingDatabase _db;
   $CokiSwimmingDatabaseManager(this._db);
   $$CokiSwimmingMembersTableTableManager get cokiSwimmingMembers =>
       $$CokiSwimmingMembersTableTableManager(_db, _db.cokiSwimmingMembers);
+  $$CokiSwimmingGuideLinesTableTableManager get cokiSwimmingGuideLines =>
+      $$CokiSwimmingGuideLinesTableTableManager(
+        _db,
+        _db.cokiSwimmingGuideLines,
+      );
 }

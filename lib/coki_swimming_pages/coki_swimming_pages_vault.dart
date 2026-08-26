@@ -30,6 +30,18 @@ class _CokiSwimmingVaultScreenState extends State<CokiSwimmingVaultScreen> {
                 alignment: Alignment.topCenter,
               ),
             ),
+            Positioned(
+              right: 38,
+              top: 88,
+              child: IgnorePointer(
+                child: Image.asset(
+                  'coki_swimming_assets/coki_swimming_vault_bag.png',
+                  width: 110,
+                  height: 110,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
             SafeArea(
               bottom: false,
               child: Column(
