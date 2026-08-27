@@ -1,16 +1,80 @@
 part of '../main.dart';
 
-class CokiSwimmingCompanionScreen extends StatelessWidget {
+class CokiSwimmingCompanionScreen extends StatefulWidget {
   const CokiSwimmingCompanionScreen({super.key, required this.memberId});
 
   final int? memberId;
 
-  void _openDialogue(BuildContext context) {
+  @override
+  State<CokiSwimmingCompanionScreen> createState() =>
+      _CokiSwimmingCompanionScreenState();
+}
+
+class _CokiSwimmingCompanionScreenState
+    extends State<CokiSwimmingCompanionScreen> {
+  static const int _entryCost = 100;
+
+  bool _checkingAccess = false;
+
+  Future<void> _openDialogue() async {
+    final memberId = widget.memberId;
     if (memberId == null) {
       CokiSwimmingLoginPrompt.show(context);
       return;
     }
-    Navigator.of(context).pushNamed(CokiSwimmingRoutesPaths.guideDialogue);
+    if (_checkingAccess) return;
+    _checkingAccess = true;
+    try {
+      final member = await CokiSwimmingDatabase.instance.memberById(memberId);
+      if (!mounted) return;
+      if (member == null) {
+        CokiSwimmingLoginPrompt.show(context);
+        return;
+      }
+      if (member.coinBalance < _entryCost) {
+        await CokiSwimmingGuideEntryPrompt.showInsufficient(
+          context,
+          member.coinBalance,
+        );
+        return;
+      }
+
+      final confirmed = await CokiSwimmingGuideEntryPrompt.confirm(
+        context,
+        member.coinBalance,
+      );
+      if (!confirmed || !mounted) return;
+
+      final consumed = await CokiSwimmingDatabase.instance.consumeGuideAccess(
+        memberId: memberId,
+        quantity: _entryCost,
+      );
+      if (!mounted) return;
+      if (!consumed) {
+        final latest = await CokiSwimmingDatabase.instance.memberById(memberId);
+        if (!mounted) return;
+        await CokiSwimmingGuideEntryPrompt.showInsufficient(
+          context,
+          latest?.coinBalance ?? 0,
+        );
+        return;
+      }
+      if (!mounted) return;
+      await Navigator.of(
+        context,
+      ).pushNamed(CokiSwimmingRoutesPaths.guideDialogue);
+    } on CokiSwimmingStorageException catch (error) {
+      if (mounted) CokiSwimmingToast.show(context, error.message);
+    } catch (_) {
+      if (mounted) {
+        CokiSwimmingToast.show(
+          context,
+          'Unable to enter Coki AI. Please try again.',
+        );
+      }
+    } finally {
+      _checkingAccess = false;
+    }
   }
 
   @override
@@ -27,60 +91,7 @@ class CokiSwimmingCompanionScreen extends StatelessWidget {
               fit: StackFit.expand,
               children: [
                 Positioned.fill(
-                  child: Image.asset(
-                    'coki_swimming_assets/coki_swimming_neon_aura.png',
-                    fit: BoxFit.cover,
-                    alignment: Alignment.topCenter,
-                  ),
-                ),
-                Positioned(
-                  right: 28 * designScale,
-                  top: 76 * designScale,
-                  child: Image.asset(
-                    'coki_swimming_assets/coki_swimming_landing_companion.png',
-                    width: 215 * designScale,
-                    height: 253 * designScale,
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                Positioned(
-                  left: 23 * designScale,
-                  top: 117 * designScale,
-                  child: _CokiSwimmingCompanionVerticalTitle(
-                    designScale: designScale,
-                  ),
-                ),
-                Positioned(
-                  left: 110 * designScale,
-                  right: 39 * designScale,
-                  top: 264 * designScale,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(23 * designScale),
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaX: 7, sigmaY: 7),
-                      child: Container(
-                        height: 46 * designScale,
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 8 * designScale,
-                        ),
-                        alignment: Alignment.center,
-                        color: const Color(0xFFB5A4B9).withValues(alpha: 0.34),
-                        child: const Text(
-                          'Chat with AI to unlock swimming tips,\ntechniques, and more.',
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                            height: 1.25,
-                            letterSpacing: 0,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  child: CokiSwimmingGuideHeader(designScale: designScale),
                 ),
                 Positioned(
                   left: 0,
@@ -94,52 +105,64 @@ class CokiSwimmingCompanionScreen extends StatelessWidget {
                         top: Radius.circular(36),
                       ),
                     ),
-                    child: SingleChildScrollView(
-                      physics: const BouncingScrollPhysics(),
-                      padding: EdgeInsets.fromLTRB(
-                        29,
-                        20,
-                        29,
-                        MediaQuery.paddingOf(context).bottom + 20,
-                      ),
-                      child: Column(
-                        children: [
-                          const Text(
-                            'Coki AI',
-                            style: TextStyle(
-                              color: Color(0xFF100A30),
-                              fontSize: 26,
-                              height: 1.2,
-                              letterSpacing: 0,
-                              fontWeight: FontWeight.w900,
+                    child: Stack(
+                      children: [
+                        Positioned.fill(
+                          child: SingleChildScrollView(
+                            physics: const BouncingScrollPhysics(),
+                            padding: EdgeInsets.fromLTRB(
+                              29,
+                              20,
+                              29,
+                              MediaQuery.paddingOf(context).bottom + 119,
+                            ),
+                            child: const Column(
+                              children: [
+                                Text(
+                                  'Coki AI',
+                                  style: TextStyle(
+                                    color: Color(0xFF100A30),
+                                    fontSize: 26,
+                                    height: 1.2,
+                                    letterSpacing: 0,
+                                    fontWeight: FontWeight.w900,
+                                  ),
+                                ),
+                                SizedBox(height: 20),
+                                Text(
+                                  'Hi! I’m Coki, your friendly AI companion\n'
+                                  'here to chat about all things swimming.\n'
+                                  "Whether you're a beginner, a seasoned\n"
+                                  'swimmer, or just love the water, I’m here to\n'
+                                  'explore techniques, share tips, and keep\n'
+                                  'the conversation inspiring and fun. Ready\n'
+                                  'to dive into the world of swimming\n'
+                                  'together? Let’s talk and make a splash\n'
+                                  'every day!',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Color(0xFF100A30),
+                                    fontSize: 16,
+                                    height: 1.85,
+                                    letterSpacing: 0,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          const SizedBox(height: 20),
-                          const Text(
-                            'Hi! I’m Coki, your friendly AI companion\n'
-                            'here to chat about all things swimming.\n'
-                            "Whether you're a beginner, a seasoned\n"
-                            'swimmer, or just love the water, I’m here to\n'
-                            'explore techniques, share tips, and keep\n'
-                            'the conversation inspiring and fun. Ready\n'
-                            'to dive into the world of swimming\n'
-                            'together? Let’s talk and make a splash\n'
-                            'every day!',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Color(0xFF100A30),
-                              fontSize: 16,
-                              height: 1.85,
-                              letterSpacing: 0,
-                              fontWeight: FontWeight.w400,
+                        ),
+                        Positioned(
+                          left: 29,
+                          right: 29,
+                          bottom: MediaQuery.paddingOf(context).bottom + 20,
+                          child: Center(
+                            child: _CokiSwimmingCompanionActionButton(
+                              onTap: _openDialogue,
                             ),
                           ),
-                          const SizedBox(height: 37),
-                          _CokiSwimmingCompanionActionButton(
-                            onTap: () => _openDialogue(context),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -156,59 +179,6 @@ class CokiSwimmingCompanionScreen extends StatelessWidget {
             );
           },
         ),
-      ),
-    );
-  }
-}
-
-class _CokiSwimmingCompanionVerticalTitle extends StatelessWidget {
-  const _CokiSwimmingCompanionVerticalTitle({required this.designScale});
-
-  final double designScale;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 60 * designScale,
-      height: 193 * designScale,
-      child: Stack(
-        children: [
-          Positioned(
-            top: 0,
-            right: 0,
-            child: Image.asset(
-              'coki_swimming_assets/coki_swimming_landing_star.png',
-              width: 18 * designScale,
-              height: 18 * designScale,
-            ),
-          ),
-          Positioned(
-            left: 0,
-            top: 23 * designScale,
-            child: RotatedBox(
-              quarterTurns: 1,
-              child: Text(
-                'Coki AI',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 34 * designScale,
-                  height: 1,
-                  letterSpacing: 0,
-                  fontWeight: FontWeight.w900,
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            left: 0,
-            bottom: 0,
-            child: Image.asset(
-              'coki_swimming_assets/coki_swimming_landing_plus_plus.png',
-              width: 36 * designScale,
-              height: 18 * designScale,
-            ),
-          ),
-        ],
       ),
     );
   }

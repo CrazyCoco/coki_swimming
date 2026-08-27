@@ -16,8 +16,8 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="YRO-k0-Ey4">
-                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="LaunchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="YRO-k0-Ey4"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="VbA-9p-mR2"/>
                         </subviews>
                         <color key="backgroundColor" red="0.062745098" green="0.039215686" blue="0.188235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -25,6 +25,10 @@
                             <constraint firstItem="YRO-k0-Ey4" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="1a2-6s-vTC"/>
                             <constraint firstItem="YRO-k0-Ey4" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="4X2-HB-R7a"/>
                             <constraint firstItem="YRO-k0-Ey4" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="Nuu-rr-I6N"/>
+                            <constraint firstItem="VbA-9p-mR2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="P3Y-vS-Wf7"/>
+                            <constraint firstItem="VbA-9p-mR2" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Qh7-rA-2Db"/>
+                            <constraint firstItem="VbA-9p-mR2" firstAttribute="width" constant="114" id="T1u-Lc-4aM"/>
+                            <constraint firstItem="VbA-9p-mR2" firstAttribute="height" constant="163" id="x9M-2B-fK8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,6 +38,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchImage" width="125" height="271"/>
+        <image name="LaunchBackground" width="375" height="812"/>
+        <image name="LaunchImage" width="114" height="163"/>
     </resources>
 </document>

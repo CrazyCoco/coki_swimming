@@ -260,6 +260,33 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
     )..where((row) => row.memberId.equals(memberId))).go();
   }
 
+  Future<bool> consumeGuideAccess({
+    required int memberId,
+    required int quantity,
+  }) {
+    if (quantity <= 0) {
+      throw const CokiSwimmingStorageException(
+        'The Coki AI access quantity is invalid',
+      );
+    }
+    return transaction(() async {
+      final member = await memberById(memberId);
+      if (member == null) {
+        throw const CokiSwimmingStorageException('Account no longer exists');
+      }
+      if (member.coinBalance < quantity) return false;
+      await (update(
+        cokiSwimmingMembers,
+      )..where((row) => row.id.equals(memberId))).write(
+        CokiSwimmingMembersCompanion(
+          coinBalance: Value(member.coinBalance - quantity),
+          updatedAt: Value(DateTime.now()),
+        ),
+      );
+      return true;
+    });
+  }
+
   Future<bool> applyStoreDelivery({
     required int memberId,
     required String transactionKey,
