@@ -150,51 +150,32 @@ class _CokiSwimmingClipNotesLayerState
                           height: 44,
                           child: Stack(
                             children: [
-                              const Positioned(
-                                left: 0,
-                                top: 2,
-                                child: Text(
-                                  'Comments',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 22,
-                                    height: 1.2,
-                                    letterSpacing: 0,
-                                    fontWeight: FontWeight.w900,
-                                  ),
-                                ),
-                              ),
                               Positioned(
-                                left: 119,
+                                left: 0,
                                 top: 0,
                                 child: Image.asset(
-                                  'coki_swimming_assets/coki_swimming_community_sparkles.png',
-                                  width: 18,
-                                  height: 14,
+                                  'coki_swimming_assets/coki_swimming_clip_comments_title.png',
+                                  width: 134,
+                                  height: 31,
+                                  filterQuality: FilterQuality.high,
                                 ),
                               ),
                               Positioned(
-                                left: 0,
-                                bottom: 0,
-                                child: Image.asset(
-                                  'coki_swimming_assets/coki_swimming_community_underline.png',
-                                  width: 54,
-                                  height: 4,
-                                ),
-                              ),
-                              Positioned(
-                                right: -10,
+                                right: -14,
                                 top: -8,
                                 child: CokiSwimmingTap(
                                   borderRadius: BorderRadius.circular(22),
                                   onTap: () => Navigator.of(context).pop(),
-                                  child: const SizedBox(
+                                  child: SizedBox(
                                     width: 44,
                                     height: 44,
-                                    child: Icon(
-                                      Icons.close_rounded,
-                                      color: Colors.white,
-                                      size: 28,
+                                    child: Center(
+                                      child: Image.asset(
+                                        'coki_swimming_assets/coki_swimming_clip_comments_close.png',
+                                        width: 24,
+                                        height: 24,
+                                        filterQuality: FilterQuality.high,
+                                      ),
                                     ),
                                   ),
                                 ),
