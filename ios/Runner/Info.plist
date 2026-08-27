@@ -32,11 +32,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Used to take a profile photo for your Coki swimming account.</string>
+	<string>Access your camera to take photos and record videos.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Used to choose a profile photo for your Coki swimming account.</string>
+	<string>Access your photo library to upload photos &amp; videos, and send images in chats.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Used to record audio when you create swimming videos or voice content in Coki.</string>
+	<string>Access your microphone to record audio while shooting videos.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

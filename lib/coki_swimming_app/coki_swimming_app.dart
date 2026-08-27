@@ -16,6 +16,12 @@ class CokiSwimmingApp extends StatefulWidget {
   static Future<CokiSwimmingApp> create() async {
     unawaited(CokiSwimmingStoreService.instance.initialize());
 
+    try {
+      await CokiSwimmingDatabase.instance.ensureSeedAccount();
+    } catch (_) {
+      // The app remains usable if local seed initialization is unavailable.
+    }
+
     var hasAcceptedEula = false;
     try {
       final storedRevision = await SharedPreferencesAsync().getString(

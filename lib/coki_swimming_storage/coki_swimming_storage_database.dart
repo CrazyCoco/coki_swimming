@@ -6,6 +6,8 @@ import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../coki_swimming_seed/coki_swimming_seed_data.dart';
+
 part 'coki_swimming_storage_database.g.dart';
 
 class CokiSwimmingMembers extends Table {
@@ -96,6 +98,47 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
     return (select(
       cokiSwimmingMembers,
     )..where((row) => row.id.equals(id))).watchSingleOrNull();
+  }
+
+  Future<CokiSwimmingMember> ensureSeedAccount() async {
+    final seedUser = cokiSwimmingSeedUsers.first;
+    final normalizedEmail = _normalizeEmail(cokiSwimmingSeedAccountEmail);
+    final existing = await _memberByEmail(normalizedEmail);
+    final now = DateTime.now();
+    final salt = _createSalt();
+    final values = CokiSwimmingMembersCompanion(
+      passwordDigest: Value(
+        _passwordDigest(cokiSwimmingSeedAccountPassword, salt),
+      ),
+      passwordSalt: Value(salt),
+      displayName: Value(seedUser.name),
+      avatarPath: Value(seedUser.avatarAsset),
+      biography: Value(seedUser.biography),
+      profileCompleted: const Value(true),
+      updatedAt: Value(now),
+    );
+
+    if (existing == null) {
+      final id = await into(cokiSwimmingMembers).insert(
+        CokiSwimmingMembersCompanion.insert(
+          email: normalizedEmail,
+          passwordDigest: values.passwordDigest.value,
+          passwordSalt: values.passwordSalt.value,
+          displayName: values.displayName,
+          avatarPath: values.avatarPath,
+          biography: values.biography,
+          profileCompleted: values.profileCompleted,
+          createdAt: now,
+          updatedAt: now,
+        ),
+      );
+      return (await memberById(id))!;
+    }
+
+    await (update(
+      cokiSwimmingMembers,
+    )..where((row) => row.id.equals(existing.id))).write(values);
+    return (await memberById(existing.id))!;
   }
 
   Future<int> createPendingMember({

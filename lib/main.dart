@@ -20,6 +20,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 import 'coki_swimming_app/coki_swimming_app_routes/coki_swimming_app_routes_paths.dart';
 import 'coki_swimming_media/coki_swimming_media_avatar_service.dart';
+import 'coki_swimming_seed/coki_swimming_seed_data.dart';
 import 'coki_swimming_services/coki_swimming_services_device.dart';
 import 'coki_swimming_storage/coki_swimming_storage_database.dart';
 import 'coki_swimming_widgets/coki_swimming_widgets_avatar_image.dart';
