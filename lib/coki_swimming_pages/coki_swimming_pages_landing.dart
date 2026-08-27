@@ -24,6 +24,9 @@ class _CokiSwimmingLandingPaneState extends State<CokiSwimmingLandingPane> {
 
   @override
   Widget build(BuildContext context) {
+    final q98485ea5691423a3 = cokiSwimmingSeedUsers
+        .where((q9fbcf502616b225c65c4) => q9fbcf502616b225c65c4.hasVideo)
+        .toList(growable: false);
     return Stack(
       fit: StackFit.expand,
       children: [
@@ -253,26 +256,21 @@ class _CokiSwimmingLandingPaneState extends State<CokiSwimmingLandingPane> {
                     childAspectRatio: 0.78,
                   ),
                   delegate: SliverChildBuilderDelegate((context, index) {
-                    final image = switch (index) {
-                      0 =>
-                        'coki_swimming_assets/coki_swimming_landing_xanthe_lagoon.png',
-                      1 =>
-                        'coki_swimming_assets/coki_swimming_landing_xanthe_ocean.png',
-                      2 =>
-                        'coki_swimming_assets/coki_swimming_landing_xanthe_sky.png',
-                      _ =>
-                        'coki_swimming_assets/coki_swimming_landing_xanthe_flower.png',
-                    };
+                    final q9fbcf502616b225c65c4 = q98485ea5691423a3[index];
                     return CokiSwimmingLandingTile(
-                      image: image,
-                      onTap: _openCompanion,
+                      image: q9fbcf502616b225c65c4.q75c338b0dd8fc0df!,
+                      q77a950db36a648bd: q9fbcf502616b225c65c4,
+                      onTap: () => Navigator.of(context).pushNamed(
+                        CokiSwimmingRoutesPaths.clip,
+                        arguments: q9fbcf502616b225c65c4,
+                      ),
                       onMore: () => CokiSwimmingAccessGate.run(
                         context,
                         isVisitor: widget.isVisitor,
                         action: () => CokiSwimmingReportSheet.show(context),
                       ),
                     );
-                  }, childCount: 4),
+                  }, childCount: q98485ea5691423a3.length),
                 ),
               ),
             ],
@@ -332,11 +330,13 @@ class CokiSwimmingLandingTile extends StatelessWidget {
     required this.image,
     required this.onTap,
     required this.onMore,
+    this.q77a950db36a648bd,
   });
 
   final String image;
   final VoidCallback onTap;
   final VoidCallback onMore;
+  final CokiSwimmingSeedUser? q77a950db36a648bd;
 
   @override
   Widget build(BuildContext context) {
@@ -357,6 +357,19 @@ class CokiSwimmingLandingTile extends StatelessWidget {
             fit: StackFit.expand,
             children: [
               Image.asset(image, fit: BoxFit.cover),
+              const DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0x66000000),
+                      Colors.transparent,
+                      Color(0x99000000),
+                    ],
+                  ),
+                ),
+              ),
               Positioned(
                 left: 8,
                 top: 8,
@@ -369,7 +382,7 @@ class CokiSwimmingLandingTile extends StatelessWidget {
                     borderRadius: BorderRadius.circular(14),
                   ),
                   child: const Text(
-                    '#Movie',
+                    '#Video',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 13,
@@ -378,6 +391,13 @@ class CokiSwimmingLandingTile extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
+                ),
+              ),
+              Center(
+                child: Image.asset(
+                  'coki_swimming_assets/coki_swimming_community_play.png',
+                  width: 44,
+                  height: 44,
                 ),
               ),
               Positioned(
@@ -414,22 +434,22 @@ class CokiSwimmingLandingTile extends StatelessWidget {
                         children: [
                           ClipOval(
                             child: Image.asset(
-                              image,
+                              q77a950db36a648bd?.avatarAsset ?? image,
                               width: 42,
                               height: 42,
                               fit: BoxFit.cover,
                             ),
                           ),
                           const SizedBox(width: 9),
-                          const Expanded(
+                          Expanded(
                             child: Text(
-                              'Xanthe',
-                              maxLines: 1,
+                              q77a950db36a648bd?.videoCaption ?? 'Video',
+                              maxLines: 2,
                               overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.white,
-                                fontSize: 17,
-                                height: 1.2,
+                                fontSize: 12,
+                                height: 1.25,
                                 letterSpacing: 0,
                                 fontWeight: FontWeight.w900,
                               ),

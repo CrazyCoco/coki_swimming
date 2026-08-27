@@ -199,12 +199,18 @@ class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
           ),
           CokiSwimmingRoutesPaths.detail => CokiSwimmingDetailScreen(
             isVisitor: _isVisitor,
+            q46b7ae32cd0ca3: settings.arguments is CokiSwimmingSeedUser
+                ? settings.arguments! as CokiSwimmingSeedUser
+                : null,
           ),
           CokiSwimmingRoutesPaths.compose => const CokiSwimmingComposeScreen(),
           CokiSwimmingRoutesPaths.motionCompose =>
             const CokiSwimmingMotionComposeScreen(),
           CokiSwimmingRoutesPaths.clip => CokiSwimmingClipScreen(
             isVisitor: _isVisitor,
+            q5c5ea193730d84485504: settings.arguments is CokiSwimmingSeedUser
+                ? settings.arguments! as CokiSwimmingSeedUser
+                : null,
           ),
           CokiSwimmingRoutesPaths.vault => CokiSwimmingVaultScreen(
             memberId: _currentMember?.id,
@@ -239,6 +245,9 @@ class _CokiSwimmingAppState extends State<CokiSwimmingApp> {
           ),
           CokiSwimmingRoutesPaths.swimmer => CokiSwimmingSwimmerScreen(
             isVisitor: _isVisitor,
+            q1a68a142c595: settings.arguments is CokiSwimmingSeedUser
+                ? settings.arguments! as CokiSwimmingSeedUser
+                : null,
           ),
           CokiSwimmingRoutesPaths.concern => const CokiSwimmingConcernScreen(),
           CokiSwimmingRoutesPaths.companion => CokiSwimmingCompanionScreen(

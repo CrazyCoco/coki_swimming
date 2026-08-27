@@ -1,12 +1,18 @@
 part of '../main.dart';
 
 class CokiSwimmingSwimmerScreen extends StatelessWidget {
-  const CokiSwimmingSwimmerScreen({super.key, required this.isVisitor});
+  const CokiSwimmingSwimmerScreen({
+    super.key,
+    required this.isVisitor,
+    this.q1a68a142c595,
+  });
 
   final bool isVisitor;
+  final CokiSwimmingSeedUser? q1a68a142c595;
 
   @override
   Widget build(BuildContext context) {
+    final q2ab4a4f1dca965 = q1a68a142c595;
     return CokiSwimmingBackground(
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -33,15 +39,16 @@ class CokiSwimmingSwimmerScreen extends StatelessWidget {
                     Center(
                       child: CokiSwimmingAvatar(
                         image:
+                            q2ab4a4f1dca965?.avatarAsset ??
                             'coki_swimming_assets/coki_swimming_avatar_apien.png',
                         size: 96,
                       ),
                     ),
                     const SizedBox(height: 12),
-                    const Text(
-                      'Apien',
+                    Text(
+                      q2ab4a4f1dca965?.name ?? 'Apien',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 24,
                         height: 1.1,
@@ -50,10 +57,11 @@ class CokiSwimmingSwimmerScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 4),
-                    const Text(
-                      'Life is a journey, embrace it.',
+                    Text(
+                      q2ab4a4f1dca965?.biography ??
+                          'Life is a journey, embrace it.',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 12,
                         height: 1.4,
@@ -102,9 +110,12 @@ class CokiSwimmingSwimmerScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 12),
-                    const CokiSwimmingEntryCard(),
+                    CokiSwimmingEntryCard(q49342b0d8fbd511a92: q2ab4a4f1dca965),
                     const SizedBox(height: 16),
-                    const CokiSwimmingEntryCard(second: true),
+                    CokiSwimmingEntryCard(
+                      second: true,
+                      q49342b0d8fbd511a92: q2ab4a4f1dca965,
+                    ),
                   ],
                 ),
               ),

@@ -14,6 +14,9 @@ class _CokiSwimmingHomePaneState extends State<CokiSwimmingHomePane> {
 
   @override
   Widget build(BuildContext context) {
+    final users = _selectedSection == 0
+        ? cokiSwimmingSeedUsers
+        : cokiSwimmingSeedUsers.reversed;
     return SafeArea(
       bottom: false,
       child: ListView(
@@ -139,21 +142,14 @@ class _CokiSwimmingHomePaneState extends State<CokiSwimmingHomePane> {
             ),
           ),
           const SizedBox(height: 14),
-          CokiSwimmingCommunityCard(
-            key: ValueKey('community-${_selectedSection == 0 ? 0 : 1}'),
-            image: _selectedSection == 0
-                ? 'coki_swimming_assets/coki_swimming_community_primary_card.png'
-                : 'coki_swimming_assets/coki_swimming_community_secondary_card.png',
-            isVisitor: widget.isVisitor,
-          ),
-          const SizedBox(height: 14),
-          CokiSwimmingCommunityCard(
-            key: ValueKey('community-${_selectedSection == 0 ? 1 : 0}'),
-            image: _selectedSection == 0
-                ? 'coki_swimming_assets/coki_swimming_community_secondary_card.png'
-                : 'coki_swimming_assets/coki_swimming_community_primary_card.png',
-            isVisitor: widget.isVisitor,
-          ),
+          for (final user in users) ...[
+            CokiSwimmingCommunityCard(
+              key: ValueKey('seed-${user.name}'),
+              seedUser: user,
+              isVisitor: widget.isVisitor,
+            ),
+            const SizedBox(height: 14),
+          ],
         ],
       ),
     );
@@ -163,11 +159,13 @@ class _CokiSwimmingHomePaneState extends State<CokiSwimmingHomePane> {
 class CokiSwimmingCommunityCard extends StatefulWidget {
   const CokiSwimmingCommunityCard({
     super.key,
-    required this.image,
+    this.image,
+    this.seedUser,
     required this.isVisitor,
-  });
+  }) : assert(image != null || seedUser != null);
 
-  final String image;
+  final String? image;
+  final CokiSwimmingSeedUser? seedUser;
   final bool isVisitor;
 
   @override
@@ -178,8 +176,11 @@ class CokiSwimmingCommunityCard extends StatefulWidget {
 class _CokiSwimmingCommunityCardState extends State<CokiSwimmingCommunityCard> {
   bool _isLiked = false;
 
-  void _openClip() {
-    Navigator.of(context).pushNamed(CokiSwimmingRoutesPaths.clip);
+  void _openContent() {
+    final seedUser = widget.seedUser;
+    Navigator.of(
+      context,
+    ).pushNamed(CokiSwimmingRoutesPaths.detail, arguments: seedUser);
   }
 
   @override
@@ -188,24 +189,70 @@ class _CokiSwimmingCommunityCardState extends State<CokiSwimmingCommunityCard> {
       height: 359,
       child: CokiSwimmingTap(
         borderRadius: BorderRadius.circular(19),
-        onTap: _openClip,
+        onTap: _openContent,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(19),
           child: Stack(
             fit: StackFit.expand,
             children: [
-              Image.asset(widget.image, fit: BoxFit.cover),
+              Image.asset(
+                widget.seedUser?.postImageAssets.first ?? widget.image!,
+                fit: BoxFit.cover,
+              ),
+              if (widget.seedUser != null)
+                const DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Color(0x99000000),
+                        Colors.transparent,
+                        Color(0xB3000000),
+                      ],
+                      stops: [0, 0.48, 1],
+                    ),
+                  ),
+                ),
               Positioned(
                 left: 0,
                 top: 0,
-                width: 72,
+                width: 210,
                 height: 58,
                 child: CokiSwimmingTap(
                   borderRadius: BorderRadius.circular(19),
-                  onTap: () => Navigator.of(
-                    context,
-                  ).pushNamed(CokiSwimmingRoutesPaths.swimmer),
-                  child: const SizedBox.expand(),
+                  onTap: () => Navigator.of(context).pushNamed(
+                    CokiSwimmingRoutesPaths.swimmer,
+                    arguments: widget.seedUser,
+                  ),
+                  child: widget.seedUser == null
+                      ? const SizedBox.expand()
+                      : Padding(
+                          padding: const EdgeInsets.fromLTRB(12, 10, 8, 6),
+                          child: Row(
+                            children: [
+                              CokiSwimmingAvatar(
+                                image: widget.seedUser!.avatarAsset,
+                                size: 38,
+                              ),
+                              const SizedBox(width: 9),
+                              Expanded(
+                                child: Text(
+                                  widget.seedUser!.name,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    height: 1.2,
+                                    letterSpacing: 0,
+                                    fontWeight: FontWeight.w900,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                 ),
               ),
               Positioned(
@@ -231,17 +278,55 @@ class _CokiSwimmingCommunityCardState extends State<CokiSwimmingCommunityCard> {
                   ),
                 ),
               ),
-              Center(
-                child: CokiSwimmingTap(
-                  borderRadius: BorderRadius.circular(22),
-                  onTap: _openClip,
-                  child: Image.asset(
-                    'coki_swimming_assets/coki_swimming_community_play.png',
-                    width: 44,
-                    height: 44,
+              if (widget.seedUser == null)
+                Center(
+                  child: CokiSwimmingTap(
+                    borderRadius: BorderRadius.circular(22),
+                    onTap: _openContent,
+                    child: Image.asset(
+                      'coki_swimming_assets/coki_swimming_community_play.png',
+                      width: 44,
+                      height: 44,
+                    ),
                   ),
                 ),
-              ),
+              if (widget.seedUser != null)
+                Positioned(
+                  left: 14,
+                  right: 72,
+                  bottom: 17,
+                  child: Text(
+                    widget.seedUser!.postCaption,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      height: 1.35,
+                      letterSpacing: 0,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              if ((widget.seedUser?.postImageAssets.length ?? 0) > 1)
+                Positioned(
+                  right: 14,
+                  top: 58,
+                  child: Container(
+                    width: 34,
+                    height: 28,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: const Color(0x99000000),
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: const Icon(
+                      Icons.collections_outlined,
+                      color: Colors.white,
+                      size: 18,
+                    ),
+                  ),
+                ),
               Positioned(
                 right: 12,
                 bottom: 15,
@@ -358,10 +443,12 @@ class CokiSwimmingEntryCard extends StatefulWidget {
     super.key,
     this.second = false,
     this.isVisitor = false,
+    this.q49342b0d8fbd511a92,
   });
 
   final bool second;
   final bool isVisitor;
+  final CokiSwimmingSeedUser? q49342b0d8fbd511a92;
 
   @override
   State<CokiSwimmingEntryCard> createState() => _CokiSwimmingEntryCardState();
@@ -372,10 +459,19 @@ class _CokiSwimmingEntryCardState extends State<CokiSwimmingEntryCard> {
 
   @override
   Widget build(BuildContext context) {
+    final qec64d1db759168d6 = widget.q49342b0d8fbd511a92;
+    final q96eec6db38e0347d4924 = qec64d1db759168d6?.postImageAssets;
+    final qcdc00acb8503 = q96eec6db38e0347d4924 == null
+        ? null
+        : q96eec6db38e0347d4924[widget.second &&
+                  q96eec6db38e0347d4924.length > 1
+              ? 1
+              : 0];
     return CokiSwimmingTap(
       borderRadius: BorderRadius.circular(12),
-      onTap: () =>
-          Navigator.of(context).pushNamed(CokiSwimmingRoutesPaths.detail),
+      onTap: () => Navigator.of(
+        context,
+      ).pushNamed(CokiSwimmingRoutesPaths.detail, arguments: qec64d1db759168d6),
       child: Container(
         padding: const EdgeInsets.all(9),
         decoration: BoxDecoration(
@@ -389,19 +485,22 @@ class _CokiSwimmingEntryCardState extends State<CokiSwimmingEntryCard> {
             Row(
               children: [
                 CokiSwimmingAvatar(
-                  image: 'coki_swimming_assets/coki_swimming_avatar_apien.png',
+                  image:
+                      qec64d1db759168d6?.avatarAsset ??
+                      'coki_swimming_assets/coki_swimming_avatar_apien.png',
                   size: 28,
-                  onTap: () => Navigator.of(
-                    context,
-                  ).pushNamed(CokiSwimmingRoutesPaths.swimmer),
+                  onTap: () => Navigator.of(context).pushNamed(
+                    CokiSwimmingRoutesPaths.swimmer,
+                    arguments: qec64d1db759168d6,
+                  ),
                 ),
                 const SizedBox(width: 8),
-                const Expanded(
+                Expanded(
                   child: Text(
-                    'Gianluca Carver',
+                    qec64d1db759168d6?.name ?? 'Gianluca Carver',
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 12,
                       height: 1.2,
@@ -429,9 +528,10 @@ class _CokiSwimmingEntryCardState extends State<CokiSwimmingEntryCard> {
                   AspectRatio(
                     aspectRatio: 310 / 150,
                     child: Image.asset(
-                      widget.second
-                          ? 'coki_swimming_assets/coki_swimming_pool_tile.png'
-                          : 'coki_swimming_assets/coki_swimming_sea_frame.png',
+                      qcdc00acb8503 ??
+                          (widget.second
+                              ? 'coki_swimming_assets/coki_swimming_pool_tile.png'
+                              : 'coki_swimming_assets/coki_swimming_sea_frame.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -490,9 +590,10 @@ class _CokiSwimmingEntryCardState extends State<CokiSwimmingEntryCard> {
             ),
             const SizedBox(height: 8),
             Text(
-              widget.second
-                  ? 'Swim with the current, embrace the flow.'
-                  : 'Life is a journey, embrace it.',
+              qec64d1db759168d6?.postCaption ??
+                  (widget.second
+                      ? 'Swim with the current, embrace the flow.'
+                      : 'Life is a journey, embrace it.'),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(

@@ -7,6 +7,7 @@ class CokiSwimmingSeedUser {
     required this.postComment,
     required this.biography,
     this.videoAsset,
+    this.q75c338b0dd8fc0df,
     this.videoCaption,
     this.videoComment,
   });
@@ -18,6 +19,7 @@ class CokiSwimmingSeedUser {
   final String postComment;
   final String biography;
   final String? videoAsset;
+  final String? q75c338b0dd8fc0df;
   final String? videoCaption;
   final String? videoComment;
 
@@ -31,12 +33,11 @@ const List<CokiSwimmingSeedUser> cokiSwimmingSeedUsers = [
   CokiSwimmingSeedUser(
     name: 'Iris',
     avatarAsset: 'coki_swimming_assets/coki_swimming_seed_iris_avatar.jpeg',
-    postImageAssets: [
-      'coki_swimming_assets/coki_swimming_seed_iris_post.jpeg',
-    ],
+    postImageAssets: ['coki_swimming_assets/coki_swimming_seed_iris_post.jpeg'],
     postCaption: 'Immersed in water, just unwind for a while',
     postComment: 'Water therapy hits different',
     videoAsset: 'coki_swimming_assets/coki_swimming_seed_iris_video.mp4',
+    q75c338b0dd8fc0df: 'coki_swimming_assets/coki_swimming_46b7ae32cd0ca3.jpeg',
     videoCaption: 'Dive into the pool and enjoy the relaxation in water',
     videoComment: 'Swimming is such a great stress reliever',
     biography: 'Free to swim when time permits',
@@ -44,12 +45,12 @@ const List<CokiSwimmingSeedUser> cokiSwimmingSeedUsers = [
   CokiSwimmingSeedUser(
     name: 'Luna',
     avatarAsset: 'coki_swimming_assets/coki_swimming_seed_luna_avatar.jpeg',
-    postImageAssets: [
-      'coki_swimming_assets/coki_swimming_seed_luna_post.jpeg',
-    ],
+    postImageAssets: ['coki_swimming_assets/coki_swimming_seed_luna_post.jpeg'],
     postCaption: 'simple little joy',
     postComment: 'Swimming is so healing',
     videoAsset: 'coki_swimming_assets/coki_swimming_seed_luna_video.mp4',
+    q75c338b0dd8fc0df:
+        'coki_swimming_assets/coki_swimming_aa3a18c4dc51066f54.jpeg',
     videoCaption: 'Ordinary day at the swimming pool, simple time in water',
     videoComment: 'Love the feeling of being in water',
     biography: 'Ordinary days, keep moving',
@@ -57,12 +58,11 @@ const List<CokiSwimmingSeedUser> cokiSwimmingSeedUsers = [
   CokiSwimmingSeedUser(
     name: 'Zoe',
     avatarAsset: 'coki_swimming_assets/coki_swimming_seed_zoe_avatar.jpeg',
-    postImageAssets: [
-      'coki_swimming_assets/coki_swimming_seed_zoe_post.jpeg',
-    ],
+    postImageAssets: ['coki_swimming_assets/coki_swimming_seed_zoe_post.jpeg'],
     postCaption: 'Leave all worries beneath the water',
     postComment: 'Water is such a good escape',
     videoAsset: 'coki_swimming_assets/coki_swimming_seed_zoe_video.mp4',
+    q75c338b0dd8fc0df: 'coki_swimming_assets/coki_swimming_1a68a142c595.jpeg',
     videoCaption: 'Let go of distractions, glide slowly along the lanes',
     videoComment: 'Total immersive vibe',
     biography: 'Enjoy short relaxation in the water',
@@ -76,6 +76,8 @@ const List<CokiSwimmingSeedUser> cokiSwimmingSeedUsers = [
     postCaption: 'Today\'s time in the water',
     postComment: 'Wish I could stay longer',
     videoAsset: 'coki_swimming_assets/coki_swimming_seed_elena_video.mp4',
+    q75c338b0dd8fc0df:
+        'coki_swimming_assets/coki_swimming_5c5ea193730d84485504.jpeg',
     videoCaption: 'Ripples flowing, a short escape from reality',
     videoComment: 'Such a calming clip',
     biography: 'Exercise is just part of life',
@@ -89,6 +91,8 @@ const List<CokiSwimmingSeedUser> cokiSwimmingSeedUsers = [
     postCaption: 'Go with the flow in the water',
     postComment: 'Love this slow-motion feeling',
     videoAsset: 'coki_swimming_assets/coki_swimming_seed_hazel_video.mp4',
+    q75c338b0dd8fc0df:
+        'coki_swimming_assets/coki_swimming_77a950db36a648bd.jpeg',
     videoCaption: 'Little moments captured at the indoor pool',
     videoComment: 'Simple daily moments are nice',
     biography: 'Love quiet moments in the pool',
@@ -106,12 +110,12 @@ const List<CokiSwimmingSeedUser> cokiSwimmingSeedUsers = [
   CokiSwimmingSeedUser(
     name: 'Noah',
     avatarAsset: 'coki_swimming_assets/coki_swimming_seed_noah_avatar.jpeg',
-    postImageAssets: [
-      'coki_swimming_assets/coki_swimming_seed_noah_post.jpeg',
-    ],
+    postImageAssets: ['coki_swimming_assets/coki_swimming_seed_noah_post.jpeg'],
     postCaption: 'Immerse myself in the peace of water',
     postComment: 'Enjoy every second',
     videoAsset: 'coki_swimming_assets/coki_swimming_seed_noah_video.mp4',
+    q75c338b0dd8fc0df:
+        'coki_swimming_assets/coki_swimming_f61d261ffe5b24ad33abed.jpeg',
     videoCaption: 'Stay with water, wash away all tiredness',
     videoComment: 'Feels refreshed after swimming',
     biography: 'Swim a few laps to release tiredness',
@@ -125,6 +129,7 @@ const List<CokiSwimmingSeedUser> cokiSwimmingSeedUsers = [
     postCaption: 'Head to the water and feel free',
     postComment: 'Who understands this joy',
     videoAsset: 'coki_swimming_assets/coki_swimming_seed_miles_video.mp4',
+    q75c338b0dd8fc0df: 'coki_swimming_assets/coki_swimming_ec02fa5e73d5eb.jpeg',
     videoCaption: 'Jump into water for a different breathing rhythm',
     videoComment: 'Mood gets better after exercise',
     biography: 'Pool eases daily trivial stuff',
@@ -132,12 +137,12 @@ const List<CokiSwimmingSeedUser> cokiSwimmingSeedUsers = [
   CokiSwimmingSeedUser(
     name: 'Kai',
     avatarAsset: 'coki_swimming_assets/coki_swimming_seed_kai_avatar.jpeg',
-    postImageAssets: [
-      'coki_swimming_assets/coki_swimming_seed_kai_post.jpeg',
-    ],
+    postImageAssets: ['coki_swimming_assets/coki_swimming_seed_kai_post.jpeg'],
     postCaption: 'A short escape under water',
     postComment: 'I really like this feeling',
     videoAsset: 'coki_swimming_assets/coki_swimming_seed_kai_video.mp4',
+    q75c338b0dd8fc0df:
+        'coki_swimming_assets/coki_swimming_2d6c8c4ada14570219.jpeg',
     videoCaption: 'Swim back and forth, just an ordinary fitness day',
     videoComment: 'Really authentic daily clip',
     biography: 'Focus on my own daily life',
@@ -145,12 +150,11 @@ const List<CokiSwimmingSeedUser> cokiSwimmingSeedUsers = [
   CokiSwimmingSeedUser(
     name: 'Owen',
     avatarAsset: 'coki_swimming_assets/coki_swimming_seed_owen_avatar.jpeg',
-    postImageAssets: [
-      'coki_swimming_assets/coki_swimming_seed_owen_post.jpeg',
-    ],
+    postImageAssets: ['coki_swimming_assets/coki_swimming_seed_owen_post.jpeg'],
     postCaption: 'No rush, just glide through water',
     postComment: 'Best way to clear your mind',
     videoAsset: 'coki_swimming_assets/coki_swimming_seed_owen_video.mp4',
+    q75c338b0dd8fc0df: 'coki_swimming_assets/coki_swimming_5d2a624d719e.jpeg',
     videoCaption: 'Finish swimming and leave feeling light-hearted',
     videoComment: 'Envy this lifestyle',
     biography: 'Work hard, exercise to unwind',
