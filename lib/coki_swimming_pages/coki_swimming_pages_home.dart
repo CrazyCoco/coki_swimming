@@ -178,8 +178,8 @@ class CokiSwimmingCommunityCard extends StatefulWidget {
 class _CokiSwimmingCommunityCardState extends State<CokiSwimmingCommunityCard> {
   bool _isLiked = false;
 
-  void _openDetail() {
-    Navigator.of(context).pushNamed(CokiSwimmingRoutesPaths.detail);
+  void _openClip() {
+    Navigator.of(context).pushNamed(CokiSwimmingRoutesPaths.clip);
   }
 
   @override
@@ -188,7 +188,7 @@ class _CokiSwimmingCommunityCardState extends State<CokiSwimmingCommunityCard> {
       height: 359,
       child: CokiSwimmingTap(
         borderRadius: BorderRadius.circular(19),
-        onTap: _openDetail,
+        onTap: _openClip,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(19),
           child: Stack(
@@ -234,7 +234,7 @@ class _CokiSwimmingCommunityCardState extends State<CokiSwimmingCommunityCard> {
               Center(
                 child: CokiSwimmingTap(
                   borderRadius: BorderRadius.circular(22),
-                  onTap: _openDetail,
+                  onTap: _openClip,
                   child: Image.asset(
                     'coki_swimming_assets/coki_swimming_community_play.png',
                     width: 44,
