@@ -6,6 +6,7 @@ class CokiSwimmingAy2dg3calz2y {
   static void pbp5sjg2i7oab6zl9h(
     BuildContext lqpxrfhim19gnc,
     String arvokwtoaraz2nqr8twl2j7c,
+    {bool isError = false},
   ) {
     final aln6hy7wn9euze6ho = Overlay.of(lqpxrfhim19gnc);
     late final OverlayEntry xv7g4zaobtxrzov2eejf0;
@@ -22,8 +23,14 @@ class CokiSwimmingAy2dg3calz2y {
                   vertical: 13,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
+                color: const Color(0xFF292249).withValues(alpha: 0.97),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(
+                  color: (isError
+                          ? const Color(0xFFD43161)
+                          : const Color(0xFF60D0EE))
+                      .withValues(alpha: 0.72),
+                ),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withValues(alpha: 0.2),
@@ -32,16 +39,33 @@ class CokiSwimmingAy2dg3calz2y {
                     ),
                   ],
                 ),
-                child: Text(
-                  arvokwtoaraz2nqr8twl2j7c,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Color(0xFF100A30),
-                    fontSize: 14,
-                    height: 1.3,
-                    letterSpacing: 0,
-                    fontWeight: FontWeight.w800,
-                  ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      isError
+                          ? Icons.info_outline_rounded
+                          : Icons.check_circle_outline_rounded,
+                      color: isError
+                          ? const Color(0xFFD43161)
+                          : const Color(0xFF60D0EE),
+                      size: 21,
+                    ),
+                    const SizedBox(width: 10),
+                    Flexible(
+                      child: Text(
+                        arvokwtoaraz2nqr8twl2j7c,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          height: 1.3,
+                          letterSpacing: 0,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -50,6 +74,10 @@ class CokiSwimmingAy2dg3calz2y {
       ),
     );
     aln6hy7wn9euze6ho.insert(xv7g4zaobtxrzov2eejf0);
-    Timer(const Duration(milliseconds: 1200), xv7g4zaobtxrzov2eejf0.remove);
+    Timer(const Duration(seconds: 2), () {
+      if (xv7g4zaobtxrzov2eejf0.mounted) {
+        xv7g4zaobtxrzov2eejf0.remove();
+      }
+    });
   }
 }

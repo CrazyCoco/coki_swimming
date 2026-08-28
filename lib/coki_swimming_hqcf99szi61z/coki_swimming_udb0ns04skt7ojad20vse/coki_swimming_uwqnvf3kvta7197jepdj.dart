@@ -27,4 +27,6 @@ class CokiSwimmingXu1hfvhsqfkovamr518kcwz {
   static const String abx6a5dmw967jaglhp = '/6b4aba1f2dda15b0e75f';
   static const String kjro2uh8n8teco8d2elrzf = '/ba61fbee8d52e21ea8c4';
   static const String u44r7kig5pilpfg = '/fd3fcb197a0346fea557';
+  static const String q7m4v9x2k8d6p1s5 = '/8c4f7a2m9q1v6x3p5n8r';
+  static const String m9x3q7v1z5n8p4c6t2r0 = '/6f2a9c7e1b5d8m3q0x4n';
 }

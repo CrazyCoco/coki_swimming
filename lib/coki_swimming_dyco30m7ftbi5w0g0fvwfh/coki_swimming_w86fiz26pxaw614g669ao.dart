@@ -203,8 +203,8 @@ class _CokiSwimmingTgd1wgwxn1o9d8 extends State<CokiSwimmingDih2lfk074dk5rke> {
     final g544lwgvv2490wsmg4 = widget.wl2hojy7crk9m8ffyrydgc3;
     Navigator.of(context).pushNamed(
       g544lwgvv2490wsmg4 == null
-          ? CokiSwimmingXu1hfvhsqfkovamr518kcwz.bvy4bc4tf24ggxjozda5p4j0
-          : CokiSwimmingXu1hfvhsqfkovamr518kcwz.usb6yvjb2e1k454zejxbs,
+          ? CokiSwimmingXu1hfvhsqfkovamr518kcwz.usb6yvjb2e1k454zejxbs
+          : CokiSwimmingXu1hfvhsqfkovamr518kcwz.bvy4bc4tf24ggxjozda5p4j0,
       arguments: g544lwgvv2490wsmg4,
     );
   }
@@ -222,7 +222,11 @@ class _CokiSwimmingTgd1wgwxn1o9d8 extends State<CokiSwimmingDih2lfk074dk5rke> {
             fit: StackFit.expand,
             children: [
               Image.asset(
-                widget.wl2hojy7crk9m8ffyrydgc3?.pgj8geudv74awjznrves.first ??
+                widget.wl2hojy7crk9m8ffyrydgc3?.xpgbqaoc87cxdg7jjztf ??
+                    widget
+                        .wl2hojy7crk9m8ffyrydgc3
+                        ?.pgj8geudv74awjznrves
+                        .first ??
                     widget.hpn5t8jy171wsi56pq171x!,
                 fit: BoxFit.cover,
               ),
@@ -315,18 +319,17 @@ class _CokiSwimmingTgd1wgwxn1o9d8 extends State<CokiSwimmingDih2lfk074dk5rke> {
                   ),
                 ),
               ),
-              if (widget.wl2hojy7crk9m8ffyrydgc3 == null)
-                Center(
-                  child: CokiSwimmingKtoozpjuob7rods(
-                    kvg85l6uieobzf: BorderRadius.circular(22),
-                    gwrsyzojtp84oco1ldhaaw90: _rr1zsojwzv4pvg5,
-                    v6j3bxo2dz4aevlmr: Image.asset(
-                      'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_f9uhejm1fo4g7oqk8dph.png',
-                      width: 44,
-                      height: 44,
-                    ),
+              Center(
+                child: CokiSwimmingKtoozpjuob7rods(
+                  kvg85l6uieobzf: BorderRadius.circular(22),
+                  gwrsyzojtp84oco1ldhaaw90: _rr1zsojwzv4pvg5,
+                  v6j3bxo2dz4aevlmr: Image.asset(
+                    'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_f9uhejm1fo4g7oqk8dph.png',
+                    width: 44,
+                    height: 44,
                   ),
                 ),
+              ),
               if (widget.wl2hojy7crk9m8ffyrydgc3 != null)
                 Positioned(
                   left: 14,
@@ -515,6 +518,7 @@ class _CokiSwimmingTjluglkuhtfqrj7k452ma4
         : uu9lr43oqe2lo[widget.i31nj2onx9bvm && uu9lr43oqe2lo.length > 1
               ? 1
               : 0];
+    final c7n8m2q4v6x1z9p3 = cj69ejfukfz9hf48g66td7g?.xpgbqaoc87cxdg7jjztf;
     return CokiSwimmingKtoozpjuob7rods(
       kvg85l6uieobzf: BorderRadius.circular(12),
       gwrsyzojtp84oco1ldhaaw90: () => Navigator.of(context).pushNamed(
@@ -585,7 +589,8 @@ class _CokiSwimmingTjluglkuhtfqrj7k452ma4
                   AspectRatio(
                     aspectRatio: 310 / 150,
                     child: Image.asset(
-                      ec61lv2o2j9w6zj4levni ??
+                      c7n8m2q4v6x1z9p3 ??
+                          ec61lv2o2j9w6zj4levni ??
                           (widget.i31nj2onx9bvm
                               ? 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_rrq2io04463zanilk5et7u.png'
                               : 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_erv95uelv147yhqn158.png'),

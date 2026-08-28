@@ -51,6 +51,8 @@ part 'coki_swimming_dyco30m7ftbi5w0g0fvwfh/coki_swimming_w86fiz26pxaw614g669ao.d
 part 'coki_swimming_dyco30m7ftbi5w0g0fvwfh/coki_swimming_z827sdolqanoebrf.dart';
 part 'coki_swimming_dyco30m7ftbi5w0g0fvwfh/coki_swimming_0m0tq1bu76zh.dart';
 part 'coki_swimming_dyco30m7ftbi5w0g0fvwfh/coki_swimming_bia5s9vply463l4za.dart';
+part 'coki_swimming_dyco30m7ftbi5w0g0fvwfh/coki_swimming_m7x2q9v4n8z1c6p3r5t0.dart';
+part 'coki_swimming_dyco30m7ftbi5w0g0fvwfh/coki_swimming_q8m2v7x4n9z1p6r3t5.dart';
 part 'coki_swimming_dyco30m7ftbi5w0g0fvwfh/coki_swimming_iim7551iniq58r.dart';
 part 'coki_swimming_dyco30m7ftbi5w0g0fvwfh/coki_swimming_zon6mx54nrxa8ryp5nhb.dart';
 part 'coki_swimming_dyco30m7ftbi5w0g0fvwfh/coki_swimming_cqm7vmpt4mj5qetch5581wc.dart';

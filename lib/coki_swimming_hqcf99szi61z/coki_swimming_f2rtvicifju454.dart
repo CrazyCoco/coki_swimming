@@ -218,6 +218,10 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
             CokiSwimmingHn7mc0efk8mqig1ezch(
               rja948ou6qv722c1e: _l9pbbvg71q3krwau6xu0xbp,
             ),
+          CokiSwimmingXu1hfvhsqfkovamr518kcwz.q7m4v9x2k8d6p1s5 =>
+            const CokiSwimmingQ8m2v7x4n9z1p6r3t5(),
+          CokiSwimmingXu1hfvhsqfkovamr518kcwz.m9x3q7v1z5n8p4c6t2r0 =>
+            const CokiSwimmingM7x2q9v4n8z1c6p3r5t0(),
           CokiSwimmingXu1hfvhsqfkovamr518kcwz.l8xp5be6yknfl9cf =>
             CokiSwimmingQx2adsjpnyi8kfrtra8bofin(
               ji0c4cwkzwdqju0dtttyvlz1: _cn8xodev15w5qw,
