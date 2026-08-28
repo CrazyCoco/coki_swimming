@@ -16,7 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="LaunchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="YRO-k0-Ey4"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="coki_swimming_jnegpbnfg7stkjx6ff8ytv" translatesAutoresizingMaskIntoConstraints="NO" id="YRO-k0-Ey4"/>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="VbA-9p-mR2"/>
                         </subviews>
                         <color key="backgroundColor" red="0.062745098" green="0.039215686" blue="0.188235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -38,7 +38,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchBackground" width="375" height="812"/>
+        <image name="coki_swimming_jnegpbnfg7stkjx6ff8ytv" width="375" height="812"/>
         <image name="LaunchImage" width="114" height="163"/>
     </resources>
 </document>

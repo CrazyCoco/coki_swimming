@@ -12,24 +12,26 @@ import UIKit
 
   func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
     GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
-    guard let registrar = engineBridge.pluginRegistry.registrar(
+    guard let iddjwzke501k = engineBridge.pluginRegistry.registrar(
       forPlugin: "CokiSwimmingDevicePlugin"
     ) else {
       return
     }
-    let channel = FlutterMethodChannel(
+    let hdlduz1rg7muhgvqu1orz = FlutterMethodChannel(
       name: "com.coki.swimming/device",
-      binaryMessenger: registrar.messenger()
+      binaryMessenger: iddjwzke501k.messenger()
     )
-    channel.setMethodCallHandler { call, result in
-      guard call.method == "getDeviceNo" else {
-        result(FlutterMethodNotImplemented)
+    hdlduz1rg7muhgvqu1orz.setMethodCallHandler { xqla98xg0t0fb, fh9av28bvxirchyllornsd27 in
+      guard xqla98xg0t0fb.method == "getDeviceNo" else {
+        fh9av28bvxirchyllornsd27(FlutterMethodNotImplemented)
         return
       }
       do {
-        result(try DeviceHelper.shared.getDeviceID())
+        fh9av28bvxirchyllornsd27(
+          try CokiSwimmingCn4db0v7g6awpd17.i6ibeqx867dskvr0ve2ggzl.afvvl6wwmwhruhk43yynn()
+        )
       } catch {
-        result(
+        fh9av28bvxirchyllornsd27(
           FlutterError(
             code: "keychain_error",
             message: "Unable to access the device identifier.",
