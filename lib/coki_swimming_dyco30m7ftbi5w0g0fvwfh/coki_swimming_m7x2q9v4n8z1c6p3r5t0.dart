@@ -166,12 +166,26 @@ class _CokiSwimmingR6p4x8n1z7m3q9v5t2
       centerTitle: true,
       leading: IconButton(
         tooltip: 'Back',
-        icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 20),
+        icon: Image.asset(
+          'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_9242ab81de8bd9181100.png',
+          width: 24,
+          height: 24,
+        ),
         onPressed: () => Navigator.of(context).maybePop(),
       ),
-      title: const Text(
-        'Training plan',
-        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+      title: ShaderMask(
+        blendMode: BlendMode.srcIn,
+        shaderCallback: (bounds) => const LinearGradient(
+          colors: [Color(0xFF60D0EE), Color(0xFFAD99C2), Color(0xFFD43161)],
+        ).createShader(bounds),
+        child: const Text(
+          'Training plan',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+            fontWeight: FontWeight.w900,
+          ),
+        ),
       ),
     ),
     body: ListView(

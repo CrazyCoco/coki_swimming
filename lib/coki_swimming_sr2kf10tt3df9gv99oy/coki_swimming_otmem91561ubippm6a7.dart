@@ -5,9 +5,9 @@ class CokiSwimmingAy2dg3calz2y {
 
   static void pbp5sjg2i7oab6zl9h(
     BuildContext lqpxrfhim19gnc,
-    String arvokwtoaraz2nqr8twl2j7c,
-    {bool isError = false},
-  ) {
+    String arvokwtoaraz2nqr8twl2j7c, {
+    bool isError = false,
+  }) {
     final aln6hy7wn9euze6ho = Overlay.of(lqpxrfhim19gnc);
     late final OverlayEntry xv7g4zaobtxrzov2eejf0;
     xv7g4zaobtxrzov2eejf0 = OverlayEntry(
@@ -23,14 +23,15 @@ class CokiSwimmingAy2dg3calz2y {
                   vertical: 13,
                 ),
                 decoration: BoxDecoration(
-                color: const Color(0xFF292249).withValues(alpha: 0.97),
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(
-                  color: (isError
-                          ? const Color(0xFFD43161)
-                          : const Color(0xFF60D0EE))
-                      .withValues(alpha: 0.72),
-                ),
+                  color: const Color(0xFF292249).withValues(alpha: 0.97),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    color:
+                        (isError
+                                ? const Color(0xFFD43161)
+                                : const Color(0xFF60D0EE))
+                            .withValues(alpha: 0.72),
+                  ),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withValues(alpha: 0.2),
