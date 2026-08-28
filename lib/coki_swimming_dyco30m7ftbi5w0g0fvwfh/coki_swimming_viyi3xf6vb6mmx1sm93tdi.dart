@@ -178,13 +178,14 @@ class _CokiSwimmingWss6hi89y06trc8g extends StatelessWidget {
                         Expanded(
                           child: CokiSwimmingJc5d2zcduyoo6(
                             kd0cj7dyrevakgl2ubrpaz0: 'Posts',
-                            e33s0ntq56lhg: '1',
+                            e33s0ntq56lhg:
+                                '${cokiSwimmingno1co2tb6p01cbgq6w3sj9k.length}',
                           ),
                         ),
                         Expanded(
                           child: CokiSwimmingJc5d2zcduyoo6(
                             kd0cj7dyrevakgl2ubrpaz0: 'Followers',
-                            e33s0ntq56lhg: '3.3w',
+                            e33s0ntq56lhg: '0',
                             dlnpydrcm1ubm: () =>
                                 Navigator.of(context).pushNamed(
                                   CokiSwimmingXu1hfvhsqfkovamr518kcwz
@@ -195,7 +196,7 @@ class _CokiSwimmingWss6hi89y06trc8g extends StatelessWidget {
                         Expanded(
                           child: CokiSwimmingJc5d2zcduyoo6(
                             kd0cj7dyrevakgl2ubrpaz0: 'Following',
-                            e33s0ntq56lhg: '33',
+                            e33s0ntq56lhg: '0',
                             dlnpydrcm1ubm: () =>
                                 Navigator.of(context).pushNamed(
                                   CokiSwimmingXu1hfvhsqfkovamr518kcwz

@@ -148,8 +148,42 @@ class CokiSwimmingPip1wwzd46n0h0rlpl0lc extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 14),
-                    const Text(
-                      'Comments +',
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.favorite,
+                          color: Color(0xFFD43161),
+                          size: 20,
+                        ),
+                        const SizedBox(width: 6),
+                        Text(
+                          '${r12lpr8l52zlmor4?.q7m4v9x2k8d6p1s5 ?? 0}',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                        const SizedBox(width: 20),
+                        const Icon(
+                          Icons.mode_comment_outlined,
+                          color: Color(0xFF60D0EE),
+                          size: 20,
+                        ),
+                        const SizedBox(width: 6),
+                        Text(
+                          '${r12lpr8l52zlmor4?.r8n3c6y1w5h9t2m7.length ?? 0}',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 14),
+                    Text(
+                      'Comments (${r12lpr8l52zlmor4?.r8n3c6y1w5h9t2m7.length ?? 0}) +',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -195,7 +229,11 @@ class CokiSwimmingPip1wwzd46n0h0rlpl0lc extends StatelessWidget {
                                   ),
                                   const SizedBox(height: 5),
                                   Text(
-                                    r12lpr8l52zlmor4.b7oexxik958wc,
+                                    r12lpr8l52zlmor4.r8n3c6y1w5h9t2m7.isEmpty
+                                        ? 'No comments yet'
+                                        : r12lpr8l52zlmor4
+                                              .r8n3c6y1w5h9t2m7
+                                              .first,
                                     style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 13,

@@ -39,7 +39,12 @@ class CokiSwimmingSs601a6wnfgg8fg74v {
     );
   }
 
-  static void ctvj7h3t3haji5wzoeo(BuildContext frs4e4efdssqrhl9e) {
+  static void ctvj7h3t3haji5wzoeo(
+    BuildContext frs4e4efdssqrhl9e, {
+    CokiSwimmingOla0gu1u5h0t2dqk0sy77kg? k6v2r9m4x8c1p7s3,
+  }) {
+    final n4w8y2k6r1m9c5 =
+        k6v2r9m4x8c1p7s3?.r8n3c6y1w5h9t2m7 ?? const <String>[];
     showModalBottomSheet<void>(
       context: frs4e4efdssqrhl9e,
       isScrollControlled: true,
@@ -51,14 +56,14 @@ class CokiSwimmingSs601a6wnfgg8fg74v {
           color: Color(0xFF100A30),
           borderRadius: BorderRadius.vertical(top: Radius.circular(22)),
         ),
-        child: const SafeArea(
+        child: SafeArea(
           top: false,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Comments +',
-                style: TextStyle(
+                'Comments (${n4w8y2k6r1m9c5.length}) +',
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 18,
                   height: 1.2,
@@ -70,13 +75,49 @@ class CokiSwimmingSs601a6wnfgg8fg74v {
               Expanded(
                 child: SingleChildScrollView(
                   physics: BouncingScrollPhysics(),
-                  child: Column(
-                    children: [
-                      CokiSwimmingEtwefhbl35nvx4mmo3rhiaj(),
-                      CokiSwimmingEtwefhbl35nvx4mmo3rhiaj(),
-                      CokiSwimmingEtwefhbl35nvx4mmo3rhiaj(),
-                    ],
-                  ),
+                  child: n4w8y2k6r1m9c5.isEmpty
+                      ? const Center(
+                          child: Text(
+                            'No comments yet',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 13,
+                            ),
+                          ),
+                        )
+                      : ListView.separated(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemCount: n4w8y2k6r1m9c5.length,
+                          separatorBuilder: (_, _) => const SizedBox(height: 8),
+                          itemBuilder: (_, index) => Container(
+                            padding: const EdgeInsets.all(9),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF2B254D),
+                              borderRadius: BorderRadius.circular(9),
+                            ),
+                            child: Row(
+                              children: [
+                                const CokiSwimmingBskfv8qke498jnw5a9nz(
+                                  bvuh7vp0q7jr0o6:
+                                      'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_96c3ybdtsvgb1g.png',
+                                  qqonq4itbdxn5jaq8l63c4: 30,
+                                ),
+                                const SizedBox(width: 8),
+                                Expanded(
+                                  child: Text(
+                                    n4w8y2k6r1m9c5[index],
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      height: 1.35,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                 ),
               ),
               CokiSwimmingFzyvkvzmusndsa(),

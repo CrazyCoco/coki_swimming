@@ -5,6 +5,7 @@ class CokiSwimmingNgkgjxthq7wy extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final b3x7m1q9v5c8 = cokiSwimmingno1co2tb6p01cbgq6w3sj9k.first;
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
@@ -48,15 +49,14 @@ class CokiSwimmingNgkgjxthq7wy extends StatelessWidget {
                   const Spacer(),
                   Row(
                     children: [
-                      const CokiSwimmingBskfv8qke498jnw5a9nz(
-                        bvuh7vp0q7jr0o6:
-                            'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_96c3ybdtsvgb1g.png',
+                      CokiSwimmingBskfv8qke498jnw5a9nz(
+                        bvuh7vp0q7jr0o6: b3x7m1q9v5c8.xkczithyrycvg26pfjjmm9,
                         qqonq4itbdxn5jaq8l63c4: 42,
                       ),
                       const SizedBox(width: 8),
-                      const Expanded(
+                      Expanded(
                         child: Text(
-                          'Apien\nJust had the best random call tonight...',
+                          '${b3x7m1q9v5c8.y2bm5rqs3zbbqyxivjft35}\n${b3x7m1q9v5c8.b7oexxik958wc}',
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
@@ -70,7 +70,8 @@ class CokiSwimmingNgkgjxthq7wy extends StatelessWidget {
                       ),
                       CokiSwimmingOqdw9pjmr8qq7a111chs(
                         q37rrengmsqmcn1: Icons.mode_comment_outlined,
-                        pbkyzn88lsx6lxy5k: '100',
+                        pbkyzn88lsx6lxy5k:
+                            '${b3x7m1q9v5c8.r8n3c6y1w5h9t2m7.length}',
                         h80xksevjvsmk: () =>
                             CokiSwimmingSs601a6wnfgg8fg74v.ctvj7h3t3haji5wzoeo(
                               context,

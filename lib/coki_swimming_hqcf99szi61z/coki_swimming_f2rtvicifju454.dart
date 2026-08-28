@@ -1,5 +1,8 @@
 part of '../main.dart';
 
+final RouteObserver<ModalRoute<dynamic>> cokiSwimmingRouteObserver =
+    RouteObserver<ModalRoute<dynamic>>();
+
 class CokiSwimmingCihhtnn535rfht8ub extends StatefulWidget {
   const CokiSwimmingCihhtnn535rfht8ub({
     super.key,
@@ -176,6 +179,7 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
     return MaterialApp(
       title: 'Coki',
       debugShowCheckedModeBanner: false,
+      navigatorObservers: [cokiSwimmingRouteObserver],
       theme: ThemeData(
         useMaterial3: true,
         scaffoldBackgroundColor: const Color(0xFF100A30),

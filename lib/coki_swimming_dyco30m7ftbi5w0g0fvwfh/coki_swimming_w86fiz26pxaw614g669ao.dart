@@ -19,9 +19,15 @@ class _CokiSwimmingPzzzrkn4dhmjpvq4usmx
 
   @override
   Widget build(BuildContext context) {
-    final ugxydknzc1wj3s4w4rkaj = _szon65ynlbize6qvs3 == 0
-        ? cokiSwimmingno1co2tb6p01cbgq6w3sj9k
-        : cokiSwimmingno1co2tb6p01cbgq6w3sj9k.reversed;
+    final ugxydknzc1wj3s4w4rkaj =
+        (_szon65ynlbize6qvs3 == 0
+                ? cokiSwimmingno1co2tb6p01cbgq6w3sj9k
+                : cokiSwimmingno1co2tb6p01cbgq6w3sj9k.reversed)
+            .where(
+              (tbubit3kjffk26xorq7nui5l) =>
+                  !tbubit3kjffk26xorq7nui5l.zagjx458al86vlep0we1whdx,
+            )
+            .toList(growable: false);
     return SafeArea(
       bottom: false,
       child: ListView(
@@ -50,8 +56,9 @@ class _CokiSwimmingPzzzrkn4dhmjpvq4usmx
                       context,
                       h5j30v6kt4ykg21tutwflx: widget.bfiaxy1tb0xj6p53k2u2636,
                       ssqbxn8vpgdaf9emp9937fjk: () =>
-                          CokiSwimmingLge1kl86nmx8w051zr.wxectqiirqq99n(
-                            context,
+                          Navigator.of(context).pushNamed(
+                            CokiSwimmingXu1hfvhsqfkovamr518kcwz
+                                .w521qang5zejpqq51niu,
                           ),
                     ),
                 v6j3bxo2dz4aevlmr: Image.asset(
@@ -588,60 +595,85 @@ class _CokiSwimmingTjluglkuhtfqrj7k452ma4
                   Positioned(
                     right: 9,
                     top: 9,
-                    child: CokiSwimmingKtoozpjuob7rods(
-                      kvg85l6uieobzf: BorderRadius.circular(18),
-                      gwrsyzojtp84oco1ldhaaw90: () =>
-                          CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
-                            context,
-                            h5j30v6kt4ykg21tutwflx: widget.uuh707ixf6f6,
-                            ssqbxn8vpgdaf9emp9937fjk: () => setState(
-                              () => _pp4vmey4ia3baebd = !_pp4vmey4ia3baebd,
+                    child: Column(
+                      children: [
+                        CokiSwimmingKtoozpjuob7rods(
+                          kvg85l6uieobzf: BorderRadius.circular(18),
+                          gwrsyzojtp84oco1ldhaaw90: () =>
+                              CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                                context,
+                                h5j30v6kt4ykg21tutwflx: widget.uuh707ixf6f6,
+                                ssqbxn8vpgdaf9emp9937fjk: () => setState(
+                                  () => _pp4vmey4ia3baebd = !_pp4vmey4ia3baebd,
+                                ),
+                              ),
+                          v6j3bxo2dz4aevlmr: Container(
+                            width: 33,
+                            height: 33,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withValues(alpha: 0.82),
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              _pp4vmey4ia3baebd
+                                  ? Icons.favorite
+                                  : Icons.favorite_border,
+                              color: const Color(0xFFD43161),
+                              size: 20,
                             ),
                           ),
-                      v6j3bxo2dz4aevlmr: Container(
-                        width: 33,
-                        height: 33,
-                        decoration: BoxDecoration(
-                          color: Colors.white.withValues(alpha: 0.82),
-                          shape: BoxShape.circle,
                         ),
-                        child: Icon(
-                          _pp4vmey4ia3baebd
-                              ? Icons.favorite
-                              : Icons.favorite_border,
-                          color: const Color(0xFFD43161),
-                          size: 20,
+                        Text(
+                          '${(cj69ejfukfz9hf48g66td7g?.q7m4v9x2k8d6p1s5 ?? 0) + (_pp4vmey4ia3baebd ? 1 : 0)}',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w800,
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                   Positioned(
                     right: 9,
                     bottom: 9,
-                    child: CokiSwimmingKtoozpjuob7rods(
-                      kvg85l6uieobzf: BorderRadius.circular(18),
-                      gwrsyzojtp84oco1ldhaaw90: () =>
-                          CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
-                            context,
-                            h5j30v6kt4ykg21tutwflx: widget.uuh707ixf6f6,
-                            ssqbxn8vpgdaf9emp9937fjk: () =>
-                                CokiSwimmingSs601a6wnfgg8fg74v.ctvj7h3t3haji5wzoeo(
-                                  context,
-                                ),
+                    child: Column(
+                      children: [
+                        CokiSwimmingKtoozpjuob7rods(
+                          kvg85l6uieobzf: BorderRadius.circular(18),
+                          gwrsyzojtp84oco1ldhaaw90: () =>
+                              CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                                context,
+                                h5j30v6kt4ykg21tutwflx: widget.uuh707ixf6f6,
+                                ssqbxn8vpgdaf9emp9937fjk: () =>
+                                    CokiSwimmingSs601a6wnfgg8fg74v.ctvj7h3t3haji5wzoeo(
+                                      context,
+                                      k6v2r9m4x8c1p7s3: cj69ejfukfz9hf48g66td7g,
+                                    ),
+                              ),
+                          v6j3bxo2dz4aevlmr: Container(
+                            width: 33,
+                            height: 33,
+                            decoration: const BoxDecoration(
+                              color: Color(0xFF60D0EE),
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Icon(
+                              Icons.mode_comment_outlined,
+                              color: Colors.white,
+                              size: 18,
+                            ),
                           ),
-                      v6j3bxo2dz4aevlmr: Container(
-                        width: 33,
-                        height: 33,
-                        decoration: const BoxDecoration(
-                          color: Color(0xFF60D0EE),
-                          shape: BoxShape.circle,
                         ),
-                        child: const Icon(
-                          Icons.mode_comment_outlined,
-                          color: Colors.white,
-                          size: 18,
+                        Text(
+                          '${cj69ejfukfz9hf48g66td7g?.r8n3c6y1w5h9t2m7.length ?? 0}',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w800,
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                 ],
