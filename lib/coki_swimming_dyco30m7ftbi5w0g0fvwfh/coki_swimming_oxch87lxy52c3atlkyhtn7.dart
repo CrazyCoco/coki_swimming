@@ -172,7 +172,7 @@ class CokiSwimmingPip1wwzd46n0h0rlpl0lc extends StatelessWidget {
                         ),
                         const SizedBox(width: 6),
                         Text(
-                          '${r12lpr8l52zlmor4?.r8n3c6y1w5h9t2m7.length ?? 0}',
+                          '${r12lpr8l52zlmor4?.m7c2v9x4q8s1d6p3.length ?? 0}',
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 14,
@@ -183,7 +183,7 @@ class CokiSwimmingPip1wwzd46n0h0rlpl0lc extends StatelessWidget {
                     ),
                     const SizedBox(height: 14),
                     Text(
-                      'Comments (${r12lpr8l52zlmor4?.r8n3c6y1w5h9t2m7.length ?? 0}) +',
+                      'Comments (${r12lpr8l52zlmor4?.m7c2v9x4q8s1d6p3.length ?? 0}) +',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -229,10 +229,10 @@ class CokiSwimmingPip1wwzd46n0h0rlpl0lc extends StatelessWidget {
                                   ),
                                   const SizedBox(height: 5),
                                   Text(
-                                    r12lpr8l52zlmor4.r8n3c6y1w5h9t2m7.isEmpty
+                                    r12lpr8l52zlmor4.m7c2v9x4q8s1d6p3.isEmpty
                                         ? 'No comments yet'
                                         : r12lpr8l52zlmor4
-                                              .r8n3c6y1w5h9t2m7
+                                              .m7c2v9x4q8s1d6p3
                                               .first,
                                     style: const TextStyle(
                                       color: Colors.white,

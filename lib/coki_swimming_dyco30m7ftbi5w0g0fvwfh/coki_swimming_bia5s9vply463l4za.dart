@@ -29,9 +29,7 @@ class _CokiSwimmingJprer454ti6ulh74dnznsb
 
   @override
   Widget build(BuildContext context) {
-    final xmuct5g7ulgenrxkuwn3j079 = cokiSwimmingno1co2tb6p01cbgq6w3sj9k
-        .where((ycyno9paj4gjjc) => ycyno9paj4gjjc.zagjx458al86vlep0we1whdx)
-        .toList(growable: false);
+    final xmuct5g7ulgenrxkuwn3j079 = cokiSwimmingno1co2tb6p01cbgq6w3sj9k;
     return Stack(
       fit: StackFit.expand,
       children: [
@@ -275,12 +273,13 @@ class _CokiSwimmingJprer454ti6ulh74dnznsb
                     final mtasewipmxtnglc2v7oai =
                         xmuct5g7ulgenrxkuwn3j079[z0xc2bimbuuhsz7];
                     return CokiSwimmingSru7lz71ab36wcsa42(
-                      xnb8xe3x8wn4: mtasewipmxtnglc2v7oai.xpgbqaoc87cxdg7jjztf!,
+                      xnb8xe3x8wn4:
+                          mtasewipmxtnglc2v7oai.pgj8geudv74awjznrves.first,
                       plup1qrc6jph: mtasewipmxtnglc2v7oai,
                       lx0jremyz3ceqne: () =>
                           Navigator.of(tx15gngz9iea1sag).pushNamed(
                             CokiSwimmingXu1hfvhsqfkovamr518kcwz
-                                .bvy4bc4tf24ggxjozda5p4j0,
+                                .usb6yvjb2e1k454zejxbs,
                             arguments: mtasewipmxtnglc2v7oai,
                           ),
                       jx9f78u6cfcn5b36k: () =>
@@ -394,36 +393,6 @@ class CokiSwimmingSru7lz71ab36wcsa42 extends StatelessWidget {
                       Color(0x99000000),
                     ],
                   ),
-                ),
-              ),
-              Positioned(
-                left: 8,
-                top: 8,
-                child: Container(
-                  height: 26,
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF59CCE9),
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  child: const Text(
-                    '#Video',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 13,
-                      height: 1.2,
-                      letterSpacing: 0,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ),
-              ),
-              Center(
-                child: Image.asset(
-                  'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_f9uhejm1fo4g7oqk8dph.png',
-                  width: 44,
-                  height: 44,
                 ),
               ),
               Positioned(
