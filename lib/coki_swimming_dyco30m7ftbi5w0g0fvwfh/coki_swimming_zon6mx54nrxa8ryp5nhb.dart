@@ -25,7 +25,10 @@ class _CokiSwimmingHjzxc8m5jr90asftbi
   Future<void> _cokiSwimmingA892faf3d317709cc461e5() async {
     if (_cokiSwimmingD39ff568259d4e51fd5dff56) return;
     final cokiSwimmingD6d48892a6e5b5cb9d1a8 =
-        await CokiSwimmingRtwym9wmdetuorto7.uxp9wn4bxdjeda(context);
+        await CokiSwimmingRtwym9wmdetuorto7.uxp9wn4bxdjeda(
+          context,
+          cokiSwimming6s5r22b3iqimshcj: true,
+        );
     if (cokiSwimmingD6d48892a6e5b5cb9d1a8 == null || !mounted) return;
     setState(() => _cokiSwimmingD39ff568259d4e51fd5dff56 = true);
     final cokiSwimmingA0b455952f98 = await CokiSwimmingMoqf2x4lzqna5nuxmxu1rah5
@@ -276,7 +279,7 @@ class _CokiSwimmingHjzxc8m5jr90asftbi
                     Align(
                       alignment: Alignment.centerLeft,
                       child: CokiSwimmingKtoozpjuob7rods(
-                        kvg85l6uieobzf: BorderRadius.circular(19),
+                        kvg85l6uieobzf: BorderRadius.circular(20),
                         gwrsyzojtp84oco1ldhaaw90:
                             _cokiSwimmingA892faf3d317709cc461e5,
                         v6j3bxo2dz4aevlmr: Container(
@@ -285,18 +288,24 @@ class _CokiSwimmingHjzxc8m5jr90asftbi
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(19),
+                            borderRadius: BorderRadius.circular(20),
                           ),
                           child: _cokiSwimmingD39ff568259d4e51fd5dff56
-                              ? const CircularProgressIndicator()
-                              : Icon(
-                                  _cokiSwimming6c0fc3c1fe050c3 == null
-                                      ? Icons.videocam_outlined
-                                      : Icons.check_circle_rounded,
-                                  color: _cokiSwimming6c0fc3c1fe050c3 == null
-                                      ? const Color(0xFF100A30)
-                                      : const Color(0xFFD43161),
-                                  size: 34,
+                              ? const CupertinoActivityIndicator(
+                                  color: Color(0xFF5BCBEA),
+                                )
+                              : ColorFiltered(
+                                  colorFilter: ColorFilter.mode(
+                                    _cokiSwimming6c0fc3c1fe050c3 == null
+                                        ? const Color(0xFF5BCBEA)
+                                        : const Color(0xFFD43161),
+                                    BlendMode.srcIn,
+                                  ),
+                                  child: Image.asset(
+                                    'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_lbrxbt89w0nhi1d8bqlqtazx.png',
+                                    width: 32,
+                                    height: 32,
+                                  ),
                                 ),
                         ),
                       ),

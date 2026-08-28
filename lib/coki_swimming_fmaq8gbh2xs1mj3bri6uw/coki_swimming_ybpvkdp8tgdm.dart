@@ -195,8 +195,11 @@ class CokiSwimmingMoqf2x4lzqna5nuxmxu1rah5 {
               .request();
         }
         if (!cokiSwimmingA3cdb64b55d15906cf.isGranted) {
-          return const CokiSwimmingMaz1fx7oaujsthbrmbk(
-            CokiSwimmingAgu703r90i4rdun9b8a07eu1.hhjze8rpndgpsp3t8nfyaia,
+          return CokiSwimmingMaz1fx7oaujsthbrmbk(
+            cokiSwimmingA3cdb64b55d15906cf.isPermanentlyDenied ||
+                    cokiSwimmingA3cdb64b55d15906cf.isRestricted
+                ? CokiSwimmingAgu703r90i4rdun9b8a07eu1.xfylbv3f69742tgubgsh
+                : CokiSwimmingAgu703r90i4rdun9b8a07eu1.hhjze8rpndgpsp3t8nfyaia,
           );
         }
       }
@@ -286,6 +289,28 @@ class CokiSwimmingMoqf2x4lzqna5nuxmxu1rah5 {
     final jiihkbrn44p6y3fy5c725v = File(wtz5dl84zpaf7q87yyyob6c);
     if (await jiihkbrn44p6y3fy5c725v.exists()) {
       await jiihkbrn44p6y3fy5c725v.delete();
+    }
+  }
+
+  Future<void> cokiSwimming7f8e7824a51276f2da300991(
+    int cokiSwimming0623cab9c36e4f87b039db9b,
+  ) async {
+    final cokiSwimming6d62d03e47d245919bbda5eb =
+        await getApplicationDocumentsDirectory();
+    for (final cokiSwimmingc24f213a1d31de8ac1 in [
+      'coki_swimming_77710f789718d228',
+      'coki_swimming_profiles',
+    ]) {
+      final cokiSwimmingc92995d641278e6473e515 = Directory(
+        p.join(
+          cokiSwimming6d62d03e47d245919bbda5eb.path,
+          cokiSwimmingc24f213a1d31de8ac1,
+          '$cokiSwimming0623cab9c36e4f87b039db9b',
+        ),
+      );
+      if (await cokiSwimmingc92995d641278e6473e515.exists()) {
+        await cokiSwimmingc92995d641278e6473e515.delete(recursive: true);
+      }
     }
   }
 

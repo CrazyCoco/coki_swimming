@@ -221,11 +221,35 @@ class CokiSwimmingJnq3aan2ocxqyhv extends StatelessWidget {
                               CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
                                 context,
                                 h5j30v6kt4ykg21tutwflx: zrjx7d7go316ig,
-                                ssqbxn8vpgdaf9emp9937fjk: () =>
-                                    Navigator.of(context).pushNamed(
-                                      CokiSwimmingXu1hfvhsqfkovamr518kcwz
-                                          .kjro2uh8n8teco8d2elrzf,
-                                    ),
+                                ssqbxn8vpgdaf9emp9937fjk: () async {
+                                  if (tj870u80nq7tc6ba30wq2d == null) {
+                                    CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
+                                      context,
+                                      'Follow each other to start a chat.',
+                                      isError: true,
+                                    );
+                                    return;
+                                  }
+                                  final cokiSwimmingc8ad854af7a0fb59448fee =
+                                      await CokiSwimming4b37q42lzh8qku34.cokiSwimming94bb189f2aff365815c5(
+                                        tj870u80nq7tc6ba30wq2d
+                                            .y2bm5rqs3zbbqyxivjft35,
+                                      );
+                                  if (!context.mounted) return;
+                                  if (!cokiSwimmingc8ad854af7a0fb59448fee) {
+                                    CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
+                                      context,
+                                      'Follow each other to start a chat.',
+                                      isError: true,
+                                    );
+                                    return;
+                                  }
+                                  Navigator.of(context).pushNamed(
+                                    CokiSwimmingXu1hfvhsqfkovamr518kcwz
+                                        .kjro2uh8n8teco8d2elrzf,
+                                    arguments: tj870u80nq7tc6ba30wq2d,
+                                  );
+                                },
                               ),
                           v6j3bxo2dz4aevlmr: Image.asset(
                             'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_tdq0tfclmt8euufhg8zk9dv.png',

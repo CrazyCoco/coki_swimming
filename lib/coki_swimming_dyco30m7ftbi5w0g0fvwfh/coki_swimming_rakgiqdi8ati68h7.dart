@@ -9,6 +9,7 @@ class CokiSwimmingVkbdq84q1nw5h9ipn extends StatefulWidget {
     this.cokiSwimminga508081db3a0820fb5,
     this.cokiSwimming046421ace0330b5090 = false,
     this.cokiSwimming96ae818a94ba028b98,
+    this.cokiSwimmingA217119ccd1df60ce7d307a6,
   });
 
   final bool lgeh2fxgazcq75g;
@@ -17,6 +18,7 @@ class CokiSwimmingVkbdq84q1nw5h9ipn extends StatefulWidget {
   final Future<void> Function()? cokiSwimminga508081db3a0820fb5;
   final bool cokiSwimming046421ace0330b5090;
   final Future<bool> Function()? cokiSwimming96ae818a94ba028b98;
+  final CokiSwimmingMember? cokiSwimmingA217119ccd1df60ce7d307a6;
 
   @override
   State<CokiSwimmingVkbdq84q1nw5h9ipn> createState() =>
@@ -340,6 +342,8 @@ class _CokiSwimmingPsg55kmkoz6nnzx7x
                                         CokiSwimmingSs601a6wnfgg8fg74v.ctvj7h3t3haji5wzoeo(
                                           iff2xuif3sai8k89,
                                           k6v2r9m4x8c1p7s3: btnvt2w2z3enc,
+                                          cokiSwimming492acfdb2d2b03a826e6f6: widget
+                                              .cokiSwimmingA217119ccd1df60ce7d307a6,
                                         ),
                                   ),
                             ),

@@ -30,7 +30,8 @@ class CokiSwimmingCihhtnn535rfht8ub extends StatefulWidget {
     );
 
     try {
-      await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf.b3ly3h8x1viikh();
+      await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+          .cokiSwimming190054447e1b046a21();
       await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
           .cokiSwimming5888d9ff47b1dda1fa87();
     } catch (_) {
@@ -99,6 +100,9 @@ class CokiSwimmingCihhtnn535rfht8ub extends StatefulWidget {
               cokiSwimmingDb6b0273792c060: _cokiSwimming470d0f93d42261a398,
               cokiSwimmingC91a15fc4d8a49ccb: cokiSwimmingD805ce66375672f,
             );
+        await cokiSwimmingf99b76c84a90ebf95e.remove(
+          _cokiSwimming470d0f93d42261a398,
+        );
       }
       if (cokiSwimmingE1efef5919ef6 == null) {
         final cokiSwimming8424fe77bbd5 =
@@ -114,6 +118,9 @@ class CokiSwimmingCihhtnn535rfht8ub extends StatefulWidget {
               cokiSwimmingDb6b0273792c060: _cokiSwimmingdf3496f6567fb03d21,
               cokiSwimmingC91a15fc4d8a49ccb: cokiSwimmingE1efef5919ef6,
             );
+        await cokiSwimmingf99b76c84a90ebf95e.remove(
+          _cokiSwimmingdf3496f6567fb03d21,
+        );
       }
       cokiSwimmingf7d98527d47412aad9 =
           (jsonDecode(cokiSwimmingD805ce66375672f) as List<dynamic>)
@@ -510,18 +517,12 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
           }
         }
       }
+      await CokiSwimmingMoqf2x4lzqna5nuxmxu1rah5.j0gecuushzrwcqffsejytl
+          .cokiSwimming7f8e7824a51276f2da300991(wzxxiwag7tjovb2loaihyi3o.id);
+      await CokiSwimmingCxpnto70zseiuixud78r.cokiSwimmingb60bfd971ff9478faa2d();
       await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf.ueewyuceyrubr4ohibgt(
         wzxxiwag7tjovb2loaihyi3o.id,
       );
-      try {
-        await CokiSwimmingMoqf2x4lzqna5nuxmxu1rah5.j0gecuushzrwcqffsejytl
-            .h8h3oh2yfwet(
-              wzxxiwag7tjovb2loaihyi3o.avatarPath,
-              wzxxiwag7tjovb2loaihyi3o.id,
-            );
-      } on Object {
-        // The account is already removed; a stale local file must not restore it.
-      }
     }
     await CokiSwimmingCxpnto70zseiuixud78r.ynqw22nyqb3a2c();
     if (!mounted) return;
@@ -602,13 +603,23 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
               rja948ou6qv722c1e: _l9pbbvg71q3krwau6xu0xbp,
             ),
           CokiSwimmingXu1hfvhsqfkovamr518kcwz.q7m4v9x2k8d6p1s5 =>
-            CokiSwimmingQ8m2v7x4n9z1p6r3t5(
-              cokiSwimming36d90b8190996: _sjzayzcmnb3rh4?.id ?? 0,
-            ),
+            _sjzayzcmnb3rh4 == null
+                ? CokiSwimmingG6jfou78x0oxqhagqndc(
+                    e15skmj605uthn4lzizpmq: _ly9xs2n8sd4ar7tgb9,
+                    eln3mx6gr6pmf: _bvebk6y6r600qld31grir,
+                  )
+                : CokiSwimmingQ8m2v7x4n9z1p6r3t5(
+                    cokiSwimming36d90b8190996: _sjzayzcmnb3rh4!.id,
+                  ),
           CokiSwimmingXu1hfvhsqfkovamr518kcwz.m9x3q7v1z5n8p4c6t2r0 =>
-            CokiSwimmingM7x2q9v4n8z1c6p3r5t0(
-              cokiSwimmingF96941bf4b8461c1c32: _sjzayzcmnb3rh4?.id ?? 0,
-            ),
+            _sjzayzcmnb3rh4 == null
+                ? CokiSwimmingG6jfou78x0oxqhagqndc(
+                    e15skmj605uthn4lzizpmq: _ly9xs2n8sd4ar7tgb9,
+                    eln3mx6gr6pmf: _bvebk6y6r600qld31grir,
+                  )
+                : CokiSwimmingM7x2q9v4n8z1c6p3r5t0(
+                    cokiSwimmingF96941bf4b8461c1c32: _sjzayzcmnb3rh4!.id,
+                  ),
           CokiSwimmingXu1hfvhsqfkovamr518kcwz.l8xp5be6yknfl9cf =>
             CokiSwimmingQx2adsjpnyi8kfrtra8bofin(
               ji0c4cwkzwdqju0dtttyvlz1: _cn8xodev15w5qw,
@@ -728,6 +739,7 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
                       true,
                     )
                   : null,
+              cokiSwimmingA217119ccd1df60ce7d307a6: _sjzayzcmnb3rh4,
             ),
           CokiSwimmingXu1hfvhsqfkovamr518kcwz.tsux9v3xzdp79n2vwllqrjd9 =>
             CokiSwimmingHdy0szot3oa6f(
@@ -805,6 +817,12 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
           CokiSwimmingXu1hfvhsqfkovamr518kcwz.kjro2uh8n8teco8d2elrzf =>
             CokiSwimmingNq0bdvs9uqdiayj9158w(
               cokiSwimming6d9c252a1792965a2f60221: _sjzayzcmnb3rh4?.id ?? 0,
+              cokiSwimming584cec7f78c5fe:
+                  wev91tsmbk6uqwiamu2ha.arguments
+                      is CokiSwimmingOla0gu1u5h0t2dqk0sy77kg
+                  ? wev91tsmbk6uqwiamu2ha.arguments!
+                        as CokiSwimmingOla0gu1u5h0t2dqk0sy77kg
+                  : null,
             ),
           CokiSwimmingXu1hfvhsqfkovamr518kcwz.u44r7kig5pilpfg =>
             const CokiSwimmingJcz6i330kx1m81dfpj89(),

@@ -24,7 +24,12 @@ class CokiSwimmingLei4ce4d64ic4llpobyo8 extends StatefulWidget {
 }
 
 class CokiSwimmingV8n2q6m4x9p1z7c3r5t6 extends StatefulWidget {
-  const CokiSwimmingV8n2q6m4x9p1z7c3r5t6({super.key});
+  const CokiSwimmingV8n2q6m4x9p1z7c3r5t6({
+    super.key,
+    required this.cokiSwimming5d42352c220b1ed97746,
+  });
+
+  final int cokiSwimming5d42352c220b1ed97746;
 
   @override
   State<CokiSwimmingV8n2q6m4x9p1z7c3r5t6> createState() =>
@@ -51,7 +56,8 @@ class _CokiSwimmingL6x2p9v4n8q1z7m3r5t0
   Future<void> _cokiSwimmingD8q4v1m7x2n9p6z3() async {
     final value = await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
         .cokiSwimming08fc79df5890845d(
-          cokiSwimmingFfdff4098f67dc2a39b: 0,
+          cokiSwimmingFfdff4098f67dc2a39b:
+              widget.cokiSwimming5d42352c220b1ed97746,
           cokiSwimming9ca085a1e9464611db57745: _cokiSwimmingR9x4m2q7v1z8p5n6,
           cokiSwimming756b8fe9fc667a: _cokiSwimmingR9x4m2q7v1z8p5n6,
         );
@@ -89,7 +95,8 @@ class _CokiSwimmingL6x2p9v4n8q1z7m3r5t0
     final next = {..._cokiSwimmingT4n8p2x6m1q7z9v3, today: hours};
     await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
         .cokiSwimming74e8b2f70fa2f5b(
-          cokiSwimming0a44fb28163763bb6ec69: 0,
+          cokiSwimming0a44fb28163763bb6ec69:
+              widget.cokiSwimming5d42352c220b1ed97746,
           cokiSwimming47e760ec313f586105: _cokiSwimmingR9x4m2q7v1z8p5n6,
           cokiSwimmingDb6b0273792c060: _cokiSwimmingR9x4m2q7v1z8p5n6,
           cokiSwimmingC91a15fc4d8a49ccb: jsonEncode(next),
@@ -507,7 +514,7 @@ class _CokiSwimmingJprer454ti6ulh74dnznsb
                                   ssqbxn8vpgdaf9emp9937fjk: () =>
                                       Navigator.of(context).pushNamed(
                                         CokiSwimmingXu1hfvhsqfkovamr518kcwz
-                                            .tsux9v3xzdp79n2vwllqrjd9,
+                                            .w521qang5zejpqq51niu,
                                       ),
                                 ),
                             v6j3bxo2dz4aevlmr: Image.asset(
@@ -530,9 +537,15 @@ class _CokiSwimmingJprer454ti6ulh74dnznsb
                           child: CokiSwimmingKtoozpjuob7rods(
                             kvg85l6uieobzf: BorderRadius.circular(16),
                             gwrsyzojtp84oco1ldhaaw90: () =>
-                                Navigator.of(context).pushNamed(
-                                  CokiSwimmingXu1hfvhsqfkovamr518kcwz
-                                      .q7m4v9x2k8d6p1s5,
+                                CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                                  context,
+                                  h5j30v6kt4ykg21tutwflx:
+                                      widget.urppm1a0b7mgzwjl90at4,
+                                  ssqbxn8vpgdaf9emp9937fjk: () =>
+                                      Navigator.of(context).pushNamed(
+                                        CokiSwimmingXu1hfvhsqfkovamr518kcwz
+                                            .q7m4v9x2k8d6p1s5,
+                                      ),
                                 ),
                             v6j3bxo2dz4aevlmr: Container(
                               height: 88,
@@ -591,9 +604,15 @@ class _CokiSwimmingJprer454ti6ulh74dnznsb
                           child: CokiSwimmingKtoozpjuob7rods(
                             kvg85l6uieobzf: BorderRadius.circular(16),
                             gwrsyzojtp84oco1ldhaaw90: () =>
-                                Navigator.of(context).pushNamed(
-                                  CokiSwimmingXu1hfvhsqfkovamr518kcwz
-                                      .m9x3q7v1z5n8p4c6t2r0,
+                                CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                                  context,
+                                  h5j30v6kt4ykg21tutwflx:
+                                      widget.urppm1a0b7mgzwjl90at4,
+                                  ssqbxn8vpgdaf9emp9937fjk: () =>
+                                      Navigator.of(context).pushNamed(
+                                        CokiSwimmingXu1hfvhsqfkovamr518kcwz
+                                            .m9x3q7v1z5n8p4c6t2r0,
+                                      ),
                                 ),
                             v6j3bxo2dz4aevlmr: Container(
                               height: 88,

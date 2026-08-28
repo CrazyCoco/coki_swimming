@@ -57,6 +57,7 @@ class _CokiSwimmingR6p4x8n1z7m3q9v5t2
               cokiSwimmingDb6b0273792c060: _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
               cokiSwimmingC91a15fc4d8a49ccb: value,
             );
+        await SharedPreferencesAsync().remove(_cokiSwimmingQ8v2m6x9n4p1z7r3t5);
       }
     }
     if (value != null) {
@@ -179,6 +180,7 @@ class _CokiSwimmingR6p4x8n1z7m3q9v5t2
               cokiSwimmingDb6b0273792c060: _cokiSwimmingK4n8q1v6x3z9m2p7r5,
               cokiSwimmingC91a15fc4d8a49ccb: raw,
             );
+        await SharedPreferencesAsync().remove(_cokiSwimmingK4n8q1v6x3z9m2p7r5);
       }
     }
     final Map<String, dynamic> records = {};

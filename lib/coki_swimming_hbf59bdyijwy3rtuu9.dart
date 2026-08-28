@@ -160,6 +160,36 @@ class CokiSwimming4b37q42lzh8qku34 {
         );
   }
 
+  static Future<bool> cokiSwimming94bb189f2aff365815c5(
+    String cokiSwimmingd20ecb85250ad65300be,
+  ) async {
+    final cokiSwimming715b7ba77eb920881311 =
+        await CokiSwimmingCxpnto70zseiuixud78r.o6irsuz6o8tm5();
+    if (cokiSwimming715b7ba77eb920881311 == null ||
+        cokiSwimming715b7ba77eb920881311 <= 0 ||
+        cokiSwimmingd20ecb85250ad65300be.trim().isEmpty) {
+      return false;
+    }
+    return await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+                .cokiSwimming08fc79df5890845d(
+                  cokiSwimmingFfdff4098f67dc2a39b:
+                      cokiSwimming715b7ba77eb920881311,
+                  cokiSwimming9ca085a1e9464611db57745:
+                      cokiSwimming427f17409f4ca84c,
+                  cokiSwimming756b8fe9fc667a: cokiSwimmingd20ecb85250ad65300be,
+                ) ==
+            'true' &&
+        await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+                .cokiSwimming08fc79df5890845d(
+                  cokiSwimmingFfdff4098f67dc2a39b:
+                      cokiSwimming715b7ba77eb920881311,
+                  cokiSwimming9ca085a1e9464611db57745:
+                      'coki_swimming_7d2435be94a018ea',
+                  cokiSwimming756b8fe9fc667a: cokiSwimmingd20ecb85250ad65300be,
+                ) ==
+            'true';
+  }
+
   static Future<bool> cokiSwimmingC78486f64e9216d24(
     String cokiSwimming1c99febfeb6401a37dbac029,
   ) async {

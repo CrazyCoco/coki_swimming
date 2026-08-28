@@ -153,7 +153,7 @@ cokiSwimmingno1co2tb6p01cbgq6w3sj9k = [
       'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_rmqa9411lyb2tfdxlejvepz.jpeg',
     ],
     jw6eiwt4zt0wuycr7q: 'Immersed in water, just unwind for a while',
-    b7oexxik958wc: 'Water therapy hits different',
+    b7oexxik958wc: 'Training',
     m7c2v9x4q8s1d6p3: ['Water therapy hits different'],
     q7m4v9x2k8d6p1s5: 128,
     dpz5ewc9dhgqc:
@@ -173,7 +173,7 @@ cokiSwimmingno1co2tb6p01cbgq6w3sj9k = [
       'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_efoiplo6zlep7rbdqci.jpeg',
     ],
     jw6eiwt4zt0wuycr7q: 'simple little joy',
-    b7oexxik958wc: 'Swimming is so healing',
+    b7oexxik958wc: 'Training',
     m7c2v9x4q8s1d6p3: ['Swimming is so healing'],
     q7m4v9x2k8d6p1s5: 96,
     dpz5ewc9dhgqc:
@@ -193,7 +193,7 @@ cokiSwimmingno1co2tb6p01cbgq6w3sj9k = [
       'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_bbgs4dh8v33foeu1.jpeg',
     ],
     jw6eiwt4zt0wuycr7q: 'Leave all worries beneath the water',
-    b7oexxik958wc: 'Water is such a good escape',
+    b7oexxik958wc: 'Training',
     m7c2v9x4q8s1d6p3: ['Water is such a good escape'],
     q7m4v9x2k8d6p1s5: 214,
     dpz5ewc9dhgqc:
@@ -213,7 +213,7 @@ cokiSwimmingno1co2tb6p01cbgq6w3sj9k = [
       'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_y40tjuwbtgd0.jpeg',
     ],
     jw6eiwt4zt0wuycr7q: 'Today\'s time in the water',
-    b7oexxik958wc: 'Wish I could stay longer',
+    b7oexxik958wc: 'Lifestyle',
     m7c2v9x4q8s1d6p3: ['Wish I could stay longer'],
     q7m4v9x2k8d6p1s5: 73,
     dpz5ewc9dhgqc:
@@ -233,7 +233,7 @@ cokiSwimmingno1co2tb6p01cbgq6w3sj9k = [
       'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_vixapu7405xmg.jpeg',
     ],
     jw6eiwt4zt0wuycr7q: 'Go with the flow in the water',
-    b7oexxik958wc: 'Love this slow-motion feeling',
+    b7oexxik958wc: 'Lifestyle',
     m7c2v9x4q8s1d6p3: ['Love this slow-motion feeling'],
     q7m4v9x2k8d6p1s5: 186,
     dpz5ewc9dhgqc:
@@ -253,7 +253,7 @@ cokiSwimmingno1co2tb6p01cbgq6w3sj9k = [
       'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_edmuimuujz7afhw7jr9fb.jpeg',
     ],
     jw6eiwt4zt0wuycr7q: 'moment of relaxation',
-    b7oexxik958wc: 'Perfect for hot days',
+    b7oexxik958wc: 'Training',
     m7c2v9x4q8s1d6p3: ['Perfect for hot days'],
     q7m4v9x2k8d6p1s5: 45,
     r8n3c6y1w5h9t2m7: ['Perfect for hot days'],
@@ -267,7 +267,7 @@ cokiSwimmingno1co2tb6p01cbgq6w3sj9k = [
       'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_bt9qabzs4iaehcdeq.jpeg',
     ],
     jw6eiwt4zt0wuycr7q: 'Immerse myself in the peace of water',
-    b7oexxik958wc: 'Enjoy every second',
+    b7oexxik958wc: 'Lifestyle',
     m7c2v9x4q8s1d6p3: ['Enjoy every second'],
     q7m4v9x2k8d6p1s5: 119,
     dpz5ewc9dhgqc:
@@ -287,7 +287,7 @@ cokiSwimmingno1co2tb6p01cbgq6w3sj9k = [
       'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_ufchfkdr5zx2zpv35vk.jpeg',
     ],
     jw6eiwt4zt0wuycr7q: 'Head to the water and feel free',
-    b7oexxik958wc: 'Who understands this joy',
+    b7oexxik958wc: 'Training',
     m7c2v9x4q8s1d6p3: ['Who understands this joy'],
     q7m4v9x2k8d6p1s5: 88,
     dpz5ewc9dhgqc:
@@ -307,7 +307,7 @@ cokiSwimmingno1co2tb6p01cbgq6w3sj9k = [
       'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_o0cc4gslcd7ss.jpeg',
     ],
     jw6eiwt4zt0wuycr7q: 'A short escape under water',
-    b7oexxik958wc: 'I really like this feeling',
+    b7oexxik958wc: 'Training',
     m7c2v9x4q8s1d6p3: ['I really like this feeling'],
     q7m4v9x2k8d6p1s5: 267,
     dpz5ewc9dhgqc:
@@ -327,7 +327,7 @@ cokiSwimmingno1co2tb6p01cbgq6w3sj9k = [
       'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_4994p1f2h7tjf.jpeg',
     ],
     jw6eiwt4zt0wuycr7q: 'No rush, just glide through water',
-    b7oexxik958wc: 'Best way to clear your mind',
+    b7oexxik958wc: 'Training',
     m7c2v9x4q8s1d6p3: ['Best way to clear your mind'],
     q7m4v9x2k8d6p1s5: 64,
     dpz5ewc9dhgqc:
@@ -347,7 +347,7 @@ cokiSwimmingno1co2tb6p01cbgq6w3sj9k = [
       'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_z0kr40086xkykh10.jpeg',
     ],
     jw6eiwt4zt0wuycr7q: 'Little vibe moments by the water',
-    b7oexxik958wc: 'Nice capture',
+    b7oexxik958wc: 'Training',
     m7c2v9x4q8s1d6p3: ['Nice capture'],
     q7m4v9x2k8d6p1s5: 152,
     r8n3c6y1w5h9t2m7: ['Nice capture'],
@@ -362,7 +362,7 @@ cokiSwimmingno1co2tb6p01cbgq6w3sj9k = [
       'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_serf6btg2ykgmb7rt9dq5.jpeg',
     ],
     jw6eiwt4zt0wuycr7q: 'Dive in and let tiredness fade away',
-    b7oexxik958wc: 'Makes me want to swim',
+    b7oexxik958wc: 'Community',
     m7c2v9x4q8s1d6p3: ['Makes me want to swim'],
     q7m4v9x2k8d6p1s5: 39,
     r8n3c6y1w5h9t2m7: ['Makes me want to swim'],

@@ -21,53 +21,11 @@ class _CokiSwimming6m1q8v4x9p3k7r2t5n0h
   Future<void> _cokiSwimming8q3m7v1x9p4k6r2t5n0h() async {
     final cokiSwimming4p9m2q7v1x8k6r3t5n0h =
         await CokiSwimmingCxpnto70zseiuixud78r.o6irsuz6o8tm5() ?? 0;
-    final cokiSwimming7m2q9v4x1p8k6r3t5n0h = await CokiSwimmingDatabase
-        .hxjpjp7w6ojq86l4ddyhf
-        .cokiSwimming08fc79df5890845d(
-          cokiSwimmingFfdff4098f67dc2a39b: cokiSwimming4p9m2q7v1x8k6r3t5n0h,
-          cokiSwimming9ca085a1e9464611db57745:
-              _CokiSwimmingRlviyh99dh4az0dmn52d5www
-                  ._cokiSwimmingDf4bbdd6c54c5a0b721,
-          cokiSwimming756b8fe9fc667a: _CokiSwimmingRlviyh99dh4az0dmn52d5www
-              ._cokiSwimmingDf4bbdd6c54c5a0b721,
-        );
-    if (cokiSwimming7m2q9v4x1p8k6r3t5n0h == null) {
-      await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
-          .cokiSwimming74e8b2f70fa2f5b(
-            cokiSwimming0a44fb28163763bb6ec69: cokiSwimming4p9m2q7v1x8k6r3t5n0h,
-            cokiSwimming47e760ec313f586105:
-                _CokiSwimmingRlviyh99dh4az0dmn52d5www
-                    ._cokiSwimmingDf4bbdd6c54c5a0b721,
-            cokiSwimmingDb6b0273792c060: _CokiSwimmingRlviyh99dh4az0dmn52d5www
-                ._cokiSwimmingDf4bbdd6c54c5a0b721,
-            cokiSwimmingC91a15fc4d8a49ccb: jsonEncode(
-              _CokiSwimmingRlviyh99dh4az0dmn52d5www
-                  ._cokiSwimming4q9m2v7x1p8k6r3t5n0h,
-            ),
-          );
-    }
     if (mounted) {
       setState(
         () => _cokiSwimming2v9m4q1x8p6k7r3t5n0h =
             cokiSwimming4p9m2q7v1x8k6r3t5n0h,
       );
-    }
-  }
-
-  List<String> _cokiSwimming1m8q4v9x3p7k6r2t5n0h(String? value) {
-    if (value == null) return const [];
-    try {
-      final cokiSwimming9q2m7v4x1p8k6r3t5n0h = jsonDecode(value);
-      return cokiSwimming9q2m7v4x1p8k6r3t5n0h is List
-          ? cokiSwimming9q2m7v4x1p8k6r3t5n0h
-                .map(
-                  (cokiSwimming3v8m1q6x9p2k7r4t5n0h) =>
-                      cokiSwimming3v8m1q6x9p2k7r4t5n0h.toString(),
-                )
-                .toList(growable: false)
-          : const [];
-    } on Object {
-      return const [];
     }
   }
 
@@ -109,42 +67,98 @@ class _CokiSwimming6m1q8v4x9p3k7r2t5n0h
                 Expanded(
                   child: _cokiSwimming2v9m4q1x8p6k7r3t5n0h == null
                       ? const Center(child: CupertinoActivityIndicator())
-                      : StreamBuilder<String?>(
+                      : StreamBuilder<List<MapEntry<String, String>>>(
                           stream: CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
-                              .cokiSwimming5a0c9ec6e99b9db2(
-                                cokiSwimming437bcbd34e2d30e6:
+                              .cokiSwimming4b20f2e655a8a5a8(
+                                cokiSwimming3e27f09983ab3565:
                                     _cokiSwimming2v9m4q1x8p6k7r3t5n0h!,
-                                cokiSwimmingA066704a66c5b817:
-                                    _CokiSwimmingRlviyh99dh4az0dmn52d5www
-                                        ._cokiSwimmingDf4bbdd6c54c5a0b721,
-                                cokiSwimming04e6aeb1f334b2eb:
+                                cokiSwimming5950383ed83f1f5a:
                                     _CokiSwimmingRlviyh99dh4az0dmn52d5www
                                         ._cokiSwimmingDf4bbdd6c54c5a0b721,
                               ),
                           builder: (context, cokiSwimming6v1m8q4x9p3k7r2t5n0h) {
-                            final cokiSwimming4m9q2v7x1p8k6r3t5n0h =
-                                _cokiSwimming1m8q4v9x3p7k6r2t5n0h(
-                                  cokiSwimming6v1m8q4x9p3k7r2t5n0h.data,
-                                );
+                            final cokiSwimming7bef692946721c76ba11e2 =
+                                (cokiSwimming6v1m8q4x9p3k7r2t5n0h.data ??
+                                        const <MapEntry<String, String>>[])
+                                    .map(
+                                      (cokiSwimmingB9e81a0002e3947eaed3bc) =>
+                                          _CokiSwimming06013c0f8e55d70e534bd1.cokiSwimming2767700d2c653098(
+                                            cokiSwimmingB9e81a0002e3947eaed3bc
+                                                .value,
+                                          ),
+                                    )
+                                    .whereType<
+                                      _CokiSwimming06013c0f8e55d70e534bd1
+                                    >()
+                                    .where(
+                                      (
+                                        cokiSwimming11d0c0d214bd7cf9,
+                                      ) => cokiSwimming11d0c0d214bd7cf9
+                                          .cokiSwimmingD9f06671a50530b5ee6b4567
+                                          .isNotEmpty,
+                                    )
+                                    .toList(growable: false);
                             return CokiSwimmingAba7n9vsqt6w3fz(
                               cokiSwimmingudas2o8q00gicj383hxod: ListView(
                                 physics: const BouncingScrollPhysics(
                                   parent: AlwaysScrollableScrollPhysics(),
                                 ),
                                 padding: const EdgeInsets.fromLTRB(0, 7, 0, 24),
-                                children: [
-                                  _CokiSwimmingMvn2foxa9lwqzco60d(
-                                    cokiSwimming8v3m1q6x9p2k7r4t5n0h:
-                                        _cokiSwimming5q1m8v3x9p4k7r2t6n0h(
-                                          cokiSwimming4m9q2v7x1p8k6r3t5n0h,
+                                children:
+                                    cokiSwimming7bef692946721c76ba11e2.isEmpty
+                                    ? const [
+                                        SizedBox(
+                                          height: 240,
+                                          child: Center(
+                                            child: Text(
+                                              'No conversations yet',
+                                              style: TextStyle(
+                                                color: Colors.white70,
+                                                fontSize: 15,
+                                              ),
+                                            ),
+                                          ),
                                         ),
-                                    oqwlyilixqrgrl60dplkvj: () =>
-                                        Navigator.of(context).pushNamed(
-                                          CokiSwimmingXu1hfvhsqfkovamr518kcwz
-                                              .kjro2uh8n8teco8d2elrzf,
-                                        ),
-                                  ),
-                                ],
+                                      ]
+                                    : [
+                                        for (final cokiSwimming6168cabaed178586d747
+                                            in cokiSwimming7bef692946721c76ba11e2) ...[
+                                          _CokiSwimmingMvn2foxa9lwqzco60d(
+                                            cokiSwimming8v3m1q6x9p2k7r4t5n0h:
+                                                _cokiSwimming5q1m8v3x9p4k7r2t6n0h(
+                                                  cokiSwimming6168cabaed178586d747
+                                                      .cokiSwimmingD9f06671a50530b5ee6b4567,
+                                                ),
+                                            cokiSwimmingF8ec827b49941758:
+                                                cokiSwimming6168cabaed178586d747
+                                                    .cokiSwimmingAa95a06e144c06fa091fa3,
+                                            oqwlyilixqrgrl60dplkvj: () async {
+                                              if (!await CokiSwimming4b37q42lzh8qku34.cokiSwimming94bb189f2aff365815c5(
+                                                cokiSwimming6168cabaed178586d747
+                                                    .cokiSwimmingAa95a06e144c06fa091fa3
+                                                    .y2bm5rqs3zbbqyxivjft35,
+                                              )) {
+                                                if (!context.mounted) return;
+                                                CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
+                                                  context,
+                                                  'Follow each other to start a chat.',
+                                                  isError: true,
+                                                );
+                                                return;
+                                              }
+                                              if (!context.mounted) return;
+                                              Navigator.of(context).pushNamed(
+                                                CokiSwimmingXu1hfvhsqfkovamr518kcwz
+                                                    .kjro2uh8n8teco8d2elrzf,
+                                                arguments:
+                                                    cokiSwimming6168cabaed178586d747
+                                                        .cokiSwimmingAa95a06e144c06fa091fa3,
+                                              );
+                                            },
+                                          ),
+                                          const SizedBox(height: 10),
+                                        ],
+                                      ],
                               ),
                             );
                           },
@@ -210,17 +224,20 @@ class _CokiSwimmingX7ifh9z2quc7dxi extends StatelessWidget {
 class _CokiSwimmingMvn2foxa9lwqzco60d extends StatelessWidget {
   const _CokiSwimmingMvn2foxa9lwqzco60d({
     required this.cokiSwimming8v3m1q6x9p2k7r4t5n0h,
+    required this.cokiSwimmingF8ec827b49941758,
     required this.oqwlyilixqrgrl60dplkvj,
   });
 
   final String cokiSwimming8v3m1q6x9p2k7r4t5n0h;
+  final CokiSwimmingOla0gu1u5h0t2dqk0sy77kg cokiSwimmingF8ec827b49941758;
   final VoidCallback oqwlyilixqrgrl60dplkvj;
 
   @override
   Widget build(BuildContext context) {
     return Semantics(
       button: true,
-      label: 'Pyrlen, $cokiSwimming8v3m1q6x9p2k7r4t5n0h',
+      label:
+          '${cokiSwimmingF8ec827b49941758.y2bm5rqs3zbbqyxivjft35}, $cokiSwimming8v3m1q6x9p2k7r4t5n0h',
       child: CokiSwimmingKtoozpjuob7rods(
         kvg85l6uieobzf: BorderRadius.circular(38),
         gwrsyzojtp84oco1ldhaaw90: oqwlyilixqrgrl60dplkvj,
@@ -244,19 +261,18 @@ class _CokiSwimmingMvn2foxa9lwqzco60d extends StatelessWidget {
               Positioned(
                 left: 16,
                 top: -7,
-                child: Image.asset(
-                  'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_fya291tpfikb0l76cjlmqbm.png',
-                  width: 72,
-                  height: 72,
-                  filterQuality: FilterQuality.high,
+                child: CokiSwimmingBskfv8qke498jnw5a9nz(
+                  bvuh7vp0q7jr0o6:
+                      cokiSwimmingF8ec827b49941758.xkczithyrycvg26pfjjmm9,
+                  qqonq4itbdxn5jaq8l63c4: 72,
                 ),
               ),
-              const Positioned(
+              Positioned(
                 left: 97,
                 top: 11,
                 right: 53,
                 child: Text(
-                  'Pyrlen',
+                  cokiSwimmingF8ec827b49941758.y2bm5rqs3zbbqyxivjft35,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -291,4 +307,48 @@ class _CokiSwimmingMvn2foxa9lwqzco60d extends StatelessWidget {
       ),
     );
   }
+}
+
+class _CokiSwimming06013c0f8e55d70e534bd1 {
+  const _CokiSwimming06013c0f8e55d70e534bd1({
+    required this.cokiSwimmingAa95a06e144c06fa091fa3,
+    required this.cokiSwimmingD9f06671a50530b5ee6b4567,
+  });
+
+  static _CokiSwimming06013c0f8e55d70e534bd1? cokiSwimming2767700d2c653098(
+    String cokiSwimmingD12985833743d3093637cd,
+  ) {
+    try {
+      final cokiSwimmingC3334a2ddfbb12b8a27fe3 = jsonDecode(
+        cokiSwimmingD12985833743d3093637cd,
+      );
+      if (cokiSwimmingC3334a2ddfbb12b8a27fe3 is! Map) return null;
+      final cokiSwimming6e4b87079a80aa6e =
+          cokiSwimmingC3334a2ddfbb12b8a27fe3['coki_swimming_91f58a5ff4ad8b'];
+      final cokiSwimming4ef4709090b6a6663d207b90 =
+          cokiSwimmingC3334a2ddfbb12b8a27fe3['coki_swimming_6298354aa4e11480ad95'];
+      if (cokiSwimming6e4b87079a80aa6e is! Map ||
+          cokiSwimming4ef4709090b6a6663d207b90 is! List) {
+        return null;
+      }
+      return _CokiSwimming06013c0f8e55d70e534bd1(
+        cokiSwimmingAa95a06e144c06fa091fa3:
+            CokiSwimmingOla0gu1u5h0t2dqk0sy77kg.cokiSwimming49593b911b058bc96d5a(
+              Map<String, dynamic>.from(cokiSwimming6e4b87079a80aa6e),
+            ),
+        cokiSwimmingD9f06671a50530b5ee6b4567:
+            cokiSwimming4ef4709090b6a6663d207b90
+                .map(
+                  (cokiSwimming881b2627e3dff684459da0cf) =>
+                      cokiSwimming881b2627e3dff684459da0cf.toString(),
+                )
+                .toList(growable: false),
+      );
+    } on Object {
+      return null;
+    }
+  }
+
+  final CokiSwimmingOla0gu1u5h0t2dqk0sy77kg cokiSwimmingAa95a06e144c06fa091fa3;
+  final List<String> cokiSwimmingD9f06671a50530b5ee6b4567;
 }

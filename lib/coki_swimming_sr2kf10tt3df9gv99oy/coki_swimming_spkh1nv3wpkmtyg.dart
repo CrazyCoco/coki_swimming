@@ -4,19 +4,25 @@ class CokiSwimmingRtwym9wmdetuorto7 {
   const CokiSwimmingRtwym9wmdetuorto7._x9vs4kkosy5wnwaem0va();
 
   static Future<CokiSwimmingGcnt0jewcf1egxi3?> uxp9wn4bxdjeda(
-    BuildContext d0lnsom1g9ctd88tx8uz,
-  ) {
+    BuildContext d0lnsom1g9ctd88tx8uz, {
+    bool cokiSwimming6s5r22b3iqimshcj = false,
+  }) {
     return showModalBottomSheet<CokiSwimmingGcnt0jewcf1egxi3>(
       context: d0lnsom1g9ctd88tx8uz,
       backgroundColor: Colors.transparent,
-      builder: (rhxpc7v2dyb1gf8g7ljapl) =>
-          const _CokiSwimmingP52hlgttj3edyd4qseohad1(),
+      builder: (rhxpc7v2dyb1gf8g7ljapl) => _CokiSwimmingP52hlgttj3edyd4qseohad1(
+        cokiSwimming6s5r22b3iqimshcj: cokiSwimming6s5r22b3iqimshcj,
+      ),
     );
   }
 }
 
 class _CokiSwimmingP52hlgttj3edyd4qseohad1 extends StatelessWidget {
-  const _CokiSwimmingP52hlgttj3edyd4qseohad1();
+  const _CokiSwimmingP52hlgttj3edyd4qseohad1({
+    required this.cokiSwimming6s5r22b3iqimshcj,
+  });
+
+  final bool cokiSwimming6s5r22b3iqimshcj;
 
   @override
   Widget build(BuildContext context) {
@@ -40,11 +46,11 @@ class _CokiSwimmingP52hlgttj3edyd4qseohad1 extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 18),
-            const Align(
+            Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Profile photo',
-                style: TextStyle(
+                cokiSwimming6s5r22b3iqimshcj ? 'Video' : 'Profile photo',
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                   height: 1.2,
@@ -55,8 +61,12 @@ class _CokiSwimmingP52hlgttj3edyd4qseohad1 extends StatelessWidget {
             ),
             const SizedBox(height: 14),
             _CokiSwimmingHruydb6zxwh1o5pg886v5wk(
-              phd3w6jw5r5i31vo9pj90: CupertinoIcons.camera_fill,
-              sndythsc77cwu: 'Take Photo',
+              phd3w6jw5r5i31vo9pj90: cokiSwimming6s5r22b3iqimshcj
+                  ? CupertinoIcons.videocam_fill
+                  : CupertinoIcons.camera_fill,
+              sndythsc77cwu: cokiSwimming6s5r22b3iqimshcj
+                  ? 'Record Video'
+                  : 'Take Photo',
               xev92lbiq8d7o: () => Navigator.of(
                 context,
               ).pop(CokiSwimmingGcnt0jewcf1egxi3.xqv2yjmj3yqx4dg),

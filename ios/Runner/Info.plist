@@ -32,11 +32,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Access your camera to take photos and record videos.</string>
+	<string>Coki uses your camera to take profile photos and create photo or video posts.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Access your photo library to upload photos &amp; videos, and send images in chats.</string>
+	<string>Coki uses your photo library to choose profile photos, upload photo and video posts, and send images in chats.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Access your microphone to record audio while shooting videos.</string>
+	<string>Coki uses your microphone to record audio when you create video posts with the camera.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

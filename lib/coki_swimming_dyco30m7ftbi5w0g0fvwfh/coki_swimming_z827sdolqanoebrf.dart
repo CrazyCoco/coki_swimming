@@ -110,6 +110,8 @@ class _CokiSwimmingLiquhjo5jdm1z3e0ycf6a6rv
       const CokiSwimmingMjnvj1qmiz2bxhm6uf0n6(),
       CokiSwimmingKlzr6l4l7f04(
         dpyf92bawwqefckl5295w: widget.oqk39w3if3ew9k1n3,
+        cokiSwimming03llkbj2g4nguizfo227xv:
+            widget.cokiSwimming3fb231781d1ec05862,
         cokiSwimming9df3412c7616f22f: [
           ..._cokiSwimming0fcb52b255531553,
           ..._cokiSwimming604bd030ea65bd5a,

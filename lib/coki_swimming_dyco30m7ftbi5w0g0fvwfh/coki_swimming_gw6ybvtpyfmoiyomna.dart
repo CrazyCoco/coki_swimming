@@ -97,10 +97,33 @@ class CokiSwimmingMemuqrf79eqifnj260swgbfm extends StatelessWidget {
                       return const Center(child: CircularProgressIndicator());
                     }
                     if (cokiSwimmingBc3f9370893eeb87.isEmpty) {
-                      return const Center(
-                        child: Text(
-                          'No records yet',
-                          style: TextStyle(color: Colors.white70, fontSize: 15),
+                      return CokiSwimmingAba7n9vsqt6w3fz(
+                        cokiSwimmingudas2o8q00gicj383hxod: ListView(
+                          physics: const BouncingScrollPhysics(
+                            parent: AlwaysScrollableScrollPhysics(),
+                          ),
+                          padding: const EdgeInsets.only(top: 136),
+                          children: [
+                            Center(
+                              child: Image.asset(
+                                'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_kh2gre8j2u6j3s8k9l.png',
+                                width: 115,
+                                height: 115,
+                                filterQuality: FilterQuality.high,
+                              ),
+                            ),
+                            const Text(
+                              'NO Data',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                height: 1.2,
+                                letterSpacing: 0,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ],
                         ),
                       );
                     }

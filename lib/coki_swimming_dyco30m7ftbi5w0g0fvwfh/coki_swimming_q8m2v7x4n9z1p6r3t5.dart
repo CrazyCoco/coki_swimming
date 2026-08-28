@@ -56,6 +56,7 @@ class _CokiSwimmingW5n1z8q4m7x2p9r6t3
               cokiSwimmingDb6b0273792c060: _cokiSwimmingE7q3m9v1x6z4p8r2t5,
               cokiSwimmingC91a15fc4d8a49ccb: raw,
             );
+        await SharedPreferencesAsync().remove(_cokiSwimmingE7q3m9v1x6z4p8r2t5);
       }
     }
     if (raw != null) {

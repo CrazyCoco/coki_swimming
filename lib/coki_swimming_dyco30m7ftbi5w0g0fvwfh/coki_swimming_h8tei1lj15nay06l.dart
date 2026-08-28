@@ -27,7 +27,7 @@ class _CokiSwimmingNiyl6fmbgal9vxloc3d5nj
 
   final TextEditingController _elg6kb8vdzgnvoczsdo6i = TextEditingController();
   int _c3dgbtkv29uy93wbnuz69ml6 = 0;
-  String? _nbub2jcpb2weejwuu;
+  List<String> _nbub2jcpb2weejwuu = const [];
   bool _w8xlxzr9a76gcwf1 = false;
   bool _cokiSwimming7q2m9v4x1p8k6r3t5n0h = false;
 
@@ -38,7 +38,7 @@ class _CokiSwimmingNiyl6fmbgal9vxloc3d5nj
   }
 
   Future<void> _n0t7llxd959xaffhkgy6ab() async {
-    if (_w8xlxzr9a76gcwf1) return;
+    if (_w8xlxzr9a76gcwf1 || _nbub2jcpb2weejwuu.length >= 3) return;
     final z1zmk7tt4z4xpzpc2g12chup =
         await CokiSwimmingRtwym9wmdetuorto7.uxp9wn4bxdjeda(context);
     if (z1zmk7tt4z4xpzpc2g12chup == null || !mounted) return;
@@ -52,8 +52,14 @@ class _CokiSwimmingNiyl6fmbgal9vxloc3d5nj
 
     switch (k3nvjl651e3c.s8ino37cgs5urhavq3k) {
       case CokiSwimmingAgu703r90i4rdun9b8a07eu1.zbp3eniyd720ii:
-        if (k3nvjl651e3c.cl6shvp4miod1vh != null) {
-          setState(() => _nbub2jcpb2weejwuu = k3nvjl651e3c.cl6shvp4miod1vh);
+        if (k3nvjl651e3c.cl6shvp4miod1vh != null &&
+            !_nbub2jcpb2weejwuu.contains(k3nvjl651e3c.cl6shvp4miod1vh)) {
+          setState(
+            () => _nbub2jcpb2weejwuu = [
+              ..._nbub2jcpb2weejwuu,
+              k3nvjl651e3c.cl6shvp4miod1vh!,
+            ].take(3).toList(growable: false),
+          );
         }
         break;
       case CokiSwimmingAgu703r90i4rdun9b8a07eu1.i6phxpwdk2a3a6kl3hcrj:
@@ -94,8 +100,10 @@ class _CokiSwimmingNiyl6fmbgal9vxloc3d5nj
 
   Future<void> _w425c8n25weiqiils3qjvu() async {
     if (_cokiSwimming7q2m9v4x1p8k6r3t5n0h) return;
-    final cokiSwimming5ca939fb99b9bf397a2a = _nbub2jcpb2weejwuu;
-    if (cokiSwimming5ca939fb99b9bf397a2a == null) {
+    final cokiSwimming5ca939fb99b9bf397a2a = _nbub2jcpb2weejwuu
+        .take(3)
+        .toList(growable: false);
+    if (cokiSwimming5ca939fb99b9bf397a2a.isEmpty) {
       CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
         context,
         'Please choose a photo',
@@ -105,15 +113,19 @@ class _CokiSwimmingNiyl6fmbgal9vxloc3d5nj
     }
     FocusScope.of(context).unfocus();
     setState(() => _cokiSwimming7q2m9v4x1p8k6r3t5n0h = true);
-    String? cokiSwimmingE74051d0a731cf5d;
+    final cokiSwimmingE74051d0a731cf5d = <String>[];
     try {
-      cokiSwimmingE74051d0a731cf5d = await CokiSwimmingMoqf2x4lzqna5nuxmxu1rah5
-          .j0gecuushzrwcqffsejytl
-          .cokiSwimming4f02cccd10f0e6f51e(
-            cokiSwimming0201c617085ad8e2: cokiSwimming5ca939fb99b9bf397a2a,
-            cokiSwimmingF829cc4fef9408bb:
-                widget.cokiSwimming6a685b0ef2d8beccb47875,
-          );
+      for (final cokiSwimming2ad02a9e00b2bfb61363
+          in cokiSwimming5ca939fb99b9bf397a2a) {
+        cokiSwimmingE74051d0a731cf5d.add(
+          await CokiSwimmingMoqf2x4lzqna5nuxmxu1rah5.j0gecuushzrwcqffsejytl
+              .cokiSwimming4f02cccd10f0e6f51e(
+                cokiSwimming0201c617085ad8e2: cokiSwimming2ad02a9e00b2bfb61363,
+                cokiSwimmingF829cc4fef9408bb:
+                    widget.cokiSwimming6a685b0ef2d8beccb47875,
+              ),
+        );
+      }
       final cokiSwimming77ca0e483ecdbddd3 = await CokiSwimmingDatabase
           .hxjpjp7w6ojq86l4ddyhf
           .cokiSwimming08fc79df5890845d(
@@ -139,7 +151,7 @@ class _CokiSwimmingNiyl6fmbgal9vxloc3d5nj
           xkczithyrycvg26pfjjmm9:
               cokiSwimmingCb9955e2cc90389a?.avatarPath ??
               'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_96c3ybdtsvgb1g.png',
-          pgj8geudv74awjznrves: [cokiSwimmingE74051d0a731cf5d],
+          pgj8geudv74awjznrves: List.unmodifiable(cokiSwimmingE74051d0a731cf5d),
           jw6eiwt4zt0wuycr7q: _elg6kb8vdzgnvoczsdo6i.text.trim(),
           b7oexxik958wc: _xt0i2uv0qexs2[_c3dgbtkv29uy93wbnuz69ml6],
           lrh0ljlgkvjv13o: cokiSwimmingCb9955e2cc90389a?.biography ?? '',
@@ -164,10 +176,11 @@ class _CokiSwimmingNiyl6fmbgal9vxloc3d5nj
       CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(context, 'Released');
       Navigator.of(context).maybePop();
     } on Object {
-      if (cokiSwimmingE74051d0a731cf5d != null) {
+      for (final cokiSwimming837c29abd7bedbf6e725
+          in cokiSwimmingE74051d0a731cf5d) {
         await CokiSwimmingMoqf2x4lzqna5nuxmxu1rah5.j0gecuushzrwcqffsejytl
             .cokiSwimming7h2v9k4m8q1x6p3r5t0n(
-              cokiSwimmingE74051d0a731cf5d,
+              cokiSwimming837c29abd7bedbf6e725,
               widget.cokiSwimming6a685b0ef2d8beccb47875,
             );
       }
@@ -386,45 +399,117 @@ class _CokiSwimmingNiyl6fmbgal9vxloc3d5nj
 
   Widget _aj9x06b4tq1bo() {
     final gozafqzot5tzjhozo5z = _nbub2jcpb2weejwuu;
-    return Align(
-      alignment: Alignment.centerLeft,
-      child: CokiSwimmingKtoozpjuob7rods(
-        kvg85l6uieobzf: BorderRadius.circular(20),
-        gwrsyzojtp84oco1ldhaaw90: () => unawaited(_n0t7llxd959xaffhkgy6ab()),
-        v6j3bxo2dz4aevlmr: Container(
-          width: 108,
-          height: 108,
-          clipBehavior: Clip.antiAlias,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: _w8xlxzr9a76gcwf1
-              ? const CupertinoActivityIndicator(color: Color(0xFF5BCBEA))
-              : gozafqzot5tzjhozo5z == null
-              ? Image.asset(
-                  'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_h6izuj44dfg1gwrgo9kp.png',
-                  width: 24,
-                  height: 23,
-                )
-              : Image.file(
-                  File(gozafqzot5tzjhozo5z),
-                  width: 108,
-                  height: 108,
-                  fit: BoxFit.cover,
-                  errorBuilder:
-                      (
-                        btxxhaz72g63hacv5,
-                        dze542e56v0azdo4n6b,
-                        e3gw6lomxlq49,
-                      ) => Image.asset(
+    return SizedBox(
+      height: 108,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        physics: const BouncingScrollPhysics(),
+        children: [
+          for (final cokiSwimming480e7835ca2d36948923
+              in gozafqzot5tzjhozo5z) ...[
+            SizedBox(
+              width: 108,
+              height: 108,
+              child: Stack(
+                children: [
+                  Positioned.fill(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.file(
+                        File(cokiSwimming480e7835ca2d36948923),
+                        fit: BoxFit.cover,
+                        errorBuilder:
+                            (
+                              btxxhaz72g63hacv5,
+                              dze542e56v0azdo4n6b,
+                              e3gw6lomxlq49,
+                            ) => ColoredBox(
+                              color: Colors.white,
+                              child: Center(
+                                child: Image.asset(
+                                  'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_h6izuj44dfg1gwrgo9kp.png',
+                                  width: 24,
+                                  height: 23,
+                                ),
+                              ),
+                            ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    right: 0,
+                    top: 0,
+                    child: Semantics(
+                      button: true,
+                      label: 'Remove photo',
+                      child: CokiSwimmingKtoozpjuob7rods(
+                        kvg85l6uieobzf: BorderRadius.circular(22),
+                        gwrsyzojtp84oco1ldhaaw90: () => setState(
+                          () => _nbub2jcpb2weejwuu = _nbub2jcpb2weejwuu
+                              .where(
+                                (cokiSwimming2cdde3f2799f64e745e6) =>
+                                    cokiSwimming2cdde3f2799f64e745e6 !=
+                                    cokiSwimming480e7835ca2d36948923,
+                              )
+                              .toList(growable: false),
+                        ),
+                        v6j3bxo2dz4aevlmr: SizedBox(
+                          width: 44,
+                          height: 44,
+                          child: Center(
+                            child: Container(
+                              width: 28,
+                              height: 28,
+                              decoration: BoxDecoration(
+                                color: Colors.white.withValues(alpha: 0.9),
+                                shape: BoxShape.circle,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withValues(alpha: 0.16),
+                                    blurRadius: 8,
+                                    offset: const Offset(0, 2),
+                                  ),
+                                ],
+                              ),
+                              child: const Icon(
+                                Icons.close_rounded,
+                                color: Color(0xFFD43161),
+                                size: 19,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(width: 10),
+          ],
+          if (gozafqzot5tzjhozo5z.length < 3)
+            CokiSwimmingKtoozpjuob7rods(
+              kvg85l6uieobzf: BorderRadius.circular(20),
+              gwrsyzojtp84oco1ldhaaw90: () =>
+                  unawaited(_n0t7llxd959xaffhkgy6ab()),
+              v6j3bxo2dz4aevlmr: Container(
+                width: 108,
+                height: 108,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: _w8xlxzr9a76gcwf1
+                    ? const CupertinoActivityIndicator(color: Color(0xFF5BCBEA))
+                    : Image.asset(
                         'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_h6izuj44dfg1gwrgo9kp.png',
                         width: 24,
                         height: 23,
                       ),
-                ),
-        ),
+              ),
+            ),
+        ],
       ),
     );
   }
