@@ -39,9 +39,11 @@ class _CokiSwimmingLiquhjo5jdm1z3e0ycf6a6rv
     final ph7j8ulugtb6c48pmi0q = [
       CokiSwimmingLei4ce4d64ic4llpobyo8(
         urppm1a0b7mgzwjl90at4: widget.zk15gjeohhu020kkbp672567,
+        ec5fb434456afb00f4: widget.oqk39w3if3ew9k1n3,
       ),
       CokiSwimmingF5656zccmafvs0qv(
         bfiaxy1tb0xj6p53k2u2636: widget.zk15gjeohhu020kkbp672567,
+        f0776540f6fd94c345: widget.oqk39w3if3ew9k1n3,
       ),
       const CokiSwimmingMjnvj1qmiz2bxhm6uf0n6(),
       CokiSwimmingKlzr6l4l7f04(dpyf92bawwqefckl5295w: widget.oqk39w3if3ew9k1n3),

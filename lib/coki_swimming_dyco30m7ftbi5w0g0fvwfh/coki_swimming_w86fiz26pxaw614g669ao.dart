@@ -4,9 +4,11 @@ class CokiSwimmingF5656zccmafvs0qv extends StatefulWidget {
   const CokiSwimmingF5656zccmafvs0qv({
     super.key,
     required this.bfiaxy1tb0xj6p53k2u2636,
+    this.f0776540f6fd94c345,
   });
 
   final bool bfiaxy1tb0xj6p53k2u2636;
+  final CokiSwimmingMember? f0776540f6fd94c345;
 
   @override
   State<CokiSwimmingF5656zccmafvs0qv> createState() =>
@@ -168,6 +170,11 @@ class _CokiSwimmingPzzzrkn4dhmjpvq4usmx
               ),
               wl2hojy7crk9m8ffyrydgc3: tbubit3kjffk26xorq7nui5l,
               kzrqy3gsjnpsppjd5m: widget.bfiaxy1tb0xj6p53k2u2636,
+              e208069dfcb66c84cb:
+                  widget.f0776540f6fd94c345?.displayName ==
+                          tbubit3kjffk26xorq7nui5l.y2bm5rqs3zbbqyxivjft35 &&
+                      widget.f0776540f6fd94c345?.avatarPath ==
+                          tbubit3kjffk26xorq7nui5l.xkczithyrycvg26pfjjmm9,
             ),
             const SizedBox(height: 14),
           ],
@@ -183,6 +190,7 @@ class CokiSwimmingDih2lfk074dk5rke extends StatefulWidget {
     this.hpn5t8jy171wsi56pq171x,
     this.wl2hojy7crk9m8ffyrydgc3,
     required this.kzrqy3gsjnpsppjd5m,
+    this.e208069dfcb66c84cb = false,
   }) : assert(
          hpn5t8jy171wsi56pq171x != null || wl2hojy7crk9m8ffyrydgc3 != null,
        );
@@ -190,6 +198,7 @@ class CokiSwimmingDih2lfk074dk5rke extends StatefulWidget {
   final String? hpn5t8jy171wsi56pq171x;
   final CokiSwimmingOla0gu1u5h0t2dqk0sy77kg? wl2hojy7crk9m8ffyrydgc3;
   final bool kzrqy3gsjnpsppjd5m;
+  final bool e208069dfcb66c84cb;
 
   @override
   State<CokiSwimmingDih2lfk074dk5rke> createState() =>
@@ -292,33 +301,35 @@ class _CokiSwimmingTgd1wgwxn1o9d8 extends State<CokiSwimmingDih2lfk074dk5rke> {
                         ),
                 ),
               ),
-              Positioned(
-                right: 0,
-                top: 0,
-                child: CokiSwimmingKtoozpjuob7rods(
-                  kvg85l6uieobzf: BorderRadius.circular(22),
-                  gwrsyzojtp84oco1ldhaaw90: () =>
-                      CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
-                        context,
-                        h5j30v6kt4ykg21tutwflx: widget.kzrqy3gsjnpsppjd5m,
-                        ssqbxn8vpgdaf9emp9937fjk: () =>
-                            CokiSwimmingEa33alie83a7ztht03ml6za.v8k18e1fwcihnfevusm4iq(
+              if (!widget.e208069dfcb66c84cb)
+                Positioned(
+                  right: 0,
+                  top: 0,
+                  child: CokiSwimmingKtoozpjuob7rods(
+                    kvg85l6uieobzf: BorderRadius.circular(22),
+                    gwrsyzojtp84oco1ldhaaw90: () =>
+                        CokiSwimmingY5kxebxyhv8gg32yly
+                            .kco1p8qja05cbsuhzrwcvesj(
                               context,
+                              h5j30v6kt4ykg21tutwflx:
+                                  widget.kzrqy3gsjnpsppjd5m,
+                              ssqbxn8vpgdaf9emp9937fjk: () =>
+                                  CokiSwimmingEa33alie83a7ztht03ml6za
+                                      .v8k18e1fwcihnfevusm4iq(context),
                             ),
-                      ),
-                  v6j3bxo2dz4aevlmr: SizedBox(
-                    width: 48,
-                    height: 48,
-                    child: Center(
-                      child: Image.asset(
-                        'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_edhgj5rn11wxh7.png',
-                        width: 24,
-                        height: 24,
+                    v6j3bxo2dz4aevlmr: SizedBox(
+                      width: 48,
+                      height: 48,
+                      child: Center(
+                        child: Image.asset(
+                          'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_edhgj5rn11wxh7.png',
+                          width: 24,
+                          height: 24,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
               Center(
                 child: CokiSwimmingKtoozpjuob7rods(
                   kvg85l6uieobzf: BorderRadius.circular(22),
@@ -387,8 +398,8 @@ class _CokiSwimmingTgd1wgwxn1o9d8 extends State<CokiSwimmingDih2lfk074dk5rke> {
                       ),
                   v6j3bxo2dz4aevlmr: Image.asset(
                     _rux2c0s05n2x3jk3cu
-                        ? 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_av7pjjh0l9116j.png'
-                        : 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_moieqazr2kftx.png',
+                        ? 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_01741504cbcb6a850100.png'
+                        : 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_7ca99e130a1bb3618c49.png',
                     width: 50,
                     height: 50,
                   ),
@@ -612,20 +623,12 @@ class _CokiSwimmingTjluglkuhtfqrj7k452ma4
                                   () => _pp4vmey4ia3baebd = !_pp4vmey4ia3baebd,
                                 ),
                               ),
-                          v6j3bxo2dz4aevlmr: Container(
+                          v6j3bxo2dz4aevlmr: Image.asset(
+                            _pp4vmey4ia3baebd
+                                ? 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_01741504cbcb6a850100.png'
+                                : 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_7ca99e130a1bb3618c49.png',
                             width: 33,
                             height: 33,
-                            decoration: BoxDecoration(
-                              color: Colors.white.withValues(alpha: 0.82),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              _pp4vmey4ia3baebd
-                                  ? Icons.favorite
-                                  : Icons.favorite_border,
-                              color: const Color(0xFFD43161),
-                              size: 20,
-                            ),
                           ),
                         ),
                         Text(

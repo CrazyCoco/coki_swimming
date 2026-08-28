@@ -174,6 +174,16 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
         : CokiSwimmingXu1hfvhsqfkovamr518kcwz.khkp9t4idd81ybveh;
   }
 
+  bool _d29e3e1c17a0f112d4(
+    CokiSwimmingOla0gu1u5h0t2dqk0sy77kg? e6141a56bb6f575127,
+  ) =>
+      e6141a56bb6f575127 != null &&
+      _sjzayzcmnb3rh4 != null &&
+      _sjzayzcmnb3rh4!.displayName ==
+          e6141a56bb6f575127.y2bm5rqs3zbbqyxivjft35 &&
+      _sjzayzcmnb3rh4!.avatarPath ==
+          e6141a56bb6f575127.xkczithyrycvg26pfjjmm9;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -188,7 +198,7 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
       ),
       builder: (ubvu3mdzk2a0o0v9e2m, pgie3pomyoinkv8) => GestureDetector(
         behavior: HitTestBehavior.translucent,
-        onTap: FocusManager.instance.primaryFocus?.unfocus,
+        onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: pgie3pomyoinkv8 ?? const SizedBox.shrink(),
       ),
       onGenerateRoute: (wev91tsmbk6uqwiamu2ha) {
@@ -243,6 +253,13 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
                   ? wev91tsmbk6uqwiamu2ha.arguments!
                         as CokiSwimmingOla0gu1u5h0t2dqk0sy77kg
                   : null,
+              d2762b49bbdd1433af: _d29e3e1c17a0f112d4(
+                wev91tsmbk6uqwiamu2ha.arguments
+                        is CokiSwimmingOla0gu1u5h0t2dqk0sy77kg
+                    ? wev91tsmbk6uqwiamu2ha.arguments!
+                          as CokiSwimmingOla0gu1u5h0t2dqk0sy77kg
+                    : null,
+              ),
             ),
           CokiSwimmingXu1hfvhsqfkovamr518kcwz.w521qang5zejpqq51niu =>
             const CokiSwimmingFw9r7ttig90mv5srreeq8sj6(),
@@ -257,6 +274,13 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
                   ? wev91tsmbk6uqwiamu2ha.arguments!
                         as CokiSwimmingOla0gu1u5h0t2dqk0sy77kg
                   : null,
+              ba6d1ef28c2a9db022: _d29e3e1c17a0f112d4(
+                wev91tsmbk6uqwiamu2ha.arguments
+                        is CokiSwimmingOla0gu1u5h0t2dqk0sy77kg
+                    ? wev91tsmbk6uqwiamu2ha.arguments!
+                          as CokiSwimmingOla0gu1u5h0t2dqk0sy77kg
+                    : null,
+              ),
             ),
           CokiSwimmingXu1hfvhsqfkovamr518kcwz.tsux9v3xzdp79n2vwllqrjd9 =>
             CokiSwimmingHdy0szot3oa6f(

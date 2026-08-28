@@ -322,8 +322,8 @@ class _CokiSwimmingPsg55kmkoz6nnzx7x
                                 gwrsyzojtp84oco1ldhaaw90: _on5l9b3euazad1y,
                                 v6j3bxo2dz4aevlmr: Image.asset(
                                   _td3na2tzlsl6rbbj7x3ttp5
-                                      ? 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_av7pjjh0l9116j.png'
-                                      : 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_moieqazr2kftx.png',
+                                      ? 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_01741504cbcb6a850100.png'
+                                      : 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_7ca99e130a1bb3618c49.png',
                                   width: 50,
                                   height: 50,
                                 ),
