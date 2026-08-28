@@ -129,27 +129,31 @@ class _CokiSwimmingU5ym6x8hwr143m0kcx4u
                   ),
                   const SizedBox(height: 30),
                   Expanded(
-                    child: ListView.separated(
-                      physics: const BouncingScrollPhysics(),
-                      padding: EdgeInsets.fromLTRB(
-                        21,
-                        0,
-                        21,
-                        v9rpvb3sixj2jerw + 108,
+                    child: CokiSwimmingAba7n9vsqt6w3fz(
+                      cokiSwimmingudas2o8q00gicj383hxod: ListView.separated(
+                        physics: const BouncingScrollPhysics(
+                          parent: AlwaysScrollableScrollPhysics(),
+                        ),
+                        padding: EdgeInsets.fromLTRB(
+                          21,
+                          0,
+                          21,
+                          v9rpvb3sixj2jerw + 108,
+                        ),
+                        itemCount: z4pzc5wkoyvtj7rb53rm2v.length,
+                        separatorBuilder: (_, _) => const SizedBox(height: 12),
+                        itemBuilder: (lukrj5dujs31c, e3sijqn4w3dkql8z) {
+                          return _CokiSwimmingFvnaa5slby5q25kh8(
+                            j54jx2z6vjpfdw8eipr:
+                                z4pzc5wkoyvtj7rb53rm2v[e3sijqn4w3dkql8z],
+                            ya5kyunybk6pt1lu:
+                                e3sijqn4w3dkql8z == _o9q06e25cpbkfrc2h,
+                            qe0q6vzi3xpl: () => setState(
+                              () => _o9q06e25cpbkfrc2h = e3sijqn4w3dkql8z,
+                            ),
+                          );
+                        },
                       ),
-                      itemCount: z4pzc5wkoyvtj7rb53rm2v.length,
-                      separatorBuilder: (_, _) => const SizedBox(height: 12),
-                      itemBuilder: (lukrj5dujs31c, e3sijqn4w3dkql8z) {
-                        return _CokiSwimmingFvnaa5slby5q25kh8(
-                          j54jx2z6vjpfdw8eipr:
-                              z4pzc5wkoyvtj7rb53rm2v[e3sijqn4w3dkql8z],
-                          ya5kyunybk6pt1lu:
-                              e3sijqn4w3dkql8z == _o9q06e25cpbkfrc2h,
-                          qe0q6vzi3xpl: () => setState(
-                            () => _o9q06e25cpbkfrc2h = e3sijqn4w3dkql8z,
-                          ),
-                        );
-                      },
                     ),
                   ),
                 ],

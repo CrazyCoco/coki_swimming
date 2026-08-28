@@ -5,10 +5,18 @@ class CokiSwimmingLei4ce4d64ic4llpobyo8 extends StatefulWidget {
     super.key,
     required this.urppm1a0b7mgzwjl90at4,
     this.ec5fb434456afb00f4,
+    required this.cokiSwimminge20a4ec90db331f90e,
+    required this.cokiSwimmingeb5ae8e8ddb6137fb9,
+    required this.cokiSwimmingC1a31e3acc4e7f8c,
   });
 
   final bool urppm1a0b7mgzwjl90at4;
   final CokiSwimmingMember? ec5fb434456afb00f4;
+  final bool Function(CokiSwimmingOla0gu1u5h0t2dqk0sy77kg, bool)
+  cokiSwimminge20a4ec90db331f90e;
+  final Future<void> Function(CokiSwimmingOla0gu1u5h0t2dqk0sy77kg, bool)
+  cokiSwimmingeb5ae8e8ddb6137fb9;
+  final List<CokiSwimmingOla0gu1u5h0t2dqk0sy77kg> cokiSwimmingC1a31e3acc4e7f8c;
 
   @override
   State<CokiSwimmingLei4ce4d64ic4llpobyo8> createState() =>
@@ -41,9 +49,12 @@ class _CokiSwimmingL6x2p9v4n8q1z7m3r5t0
   }
 
   Future<void> _cokiSwimmingD8q4v1m7x2n9p6z3() async {
-    final value = await SharedPreferencesAsync().getString(
-      _cokiSwimmingR9x4m2q7v1z8p5n6,
-    );
+    final value = await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming08fc79df5890845d(
+          cokiSwimmingFfdff4098f67dc2a39b: 0,
+          cokiSwimming9ca085a1e9464611db57745: _cokiSwimmingR9x4m2q7v1z8p5n6,
+          cokiSwimming756b8fe9fc667a: _cokiSwimmingR9x4m2q7v1z8p5n6,
+        );
     if (value != null) {
       final decoded = jsonDecode(value);
       if (decoded is Map) {
@@ -76,10 +87,13 @@ class _CokiSwimmingL6x2p9v4n8q1z7m3r5t0
     }
     final today = _cokiSwimmingB6x2n9m4q7v1z8p3(DateTime.now());
     final next = {..._cokiSwimmingT4n8p2x6m1q7z9v3, today: hours};
-    await SharedPreferencesAsync().setString(
-      _cokiSwimmingR9x4m2q7v1z8p5n6,
-      jsonEncode(next),
-    );
+    await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming74e8b2f70fa2f5b(
+          cokiSwimming0a44fb28163763bb6ec69: 0,
+          cokiSwimming47e760ec313f586105: _cokiSwimmingR9x4m2q7v1z8p5n6,
+          cokiSwimmingDb6b0273792c060: _cokiSwimmingR9x4m2q7v1z8p5n6,
+          cokiSwimmingC91a15fc4d8a49ccb: jsonEncode(next),
+        );
     if (!mounted) return;
     setState(() => _cokiSwimmingT4n8p2x6m1q7z9v3 = next);
     FocusManager.instance.primaryFocus?.unfocus();
@@ -319,7 +333,15 @@ class _CokiSwimmingJprer454ti6ulh74dnznsb
 
   @override
   Widget build(BuildContext context) {
-    final xmuct5g7ulgenrxkuwn3j079 = cokiSwimmingno1co2tb6p01cbgq6w3sj9k;
+    final xmuct5g7ulgenrxkuwn3j079 = widget.cokiSwimmingC1a31e3acc4e7f8c
+        .where(
+          (cokiSwimmingd7376129abde347804) =>
+              !widget.cokiSwimminge20a4ec90db331f90e(
+                cokiSwimmingd7376129abde347804,
+                false,
+              ),
+        )
+        .toList(growable: false);
     return Stack(
       fit: StackFit.expand,
       children: [
@@ -330,369 +352,397 @@ class _CokiSwimmingJprer454ti6ulh74dnznsb
         ),
         SafeArea(
           bottom: false,
-          child: CustomScrollView(
-            physics: const BouncingScrollPhysics(
-              parent: AlwaysScrollableScrollPhysics(),
-            ),
-            slivers: [
-              SliverToBoxAdapter(
-                child: SizedBox(
-                  height: 307,
-                  child: Stack(
-                    clipBehavior: Clip.none,
-                    children: [
-                      const Positioned(
-                        left: 20,
-                        top: 3,
-                        child: Text(
-                          'Coki',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 34,
-                            height: 1.08,
-                            letterSpacing: 0,
-                            fontWeight: FontWeight.w900,
-                          ),
-                        ),
-                      ),
-                      const Positioned(
-                        left: 20,
-                        top: 50,
-                        child: Text(
-                          'Swim with the current, embrace\nthe flow.',
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 17,
-                            height: 1.35,
-                            letterSpacing: 0,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ),
-                      const Positioned(
-                        left: 22,
-                        top: 101,
-                        child: Column(
-                          children: [
-                            Image(
-                              image: AssetImage(
-                                'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_q5w61qze4rfzcl2i.png',
-                              ),
-                              width: 26,
-                              height: 26,
+          child: CokiSwimmingAba7n9vsqt6w3fz(
+            cokiSwimmingudas2o8q00gicj383hxod: CustomScrollView(
+              physics: const BouncingScrollPhysics(
+                parent: AlwaysScrollableScrollPhysics(),
+              ),
+              slivers: [
+                SliverToBoxAdapter(
+                  child: SizedBox(
+                    height: 307,
+                    child: Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        const Positioned(
+                          left: 20,
+                          top: 3,
+                          child: Text(
+                            'Coki',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 34,
+                              height: 1.08,
+                              letterSpacing: 0,
+                              fontWeight: FontWeight.w900,
                             ),
-                            SizedBox(height: 7),
-                            RotatedBox(
-                              quarterTurns: 1,
-                              child: Row(
+                          ),
+                        ),
+                        const Positioned(
+                          left: 20,
+                          top: 50,
+                          child: Text(
+                            'Swim with the current, embrace\nthe flow.',
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 17,
+                              height: 1.35,
+                              letterSpacing: 0,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                        const Positioned(
+                          left: 22,
+                          top: 101,
+                          child: Column(
+                            children: [
+                              Image(
+                                image: AssetImage(
+                                  'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_q5w61qze4rfzcl2i.png',
+                                ),
+                                width: 26,
+                                height: 26,
+                              ),
+                              SizedBox(height: 7),
+                              RotatedBox(
+                                quarterTurns: 1,
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      'Coki AI',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 33,
+                                        height: 1,
+                                        letterSpacing: 0,
+                                        fontWeight: FontWeight.w900,
+                                      ),
+                                    ),
+                                    SizedBox(width: 10),
+                                    Image(
+                                      image: AssetImage(
+                                        'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_9n0kiofpdcmc7.png',
+                                      ),
+                                      width: 36,
+                                      height: 18,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Positioned(
+                          right: 50,
+                          top: 74,
+                          child: Image.asset(
+                            'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_n9bdkwecb8mb.png',
+                            width: 179,
+                            height: 211,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Positioned(
+                          left: 110,
+                          right: 39,
+                          top: 250,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(24),
+                            child: BackdropFilter(
+                              filter: ImageFilter.blur(sigmaX: 7, sigmaY: 7),
+                              child: Container(
+                                height: 46,
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                ),
+                                alignment: Alignment.center,
+                                color: const Color(
+                                  0xFFB5A4B9,
+                                ).withValues(alpha: 0.34),
+                                child: const Text(
+                                  'Chat with AI to unlock swimming tips,\ntechniques, and more.',
+                                  textAlign: TextAlign.center,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 13,
+                                    height: 1.22,
+                                    letterSpacing: 0,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 20,
+                          right: 20,
+                          top: 70,
+                          bottom: 0,
+                          child: Semantics(
+                            button: true,
+                            label: 'Open Coki AI chat',
+                            child: GestureDetector(
+                              behavior: HitTestBehavior.opaque,
+                              onTap: _wbn3x4x9v4nwn9zv,
+                              child: const SizedBox.expand(),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          right: 20,
+                          top: 13,
+                          child: CokiSwimmingKtoozpjuob7rods(
+                            kvg85l6uieobzf: BorderRadius.circular(24),
+                            gwrsyzojtp84oco1ldhaaw90: () =>
+                                CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                                  context,
+                                  h5j30v6kt4ykg21tutwflx:
+                                      widget.urppm1a0b7mgzwjl90at4,
+                                  ssqbxn8vpgdaf9emp9937fjk: () =>
+                                      Navigator.of(context).pushNamed(
+                                        CokiSwimmingXu1hfvhsqfkovamr518kcwz
+                                            .tsux9v3xzdp79n2vwllqrjd9,
+                                      ),
+                                ),
+                            v6j3bxo2dz4aevlmr: Image.asset(
+                              'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_f1q49zts6gp606l82qfcf.png',
+                              width: 44,
+                              height: 44,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 14),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: CokiSwimmingKtoozpjuob7rods(
+                            kvg85l6uieobzf: BorderRadius.circular(16),
+                            gwrsyzojtp84oco1ldhaaw90: () =>
+                                Navigator.of(context).pushNamed(
+                                  CokiSwimmingXu1hfvhsqfkovamr518kcwz
+                                      .q7m4v9x2k8d6p1s5,
+                                ),
+                            v6j3bxo2dz4aevlmr: Container(
+                              height: 88,
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 10,
+                              ),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFF292249),
+                                borderRadius: BorderRadius.circular(16),
+                                border: Border.all(
+                                  color: const Color(
+                                    0xFF60D0EE,
+                                  ).withValues(alpha: 0.55),
+                                ),
+                              ),
+                              child: const Row(
                                 children: [
-                                  Text(
-                                    'Coki AI',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 33,
-                                      height: 1,
-                                      letterSpacing: 0,
-                                      fontWeight: FontWeight.w900,
+                                  CircleAvatar(
+                                    radius: 19,
+                                    backgroundColor: Color(0xFF60D0EE),
+                                    child: Icon(
+                                      Icons.pool_outlined,
+                                      color: Color(0xFF100A30),
+                                      size: 21,
                                     ),
                                   ),
-                                  SizedBox(width: 10),
-                                  Image(
-                                    image: AssetImage(
-                                      'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_9n0kiofpdcmc7.png',
+                                  SizedBox(width: 8),
+                                  Expanded(
+                                    child: FittedBox(
+                                      fit: BoxFit.scaleDown,
+                                      alignment: Alignment.centerLeft,
+                                      child: Text(
+                                        'Swim log',
+                                        maxLines: 1,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                          height: 1.2,
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                      ),
                                     ),
-                                    width: 36,
-                                    height: 18,
+                                  ),
+                                  Icon(
+                                    Icons.chevron_right_rounded,
+                                    color: Colors.white,
+                                    size: 22,
                                   ),
                                 ],
                               ),
                             ),
-                          ],
+                          ),
                         ),
-                      ),
-                      Positioned(
-                        right: 50,
-                        top: 74,
-                        child: Image.asset(
-                          'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_n9bdkwecb8mb.png',
-                          width: 179,
-                          height: 211,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                      Positioned(
-                        left: 110,
-                        right: 39,
-                        top: 250,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(24),
-                          child: BackdropFilter(
-                            filter: ImageFilter.blur(sigmaX: 7, sigmaY: 7),
-                            child: Container(
-                              height: 46,
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: CokiSwimmingKtoozpjuob7rods(
+                            kvg85l6uieobzf: BorderRadius.circular(16),
+                            gwrsyzojtp84oco1ldhaaw90: () =>
+                                Navigator.of(context).pushNamed(
+                                  CokiSwimmingXu1hfvhsqfkovamr518kcwz
+                                      .m9x3q7v1z5n8p4c6t2r0,
+                                ),
+                            v6j3bxo2dz4aevlmr: Container(
+                              height: 88,
                               padding: const EdgeInsets.symmetric(
-                                horizontal: 12,
+                                horizontal: 10,
                               ),
-                              alignment: Alignment.center,
-                              color: const Color(
-                                0xFFB5A4B9,
-                              ).withValues(alpha: 0.34),
-                              child: const Text(
-                                'Chat with AI to unlock swimming tips,\ntechniques, and more.',
-                                textAlign: TextAlign.center,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 13,
-                                  height: 1.22,
-                                  letterSpacing: 0,
-                                  fontWeight: FontWeight.w400,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFF292249),
+                                borderRadius: BorderRadius.circular(16),
+                                border: Border.all(
+                                  color: const Color(
+                                    0xFFD43161,
+                                  ).withValues(alpha: 0.65),
                                 ),
                               ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 20,
-                        right: 20,
-                        top: 70,
-                        bottom: 0,
-                        child: Semantics(
-                          button: true,
-                          label: 'Open Coki AI chat',
-                          child: GestureDetector(
-                            behavior: HitTestBehavior.opaque,
-                            onTap: _wbn3x4x9v4nwn9zv,
-                            child: const SizedBox.expand(),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        right: 20,
-                        top: 13,
-                        child: CokiSwimmingKtoozpjuob7rods(
-                          kvg85l6uieobzf: BorderRadius.circular(24),
-                          gwrsyzojtp84oco1ldhaaw90: () =>
-                              CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
-                                context,
-                                h5j30v6kt4ykg21tutwflx:
-                                    widget.urppm1a0b7mgzwjl90at4,
-                                ssqbxn8vpgdaf9emp9937fjk: () =>
-                                    Navigator.of(context).pushNamed(
-                                      CokiSwimmingXu1hfvhsqfkovamr518kcwz
-                                          .tsux9v3xzdp79n2vwllqrjd9,
+                              child: const Row(
+                                children: [
+                                  CircleAvatar(
+                                    radius: 19,
+                                    backgroundColor: Color(0xFFD43161),
+                                    child: Icon(
+                                      Icons.event_note_outlined,
+                                      color: Colors.white,
+                                      size: 20,
                                     ),
-                              ),
-                          v6j3bxo2dz4aevlmr: Image.asset(
-                            'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_f1q49zts6gp606l82qfcf.png',
-                            width: 44,
-                            height: 44,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 14),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: CokiSwimmingKtoozpjuob7rods(
-                          kvg85l6uieobzf: BorderRadius.circular(16),
-                          gwrsyzojtp84oco1ldhaaw90: () =>
-                              Navigator.of(context).pushNamed(
-                                CokiSwimmingXu1hfvhsqfkovamr518kcwz
-                                    .q7m4v9x2k8d6p1s5,
-                              ),
-                          v6j3bxo2dz4aevlmr: Container(
-                            height: 88,
-                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFF292249),
-                              borderRadius: BorderRadius.circular(16),
-                              border: Border.all(
-                                color: const Color(
-                                  0xFF60D0EE,
-                                ).withValues(alpha: 0.55),
-                              ),
-                            ),
-                            child: const Row(
-                              children: [
-                                CircleAvatar(
-                                  radius: 19,
-                                  backgroundColor: Color(0xFF60D0EE),
-                                  child: Icon(
-                                    Icons.pool_outlined,
-                                    color: Color(0xFF100A30),
-                                    size: 21,
                                   ),
-                                ),
-                                SizedBox(width: 8),
-                                Expanded(
-                                  child: FittedBox(
-                                    fit: BoxFit.scaleDown,
-                                    alignment: Alignment.centerLeft,
+                                  SizedBox(width: 8),
+                                  Expanded(
                                     child: Text(
-                                      'Swim log',
-                                      maxLines: 1,
+                                      'Training plan',
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: 15,
+                                        fontSize: 13,
                                         height: 1.2,
                                         fontWeight: FontWeight.w900,
                                       ),
                                     ),
                                   ),
-                                ),
-                                Icon(
-                                  Icons.chevron_right_rounded,
-                                  color: Colors.white,
-                                  size: 22,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Expanded(
-                        child: CokiSwimmingKtoozpjuob7rods(
-                          kvg85l6uieobzf: BorderRadius.circular(16),
-                          gwrsyzojtp84oco1ldhaaw90: () =>
-                              Navigator.of(context).pushNamed(
-                                CokiSwimmingXu1hfvhsqfkovamr518kcwz
-                                    .m9x3q7v1z5n8p4c6t2r0,
-                              ),
-                          v6j3bxo2dz4aevlmr: Container(
-                            height: 88,
-                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFF292249),
-                              borderRadius: BorderRadius.circular(16),
-                              border: Border.all(
-                                color: const Color(
-                                  0xFFD43161,
-                                ).withValues(alpha: 0.65),
-                              ),
-                            ),
-                            child: const Row(
-                              children: [
-                                CircleAvatar(
-                                  radius: 19,
-                                  backgroundColor: Color(0xFFD43161),
-                                  child: Icon(
-                                    Icons.event_note_outlined,
+                                  Icon(
+                                    Icons.chevron_right_rounded,
                                     color: Colors.white,
-                                    size: 20,
+                                    size: 22,
                                   ),
-                                ),
-                                SizedBox(width: 8),
-                                Expanded(
-                                  child: Text(
-                                    'Training plan',
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 13,
-                                      height: 1.2,
-                                      fontWeight: FontWeight.w900,
-                                    ),
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.chevron_right_rounded,
-                                  color: Colors.white,
-                                  size: 22,
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 12),
-                  child: SizedBox(
-                    width: 125,
-                    child: ShaderMask(
-                      blendMode: BlendMode.srcIn,
-                      shaderCallback: (bounds) => const LinearGradient(
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        colors: [Color(0xFF60D0EE), Color(0xFFD43161)],
-                      ).createShader(bounds),
-                      child: const Text(
-                        'Trending',
-                        style: TextStyle(
-                          fontSize: 22,
-                          height: 1.2,
-                          fontWeight: FontWeight.w900,
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 12),
+                    child: SizedBox(
+                      width: 125,
+                      child: ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (bounds) => const LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: [Color(0xFF60D0EE), Color(0xFFD43161)],
+                        ).createShader(bounds),
+                        child: const Text(
+                          'Trending',
+                          style: TextStyle(
+                            fontSize: 22,
+                            height: 1.2,
+                            fontWeight: FontWeight.w900,
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              SliverPadding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 18),
-                sliver: SliverGrid(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 12,
-                    mainAxisSpacing: 14,
-                    childAspectRatio: 0.78,
-                  ),
-                  delegate: SliverChildBuilderDelegate((
-                    tx15gngz9iea1sag,
-                    z0xc2bimbuuhsz7,
-                  ) {
-                    final mtasewipmxtnglc2v7oai =
-                        xmuct5g7ulgenrxkuwn3j079[z0xc2bimbuuhsz7];
-                    return CokiSwimmingSru7lz71ab36wcsa42(
-                      xnb8xe3x8wn4:
-                          mtasewipmxtnglc2v7oai.pgj8geudv74awjznrves.first,
-                      plup1qrc6jph: mtasewipmxtnglc2v7oai,
-                      lx0jremyz3ceqne: () =>
-                          Navigator.of(tx15gngz9iea1sag).pushNamed(
-                            CokiSwimmingXu1hfvhsqfkovamr518kcwz
-                                .usb6yvjb2e1k454zejxbs,
-                            arguments: mtasewipmxtnglc2v7oai,
-                          ),
-                      jx9f78u6cfcn5b36k:
-                          widget.ec5fb434456afb00f4?.displayName ==
-                                  mtasewipmxtnglc2v7oai
+                SliverPadding(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 18),
+                  sliver: SliverGrid(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          crossAxisSpacing: 12,
+                          mainAxisSpacing: 14,
+                          childAspectRatio: 0.78,
+                        ),
+                    delegate: SliverChildBuilderDelegate((
+                      tx15gngz9iea1sag,
+                      z0xc2bimbuuhsz7,
+                    ) {
+                      final mtasewipmxtnglc2v7oai =
+                          xmuct5g7ulgenrxkuwn3j079[z0xc2bimbuuhsz7];
+                      final cokiSwimming8ef5bc7bc93c1b97a3 =
+                          mtasewipmxtnglc2v7oai
+                                  .cokiSwimmingD6f37ea57614705817c1 ==
+                              widget.ec5fb434456afb00f4?.id ||
+                          (widget.ec5fb434456afb00f4?.email ==
+                                  cokiSwimmingw0k49uzxp20rme687o &&
+                              mtasewipmxtnglc2v7oai.y2bm5rqs3zbbqyxivjft35 ==
+                                  cokiSwimmingno1co2tb6p01cbgq6w3sj9k
+                                      .first
                                       .y2bm5rqs3zbbqyxivjft35 &&
-                              widget.ec5fb434456afb00f4?.avatarPath ==
-                                  mtasewipmxtnglc2v7oai.xkczithyrycvg26pfjjmm9
-                          ? null
-                          : () => CokiSwimmingY5kxebxyhv8gg32yly
-                                .kco1p8qja05cbsuhzrwcvesj(
-                                  tx15gngz9iea1sag,
-                                  h5j30v6kt4ykg21tutwflx:
-                                      widget.urppm1a0b7mgzwjl90at4,
-                                  ssqbxn8vpgdaf9emp9937fjk: () =>
-                                      CokiSwimmingEa33alie83a7ztht03ml6za
-                                          .v8k18e1fwcihnfevusm4iq(
-                                            tx15gngz9iea1sag,
-                                          ),
-                                ),
-                    );
-                  }, childCount: xmuct5g7ulgenrxkuwn3j079.length),
+                              mtasewipmxtnglc2v7oai.xkczithyrycvg26pfjjmm9 ==
+                                  cokiSwimmingno1co2tb6p01cbgq6w3sj9k
+                                      .first
+                                      .xkczithyrycvg26pfjjmm9);
+                      return CokiSwimmingSru7lz71ab36wcsa42(
+                        xnb8xe3x8wn4:
+                            mtasewipmxtnglc2v7oai.pgj8geudv74awjznrves.first,
+                        plup1qrc6jph: mtasewipmxtnglc2v7oai,
+                        lx0jremyz3ceqne: () =>
+                            Navigator.of(tx15gngz9iea1sag).pushNamed(
+                              CokiSwimmingXu1hfvhsqfkovamr518kcwz
+                                  .usb6yvjb2e1k454zejxbs,
+                              arguments: mtasewipmxtnglc2v7oai,
+                            ),
+                        jx9f78u6cfcn5b36k: cokiSwimming8ef5bc7bc93c1b97a3
+                            ? null
+                            : () => CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                                tx15gngz9iea1sag,
+                                h5j30v6kt4ykg21tutwflx:
+                                    widget.urppm1a0b7mgzwjl90at4,
+                                ssqbxn8vpgdaf9emp9937fjk: () =>
+                                    CokiSwimmingEa33alie83a7ztht03ml6za.v8k18e1fwcihnfevusm4iq(
+                                      tx15gngz9iea1sag,
+                                      cokiSwimming2017dfe9792f0833:
+                                          mtasewipmxtnglc2v7oai
+                                              .y2bm5rqs3zbbqyxivjft35,
+                                    ),
+                              ),
+                        cokiSwimmingf3777576fc24d8f764:
+                            cokiSwimming8ef5bc7bc93c1b97a3
+                            ? () =>
+                                  CokiSwimmingTq92zenanm7d.cokiSwimming9e422d9ca2b283fe4a(
+                                    tx15gngz9iea1sag,
+                                    () => widget.cokiSwimmingeb5ae8e8ddb6137fb9(
+                                      mtasewipmxtnglc2v7oai,
+                                      false,
+                                    ),
+                                  )
+                            : null,
+                      );
+                    }, childCount: xmuct5g7ulgenrxkuwn3j079.length),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],
@@ -752,12 +802,14 @@ class CokiSwimmingSru7lz71ab36wcsa42 extends StatelessWidget {
     required this.lx0jremyz3ceqne,
     this.jx9f78u6cfcn5b36k,
     this.plup1qrc6jph,
+    this.cokiSwimmingf3777576fc24d8f764,
   });
 
   final String xnb8xe3x8wn4;
   final VoidCallback lx0jremyz3ceqne;
   final VoidCallback? jx9f78u6cfcn5b36k;
   final CokiSwimmingOla0gu1u5h0t2dqk0sy77kg? plup1qrc6jph;
+  final VoidCallback? cokiSwimmingf3777576fc24d8f764;
 
   @override
   Widget build(BuildContext context) {
@@ -777,7 +829,9 @@ class CokiSwimmingSru7lz71ab36wcsa42 extends StatelessWidget {
           child: Stack(
             fit: StackFit.expand,
             children: [
-              Image.asset(xnb8xe3x8wn4, fit: BoxFit.cover),
+              CokiSwimmingC42e81133062ccfd(
+                cokiSwimmingEbf673309ff7e1c4: xnb8xe3x8wn4,
+              ),
               const DecoratedBox(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -791,7 +845,25 @@ class CokiSwimmingSru7lz71ab36wcsa42 extends StatelessWidget {
                   ),
                 ),
               ),
-              if (jx9f78u6cfcn5b36k != null)
+              if (cokiSwimmingf3777576fc24d8f764 != null)
+                Positioned(
+                  right: 6,
+                  top: 7,
+                  child: CokiSwimmingKtoozpjuob7rods(
+                    kvg85l6uieobzf: BorderRadius.circular(22),
+                    gwrsyzojtp84oco1ldhaaw90: cokiSwimmingf3777576fc24d8f764!,
+                    v6j3bxo2dz4aevlmr: const SizedBox(
+                      width: 44,
+                      height: 44,
+                      child: Icon(
+                        Icons.delete_outline_rounded,
+                        color: Colors.white,
+                        size: 24,
+                      ),
+                    ),
+                  ),
+                )
+              else if (jx9f78u6cfcn5b36k != null)
                 Positioned(
                   right: 6,
                   top: 7,
@@ -825,12 +897,12 @@ class CokiSwimmingSru7lz71ab36wcsa42 extends StatelessWidget {
                       child: Row(
                         children: [
                           ClipOval(
-                            child: Image.asset(
-                              plup1qrc6jph?.xkczithyrycvg26pfjjmm9 ??
+                            child: CokiSwimmingFp31kwqgnq7d7mmdubsu7(
+                              ebv0wnhcczmsg2ytfim3iox:
+                                  plup1qrc6jph?.xkczithyrycvg26pfjjmm9 ??
                                   xnb8xe3x8wn4,
-                              width: 42,
-                              height: 42,
-                              fit: BoxFit.cover,
+                              mhyr7b1jr0dol34ahhd0ii9: 42,
+                              mjsibeo326cy1bub95ae: 42,
                             ),
                           ),
                           const SizedBox(width: 9),

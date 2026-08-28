@@ -13,7 +13,88 @@ class CokiSwimmingOla0gu1u5h0t2dqk0sy77kg {
     this.q7m4v9x2k8d6p1s5 = 0,
     this.r8n3c6y1w5h9t2m7 = const [],
     this.m7c2v9x4q8s1d6p3 = const [],
+    this.cokiSwimmingD6f37ea57614705817c1 = 0,
+    this.cokiSwimming33bc936a74920f8954e0,
+    this.cokiSwimming78b6e768b6acab88e197,
   });
+
+  factory CokiSwimmingOla0gu1u5h0t2dqk0sy77kg.cokiSwimming49593b911b058bc96d5a(
+    Map<String, dynamic> cokiSwimming70a5b94a9063a509a8a2, {
+    int cokiSwimming4da2b55cb07db7a7c3e3 = 0,
+  }) {
+    List<String> cokiSwimmingA0f0d181e895d0b31dc2(
+      String cokiSwimming55f697baae36684569f9,
+    ) {
+      final cokiSwimmingCb5de54cc57ecd5adc19 =
+          cokiSwimming70a5b94a9063a509a8a2[cokiSwimming55f697baae36684569f9];
+      return cokiSwimmingCb5de54cc57ecd5adc19 is List
+          ? cokiSwimmingCb5de54cc57ecd5adc19
+                .map(
+                  (cokiSwimming02cb238d1aee17489777) =>
+                      cokiSwimming02cb238d1aee17489777.toString(),
+                )
+                .toList(growable: false)
+          : const <String>[];
+    }
+
+    return CokiSwimmingOla0gu1u5h0t2dqk0sy77kg(
+      y2bm5rqs3zbbqyxivjft35:
+          cokiSwimming70a5b94a9063a509a8a2['coki_swimming_a33aa39e2af0e9856dfa']
+              ?.toString() ??
+          'Coki',
+      xkczithyrycvg26pfjjmm9:
+          cokiSwimming70a5b94a9063a509a8a2['coki_swimming_f6643ddc1cc353551724']
+              ?.toString() ??
+          'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_96c3ybdtsvgb1g.png',
+      pgj8geudv74awjznrves: cokiSwimmingA0f0d181e895d0b31dc2(
+        'coki_swimming_bba9677e3e7adf3b3317',
+      ),
+      jw6eiwt4zt0wuycr7q:
+          cokiSwimming70a5b94a9063a509a8a2['coki_swimming_50921408411f3120bd2d']
+              ?.toString() ??
+          '',
+      b7oexxik958wc:
+          cokiSwimming70a5b94a9063a509a8a2['coki_swimming_aba5f578c6b93e759b60']
+              ?.toString() ??
+          '',
+      lrh0ljlgkvjv13o:
+          cokiSwimming70a5b94a9063a509a8a2['coki_swimming_c9d8da9a66b15cf669aa']
+              ?.toString() ??
+          '',
+      dpz5ewc9dhgqc:
+          cokiSwimming70a5b94a9063a509a8a2['coki_swimming_3ec6f0d0b87fbe4ec35b']
+              ?.toString(),
+      xpgbqaoc87cxdg7jjztf:
+          cokiSwimming70a5b94a9063a509a8a2['coki_swimming_3a68c8189903e5f22d23']
+              ?.toString(),
+      s35sepsxcpz4hg:
+          cokiSwimming70a5b94a9063a509a8a2['coki_swimming_c88abc623d1e45428e83']
+              ?.toString(),
+      c5rtbjwhj1h6kchqi:
+          cokiSwimming70a5b94a9063a509a8a2['coki_swimming_75f1e02a00fa61a2f006']
+              ?.toString(),
+      q7m4v9x2k8d6p1s5:
+          (cokiSwimming70a5b94a9063a509a8a2['coki_swimming_67d63374ef6b2be41b9e']
+                  as num?)
+              ?.toInt() ??
+          0,
+      r8n3c6y1w5h9t2m7: cokiSwimmingA0f0d181e895d0b31dc2(
+        'coki_swimming_c1d17e7d1d25cec9a61c',
+      ),
+      m7c2v9x4q8s1d6p3: cokiSwimmingA0f0d181e895d0b31dc2(
+        'coki_swimming_6d583c8b5c4c84c37bec',
+      ),
+      cokiSwimmingD6f37ea57614705817c1: cokiSwimming4da2b55cb07db7a7c3e3,
+      cokiSwimming33bc936a74920f8954e0:
+          cokiSwimming70a5b94a9063a509a8a2['coki_swimming_c290075e5760925bc98b']
+              ?.toString(),
+      cokiSwimming78b6e768b6acab88e197: DateTime.tryParse(
+        cokiSwimming70a5b94a9063a509a8a2['coki_swimming_ba7435db91e3cd9a37e4']
+                ?.toString() ??
+            '',
+      ),
+    );
+  }
 
   final String y2bm5rqs3zbbqyxivjft35;
   final String xkczithyrycvg26pfjjmm9;
@@ -28,9 +109,36 @@ class CokiSwimmingOla0gu1u5h0t2dqk0sy77kg {
   final int q7m4v9x2k8d6p1s5;
   final List<String> r8n3c6y1w5h9t2m7;
   final List<String> m7c2v9x4q8s1d6p3;
+  final int cokiSwimmingD6f37ea57614705817c1;
+  final String? cokiSwimming33bc936a74920f8954e0;
+  final DateTime? cokiSwimming78b6e768b6acab88e197;
 
   bool get zagjx458al86vlep0we1whdx => dpz5ewc9dhgqc != null;
+
+  Map<String, dynamic> cokiSwimming4e5227e43dc4c3fab6e2() => {
+    'coki_swimming_a33aa39e2af0e9856dfa': y2bm5rqs3zbbqyxivjft35,
+    'coki_swimming_f6643ddc1cc353551724': xkczithyrycvg26pfjjmm9,
+    'coki_swimming_bba9677e3e7adf3b3317': pgj8geudv74awjznrves,
+    'coki_swimming_50921408411f3120bd2d': jw6eiwt4zt0wuycr7q,
+    'coki_swimming_aba5f578c6b93e759b60': b7oexxik958wc,
+    'coki_swimming_c9d8da9a66b15cf669aa': lrh0ljlgkvjv13o,
+    'coki_swimming_3ec6f0d0b87fbe4ec35b': dpz5ewc9dhgqc,
+    'coki_swimming_3a68c8189903e5f22d23': xpgbqaoc87cxdg7jjztf,
+    'coki_swimming_c88abc623d1e45428e83': s35sepsxcpz4hg,
+    'coki_swimming_75f1e02a00fa61a2f006': c5rtbjwhj1h6kchqi,
+    'coki_swimming_67d63374ef6b2be41b9e': q7m4v9x2k8d6p1s5,
+    'coki_swimming_c1d17e7d1d25cec9a61c': r8n3c6y1w5h9t2m7,
+    'coki_swimming_6d583c8b5c4c84c37bec': m7c2v9x4q8s1d6p3,
+    'coki_swimming_c290075e5760925bc98b': cokiSwimming33bc936a74920f8954e0,
+    'coki_swimming_ba7435db91e3cd9a37e4': cokiSwimming78b6e768b6acab88e197
+        ?.toIso8601String(),
+  };
 }
+
+const String cokiSwimming4ca26a05eb1ecb7acb47 =
+    'coki_swimming_2884271c5ef78251a648';
+const String cokiSwimmingEe949f348e3201ebf685 =
+    'coki_swimming_6e64d05879323a139af2';
 
 const String cokiSwimmingw0k49uzxp20rme687o = 'cokiswimming@gmail.com';
 const String cokiSwimmingf8gv23j6xwjt30n = '123456';

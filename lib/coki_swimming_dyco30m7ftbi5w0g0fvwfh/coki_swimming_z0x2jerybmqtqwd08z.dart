@@ -187,51 +187,56 @@ class _CokiSwimmingU7ng1lsyjhkbmqued
                                         y9wy4fkwhk2b16lxzkz5g;
                                     _dpwmifx0x45dngcvlg();
                                   }
-                                  return ListView.builder(
-                                    controller: _x4nr5kg3ddvpfj,
-                                    keyboardDismissBehavior:
-                                        ScrollViewKeyboardDismissBehavior
-                                            .onDrag,
-                                    physics: const BouncingScrollPhysics(),
-                                    padding: const EdgeInsets.fromLTRB(
-                                      20,
-                                      26,
-                                      20,
-                                      114,
-                                    ),
-                                    itemCount: y9wy4fkwhk2b16lxzkz5g,
-                                    itemBuilder: (mvjjqigmeaknisys, iaf8qbv0xi41i9651v4xoyh) {
-                                      if (iaf8qbv0xi41i9651v4xoyh == 0) {
+                                  return CokiSwimmingAba7n9vsqt6w3fz(
+                                    cokiSwimmingudas2o8q00gicj383hxod: ListView.builder(
+                                      controller: _x4nr5kg3ddvpfj,
+                                      keyboardDismissBehavior:
+                                          ScrollViewKeyboardDismissBehavior
+                                              .onDrag,
+                                      physics: const BouncingScrollPhysics(
+                                        parent: AlwaysScrollableScrollPhysics(),
+                                      ),
+                                      padding: const EdgeInsets.fromLTRB(
+                                        20,
+                                        26,
+                                        20,
+                                        114,
+                                      ),
+                                      itemCount: y9wy4fkwhk2b16lxzkz5g,
+                                      itemBuilder: (mvjjqigmeaknisys, iaf8qbv0xi41i9651v4xoyh) {
+                                        if (iaf8qbv0xi41i9651v4xoyh == 0) {
+                                          return _CokiSwimmingJ1sp8oo11c3e28c3q7(
+                                            tedzb3ct9yhvohp4:
+                                                'Hi there! I’m Coki, your AI buddy for all things swimming.',
+                                            t7b2wgpma3klyd3c4am0x: true,
+                                            ljvgs57go601ph: _q69eycnvanejgbir,
+                                            hq63bib1zpmb93xne3:
+                                                oapkk97h5aduyciafifrncu,
+                                          );
+                                        }
+                                        final h8wksfngh2pcqisk40udc =
+                                            iaf8qbv0xi41i9651v4xoyh - 1;
+                                        if (h8wksfngh2pcqisk40udc ==
+                                            ny1lx3z1zbvi4qg968uh.length) {
+                                          return _CokiSwimmingHh5s3dvxjvsthwsrqbqmgx7(
+                                            gwml3ajmqlv72edtlqfr2:
+                                                DateTime.now(),
+                                          );
+                                        }
+                                        final wh2l8p9sa8ndsj =
+                                            ny1lx3z1zbvi4qg968uh[h8wksfngh2pcqisk40udc];
                                         return _CokiSwimmingJ1sp8oo11c3e28c3q7(
                                           tedzb3ct9yhvohp4:
-                                              'Hi there! I’m Coki, your AI buddy for all things swimming.',
-                                          t7b2wgpma3klyd3c4am0x: true,
-                                          ljvgs57go601ph: _q69eycnvanejgbir,
+                                              wh2l8p9sa8ndsj.content,
+                                          t7b2wgpma3klyd3c4am0x:
+                                              wh2l8p9sa8ndsj.fromGuide,
+                                          ljvgs57go601ph:
+                                              wh2l8p9sa8ndsj.createdAt,
                                           hq63bib1zpmb93xne3:
                                               oapkk97h5aduyciafifrncu,
                                         );
-                                      }
-                                      final h8wksfngh2pcqisk40udc =
-                                          iaf8qbv0xi41i9651v4xoyh - 1;
-                                      if (h8wksfngh2pcqisk40udc ==
-                                          ny1lx3z1zbvi4qg968uh.length) {
-                                        return _CokiSwimmingHh5s3dvxjvsthwsrqbqmgx7(
-                                          gwml3ajmqlv72edtlqfr2: DateTime.now(),
-                                        );
-                                      }
-                                      final wh2l8p9sa8ndsj =
-                                          ny1lx3z1zbvi4qg968uh[h8wksfngh2pcqisk40udc];
-                                      return _CokiSwimmingJ1sp8oo11c3e28c3q7(
-                                        tedzb3ct9yhvohp4:
-                                            wh2l8p9sa8ndsj.content,
-                                        t7b2wgpma3klyd3c4am0x:
-                                            wh2l8p9sa8ndsj.fromGuide,
-                                        ljvgs57go601ph:
-                                            wh2l8p9sa8ndsj.createdAt,
-                                        hq63bib1zpmb93xne3:
-                                            oapkk97h5aduyciafifrncu,
-                                      );
-                                    },
+                                      },
+                                    ),
                                   );
                                 },
                               ),

@@ -1,7 +1,12 @@
 part of '../main.dart';
 
 class CokiSwimmingQ8m2v7x4n9z1p6r3t5 extends StatefulWidget {
-  const CokiSwimmingQ8m2v7x4n9z1p6r3t5({super.key});
+  const CokiSwimmingQ8m2v7x4n9z1p6r3t5({
+    super.key,
+    required this.cokiSwimming36d90b8190996,
+  });
+
+  final int cokiSwimming36d90b8190996;
 
   @override
   State<CokiSwimmingQ8m2v7x4n9z1p6r3t5> createState() =>
@@ -12,7 +17,6 @@ class _CokiSwimmingW5n1z8q4m7x2p9r6t3
     extends State<CokiSwimmingQ8m2v7x4n9z1p6r3t5> {
   static const _cokiSwimmingE7q3m9v1x6z4p8r2t5 =
       'coki_swimming_daily_swim_log_v1';
-  final _cokiSwimmingN4x8p2m7z1q6v9r3t5 = SharedPreferencesAsync();
   final _cokiSwimmingP9v3n6x1m8q4z7r2t5 = TextEditingController();
   final _cokiSwimmingR2m7q5z9x3n1v8p6t4 = TextEditingController();
   final _cokiSwimmingS6z1p4n8v2m9x5q7r3 = TextEditingController();
@@ -33,9 +37,27 @@ class _CokiSwimmingW5n1z8q4m7x2p9r6t3
   }
 
   Future<void> _cokiSwimmingB7m3x9p1q6z8n4v2r5() async {
-    final raw = await _cokiSwimmingN4x8p2m7z1q6v9r3t5.getString(
-      _cokiSwimmingE7q3m9v1x6z4p8r2t5,
-    );
+    var raw = await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming08fc79df5890845d(
+          cokiSwimmingFfdff4098f67dc2a39b: widget.cokiSwimming36d90b8190996,
+          cokiSwimming9ca085a1e9464611db57745: _cokiSwimmingE7q3m9v1x6z4p8r2t5,
+          cokiSwimming756b8fe9fc667a: _cokiSwimmingE7q3m9v1x6z4p8r2t5,
+        );
+    if (raw == null) {
+      raw = await SharedPreferencesAsync().getString(
+        _cokiSwimmingE7q3m9v1x6z4p8r2t5,
+      );
+      if (raw != null) {
+        await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+            .cokiSwimming74e8b2f70fa2f5b(
+              cokiSwimming0a44fb28163763bb6ec69:
+                  widget.cokiSwimming36d90b8190996,
+              cokiSwimming47e760ec313f586105: _cokiSwimmingE7q3m9v1x6z4p8r2t5,
+              cokiSwimmingDb6b0273792c060: _cokiSwimmingE7q3m9v1x6z4p8r2t5,
+              cokiSwimmingC91a15fc4d8a49ccb: raw,
+            );
+      }
+    }
     if (raw != null) {
       final decoded = jsonDecode(raw);
       if (decoded is Map) {
@@ -92,10 +114,13 @@ class _CokiSwimmingW5n1z8q4m7x2p9r6t3
         'notes': _cokiSwimmingT8q2x6m1z9v4n7p3r5.text.trim(),
       },
     };
-    await _cokiSwimmingN4x8p2m7z1q6v9r3t5.setString(
-      _cokiSwimmingE7q3m9v1x6z4p8r2t5,
-      jsonEncode(next),
-    );
+    await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming74e8b2f70fa2f5b(
+          cokiSwimming0a44fb28163763bb6ec69: widget.cokiSwimming36d90b8190996,
+          cokiSwimming47e760ec313f586105: _cokiSwimmingE7q3m9v1x6z4p8r2t5,
+          cokiSwimmingDb6b0273792c060: _cokiSwimmingE7q3m9v1x6z4p8r2t5,
+          cokiSwimmingC91a15fc4d8a49ccb: jsonEncode(next),
+        );
     if (!mounted) return;
     setState(() => _cokiSwimmingU5n9m3x7q1z8p4v6r2 = next);
     FocusManager.instance.primaryFocus?.unfocus();

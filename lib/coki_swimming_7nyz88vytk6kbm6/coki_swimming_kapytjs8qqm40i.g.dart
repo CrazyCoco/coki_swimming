@@ -1417,6 +1417,648 @@ class CokiSwimmingStoreReceiptsCompanion
   }
 }
 
+class $CokiSwimming73e845eb8995e10d78699Table
+    extends CokiSwimming73e845eb8995e10d78699
+    with
+        TableInfo<
+          $CokiSwimming73e845eb8995e10d78699Table,
+          CokiSwimming73e845eb8995e10d78699Data
+        > {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $CokiSwimming73e845eb8995e10d78699Table(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _cokiSwimmingCe270c0c89ce45814c97b26dMeta =
+      const VerificationMeta('cokiSwimmingCe270c0c89ce45814c97b26d');
+  @override
+  late final GeneratedColumn<int> cokiSwimmingCe270c0c89ce45814c97b26d =
+      GeneratedColumn<int>(
+        'coki_swimming_ce270c0c89ce45814c97b26d',
+        aliasedName,
+        false,
+        hasAutoIncrement: true,
+        type: DriftSqlType.int,
+        requiredDuringInsert: false,
+        defaultConstraints: GeneratedColumn.constraintIsAlways(
+          'PRIMARY KEY AUTOINCREMENT',
+        ),
+      );
+  static const VerificationMeta _cokiSwimming374c2d33d71555cMeta =
+      const VerificationMeta('cokiSwimming374c2d33d71555c');
+  @override
+  late final GeneratedColumn<int> cokiSwimming374c2d33d71555c =
+      GeneratedColumn<int>(
+        'coki_swimming374c2d33d71555c',
+        aliasedName,
+        false,
+        type: DriftSqlType.int,
+        requiredDuringInsert: true,
+      );
+  static const VerificationMeta _cokiSwimming7b6a39bc7b3edf2290dcea74Meta =
+      const VerificationMeta('cokiSwimming7b6a39bc7b3edf2290dcea74');
+  @override
+  late final GeneratedColumn<String> cokiSwimming7b6a39bc7b3edf2290dcea74 =
+      GeneratedColumn<String>(
+        'coki_swimming7b6a39bc7b3edf2290dcea74',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: true,
+      );
+  static const VerificationMeta _cokiSwimming9af26f21c2b33Meta =
+      const VerificationMeta('cokiSwimming9af26f21c2b33');
+  @override
+  late final GeneratedColumn<String> cokiSwimming9af26f21c2b33 =
+      GeneratedColumn<String>(
+        'coki_swimming9af26f21c2b33',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: true,
+      );
+  static const VerificationMeta _cokiSwimmingE070b66af5a82465Meta =
+      const VerificationMeta('cokiSwimmingE070b66af5a82465');
+  @override
+  late final GeneratedColumn<String> cokiSwimmingE070b66af5a82465 =
+      GeneratedColumn<String>(
+        'coki_swimming_e070b66af5a82465',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: true,
+      );
+  static const VerificationMeta _cokiSwimming514b073dd6131a57e6977ba2Meta =
+      const VerificationMeta('cokiSwimming514b073dd6131a57e6977ba2');
+  @override
+  late final GeneratedColumn<DateTime> cokiSwimming514b073dd6131a57e6977ba2 =
+      GeneratedColumn<DateTime>(
+        'coki_swimming514b073dd6131a57e6977ba2',
+        aliasedName,
+        false,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: true,
+      );
+  static const VerificationMeta _cokiSwimming33d2f31d45bcd84135Meta =
+      const VerificationMeta('cokiSwimming33d2f31d45bcd84135');
+  @override
+  late final GeneratedColumn<DateTime> cokiSwimming33d2f31d45bcd84135 =
+      GeneratedColumn<DateTime>(
+        'coki_swimming33d2f31d45bcd84135',
+        aliasedName,
+        false,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: true,
+      );
+  @override
+  List<GeneratedColumn> get $columns => [
+    cokiSwimmingCe270c0c89ce45814c97b26d,
+    cokiSwimming374c2d33d71555c,
+    cokiSwimming7b6a39bc7b3edf2290dcea74,
+    cokiSwimming9af26f21c2b33,
+    cokiSwimmingE070b66af5a82465,
+    cokiSwimming514b073dd6131a57e6977ba2,
+    cokiSwimming33d2f31d45bcd84135,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'coki_swimming73e845eb8995e10d78699';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<CokiSwimming73e845eb8995e10d78699Data> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('coki_swimming_ce270c0c89ce45814c97b26d')) {
+      context.handle(
+        _cokiSwimmingCe270c0c89ce45814c97b26dMeta,
+        cokiSwimmingCe270c0c89ce45814c97b26d.isAcceptableOrUnknown(
+          data['coki_swimming_ce270c0c89ce45814c97b26d']!,
+          _cokiSwimmingCe270c0c89ce45814c97b26dMeta,
+        ),
+      );
+    }
+    if (data.containsKey('coki_swimming374c2d33d71555c')) {
+      context.handle(
+        _cokiSwimming374c2d33d71555cMeta,
+        cokiSwimming374c2d33d71555c.isAcceptableOrUnknown(
+          data['coki_swimming374c2d33d71555c']!,
+          _cokiSwimming374c2d33d71555cMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_cokiSwimming374c2d33d71555cMeta);
+    }
+    if (data.containsKey('coki_swimming7b6a39bc7b3edf2290dcea74')) {
+      context.handle(
+        _cokiSwimming7b6a39bc7b3edf2290dcea74Meta,
+        cokiSwimming7b6a39bc7b3edf2290dcea74.isAcceptableOrUnknown(
+          data['coki_swimming7b6a39bc7b3edf2290dcea74']!,
+          _cokiSwimming7b6a39bc7b3edf2290dcea74Meta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_cokiSwimming7b6a39bc7b3edf2290dcea74Meta);
+    }
+    if (data.containsKey('coki_swimming9af26f21c2b33')) {
+      context.handle(
+        _cokiSwimming9af26f21c2b33Meta,
+        cokiSwimming9af26f21c2b33.isAcceptableOrUnknown(
+          data['coki_swimming9af26f21c2b33']!,
+          _cokiSwimming9af26f21c2b33Meta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_cokiSwimming9af26f21c2b33Meta);
+    }
+    if (data.containsKey('coki_swimming_e070b66af5a82465')) {
+      context.handle(
+        _cokiSwimmingE070b66af5a82465Meta,
+        cokiSwimmingE070b66af5a82465.isAcceptableOrUnknown(
+          data['coki_swimming_e070b66af5a82465']!,
+          _cokiSwimmingE070b66af5a82465Meta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_cokiSwimmingE070b66af5a82465Meta);
+    }
+    if (data.containsKey('coki_swimming514b073dd6131a57e6977ba2')) {
+      context.handle(
+        _cokiSwimming514b073dd6131a57e6977ba2Meta,
+        cokiSwimming514b073dd6131a57e6977ba2.isAcceptableOrUnknown(
+          data['coki_swimming514b073dd6131a57e6977ba2']!,
+          _cokiSwimming514b073dd6131a57e6977ba2Meta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_cokiSwimming514b073dd6131a57e6977ba2Meta);
+    }
+    if (data.containsKey('coki_swimming33d2f31d45bcd84135')) {
+      context.handle(
+        _cokiSwimming33d2f31d45bcd84135Meta,
+        cokiSwimming33d2f31d45bcd84135.isAcceptableOrUnknown(
+          data['coki_swimming33d2f31d45bcd84135']!,
+          _cokiSwimming33d2f31d45bcd84135Meta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_cokiSwimming33d2f31d45bcd84135Meta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {
+    cokiSwimmingCe270c0c89ce45814c97b26d,
+  };
+  @override
+  List<Set<GeneratedColumn>> get uniqueKeys => [
+    {
+      cokiSwimming374c2d33d71555c,
+      cokiSwimming7b6a39bc7b3edf2290dcea74,
+      cokiSwimming9af26f21c2b33,
+    },
+  ];
+  @override
+  CokiSwimming73e845eb8995e10d78699Data map(
+    Map<String, dynamic> data, {
+    String? tablePrefix,
+  }) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return CokiSwimming73e845eb8995e10d78699Data(
+      cokiSwimmingCe270c0c89ce45814c97b26d: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}coki_swimming_ce270c0c89ce45814c97b26d'],
+      )!,
+      cokiSwimming374c2d33d71555c: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}coki_swimming374c2d33d71555c'],
+      )!,
+      cokiSwimming7b6a39bc7b3edf2290dcea74: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}coki_swimming7b6a39bc7b3edf2290dcea74'],
+      )!,
+      cokiSwimming9af26f21c2b33: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}coki_swimming9af26f21c2b33'],
+      )!,
+      cokiSwimmingE070b66af5a82465: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}coki_swimming_e070b66af5a82465'],
+      )!,
+      cokiSwimming514b073dd6131a57e6977ba2: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}coki_swimming514b073dd6131a57e6977ba2'],
+      )!,
+      cokiSwimming33d2f31d45bcd84135: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}coki_swimming33d2f31d45bcd84135'],
+      )!,
+    );
+  }
+
+  @override
+  $CokiSwimming73e845eb8995e10d78699Table createAlias(String alias) {
+    return $CokiSwimming73e845eb8995e10d78699Table(attachedDatabase, alias);
+  }
+}
+
+class CokiSwimming73e845eb8995e10d78699Data extends DataClass
+    implements Insertable<CokiSwimming73e845eb8995e10d78699Data> {
+  final int cokiSwimmingCe270c0c89ce45814c97b26d;
+  final int cokiSwimming374c2d33d71555c;
+  final String cokiSwimming7b6a39bc7b3edf2290dcea74;
+  final String cokiSwimming9af26f21c2b33;
+  final String cokiSwimmingE070b66af5a82465;
+  final DateTime cokiSwimming514b073dd6131a57e6977ba2;
+  final DateTime cokiSwimming33d2f31d45bcd84135;
+  const CokiSwimming73e845eb8995e10d78699Data({
+    required this.cokiSwimmingCe270c0c89ce45814c97b26d,
+    required this.cokiSwimming374c2d33d71555c,
+    required this.cokiSwimming7b6a39bc7b3edf2290dcea74,
+    required this.cokiSwimming9af26f21c2b33,
+    required this.cokiSwimmingE070b66af5a82465,
+    required this.cokiSwimming514b073dd6131a57e6977ba2,
+    required this.cokiSwimming33d2f31d45bcd84135,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['coki_swimming_ce270c0c89ce45814c97b26d'] = Variable<int>(
+      cokiSwimmingCe270c0c89ce45814c97b26d,
+    );
+    map['coki_swimming374c2d33d71555c'] = Variable<int>(
+      cokiSwimming374c2d33d71555c,
+    );
+    map['coki_swimming7b6a39bc7b3edf2290dcea74'] = Variable<String>(
+      cokiSwimming7b6a39bc7b3edf2290dcea74,
+    );
+    map['coki_swimming9af26f21c2b33'] = Variable<String>(
+      cokiSwimming9af26f21c2b33,
+    );
+    map['coki_swimming_e070b66af5a82465'] = Variable<String>(
+      cokiSwimmingE070b66af5a82465,
+    );
+    map['coki_swimming514b073dd6131a57e6977ba2'] = Variable<DateTime>(
+      cokiSwimming514b073dd6131a57e6977ba2,
+    );
+    map['coki_swimming33d2f31d45bcd84135'] = Variable<DateTime>(
+      cokiSwimming33d2f31d45bcd84135,
+    );
+    return map;
+  }
+
+  CokiSwimming73e845eb8995e10d78699Companion toCompanion(bool nullToAbsent) {
+    return CokiSwimming73e845eb8995e10d78699Companion(
+      cokiSwimmingCe270c0c89ce45814c97b26d: Value(
+        cokiSwimmingCe270c0c89ce45814c97b26d,
+      ),
+      cokiSwimming374c2d33d71555c: Value(cokiSwimming374c2d33d71555c),
+      cokiSwimming7b6a39bc7b3edf2290dcea74: Value(
+        cokiSwimming7b6a39bc7b3edf2290dcea74,
+      ),
+      cokiSwimming9af26f21c2b33: Value(cokiSwimming9af26f21c2b33),
+      cokiSwimmingE070b66af5a82465: Value(cokiSwimmingE070b66af5a82465),
+      cokiSwimming514b073dd6131a57e6977ba2: Value(
+        cokiSwimming514b073dd6131a57e6977ba2,
+      ),
+      cokiSwimming33d2f31d45bcd84135: Value(cokiSwimming33d2f31d45bcd84135),
+    );
+  }
+
+  factory CokiSwimming73e845eb8995e10d78699Data.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return CokiSwimming73e845eb8995e10d78699Data(
+      cokiSwimmingCe270c0c89ce45814c97b26d: serializer.fromJson<int>(
+        json['cokiSwimmingCe270c0c89ce45814c97b26d'],
+      ),
+      cokiSwimming374c2d33d71555c: serializer.fromJson<int>(
+        json['cokiSwimming374c2d33d71555c'],
+      ),
+      cokiSwimming7b6a39bc7b3edf2290dcea74: serializer.fromJson<String>(
+        json['cokiSwimming7b6a39bc7b3edf2290dcea74'],
+      ),
+      cokiSwimming9af26f21c2b33: serializer.fromJson<String>(
+        json['cokiSwimming9af26f21c2b33'],
+      ),
+      cokiSwimmingE070b66af5a82465: serializer.fromJson<String>(
+        json['cokiSwimmingE070b66af5a82465'],
+      ),
+      cokiSwimming514b073dd6131a57e6977ba2: serializer.fromJson<DateTime>(
+        json['cokiSwimming514b073dd6131a57e6977ba2'],
+      ),
+      cokiSwimming33d2f31d45bcd84135: serializer.fromJson<DateTime>(
+        json['cokiSwimming33d2f31d45bcd84135'],
+      ),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'cokiSwimmingCe270c0c89ce45814c97b26d': serializer.toJson<int>(
+        cokiSwimmingCe270c0c89ce45814c97b26d,
+      ),
+      'cokiSwimming374c2d33d71555c': serializer.toJson<int>(
+        cokiSwimming374c2d33d71555c,
+      ),
+      'cokiSwimming7b6a39bc7b3edf2290dcea74': serializer.toJson<String>(
+        cokiSwimming7b6a39bc7b3edf2290dcea74,
+      ),
+      'cokiSwimming9af26f21c2b33': serializer.toJson<String>(
+        cokiSwimming9af26f21c2b33,
+      ),
+      'cokiSwimmingE070b66af5a82465': serializer.toJson<String>(
+        cokiSwimmingE070b66af5a82465,
+      ),
+      'cokiSwimming514b073dd6131a57e6977ba2': serializer.toJson<DateTime>(
+        cokiSwimming514b073dd6131a57e6977ba2,
+      ),
+      'cokiSwimming33d2f31d45bcd84135': serializer.toJson<DateTime>(
+        cokiSwimming33d2f31d45bcd84135,
+      ),
+    };
+  }
+
+  CokiSwimming73e845eb8995e10d78699Data copyWith({
+    int? cokiSwimmingCe270c0c89ce45814c97b26d,
+    int? cokiSwimming374c2d33d71555c,
+    String? cokiSwimming7b6a39bc7b3edf2290dcea74,
+    String? cokiSwimming9af26f21c2b33,
+    String? cokiSwimmingE070b66af5a82465,
+    DateTime? cokiSwimming514b073dd6131a57e6977ba2,
+    DateTime? cokiSwimming33d2f31d45bcd84135,
+  }) => CokiSwimming73e845eb8995e10d78699Data(
+    cokiSwimmingCe270c0c89ce45814c97b26d:
+        cokiSwimmingCe270c0c89ce45814c97b26d ??
+        this.cokiSwimmingCe270c0c89ce45814c97b26d,
+    cokiSwimming374c2d33d71555c:
+        cokiSwimming374c2d33d71555c ?? this.cokiSwimming374c2d33d71555c,
+    cokiSwimming7b6a39bc7b3edf2290dcea74:
+        cokiSwimming7b6a39bc7b3edf2290dcea74 ??
+        this.cokiSwimming7b6a39bc7b3edf2290dcea74,
+    cokiSwimming9af26f21c2b33:
+        cokiSwimming9af26f21c2b33 ?? this.cokiSwimming9af26f21c2b33,
+    cokiSwimmingE070b66af5a82465:
+        cokiSwimmingE070b66af5a82465 ?? this.cokiSwimmingE070b66af5a82465,
+    cokiSwimming514b073dd6131a57e6977ba2:
+        cokiSwimming514b073dd6131a57e6977ba2 ??
+        this.cokiSwimming514b073dd6131a57e6977ba2,
+    cokiSwimming33d2f31d45bcd84135:
+        cokiSwimming33d2f31d45bcd84135 ?? this.cokiSwimming33d2f31d45bcd84135,
+  );
+  CokiSwimming73e845eb8995e10d78699Data copyWithCompanion(
+    CokiSwimming73e845eb8995e10d78699Companion data,
+  ) {
+    return CokiSwimming73e845eb8995e10d78699Data(
+      cokiSwimmingCe270c0c89ce45814c97b26d:
+          data.cokiSwimmingCe270c0c89ce45814c97b26d.present
+          ? data.cokiSwimmingCe270c0c89ce45814c97b26d.value
+          : this.cokiSwimmingCe270c0c89ce45814c97b26d,
+      cokiSwimming374c2d33d71555c: data.cokiSwimming374c2d33d71555c.present
+          ? data.cokiSwimming374c2d33d71555c.value
+          : this.cokiSwimming374c2d33d71555c,
+      cokiSwimming7b6a39bc7b3edf2290dcea74:
+          data.cokiSwimming7b6a39bc7b3edf2290dcea74.present
+          ? data.cokiSwimming7b6a39bc7b3edf2290dcea74.value
+          : this.cokiSwimming7b6a39bc7b3edf2290dcea74,
+      cokiSwimming9af26f21c2b33: data.cokiSwimming9af26f21c2b33.present
+          ? data.cokiSwimming9af26f21c2b33.value
+          : this.cokiSwimming9af26f21c2b33,
+      cokiSwimmingE070b66af5a82465: data.cokiSwimmingE070b66af5a82465.present
+          ? data.cokiSwimmingE070b66af5a82465.value
+          : this.cokiSwimmingE070b66af5a82465,
+      cokiSwimming514b073dd6131a57e6977ba2:
+          data.cokiSwimming514b073dd6131a57e6977ba2.present
+          ? data.cokiSwimming514b073dd6131a57e6977ba2.value
+          : this.cokiSwimming514b073dd6131a57e6977ba2,
+      cokiSwimming33d2f31d45bcd84135:
+          data.cokiSwimming33d2f31d45bcd84135.present
+          ? data.cokiSwimming33d2f31d45bcd84135.value
+          : this.cokiSwimming33d2f31d45bcd84135,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('CokiSwimming73e845eb8995e10d78699Data(')
+          ..write(
+            'cokiSwimmingCe270c0c89ce45814c97b26d: $cokiSwimmingCe270c0c89ce45814c97b26d, ',
+          )
+          ..write('cokiSwimming374c2d33d71555c: $cokiSwimming374c2d33d71555c, ')
+          ..write(
+            'cokiSwimming7b6a39bc7b3edf2290dcea74: $cokiSwimming7b6a39bc7b3edf2290dcea74, ',
+          )
+          ..write('cokiSwimming9af26f21c2b33: $cokiSwimming9af26f21c2b33, ')
+          ..write(
+            'cokiSwimmingE070b66af5a82465: $cokiSwimmingE070b66af5a82465, ',
+          )
+          ..write(
+            'cokiSwimming514b073dd6131a57e6977ba2: $cokiSwimming514b073dd6131a57e6977ba2, ',
+          )
+          ..write(
+            'cokiSwimming33d2f31d45bcd84135: $cokiSwimming33d2f31d45bcd84135',
+          )
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    cokiSwimmingCe270c0c89ce45814c97b26d,
+    cokiSwimming374c2d33d71555c,
+    cokiSwimming7b6a39bc7b3edf2290dcea74,
+    cokiSwimming9af26f21c2b33,
+    cokiSwimmingE070b66af5a82465,
+    cokiSwimming514b073dd6131a57e6977ba2,
+    cokiSwimming33d2f31d45bcd84135,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is CokiSwimming73e845eb8995e10d78699Data &&
+          other.cokiSwimmingCe270c0c89ce45814c97b26d ==
+              this.cokiSwimmingCe270c0c89ce45814c97b26d &&
+          other.cokiSwimming374c2d33d71555c ==
+              this.cokiSwimming374c2d33d71555c &&
+          other.cokiSwimming7b6a39bc7b3edf2290dcea74 ==
+              this.cokiSwimming7b6a39bc7b3edf2290dcea74 &&
+          other.cokiSwimming9af26f21c2b33 == this.cokiSwimming9af26f21c2b33 &&
+          other.cokiSwimmingE070b66af5a82465 ==
+              this.cokiSwimmingE070b66af5a82465 &&
+          other.cokiSwimming514b073dd6131a57e6977ba2 ==
+              this.cokiSwimming514b073dd6131a57e6977ba2 &&
+          other.cokiSwimming33d2f31d45bcd84135 ==
+              this.cokiSwimming33d2f31d45bcd84135);
+}
+
+class CokiSwimming73e845eb8995e10d78699Companion
+    extends UpdateCompanion<CokiSwimming73e845eb8995e10d78699Data> {
+  final Value<int> cokiSwimmingCe270c0c89ce45814c97b26d;
+  final Value<int> cokiSwimming374c2d33d71555c;
+  final Value<String> cokiSwimming7b6a39bc7b3edf2290dcea74;
+  final Value<String> cokiSwimming9af26f21c2b33;
+  final Value<String> cokiSwimmingE070b66af5a82465;
+  final Value<DateTime> cokiSwimming514b073dd6131a57e6977ba2;
+  final Value<DateTime> cokiSwimming33d2f31d45bcd84135;
+  const CokiSwimming73e845eb8995e10d78699Companion({
+    this.cokiSwimmingCe270c0c89ce45814c97b26d = const Value.absent(),
+    this.cokiSwimming374c2d33d71555c = const Value.absent(),
+    this.cokiSwimming7b6a39bc7b3edf2290dcea74 = const Value.absent(),
+    this.cokiSwimming9af26f21c2b33 = const Value.absent(),
+    this.cokiSwimmingE070b66af5a82465 = const Value.absent(),
+    this.cokiSwimming514b073dd6131a57e6977ba2 = const Value.absent(),
+    this.cokiSwimming33d2f31d45bcd84135 = const Value.absent(),
+  });
+  CokiSwimming73e845eb8995e10d78699Companion.insert({
+    this.cokiSwimmingCe270c0c89ce45814c97b26d = const Value.absent(),
+    required int cokiSwimming374c2d33d71555c,
+    required String cokiSwimming7b6a39bc7b3edf2290dcea74,
+    required String cokiSwimming9af26f21c2b33,
+    required String cokiSwimmingE070b66af5a82465,
+    required DateTime cokiSwimming514b073dd6131a57e6977ba2,
+    required DateTime cokiSwimming33d2f31d45bcd84135,
+  }) : cokiSwimming374c2d33d71555c = Value(cokiSwimming374c2d33d71555c),
+       cokiSwimming7b6a39bc7b3edf2290dcea74 = Value(
+         cokiSwimming7b6a39bc7b3edf2290dcea74,
+       ),
+       cokiSwimming9af26f21c2b33 = Value(cokiSwimming9af26f21c2b33),
+       cokiSwimmingE070b66af5a82465 = Value(cokiSwimmingE070b66af5a82465),
+       cokiSwimming514b073dd6131a57e6977ba2 = Value(
+         cokiSwimming514b073dd6131a57e6977ba2,
+       ),
+       cokiSwimming33d2f31d45bcd84135 = Value(cokiSwimming33d2f31d45bcd84135);
+  static Insertable<CokiSwimming73e845eb8995e10d78699Data> custom({
+    Expression<int>? cokiSwimmingCe270c0c89ce45814c97b26d,
+    Expression<int>? cokiSwimming374c2d33d71555c,
+    Expression<String>? cokiSwimming7b6a39bc7b3edf2290dcea74,
+    Expression<String>? cokiSwimming9af26f21c2b33,
+    Expression<String>? cokiSwimmingE070b66af5a82465,
+    Expression<DateTime>? cokiSwimming514b073dd6131a57e6977ba2,
+    Expression<DateTime>? cokiSwimming33d2f31d45bcd84135,
+  }) {
+    return RawValuesInsertable({
+      if (cokiSwimmingCe270c0c89ce45814c97b26d != null)
+        'coki_swimming_ce270c0c89ce45814c97b26d':
+            cokiSwimmingCe270c0c89ce45814c97b26d,
+      if (cokiSwimming374c2d33d71555c != null)
+        'coki_swimming374c2d33d71555c': cokiSwimming374c2d33d71555c,
+      if (cokiSwimming7b6a39bc7b3edf2290dcea74 != null)
+        'coki_swimming7b6a39bc7b3edf2290dcea74':
+            cokiSwimming7b6a39bc7b3edf2290dcea74,
+      if (cokiSwimming9af26f21c2b33 != null)
+        'coki_swimming9af26f21c2b33': cokiSwimming9af26f21c2b33,
+      if (cokiSwimmingE070b66af5a82465 != null)
+        'coki_swimming_e070b66af5a82465': cokiSwimmingE070b66af5a82465,
+      if (cokiSwimming514b073dd6131a57e6977ba2 != null)
+        'coki_swimming514b073dd6131a57e6977ba2':
+            cokiSwimming514b073dd6131a57e6977ba2,
+      if (cokiSwimming33d2f31d45bcd84135 != null)
+        'coki_swimming33d2f31d45bcd84135': cokiSwimming33d2f31d45bcd84135,
+    });
+  }
+
+  CokiSwimming73e845eb8995e10d78699Companion copyWith({
+    Value<int>? cokiSwimmingCe270c0c89ce45814c97b26d,
+    Value<int>? cokiSwimming374c2d33d71555c,
+    Value<String>? cokiSwimming7b6a39bc7b3edf2290dcea74,
+    Value<String>? cokiSwimming9af26f21c2b33,
+    Value<String>? cokiSwimmingE070b66af5a82465,
+    Value<DateTime>? cokiSwimming514b073dd6131a57e6977ba2,
+    Value<DateTime>? cokiSwimming33d2f31d45bcd84135,
+  }) {
+    return CokiSwimming73e845eb8995e10d78699Companion(
+      cokiSwimmingCe270c0c89ce45814c97b26d:
+          cokiSwimmingCe270c0c89ce45814c97b26d ??
+          this.cokiSwimmingCe270c0c89ce45814c97b26d,
+      cokiSwimming374c2d33d71555c:
+          cokiSwimming374c2d33d71555c ?? this.cokiSwimming374c2d33d71555c,
+      cokiSwimming7b6a39bc7b3edf2290dcea74:
+          cokiSwimming7b6a39bc7b3edf2290dcea74 ??
+          this.cokiSwimming7b6a39bc7b3edf2290dcea74,
+      cokiSwimming9af26f21c2b33:
+          cokiSwimming9af26f21c2b33 ?? this.cokiSwimming9af26f21c2b33,
+      cokiSwimmingE070b66af5a82465:
+          cokiSwimmingE070b66af5a82465 ?? this.cokiSwimmingE070b66af5a82465,
+      cokiSwimming514b073dd6131a57e6977ba2:
+          cokiSwimming514b073dd6131a57e6977ba2 ??
+          this.cokiSwimming514b073dd6131a57e6977ba2,
+      cokiSwimming33d2f31d45bcd84135:
+          cokiSwimming33d2f31d45bcd84135 ?? this.cokiSwimming33d2f31d45bcd84135,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (cokiSwimmingCe270c0c89ce45814c97b26d.present) {
+      map['coki_swimming_ce270c0c89ce45814c97b26d'] = Variable<int>(
+        cokiSwimmingCe270c0c89ce45814c97b26d.value,
+      );
+    }
+    if (cokiSwimming374c2d33d71555c.present) {
+      map['coki_swimming374c2d33d71555c'] = Variable<int>(
+        cokiSwimming374c2d33d71555c.value,
+      );
+    }
+    if (cokiSwimming7b6a39bc7b3edf2290dcea74.present) {
+      map['coki_swimming7b6a39bc7b3edf2290dcea74'] = Variable<String>(
+        cokiSwimming7b6a39bc7b3edf2290dcea74.value,
+      );
+    }
+    if (cokiSwimming9af26f21c2b33.present) {
+      map['coki_swimming9af26f21c2b33'] = Variable<String>(
+        cokiSwimming9af26f21c2b33.value,
+      );
+    }
+    if (cokiSwimmingE070b66af5a82465.present) {
+      map['coki_swimming_e070b66af5a82465'] = Variable<String>(
+        cokiSwimmingE070b66af5a82465.value,
+      );
+    }
+    if (cokiSwimming514b073dd6131a57e6977ba2.present) {
+      map['coki_swimming514b073dd6131a57e6977ba2'] = Variable<DateTime>(
+        cokiSwimming514b073dd6131a57e6977ba2.value,
+      );
+    }
+    if (cokiSwimming33d2f31d45bcd84135.present) {
+      map['coki_swimming33d2f31d45bcd84135'] = Variable<DateTime>(
+        cokiSwimming33d2f31d45bcd84135.value,
+      );
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('CokiSwimming73e845eb8995e10d78699Companion(')
+          ..write(
+            'cokiSwimmingCe270c0c89ce45814c97b26d: $cokiSwimmingCe270c0c89ce45814c97b26d, ',
+          )
+          ..write('cokiSwimming374c2d33d71555c: $cokiSwimming374c2d33d71555c, ')
+          ..write(
+            'cokiSwimming7b6a39bc7b3edf2290dcea74: $cokiSwimming7b6a39bc7b3edf2290dcea74, ',
+          )
+          ..write('cokiSwimming9af26f21c2b33: $cokiSwimming9af26f21c2b33, ')
+          ..write(
+            'cokiSwimmingE070b66af5a82465: $cokiSwimmingE070b66af5a82465, ',
+          )
+          ..write(
+            'cokiSwimming514b073dd6131a57e6977ba2: $cokiSwimming514b073dd6131a57e6977ba2, ',
+          )
+          ..write(
+            'cokiSwimming33d2f31d45bcd84135: $cokiSwimming33d2f31d45bcd84135',
+          )
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$CokiSwimmingDatabase extends GeneratedDatabase {
   _$CokiSwimmingDatabase(QueryExecutor e) : super(e);
   $CokiSwimmingDatabaseManager get managers =>
@@ -1427,6 +2069,10 @@ abstract class _$CokiSwimmingDatabase extends GeneratedDatabase {
       $CokiSwimmingGuideLinesTable(this);
   late final $CokiSwimmingStoreReceiptsTable cokiSwimmingStoreReceipts =
       $CokiSwimmingStoreReceiptsTable(this);
+  late final $CokiSwimming73e845eb8995e10d78699Table
+  cokiSwimming73e845eb8995e10d78699 = $CokiSwimming73e845eb8995e10d78699Table(
+    this,
+  );
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -1435,6 +2081,7 @@ abstract class _$CokiSwimmingDatabase extends GeneratedDatabase {
     cokiSwimmingMembers,
     cokiSwimmingGuideLines,
     cokiSwimmingStoreReceipts,
+    cokiSwimming73e845eb8995e10d78699,
   ];
 }
 
@@ -2208,6 +2855,309 @@ typedef $$CokiSwimmingStoreReceiptsTableProcessedTableManager =
       CokiSwimmingStoreReceipt,
       PrefetchHooks Function()
     >;
+typedef $$CokiSwimming73e845eb8995e10d78699TableCreateCompanionBuilder =
+    CokiSwimming73e845eb8995e10d78699Companion Function({
+      Value<int> cokiSwimmingCe270c0c89ce45814c97b26d,
+      required int cokiSwimming374c2d33d71555c,
+      required String cokiSwimming7b6a39bc7b3edf2290dcea74,
+      required String cokiSwimming9af26f21c2b33,
+      required String cokiSwimmingE070b66af5a82465,
+      required DateTime cokiSwimming514b073dd6131a57e6977ba2,
+      required DateTime cokiSwimming33d2f31d45bcd84135,
+    });
+typedef $$CokiSwimming73e845eb8995e10d78699TableUpdateCompanionBuilder =
+    CokiSwimming73e845eb8995e10d78699Companion Function({
+      Value<int> cokiSwimmingCe270c0c89ce45814c97b26d,
+      Value<int> cokiSwimming374c2d33d71555c,
+      Value<String> cokiSwimming7b6a39bc7b3edf2290dcea74,
+      Value<String> cokiSwimming9af26f21c2b33,
+      Value<String> cokiSwimmingE070b66af5a82465,
+      Value<DateTime> cokiSwimming514b073dd6131a57e6977ba2,
+      Value<DateTime> cokiSwimming33d2f31d45bcd84135,
+    });
+
+class $$CokiSwimming73e845eb8995e10d78699TableFilterComposer
+    extends
+        Composer<
+          _$CokiSwimmingDatabase,
+          $CokiSwimming73e845eb8995e10d78699Table
+        > {
+  $$CokiSwimming73e845eb8995e10d78699TableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get cokiSwimmingCe270c0c89ce45814c97b26d =>
+      $composableBuilder(
+        column: $table.cokiSwimmingCe270c0c89ce45814c97b26d,
+        builder: (column) => ColumnFilters(column),
+      );
+
+  ColumnFilters<int> get cokiSwimming374c2d33d71555c => $composableBuilder(
+    column: $table.cokiSwimming374c2d33d71555c,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get cokiSwimming7b6a39bc7b3edf2290dcea74 =>
+      $composableBuilder(
+        column: $table.cokiSwimming7b6a39bc7b3edf2290dcea74,
+        builder: (column) => ColumnFilters(column),
+      );
+
+  ColumnFilters<String> get cokiSwimming9af26f21c2b33 => $composableBuilder(
+    column: $table.cokiSwimming9af26f21c2b33,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get cokiSwimmingE070b66af5a82465 => $composableBuilder(
+    column: $table.cokiSwimmingE070b66af5a82465,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get cokiSwimming514b073dd6131a57e6977ba2 =>
+      $composableBuilder(
+        column: $table.cokiSwimming514b073dd6131a57e6977ba2,
+        builder: (column) => ColumnFilters(column),
+      );
+
+  ColumnFilters<DateTime> get cokiSwimming33d2f31d45bcd84135 =>
+      $composableBuilder(
+        column: $table.cokiSwimming33d2f31d45bcd84135,
+        builder: (column) => ColumnFilters(column),
+      );
+}
+
+class $$CokiSwimming73e845eb8995e10d78699TableOrderingComposer
+    extends
+        Composer<
+          _$CokiSwimmingDatabase,
+          $CokiSwimming73e845eb8995e10d78699Table
+        > {
+  $$CokiSwimming73e845eb8995e10d78699TableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get cokiSwimmingCe270c0c89ce45814c97b26d =>
+      $composableBuilder(
+        column: $table.cokiSwimmingCe270c0c89ce45814c97b26d,
+        builder: (column) => ColumnOrderings(column),
+      );
+
+  ColumnOrderings<int> get cokiSwimming374c2d33d71555c => $composableBuilder(
+    column: $table.cokiSwimming374c2d33d71555c,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get cokiSwimming7b6a39bc7b3edf2290dcea74 =>
+      $composableBuilder(
+        column: $table.cokiSwimming7b6a39bc7b3edf2290dcea74,
+        builder: (column) => ColumnOrderings(column),
+      );
+
+  ColumnOrderings<String> get cokiSwimming9af26f21c2b33 => $composableBuilder(
+    column: $table.cokiSwimming9af26f21c2b33,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get cokiSwimmingE070b66af5a82465 =>
+      $composableBuilder(
+        column: $table.cokiSwimmingE070b66af5a82465,
+        builder: (column) => ColumnOrderings(column),
+      );
+
+  ColumnOrderings<DateTime> get cokiSwimming514b073dd6131a57e6977ba2 =>
+      $composableBuilder(
+        column: $table.cokiSwimming514b073dd6131a57e6977ba2,
+        builder: (column) => ColumnOrderings(column),
+      );
+
+  ColumnOrderings<DateTime> get cokiSwimming33d2f31d45bcd84135 =>
+      $composableBuilder(
+        column: $table.cokiSwimming33d2f31d45bcd84135,
+        builder: (column) => ColumnOrderings(column),
+      );
+}
+
+class $$CokiSwimming73e845eb8995e10d78699TableAnnotationComposer
+    extends
+        Composer<
+          _$CokiSwimmingDatabase,
+          $CokiSwimming73e845eb8995e10d78699Table
+        > {
+  $$CokiSwimming73e845eb8995e10d78699TableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get cokiSwimmingCe270c0c89ce45814c97b26d =>
+      $composableBuilder(
+        column: $table.cokiSwimmingCe270c0c89ce45814c97b26d,
+        builder: (column) => column,
+      );
+
+  GeneratedColumn<int> get cokiSwimming374c2d33d71555c => $composableBuilder(
+    column: $table.cokiSwimming374c2d33d71555c,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get cokiSwimming7b6a39bc7b3edf2290dcea74 =>
+      $composableBuilder(
+        column: $table.cokiSwimming7b6a39bc7b3edf2290dcea74,
+        builder: (column) => column,
+      );
+
+  GeneratedColumn<String> get cokiSwimming9af26f21c2b33 => $composableBuilder(
+    column: $table.cokiSwimming9af26f21c2b33,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get cokiSwimmingE070b66af5a82465 =>
+      $composableBuilder(
+        column: $table.cokiSwimmingE070b66af5a82465,
+        builder: (column) => column,
+      );
+
+  GeneratedColumn<DateTime> get cokiSwimming514b073dd6131a57e6977ba2 =>
+      $composableBuilder(
+        column: $table.cokiSwimming514b073dd6131a57e6977ba2,
+        builder: (column) => column,
+      );
+
+  GeneratedColumn<DateTime> get cokiSwimming33d2f31d45bcd84135 =>
+      $composableBuilder(
+        column: $table.cokiSwimming33d2f31d45bcd84135,
+        builder: (column) => column,
+      );
+}
+
+class $$CokiSwimming73e845eb8995e10d78699TableTableManager
+    extends
+        RootTableManager<
+          _$CokiSwimmingDatabase,
+          $CokiSwimming73e845eb8995e10d78699Table,
+          CokiSwimming73e845eb8995e10d78699Data,
+          $$CokiSwimming73e845eb8995e10d78699TableFilterComposer,
+          $$CokiSwimming73e845eb8995e10d78699TableOrderingComposer,
+          $$CokiSwimming73e845eb8995e10d78699TableAnnotationComposer,
+          $$CokiSwimming73e845eb8995e10d78699TableCreateCompanionBuilder,
+          $$CokiSwimming73e845eb8995e10d78699TableUpdateCompanionBuilder,
+          (
+            CokiSwimming73e845eb8995e10d78699Data,
+            BaseReferences<
+              _$CokiSwimmingDatabase,
+              $CokiSwimming73e845eb8995e10d78699Table,
+              CokiSwimming73e845eb8995e10d78699Data
+            >,
+          ),
+          CokiSwimming73e845eb8995e10d78699Data,
+          PrefetchHooks Function()
+        > {
+  $$CokiSwimming73e845eb8995e10d78699TableTableManager(
+    _$CokiSwimmingDatabase db,
+    $CokiSwimming73e845eb8995e10d78699Table table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$CokiSwimming73e845eb8995e10d78699TableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$CokiSwimming73e845eb8995e10d78699TableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$CokiSwimming73e845eb8995e10d78699TableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<int> cokiSwimmingCe270c0c89ce45814c97b26d =
+                    const Value.absent(),
+                Value<int> cokiSwimming374c2d33d71555c = const Value.absent(),
+                Value<String> cokiSwimming7b6a39bc7b3edf2290dcea74 =
+                    const Value.absent(),
+                Value<String> cokiSwimming9af26f21c2b33 = const Value.absent(),
+                Value<String> cokiSwimmingE070b66af5a82465 =
+                    const Value.absent(),
+                Value<DateTime> cokiSwimming514b073dd6131a57e6977ba2 =
+                    const Value.absent(),
+                Value<DateTime> cokiSwimming33d2f31d45bcd84135 =
+                    const Value.absent(),
+              }) => CokiSwimming73e845eb8995e10d78699Companion(
+                cokiSwimmingCe270c0c89ce45814c97b26d:
+                    cokiSwimmingCe270c0c89ce45814c97b26d,
+                cokiSwimming374c2d33d71555c: cokiSwimming374c2d33d71555c,
+                cokiSwimming7b6a39bc7b3edf2290dcea74:
+                    cokiSwimming7b6a39bc7b3edf2290dcea74,
+                cokiSwimming9af26f21c2b33: cokiSwimming9af26f21c2b33,
+                cokiSwimmingE070b66af5a82465: cokiSwimmingE070b66af5a82465,
+                cokiSwimming514b073dd6131a57e6977ba2:
+                    cokiSwimming514b073dd6131a57e6977ba2,
+                cokiSwimming33d2f31d45bcd84135: cokiSwimming33d2f31d45bcd84135,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> cokiSwimmingCe270c0c89ce45814c97b26d =
+                    const Value.absent(),
+                required int cokiSwimming374c2d33d71555c,
+                required String cokiSwimming7b6a39bc7b3edf2290dcea74,
+                required String cokiSwimming9af26f21c2b33,
+                required String cokiSwimmingE070b66af5a82465,
+                required DateTime cokiSwimming514b073dd6131a57e6977ba2,
+                required DateTime cokiSwimming33d2f31d45bcd84135,
+              }) => CokiSwimming73e845eb8995e10d78699Companion.insert(
+                cokiSwimmingCe270c0c89ce45814c97b26d:
+                    cokiSwimmingCe270c0c89ce45814c97b26d,
+                cokiSwimming374c2d33d71555c: cokiSwimming374c2d33d71555c,
+                cokiSwimming7b6a39bc7b3edf2290dcea74:
+                    cokiSwimming7b6a39bc7b3edf2290dcea74,
+                cokiSwimming9af26f21c2b33: cokiSwimming9af26f21c2b33,
+                cokiSwimmingE070b66af5a82465: cokiSwimmingE070b66af5a82465,
+                cokiSwimming514b073dd6131a57e6977ba2:
+                    cokiSwimming514b073dd6131a57e6977ba2,
+                cokiSwimming33d2f31d45bcd84135: cokiSwimming33d2f31d45bcd84135,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$CokiSwimming73e845eb8995e10d78699TableProcessedTableManager =
+    ProcessedTableManager<
+      _$CokiSwimmingDatabase,
+      $CokiSwimming73e845eb8995e10d78699Table,
+      CokiSwimming73e845eb8995e10d78699Data,
+      $$CokiSwimming73e845eb8995e10d78699TableFilterComposer,
+      $$CokiSwimming73e845eb8995e10d78699TableOrderingComposer,
+      $$CokiSwimming73e845eb8995e10d78699TableAnnotationComposer,
+      $$CokiSwimming73e845eb8995e10d78699TableCreateCompanionBuilder,
+      $$CokiSwimming73e845eb8995e10d78699TableUpdateCompanionBuilder,
+      (
+        CokiSwimming73e845eb8995e10d78699Data,
+        BaseReferences<
+          _$CokiSwimmingDatabase,
+          $CokiSwimming73e845eb8995e10d78699Table,
+          CokiSwimming73e845eb8995e10d78699Data
+        >,
+      ),
+      CokiSwimming73e845eb8995e10d78699Data,
+      PrefetchHooks Function()
+    >;
 
 class $CokiSwimmingDatabaseManager {
   final _$CokiSwimmingDatabase _db;
@@ -2223,5 +3173,11 @@ class $CokiSwimmingDatabaseManager {
       $$CokiSwimmingStoreReceiptsTableTableManager(
         _db,
         _db.cokiSwimmingStoreReceipts,
+      );
+  $$CokiSwimming73e845eb8995e10d78699TableTableManager
+  get cokiSwimming73e845eb8995e10d78699 =>
+      $$CokiSwimming73e845eb8995e10d78699TableTableManager(
+        _db,
+        _db.cokiSwimming73e845eb8995e10d78699,
       );
 }

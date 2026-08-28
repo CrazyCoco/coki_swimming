@@ -5,10 +5,24 @@ class CokiSwimmingF5656zccmafvs0qv extends StatefulWidget {
     super.key,
     required this.bfiaxy1tb0xj6p53k2u2636,
     this.f0776540f6fd94c345,
+    required this.cokiSwimming689a8c49efbf354ad8,
+    required this.cokiSwimming6e187fb50274026987,
+    required this.cokiSwimming8d87deef5334a807ec,
+    required this.cokiSwimming51836eca48c23cdf8e,
+    required this.cokiSwimming484e808a96e62a86,
   });
 
   final bool bfiaxy1tb0xj6p53k2u2636;
   final CokiSwimmingMember? f0776540f6fd94c345;
+  final bool Function(CokiSwimmingOla0gu1u5h0t2dqk0sy77kg, bool)
+  cokiSwimming689a8c49efbf354ad8;
+  final Future<void> Function(CokiSwimmingOla0gu1u5h0t2dqk0sy77kg, bool)
+  cokiSwimming6e187fb50274026987;
+  final bool Function(CokiSwimmingOla0gu1u5h0t2dqk0sy77kg, bool)
+  cokiSwimming8d87deef5334a807ec;
+  final Future<bool> Function(CokiSwimmingOla0gu1u5h0t2dqk0sy77kg, bool)
+  cokiSwimming51836eca48c23cdf8e;
+  final List<CokiSwimmingOla0gu1u5h0t2dqk0sy77kg> cokiSwimming484e808a96e62a86;
 
   @override
   State<CokiSwimmingF5656zccmafvs0qv> createState() =>
@@ -23,162 +37,194 @@ class _CokiSwimmingPzzzrkn4dhmjpvq4usmx
   Widget build(BuildContext context) {
     final ugxydknzc1wj3s4w4rkaj =
         (_szon65ynlbize6qvs3 == 0
-                ? cokiSwimmingno1co2tb6p01cbgq6w3sj9k
-                : cokiSwimmingno1co2tb6p01cbgq6w3sj9k.reversed)
+                ? widget.cokiSwimming484e808a96e62a86
+                : widget.cokiSwimming484e808a96e62a86.reversed)
             .where(
               (tbubit3kjffk26xorq7nui5l) =>
-                  tbubit3kjffk26xorq7nui5l.zagjx458al86vlep0we1whdx,
+                  tbubit3kjffk26xorq7nui5l.zagjx458al86vlep0we1whdx &&
+                  !widget.cokiSwimming689a8c49efbf354ad8(
+                    tbubit3kjffk26xorq7nui5l,
+                    true,
+                  ),
             )
             .toList(growable: false);
     return SafeArea(
       bottom: false,
-      child: ListView(
-        physics: const BouncingScrollPhysics(
-          parent: AlwaysScrollableScrollPhysics(),
-        ),
-        padding: const EdgeInsets.fromLTRB(20, 12, 20, 18),
-        children: [
-          Row(
-            children: [
-              CokiSwimmingKtoozpjuob7rods(
-                kvg85l6uieobzf: BorderRadius.circular(24),
-                gwrsyzojtp84oco1ldhaaw90: () =>
-                    setState(() => _szon65ynlbize6qvs3 = 0),
-                v6j3bxo2dz4aevlmr: Image.asset(
-                  'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_7rjhvfra627txrp5k5f.png',
-                  width: 107,
-                  height: 47,
-                ),
-              ),
-              const Spacer(),
-              CokiSwimmingKtoozpjuob7rods(
-                kvg85l6uieobzf: BorderRadius.circular(22),
-                gwrsyzojtp84oco1ldhaaw90: () =>
-                    CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
-                      context,
-                      h5j30v6kt4ykg21tutwflx: widget.bfiaxy1tb0xj6p53k2u2636,
-                      ssqbxn8vpgdaf9emp9937fjk: () =>
-                          Navigator.of(context).pushNamed(
-                            CokiSwimmingXu1hfvhsqfkovamr518kcwz
-                                .w521qang5zejpqq51niu,
-                          ),
-                    ),
-                v6j3bxo2dz4aevlmr: Image.asset(
-                  'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_8zdq4decaajai1.png',
-                  width: 44,
-                  height: 44,
-                ),
-              ),
-            ],
+      child: CokiSwimmingAba7n9vsqt6w3fz(
+        cokiSwimmingudas2o8q00gicj383hxod: ListView(
+          physics: const BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics(),
           ),
-          const SizedBox(height: 19),
-          SizedBox(
-            height: 32,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          padding: const EdgeInsets.fromLTRB(20, 12, 20, 18),
+          children: [
+            Row(
               children: [
                 CokiSwimmingKtoozpjuob7rods(
-                  kvg85l6uieobzf: BorderRadius.circular(6),
+                  kvg85l6uieobzf: BorderRadius.circular(24),
                   gwrsyzojtp84oco1ldhaaw90: () =>
                       setState(() => _szon65ynlbize6qvs3 = 0),
-                  v6j3bxo2dz4aevlmr: SizedBox(
-                    width: 118,
-                    height: 32,
-                    child: Stack(
-                      children: [
-                        const Positioned(
-                          left: 0,
-                          top: 0,
-                          child: Text(
-                            'Trending',
+                  v6j3bxo2dz4aevlmr: Image.asset(
+                    'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_7rjhvfra627txrp5k5f.png',
+                    width: 107,
+                    height: 47,
+                  ),
+                ),
+                const Spacer(),
+                CokiSwimmingKtoozpjuob7rods(
+                  kvg85l6uieobzf: BorderRadius.circular(22),
+                  gwrsyzojtp84oco1ldhaaw90: () =>
+                      CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                        context,
+                        h5j30v6kt4ykg21tutwflx: widget.bfiaxy1tb0xj6p53k2u2636,
+                        ssqbxn8vpgdaf9emp9937fjk: () =>
+                            Navigator.of(context).pushNamed(
+                              CokiSwimmingXu1hfvhsqfkovamr518kcwz
+                                  .w521qang5zejpqq51niu,
+                            ),
+                      ),
+                  v6j3bxo2dz4aevlmr: Image.asset(
+                    'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_8zdq4decaajai1.png',
+                    width: 44,
+                    height: 44,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 19),
+            SizedBox(
+              height: 32,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CokiSwimmingKtoozpjuob7rods(
+                    kvg85l6uieobzf: BorderRadius.circular(6),
+                    gwrsyzojtp84oco1ldhaaw90: () =>
+                        setState(() => _szon65ynlbize6qvs3 = 0),
+                    v6j3bxo2dz4aevlmr: SizedBox(
+                      width: 118,
+                      height: 32,
+                      child: Stack(
+                        children: [
+                          const Positioned(
+                            left: 0,
+                            top: 0,
+                            child: Text(
+                              'Trending',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                height: 1.2,
+                                letterSpacing: 0,
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 92,
+                            top: 0,
+                            child: Image.asset(
+                              'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_1t87upgxeqhhj8h.png',
+                              width: 18,
+                              height: 14,
+                            ),
+                          ),
+                          if (_szon65ynlbize6qvs3 == 0)
+                            Positioned(
+                              left: 0,
+                              bottom: 0,
+                              child: Image.asset(
+                                'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_ayxbrfe89zbjhau4l3sd9e.png',
+                                width: 54,
+                                height: 4,
+                              ),
+                            ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 15),
+                  CokiSwimmingKtoozpjuob7rods(
+                    kvg85l6uieobzf: BorderRadius.circular(6),
+                    gwrsyzojtp84oco1ldhaaw90: () =>
+                        setState(() => _szon65ynlbize6qvs3 = 1),
+                    v6j3bxo2dz4aevlmr: SizedBox(
+                      width: 54,
+                      height: 32,
+                      child: Stack(
+                        children: [
+                          Text(
+                            'New',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: _szon65ynlbize6qvs3 == 1
+                                  ? Colors.white
+                                  : const Color(0xFF817B96),
                               fontSize: 20,
                               height: 1.2,
                               letterSpacing: 0,
                               fontWeight: FontWeight.w800,
                             ),
                           ),
-                        ),
-                        Positioned(
-                          left: 92,
-                          top: 0,
-                          child: Image.asset(
-                            'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_1t87upgxeqhhj8h.png',
-                            width: 18,
-                            height: 14,
-                          ),
-                        ),
-                        if (_szon65ynlbize6qvs3 == 0)
-                          Positioned(
-                            left: 0,
-                            bottom: 0,
-                            child: Image.asset(
-                              'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_ayxbrfe89zbjhau4l3sd9e.png',
-                              width: 54,
-                              height: 4,
+                          if (_szon65ynlbize6qvs3 == 1)
+                            Positioned(
+                              left: 0,
+                              bottom: 0,
+                              child: Image.asset(
+                                'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_ayxbrfe89zbjhau4l3sd9e.png',
+                                width: 54,
+                                height: 4,
+                              ),
                             ),
-                          ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(width: 15),
-                CokiSwimmingKtoozpjuob7rods(
-                  kvg85l6uieobzf: BorderRadius.circular(6),
-                  gwrsyzojtp84oco1ldhaaw90: () =>
-                      setState(() => _szon65ynlbize6qvs3 = 1),
-                  v6j3bxo2dz4aevlmr: SizedBox(
-                    width: 54,
-                    height: 32,
-                    child: Stack(
-                      children: [
-                        Text(
-                          'New',
-                          style: TextStyle(
-                            color: _szon65ynlbize6qvs3 == 1
-                                ? Colors.white
-                                : const Color(0xFF817B96),
-                            fontSize: 20,
-                            height: 1.2,
-                            letterSpacing: 0,
-                            fontWeight: FontWeight.w800,
-                          ),
-                        ),
-                        if (_szon65ynlbize6qvs3 == 1)
-                          Positioned(
-                            left: 0,
-                            bottom: 0,
-                            child: Image.asset(
-                              'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_ayxbrfe89zbjhau4l3sd9e.png',
-                              width: 54,
-                              height: 4,
-                            ),
-                          ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 14),
-          for (final tbubit3kjffk26xorq7nui5l in ugxydknzc1wj3s4w4rkaj) ...[
-            CokiSwimmingDih2lfk074dk5rke(
-              key: ValueKey(
-                'seed-${tbubit3kjffk26xorq7nui5l.y2bm5rqs3zbbqyxivjft35}',
+                ],
               ),
-              wl2hojy7crk9m8ffyrydgc3: tbubit3kjffk26xorq7nui5l,
-              kzrqy3gsjnpsppjd5m: widget.bfiaxy1tb0xj6p53k2u2636,
-              e208069dfcb66c84cb:
-                  widget.f0776540f6fd94c345?.displayName ==
-                          tbubit3kjffk26xorq7nui5l.y2bm5rqs3zbbqyxivjft35 &&
-                      widget.f0776540f6fd94c345?.avatarPath ==
-                          tbubit3kjffk26xorq7nui5l.xkczithyrycvg26pfjjmm9,
             ),
             const SizedBox(height: 14),
+            for (final tbubit3kjffk26xorq7nui5l in ugxydknzc1wj3s4w4rkaj) ...[
+              CokiSwimmingDih2lfk074dk5rke(
+                key: ValueKey(
+                  'seed-${tbubit3kjffk26xorq7nui5l.y2bm5rqs3zbbqyxivjft35}',
+                ),
+                wl2hojy7crk9m8ffyrydgc3: tbubit3kjffk26xorq7nui5l,
+                kzrqy3gsjnpsppjd5m: widget.bfiaxy1tb0xj6p53k2u2636,
+                e208069dfcb66c84cb:
+                    tbubit3kjffk26xorq7nui5l.cokiSwimmingD6f37ea57614705817c1 ==
+                        widget.f0776540f6fd94c345?.id ||
+                    (widget.f0776540f6fd94c345?.email ==
+                            cokiSwimmingw0k49uzxp20rme687o &&
+                        tbubit3kjffk26xorq7nui5l.y2bm5rqs3zbbqyxivjft35 ==
+                            cokiSwimmingno1co2tb6p01cbgq6w3sj9k
+                                .first
+                                .y2bm5rqs3zbbqyxivjft35 &&
+                        tbubit3kjffk26xorq7nui5l.xkczithyrycvg26pfjjmm9 ==
+                            cokiSwimmingno1co2tb6p01cbgq6w3sj9k
+                                .first
+                                .xkczithyrycvg26pfjjmm9),
+                cokiSwimming88390265045321b9db: () =>
+                    CokiSwimmingTq92zenanm7d.cokiSwimming9e422d9ca2b283fe4a(
+                      context,
+                      () => widget.cokiSwimming6e187fb50274026987(
+                        tbubit3kjffk26xorq7nui5l,
+                        true,
+                      ),
+                    ),
+                cokiSwimmingf43e0374a1e6304bd6: widget
+                    .cokiSwimming8d87deef5334a807ec(
+                      tbubit3kjffk26xorq7nui5l,
+                      true,
+                    ),
+                cokiSwimmingf0100d53fad8946c31: () =>
+                    widget.cokiSwimming51836eca48c23cdf8e(
+                      tbubit3kjffk26xorq7nui5l,
+                      true,
+                    ),
+              ),
+              const SizedBox(height: 14),
+            ],
           ],
-        ],
+        ),
       ),
     );
   }
@@ -191,6 +237,9 @@ class CokiSwimmingDih2lfk074dk5rke extends StatefulWidget {
     this.wl2hojy7crk9m8ffyrydgc3,
     required this.kzrqy3gsjnpsppjd5m,
     this.e208069dfcb66c84cb = false,
+    this.cokiSwimming88390265045321b9db,
+    this.cokiSwimmingf43e0374a1e6304bd6 = false,
+    this.cokiSwimmingf0100d53fad8946c31,
   }) : assert(
          hpn5t8jy171wsi56pq171x != null || wl2hojy7crk9m8ffyrydgc3 != null,
        );
@@ -199,6 +248,9 @@ class CokiSwimmingDih2lfk074dk5rke extends StatefulWidget {
   final CokiSwimmingOla0gu1u5h0t2dqk0sy77kg? wl2hojy7crk9m8ffyrydgc3;
   final bool kzrqy3gsjnpsppjd5m;
   final bool e208069dfcb66c84cb;
+  final VoidCallback? cokiSwimming88390265045321b9db;
+  final bool cokiSwimmingf43e0374a1e6304bd6;
+  final Future<bool> Function()? cokiSwimmingf0100d53fad8946c31;
 
   @override
   State<CokiSwimmingDih2lfk074dk5rke> createState() =>
@@ -206,7 +258,17 @@ class CokiSwimmingDih2lfk074dk5rke extends StatefulWidget {
 }
 
 class _CokiSwimmingTgd1wgwxn1o9d8 extends State<CokiSwimmingDih2lfk074dk5rke> {
-  bool _rux2c0s05n2x3jk3cu = false;
+  late bool _rux2c0s05n2x3jk3cu = widget.cokiSwimmingf43e0374a1e6304bd6;
+  bool _cokiSwimminga883a38658e181c4bd = false;
+
+  @override
+  void didUpdateWidget(CokiSwimmingDih2lfk074dk5rke oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.cokiSwimmingf43e0374a1e6304bd6 !=
+        widget.cokiSwimmingf43e0374a1e6304bd6) {
+      _rux2c0s05n2x3jk3cu = widget.cokiSwimmingf43e0374a1e6304bd6;
+    }
+  }
 
   void _rr1zsojwzv4pvg5() {
     final g544lwgvv2490wsmg4 = widget.wl2hojy7crk9m8ffyrydgc3;
@@ -230,14 +292,14 @@ class _CokiSwimmingTgd1wgwxn1o9d8 extends State<CokiSwimmingDih2lfk074dk5rke> {
           child: Stack(
             fit: StackFit.expand,
             children: [
-              Image.asset(
-                widget.wl2hojy7crk9m8ffyrydgc3?.xpgbqaoc87cxdg7jjztf ??
+              CokiSwimmingC42e81133062ccfd(
+                cokiSwimmingEbf673309ff7e1c4:
+                    widget.wl2hojy7crk9m8ffyrydgc3?.xpgbqaoc87cxdg7jjztf ??
                     widget
                         .wl2hojy7crk9m8ffyrydgc3
                         ?.pgj8geudv74awjznrves
                         .first ??
                     widget.hpn5t8jy171wsi56pq171x!,
-                fit: BoxFit.cover,
               ),
               if (widget.wl2hojy7crk9m8ffyrydgc3 != null)
                 const DecoratedBox(
@@ -301,22 +363,46 @@ class _CokiSwimmingTgd1wgwxn1o9d8 extends State<CokiSwimmingDih2lfk074dk5rke> {
                         ),
                 ),
               ),
-              if (!widget.e208069dfcb66c84cb)
+              if (widget.e208069dfcb66c84cb &&
+                  widget.cokiSwimming88390265045321b9db != null)
+                Positioned(
+                  right: 0,
+                  top: 0,
+                  child: CokiSwimmingKtoozpjuob7rods(
+                    kvg85l6uieobzf: BorderRadius.circular(22),
+                    gwrsyzojtp84oco1ldhaaw90:
+                        widget.cokiSwimming88390265045321b9db!,
+                    v6j3bxo2dz4aevlmr: const SizedBox(
+                      width: 48,
+                      height: 48,
+                      child: Icon(
+                        Icons.delete_outline_rounded,
+                        color: Colors.white,
+                        size: 26,
+                      ),
+                    ),
+                  ),
+                )
+              else if (!widget.e208069dfcb66c84cb)
                 Positioned(
                   right: 0,
                   top: 0,
                   child: CokiSwimmingKtoozpjuob7rods(
                     kvg85l6uieobzf: BorderRadius.circular(22),
                     gwrsyzojtp84oco1ldhaaw90: () =>
-                        CokiSwimmingY5kxebxyhv8gg32yly
-                            .kco1p8qja05cbsuhzrwcvesj(
-                              context,
-                              h5j30v6kt4ykg21tutwflx:
-                                  widget.kzrqy3gsjnpsppjd5m,
-                              ssqbxn8vpgdaf9emp9937fjk: () =>
-                                  CokiSwimmingEa33alie83a7ztht03ml6za
-                                      .v8k18e1fwcihnfevusm4iq(context),
-                            ),
+                        CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                          context,
+                          h5j30v6kt4ykg21tutwflx: widget.kzrqy3gsjnpsppjd5m,
+                          ssqbxn8vpgdaf9emp9937fjk: () =>
+                              CokiSwimmingEa33alie83a7ztht03ml6za.v8k18e1fwcihnfevusm4iq(
+                                context,
+                                cokiSwimming2017dfe9792f0833:
+                                    widget
+                                        .wl2hojy7crk9m8ffyrydgc3
+                                        ?.y2bm5rqs3zbbqyxivjft35 ??
+                                    'unknown',
+                              ),
+                        ),
                     v6j3bxo2dz4aevlmr: SizedBox(
                       width: 48,
                       height: 48,
@@ -392,9 +478,31 @@ class _CokiSwimmingTgd1wgwxn1o9d8 extends State<CokiSwimmingDih2lfk074dk5rke> {
                       CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
                         context,
                         h5j30v6kt4ykg21tutwflx: widget.kzrqy3gsjnpsppjd5m,
-                        ssqbxn8vpgdaf9emp9937fjk: () => setState(
-                          () => _rux2c0s05n2x3jk3cu = !_rux2c0s05n2x3jk3cu,
-                        ),
+                        ssqbxn8vpgdaf9emp9937fjk: () async {
+                          if (_cokiSwimminga883a38658e181c4bd) return;
+                          _cokiSwimminga883a38658e181c4bd = true;
+                          try {
+                            final cokiSwimmingfda3567e208c26eb4e =
+                                widget.cokiSwimmingf0100d53fad8946c31 == null
+                                ? !_rux2c0s05n2x3jk3cu
+                                : await widget
+                                      .cokiSwimmingf0100d53fad8946c31!();
+                            if (!mounted) return;
+                            setState(
+                              () => _rux2c0s05n2x3jk3cu =
+                                  cokiSwimmingfda3567e208c26eb4e,
+                            );
+                          } catch (_) {
+                            if (!context.mounted) return;
+                            CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
+                              context,
+                              'Unable to update',
+                              isError: true,
+                            );
+                          } finally {
+                            _cokiSwimminga883a38658e181c4bd = false;
+                          }
+                        },
                       ),
                   v6j3bxo2dz4aevlmr: Image.asset(
                     _rux2c0s05n2x3jk3cu
@@ -505,11 +613,15 @@ class CokiSwimmingNpcc1enzhrcu212d5ok60l extends StatefulWidget {
     this.i31nj2onx9bvm = false,
     this.uuh707ixf6f6 = false,
     this.syng6otqlfthv,
+    this.cokiSwimmingee699a2136e7a1f54b = false,
+    this.cokiSwimming77274608f800c9c34a,
   });
 
   final bool i31nj2onx9bvm;
   final bool uuh707ixf6f6;
   final CokiSwimmingOla0gu1u5h0t2dqk0sy77kg? syng6otqlfthv;
+  final bool cokiSwimmingee699a2136e7a1f54b;
+  final Future<bool> Function()? cokiSwimming77274608f800c9c34a;
 
   @override
   State<CokiSwimmingNpcc1enzhrcu212d5ok60l> createState() =>
@@ -518,7 +630,17 @@ class CokiSwimmingNpcc1enzhrcu212d5ok60l extends StatefulWidget {
 
 class _CokiSwimmingTjluglkuhtfqrj7k452ma4
     extends State<CokiSwimmingNpcc1enzhrcu212d5ok60l> {
-  bool _pp4vmey4ia3baebd = false;
+  late bool _pp4vmey4ia3baebd = widget.cokiSwimmingee699a2136e7a1f54b;
+  bool _cokiSwimming8958ae0309d518febf = false;
+
+  @override
+  void didUpdateWidget(CokiSwimmingNpcc1enzhrcu212d5ok60l oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.cokiSwimmingee699a2136e7a1f54b !=
+        widget.cokiSwimmingee699a2136e7a1f54b) {
+      _pp4vmey4ia3baebd = widget.cokiSwimmingee699a2136e7a1f54b;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -529,191 +651,218 @@ class _CokiSwimmingTjluglkuhtfqrj7k452ma4
         : uu9lr43oqe2lo[widget.i31nj2onx9bvm && uu9lr43oqe2lo.length > 1
               ? 1
               : 0];
-    final c7n8m2q4v6x1z9p3 = cj69ejfukfz9hf48g66td7g?.xpgbqaoc87cxdg7jjztf;
     return CokiSwimmingKtoozpjuob7rods(
-      kvg85l6uieobzf: BorderRadius.circular(12),
+      kvg85l6uieobzf: BorderRadius.circular(21),
       gwrsyzojtp84oco1ldhaaw90: () => Navigator.of(context).pushNamed(
         CokiSwimmingXu1hfvhsqfkovamr518kcwz.bvy4bc4tf24ggxjozda5p4j0,
         arguments: cj69ejfukfz9hf48g66td7g,
       ),
       v6j3bxo2dz4aevlmr: Container(
-        padding: const EdgeInsets.all(9),
-        decoration: BoxDecoration(
-          color: const Color(0xFF2B254D),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: const Color(0xFF60D0EE)),
+        padding: const EdgeInsets.all(2),
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Color(0xFF60D0EE), Color(0xFFAD99C2), Color(0xFFD43161)],
+          ),
+          borderRadius: BorderRadius.all(Radius.circular(21)),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                CokiSwimmingBskfv8qke498jnw5a9nz(
-                  bvuh7vp0q7jr0o6:
-                      cj69ejfukfz9hf48g66td7g?.xkczithyrycvg26pfjjmm9 ??
-                      'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_96c3ybdtsvgb1g.png',
-                  qqonq4itbdxn5jaq8l63c4: 28,
-                  mq2l8m5tl12kohgr7u: () => Navigator.of(context).pushNamed(
-                    CokiSwimmingXu1hfvhsqfkovamr518kcwz.tigdkksey2ignkpcr57u,
-                    arguments: cj69ejfukfz9hf48g66td7g,
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    cj69ejfukfz9hf48g66td7g?.y2bm5rqs3zbbqyxivjft35 ??
-                        'Gianluca Carver',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      height: 1.2,
-                      letterSpacing: 0,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                ),
-                CokiSwimmingL87l1svejpll9i99(
-                  aseqz83ezsawz3urs5: Colors.transparent,
-                  rx3u02ekjw3epobplo8e: () =>
-                      CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
-                        context,
-                        h5j30v6kt4ykg21tutwflx: widget.uuh707ixf6f6,
-                        ssqbxn8vpgdaf9emp9937fjk: () =>
-                            CokiSwimmingEa33alie83a7ztht03ml6za.v8k18e1fwcihnfevusm4iq(
-                              context,
-                            ),
-                      ),
-                  jf9ewz509wfu: const Icon(
-                    Icons.more_horiz,
-                    color: Colors.white,
-                  ),
-                ),
-              ],
+        child: Container(
+          padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xFF371238), Color(0xFF100A30)],
             ),
-            const SizedBox(height: 8),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(9),
-              child: Stack(
+            borderRadius: BorderRadius.all(Radius.circular(19)),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
                 children: [
-                  AspectRatio(
-                    aspectRatio: 310 / 150,
-                    child: Image.asset(
-                      c7n8m2q4v6x1z9p3 ??
-                          ec61lv2o2j9w6zj4levni ??
-                          (widget.i31nj2onx9bvm
-                              ? 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_rrq2io04463zanilk5et7u.png'
-                              : 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_erv95uelv147yhqn158.png'),
-                      fit: BoxFit.cover,
+                  CokiSwimmingBskfv8qke498jnw5a9nz(
+                    bvuh7vp0q7jr0o6:
+                        cj69ejfukfz9hf48g66td7g?.xkczithyrycvg26pfjjmm9 ??
+                        'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_96c3ybdtsvgb1g.png',
+                    qqonq4itbdxn5jaq8l63c4: 36,
+                    mq2l8m5tl12kohgr7u: () => Navigator.of(context).pushNamed(
+                      CokiSwimmingXu1hfvhsqfkovamr518kcwz.tigdkksey2ignkpcr57u,
+                      arguments: cj69ejfukfz9hf48g66td7g,
                     ),
                   ),
-                  Positioned(
-                    right: 9,
-                    top: 9,
-                    child: Column(
-                      children: [
-                        CokiSwimmingKtoozpjuob7rods(
-                          kvg85l6uieobzf: BorderRadius.circular(18),
-                          gwrsyzojtp84oco1ldhaaw90: () =>
-                              CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
-                                context,
-                                h5j30v6kt4ykg21tutwflx: widget.uuh707ixf6f6,
-                                ssqbxn8vpgdaf9emp9937fjk: () => setState(
-                                  () => _pp4vmey4ia3baebd = !_pp4vmey4ia3baebd,
-                                ),
-                              ),
-                          v6j3bxo2dz4aevlmr: Image.asset(
-                            _pp4vmey4ia3baebd
-                                ? 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_01741504cbcb6a850100.png'
-                                : 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_7ca99e130a1bb3618c49.png',
-                            width: 33,
-                            height: 33,
-                          ),
-                        ),
-                        Text(
-                          '${(cj69ejfukfz9hf48g66td7g?.q7m4v9x2k8d6p1s5 ?? 0) + (_pp4vmey4ia3baebd ? 1 : 0)}',
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 11,
-                            fontWeight: FontWeight.w800,
-                          ),
-                        ),
-                      ],
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      cj69ejfukfz9hf48g66td7g?.y2bm5rqs3zbbqyxivjft35 ??
+                          'Gianluca Carver',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        height: 1.2,
+                        letterSpacing: 0,
+                        fontWeight: FontWeight.w800,
+                      ),
                     ),
                   ),
-                  Positioned(
-                    right: 9,
-                    bottom: 9,
-                    child: Column(
-                      children: [
-                        CokiSwimmingKtoozpjuob7rods(
-                          kvg85l6uieobzf: BorderRadius.circular(18),
-                          gwrsyzojtp84oco1ldhaaw90: () =>
-                              CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                  CokiSwimmingL87l1svejpll9i99(
+                    aseqz83ezsawz3urs5: Colors.transparent,
+                    rx3u02ekjw3epobplo8e: () =>
+                        CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                          context,
+                          h5j30v6kt4ykg21tutwflx: widget.uuh707ixf6f6,
+                          ssqbxn8vpgdaf9emp9937fjk: () =>
+                              CokiSwimmingEa33alie83a7ztht03ml6za.v8k18e1fwcihnfevusm4iq(
                                 context,
-                                h5j30v6kt4ykg21tutwflx: widget.uuh707ixf6f6,
-                                ssqbxn8vpgdaf9emp9937fjk: () =>
-                                    CokiSwimmingSs601a6wnfgg8fg74v.ctvj7h3t3haji5wzoeo(
-                                      context,
-                                      k6v2r9m4x8c1p7s3: cj69ejfukfz9hf48g66td7g,
-                                    ),
+                                cokiSwimming2017dfe9792f0833:
+                                    cj69ejfukfz9hf48g66td7g
+                                        ?.y2bm5rqs3zbbqyxivjft35 ??
+                                    'unknown',
                               ),
-                          v6j3bxo2dz4aevlmr: Container(
-                            width: 33,
-                            height: 33,
-                            decoration: const BoxDecoration(
-                              color: Color(0xFF60D0EE),
-                              shape: BoxShape.circle,
-                            ),
-                            child: const Icon(
-                              Icons.mode_comment_outlined,
-                              color: Colors.white,
-                              size: 18,
-                            ),
-                          ),
                         ),
-                        Text(
-                          '${cj69ejfukfz9hf48g66td7g?.r8n3c6y1w5h9t2m7.length ?? 0}',
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 11,
-                            fontWeight: FontWeight.w800,
-                          ),
-                        ),
-                      ],
+                    jf9ewz509wfu: const Icon(
+                      Icons.more_horiz,
+                      color: Colors.white,
                     ),
                   ),
                 ],
               ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              cj69ejfukfz9hf48g66td7g?.jw6eiwt4zt0wuycr7q ??
-                  (widget.i31nj2onx9bvm
-                      ? 'Swim with the current, embrace the flow.'
-                      : 'Life is a journey, embrace it.'),
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 11,
-                height: 1.35,
-                letterSpacing: 0,
-                fontWeight: FontWeight.w500,
+              const SizedBox(height: 8),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(14),
+                child: Stack(
+                  children: [
+                    AspectRatio(
+                      aspectRatio: 310 / 170,
+                      child: CokiSwimmingC42e81133062ccfd(
+                        cokiSwimmingEbf673309ff7e1c4:
+                            ec61lv2o2j9w6zj4levni ??
+                            (widget.i31nj2onx9bvm
+                                ? 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_rrq2io04463zanilk5et7u.png'
+                                : 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_erv95uelv147yhqn158.png'),
+                      ),
+                    ),
+                    Positioned(
+                      right: 9,
+                      top: 9,
+                      child: Column(
+                        children: [
+                          CokiSwimmingKtoozpjuob7rods(
+                            kvg85l6uieobzf: BorderRadius.circular(18),
+                            gwrsyzojtp84oco1ldhaaw90: () =>
+                                CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                                  context,
+                                  h5j30v6kt4ykg21tutwflx: widget.uuh707ixf6f6,
+                                  ssqbxn8vpgdaf9emp9937fjk: () async {
+                                    if (_cokiSwimming8958ae0309d518febf) return;
+                                    _cokiSwimming8958ae0309d518febf = true;
+                                    try {
+                                      final cokiSwimmingedb634862f861c5e22 =
+                                          widget.cokiSwimming77274608f800c9c34a ==
+                                              null
+                                          ? !_pp4vmey4ia3baebd
+                                          : await widget
+                                                .cokiSwimming77274608f800c9c34a!();
+                                      if (!mounted) return;
+                                      setState(
+                                        () => _pp4vmey4ia3baebd =
+                                            cokiSwimmingedb634862f861c5e22,
+                                      );
+                                    } catch (_) {
+                                      if (!context.mounted) return;
+                                      CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
+                                        context,
+                                        'Unable to update',
+                                        isError: true,
+                                      );
+                                    } finally {
+                                      _cokiSwimming8958ae0309d518febf = false;
+                                    }
+                                  },
+                                ),
+                            v6j3bxo2dz4aevlmr: Image.asset(
+                              _pp4vmey4ia3baebd
+                                  ? 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_01741504cbcb6a850100.png'
+                                  : 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_7ca99e130a1bb3618c49.png',
+                              width: 42,
+                              height: 42,
+                            ),
+                          ),
+                          Text(
+                            '${(cj69ejfukfz9hf48g66td7g?.q7m4v9x2k8d6p1s5 ?? 0) + (_pp4vmey4ia3baebd ? 1 : 0)}',
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Positioned(
+                      right: 9,
+                      bottom: 9,
+                      child: Column(
+                        children: [
+                          CokiSwimmingKtoozpjuob7rods(
+                            kvg85l6uieobzf: BorderRadius.circular(18),
+                            gwrsyzojtp84oco1ldhaaw90: () =>
+                                CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                                  context,
+                                  h5j30v6kt4ykg21tutwflx: widget.uuh707ixf6f6,
+                                  ssqbxn8vpgdaf9emp9937fjk: () =>
+                                      CokiSwimmingSs601a6wnfgg8fg74v.ctvj7h3t3haji5wzoeo(
+                                        context,
+                                        k6v2r9m4x8c1p7s3:
+                                            cj69ejfukfz9hf48g66td7g,
+                                      ),
+                                ),
+                            v6j3bxo2dz4aevlmr: Container(
+                              width: 42,
+                              height: 42,
+                              alignment: Alignment.center,
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.asset(
+                                'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_78019e85749b840626b6.png',
+                                width: 24,
+                                height: 24,
+                              ),
+                            ),
+                          ),
+                          CokiSwimmingD67038e81c290baa(
+                            cokiSwimming90df3b806b3a319c:
+                                cj69ejfukfz9hf48g66td7g,
+                            cokiSwimming2378cbe62fd97c4e: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(height: 7),
-            const Text(
-              '#Theme   #Theme   #Theme',
-              style: TextStyle(
-                color: Colors.white70,
-                fontSize: 10,
-                height: 1.2,
-                letterSpacing: 0,
+              const SizedBox(height: 10),
+              Text(
+                '# ${cj69ejfukfz9hf48g66td7g?.b7oexxik958wc ?? 'Theme'}',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  height: 1.3,
+                  letterSpacing: 0,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

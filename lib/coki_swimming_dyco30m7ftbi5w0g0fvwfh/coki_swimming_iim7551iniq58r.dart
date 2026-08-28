@@ -57,6 +57,8 @@ class CokiSwimmingAnbnc13220sf27xqcjw extends StatelessWidget {
                               ssqbxn8vpgdaf9emp9937fjk: () =>
                                   CokiSwimmingEa33alie83a7ztht03ml6za.v8k18e1fwcihnfevusm4iq(
                                     context,
+                                    cokiSwimming2017dfe9792f0833:
+                                        b3x7m1q9v5c8.y2bm5rqs3zbbqyxivjft35,
                                   ),
                             ),
                         jf9ewz509wfu: const Icon(

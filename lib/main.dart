@@ -100,6 +100,7 @@ part 'coki_swimming_sr2kf10tt3df9gv99oy/coki_swimming_spkh1nv3wpkmtyg.dart';
 part 'coki_swimming_sr2kf10tt3df9gv99oy/coki_swimming_u0p1ckqbi1dvi.dart';
 part 'coki_swimming_sr2kf10tt3df9gv99oy/coki_swimming_b2afkuesnw19mccy81f98d.dart';
 part 'coki_swimming_sr2kf10tt3df9gv99oy/coki_swimming_otmem91561ubippm6a7.dart';
+part 'coki_swimming_hbf59bdyijwy3rtuu9.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

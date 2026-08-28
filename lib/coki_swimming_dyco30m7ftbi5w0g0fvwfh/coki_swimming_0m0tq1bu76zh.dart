@@ -25,25 +25,28 @@ class CokiSwimmingMjnvj1qmiz2bxhm6uf0n6 extends StatelessWidget {
                 const _CokiSwimmingX7ifh9z2quc7dxi(),
                 const SizedBox(height: 13),
                 Expanded(
-                  child: ListView.separated(
-                    physics: const BouncingScrollPhysics(
-                      parent: AlwaysScrollableScrollPhysics(),
+                  child: CokiSwimmingAba7n9vsqt6w3fz(
+                    cokiSwimmingudas2o8q00gicj383hxod: ListView.separated(
+                      physics: const BouncingScrollPhysics(
+                        parent: AlwaysScrollableScrollPhysics(),
+                      ),
+                      padding: const EdgeInsets.fromLTRB(0, 7, 0, 24),
+                      itemCount: 4,
+                      separatorBuilder: (_, _) => const SizedBox(height: 21),
+                      itemBuilder:
+                          (
+                            cl0dvjn1txirc8cweqtm,
+                            f10atkkkh1dllie3xuidswp,
+                          ) => _CokiSwimmingMvn2foxa9lwqzco60d(
+                            j2yxxfk05vt0hf: f10atkkkh1dllie3xuidswp < 3,
+                            onasyar65t2k23v6c3iu3: f10atkkkh1dllie3xuidswp < 2,
+                            oqwlyilixqrgrl60dplkvj: () =>
+                                Navigator.of(cl0dvjn1txirc8cweqtm).pushNamed(
+                                  CokiSwimmingXu1hfvhsqfkovamr518kcwz
+                                      .kjro2uh8n8teco8d2elrzf,
+                                ),
+                          ),
                     ),
-                    padding: const EdgeInsets.fromLTRB(0, 7, 0, 24),
-                    itemCount: 4,
-                    separatorBuilder: (_, _) => const SizedBox(height: 21),
-                    itemBuilder:
-                        (cl0dvjn1txirc8cweqtm, f10atkkkh1dllie3xuidswp) =>
-                            _CokiSwimmingMvn2foxa9lwqzco60d(
-                              j2yxxfk05vt0hf: f10atkkkh1dllie3xuidswp < 3,
-                              onasyar65t2k23v6c3iu3:
-                                  f10atkkkh1dllie3xuidswp < 2,
-                              oqwlyilixqrgrl60dplkvj: () =>
-                                  Navigator.of(cl0dvjn1txirc8cweqtm).pushNamed(
-                                    CokiSwimmingXu1hfvhsqfkovamr518kcwz
-                                        .kjro2uh8n8teco8d2elrzf,
-                                  ),
-                            ),
                   ),
                 ),
               ],

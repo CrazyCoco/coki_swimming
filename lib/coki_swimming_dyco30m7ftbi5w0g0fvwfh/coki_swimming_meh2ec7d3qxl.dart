@@ -1,7 +1,12 @@
 part of '../main.dart';
 
 class CokiSwimmingNq0bdvs9uqdiayj9158w extends StatefulWidget {
-  const CokiSwimmingNq0bdvs9uqdiayj9158w({super.key});
+  const CokiSwimmingNq0bdvs9uqdiayj9158w({
+    super.key,
+    required this.cokiSwimming6d9c252a1792965a2f60221,
+  });
+
+  final int cokiSwimming6d9c252a1792965a2f60221;
 
   @override
   State<CokiSwimmingNq0bdvs9uqdiayj9158w> createState() =>
@@ -10,6 +15,8 @@ class CokiSwimmingNq0bdvs9uqdiayj9158w extends StatefulWidget {
 
 class _CokiSwimmingRlviyh99dh4az0dmn52d5www
     extends State<CokiSwimmingNq0bdvs9uqdiayj9158w> {
+  static const String _cokiSwimmingDf4bbdd6c54c5a0b721 =
+      'coki_swimming_0b07453e76830afdf';
   static const Color _jnlm2sle63me1d8zxiad7cs = Color(0xFF100A30);
   static const Color _ezgv195xyhgew = Color(0xFFF1F2F4);
   static const Color _urpbrps7k1hnd5cm = Color(0xFF5BCBEA);
@@ -20,18 +27,65 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
   final List<String> _wbrx0jgemuxppfzmdc4 = [];
 
   @override
+  void initState() {
+    super.initState();
+    _cokiSwimming12d41f4f7e27();
+  }
+
+  Future<void> _cokiSwimming12d41f4f7e27() async {
+    final cokiSwimmingDbd9d5a644c9b0f = await CokiSwimmingDatabase
+        .hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming08fc79df5890845d(
+          cokiSwimmingFfdff4098f67dc2a39b:
+              widget.cokiSwimming6d9c252a1792965a2f60221,
+          cokiSwimming9ca085a1e9464611db57745: _cokiSwimmingDf4bbdd6c54c5a0b721,
+          cokiSwimming756b8fe9fc667a: _cokiSwimmingDf4bbdd6c54c5a0b721,
+        );
+    if (cokiSwimmingDbd9d5a644c9b0f == null || !mounted) return;
+    final cokiSwimmingA0dad44aab863 = jsonDecode(cokiSwimmingDbd9d5a644c9b0f);
+    if (cokiSwimmingA0dad44aab863 is! List) return;
+    setState(() {
+      _wbrx0jgemuxppfzmdc4
+        ..clear()
+        ..addAll(
+          cokiSwimmingA0dad44aab863.map(
+            (cokiSwimming3c36e4b83a21c15129) =>
+                cokiSwimming3c36e4b83a21c15129.toString(),
+          ),
+        );
+    });
+  }
+
+  @override
   void dispose() {
     _w44lr0x0kd6pemmvistd.dispose();
     _z4b0z1mr6soc8zkyijj.dispose();
     super.dispose();
   }
 
-  void _t2eocks1qg67mpfd41fs0ul() {
+  Future<void> _t2eocks1qg67mpfd41fs0ul() async {
     final qmtl063oafbxby2mrydobe = _w44lr0x0kd6pemmvistd.text.trim();
     if (qmtl063oafbxby2mrydobe.isEmpty) return;
 
+    final cokiSwimmingFf1c5a0ebf8395d3 = [
+      ..._wbrx0jgemuxppfzmdc4,
+      qmtl063oafbxby2mrydobe,
+    ];
+    await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming74e8b2f70fa2f5b(
+          cokiSwimming0a44fb28163763bb6ec69:
+              widget.cokiSwimming6d9c252a1792965a2f60221,
+          cokiSwimming47e760ec313f586105: _cokiSwimmingDf4bbdd6c54c5a0b721,
+          cokiSwimmingDb6b0273792c060: _cokiSwimmingDf4bbdd6c54c5a0b721,
+          cokiSwimmingC91a15fc4d8a49ccb: jsonEncode(
+            cokiSwimmingFf1c5a0ebf8395d3,
+          ),
+        );
+    if (!mounted) return;
     setState(() {
-      _wbrx0jgemuxppfzmdc4.add(qmtl063oafbxby2mrydobe);
+      _wbrx0jgemuxppfzmdc4
+        ..clear()
+        ..addAll(cokiSwimmingFf1c5a0ebf8395d3);
       _w44lr0x0kd6pemmvistd.clear();
     });
     FocusScope.of(context).unfocus();
@@ -140,6 +194,7 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
               c7slhftcvtpl3nay: () =>
                   CokiSwimmingEa33alie83a7ztht03ml6za.v8k18e1fwcihnfevusm4iq(
                     wilsyk8xcdbu1z,
+                    cokiSwimming2017dfe9792f0833: 'Apien',
                   ),
             ),
           ],
@@ -175,24 +230,28 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
   }
 
   Widget _nbalmd7taj9360azzz() {
-    return ListView(
-      controller: _z4b0z1mr6soc8zkyijj,
-      physics: const BouncingScrollPhysics(),
-      padding: const EdgeInsets.fromLTRB(20, 24, 20, 24),
-      children: [
-        _nggkzh74hvembdo98sla(),
-        const SizedBox(height: 12),
-        _j2dd1nsgj651j5huez9kje(
-          'OK, if you have anything you\nwant to know, you can ask me',
-          caemx73e871dvx3bp: true,
+    return CokiSwimmingAba7n9vsqt6w3fz(
+      cokiSwimmingudas2o8q00gicj383hxod: ListView(
+        controller: _z4b0z1mr6soc8zkyijj,
+        physics: const BouncingScrollPhysics(
+          parent: AlwaysScrollableScrollPhysics(),
         ),
-        const SizedBox(height: 7),
-        _hcmtmggl64k1l2p1err5f9gh(),
-        for (final q9xuew2lofmmx in _wbrx0jgemuxppfzmdc4) ...[
-          const SizedBox(height: 16),
-          _j2dd1nsgj651j5huez9kje(q9xuew2lofmmx),
+        padding: const EdgeInsets.fromLTRB(20, 24, 20, 24),
+        children: [
+          _nggkzh74hvembdo98sla(),
+          const SizedBox(height: 12),
+          _j2dd1nsgj651j5huez9kje(
+            'OK, if you have anything you\nwant to know, you can ask me',
+            caemx73e871dvx3bp: true,
+          ),
+          const SizedBox(height: 7),
+          _hcmtmggl64k1l2p1err5f9gh(),
+          for (final q9xuew2lofmmx in _wbrx0jgemuxppfzmdc4) ...[
+            const SizedBox(height: 16),
+            _j2dd1nsgj651j5huez9kje(q9xuew2lofmmx),
+          ],
         ],
-      ],
+      ),
     );
   }
 

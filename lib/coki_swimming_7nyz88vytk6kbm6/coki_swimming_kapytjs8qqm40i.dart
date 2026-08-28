@@ -44,6 +44,26 @@ class CokiSwimmingStoreReceipts extends Table {
   Set<Column<Object>> get primaryKey => {transactionKey};
 }
 
+class CokiSwimming73e845eb8995e10d78699 extends Table {
+  IntColumn get cokiSwimmingCe270c0c89ce45814c97b26d =>
+      integer().autoIncrement()();
+  IntColumn get cokiSwimming374c2d33d71555c => integer()();
+  TextColumn get cokiSwimming7b6a39bc7b3edf2290dcea74 => text()();
+  TextColumn get cokiSwimming9af26f21c2b33 => text()();
+  TextColumn get cokiSwimmingE070b66af5a82465 => text()();
+  DateTimeColumn get cokiSwimming514b073dd6131a57e6977ba2 => dateTime()();
+  DateTimeColumn get cokiSwimming33d2f31d45bcd84135 => dateTime()();
+
+  @override
+  List<Set<Column<Object>>> get uniqueKeys => [
+    {
+      cokiSwimming374c2d33d71555c,
+      cokiSwimming7b6a39bc7b3edf2290dcea74,
+      cokiSwimming9af26f21c2b33,
+    },
+  ];
+}
+
 class CokiSwimmingVgf5z8lwah8pc429uyoylrwv implements Exception {
   const CokiSwimmingVgf5z8lwah8pc429uyoylrwv(this.c4iyezrax5jry9k38j7kkbr);
 
@@ -58,6 +78,7 @@ class CokiSwimmingVgf5z8lwah8pc429uyoylrwv implements Exception {
     CokiSwimmingMembers,
     CokiSwimmingGuideLines,
     CokiSwimmingStoreReceipts,
+    CokiSwimming73e845eb8995e10d78699,
   ],
 )
 class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
@@ -68,7 +89,7 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
       CokiSwimmingDatabase._ewgz5mlhoc0z8();
 
   @override
-  int get schemaVersion => 4;
+  int get schemaVersion => 5;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -91,8 +112,220 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
           if (cu1jslbenb8nsg3w5oov < 4) {
             await sbz8mjrvceqqwhu70h5.createTable(cokiSwimmingStoreReceipts);
           }
+          if (cu1jslbenb8nsg3w5oov < 5) {
+            await sbz8mjrvceqqwhu70h5.createTable(
+              cokiSwimming73e845eb8995e10d78699,
+            );
+          }
         },
   );
+
+  Future<String?> cokiSwimming08fc79df5890845d({
+    required int cokiSwimmingFfdff4098f67dc2a39b,
+    required String cokiSwimming9ca085a1e9464611db57745,
+    required String cokiSwimming756b8fe9fc667a,
+  }) async {
+    final cokiSwimming3c65da8108cd178e5abb90 =
+        await (select(cokiSwimming73e845eb8995e10d78699)..where(
+              (cokiSwimmingCe3de262b28deb0bff0) =>
+                  cokiSwimmingCe3de262b28deb0bff0.cokiSwimming374c2d33d71555c
+                      .equals(cokiSwimmingFfdff4098f67dc2a39b) &
+                  cokiSwimmingCe3de262b28deb0bff0
+                      .cokiSwimming7b6a39bc7b3edf2290dcea74
+                      .equals(cokiSwimming9ca085a1e9464611db57745) &
+                  cokiSwimmingCe3de262b28deb0bff0.cokiSwimming9af26f21c2b33
+                      .equals(cokiSwimming756b8fe9fc667a),
+            ))
+            .getSingleOrNull();
+    return cokiSwimming3c65da8108cd178e5abb90?.cokiSwimmingE070b66af5a82465;
+  }
+
+  Future<void> cokiSwimming74e8b2f70fa2f5b({
+    required int cokiSwimming0a44fb28163763bb6ec69,
+    required String cokiSwimming47e760ec313f586105,
+    required String cokiSwimmingDb6b0273792c060,
+    required String cokiSwimmingC91a15fc4d8a49ccb,
+  }) async {
+    final cokiSwimmingBd3e1c8338c6 = DateTime.now();
+    await into(cokiSwimming73e845eb8995e10d78699).insert(
+      CokiSwimming73e845eb8995e10d78699Companion.insert(
+        cokiSwimming374c2d33d71555c: cokiSwimming0a44fb28163763bb6ec69,
+        cokiSwimming7b6a39bc7b3edf2290dcea74: cokiSwimming47e760ec313f586105,
+        cokiSwimming9af26f21c2b33: cokiSwimmingDb6b0273792c060,
+        cokiSwimmingE070b66af5a82465: cokiSwimmingC91a15fc4d8a49ccb,
+        cokiSwimming514b073dd6131a57e6977ba2: cokiSwimmingBd3e1c8338c6,
+        cokiSwimming33d2f31d45bcd84135: cokiSwimmingBd3e1c8338c6,
+      ),
+      mode: InsertMode.insertOrReplace,
+    );
+  }
+
+  Future<void> cokiSwimmingD9140901ed7086({
+    required int cokiSwimmingE0064399a5ff3e4735ca7,
+    required String cokiSwimmingCf073cd0054339a92b8,
+    required String cokiSwimming73d832bca2a52a71d0da79bb,
+  }) {
+    return (delete(cokiSwimming73e845eb8995e10d78699)..where(
+          (cokiSwimming80031596729d0f601e80) =>
+              cokiSwimming80031596729d0f601e80.cokiSwimming374c2d33d71555c
+                  .equals(cokiSwimmingE0064399a5ff3e4735ca7) &
+              cokiSwimming80031596729d0f601e80
+                  .cokiSwimming7b6a39bc7b3edf2290dcea74
+                  .equals(cokiSwimmingCf073cd0054339a92b8) &
+              cokiSwimming80031596729d0f601e80.cokiSwimming9af26f21c2b33.equals(
+                cokiSwimming73d832bca2a52a71d0da79bb,
+              ),
+        ))
+        .go();
+  }
+
+  Stream<List<MapEntry<int, String>>> cokiSwimming0b68ec29b8b211b689a6(
+    String cokiSwimming30ee5c09746b3902e836,
+  ) {
+    return (select(cokiSwimming73e845eb8995e10d78699)
+          ..where(
+            (cokiSwimming3017dc7f9db088fe92f4) =>
+                cokiSwimming3017dc7f9db088fe92f4
+                    .cokiSwimming7b6a39bc7b3edf2290dcea74
+                    .equals(cokiSwimming30ee5c09746b3902e836),
+          )
+          ..orderBy([
+            (cokiSwimmingF97b7fb084ac48c309b9) => OrderingTerm.desc(
+              cokiSwimmingF97b7fb084ac48c309b9.cokiSwimming33d2f31d45bcd84135,
+            ),
+          ]))
+        .watch()
+        .map(
+          (cokiSwimmingA1152e21221753ced0a4) => cokiSwimmingA1152e21221753ced0a4
+              .map(
+                (cokiSwimming601d1327323ffd99fab1) => MapEntry(
+                  cokiSwimming601d1327323ffd99fab1.cokiSwimming374c2d33d71555c,
+                  cokiSwimming601d1327323ffd99fab1.cokiSwimmingE070b66af5a82465,
+                ),
+              )
+              .toList(growable: false),
+        );
+  }
+
+  Stream<String?> cokiSwimming5a0c9ec6e99b9db2({
+    required int cokiSwimming437bcbd34e2d30e6,
+    required String cokiSwimmingA066704a66c5b817,
+    required String cokiSwimming04e6aeb1f334b2eb,
+  }) {
+    return (select(cokiSwimming73e845eb8995e10d78699)..where(
+          (cokiSwimming7b00554c333342d9) =>
+              cokiSwimming7b00554c333342d9.cokiSwimming374c2d33d71555c.equals(
+                cokiSwimming437bcbd34e2d30e6,
+              ) &
+              cokiSwimming7b00554c333342d9.cokiSwimming7b6a39bc7b3edf2290dcea74
+                  .equals(cokiSwimmingA066704a66c5b817) &
+              cokiSwimming7b00554c333342d9.cokiSwimming9af26f21c2b33.equals(
+                cokiSwimming04e6aeb1f334b2eb,
+              ),
+        ))
+        .watchSingleOrNull()
+        .map(
+          (cokiSwimmingE19eaf3b5d760191) =>
+              cokiSwimmingE19eaf3b5d760191?.cokiSwimmingE070b66af5a82465,
+        );
+  }
+
+  Stream<List<MapEntry<String, String>>> cokiSwimming4b20f2e655a8a5a8({
+    required int cokiSwimming3e27f09983ab3565,
+    required String cokiSwimming5950383ed83f1f5a,
+  }) {
+    return (select(cokiSwimming73e845eb8995e10d78699)..where(
+          (cokiSwimmingCb428abcb4ac6b4e) =>
+              cokiSwimmingCb428abcb4ac6b4e.cokiSwimming374c2d33d71555c.equals(
+                cokiSwimming3e27f09983ab3565,
+              ) &
+              cokiSwimmingCb428abcb4ac6b4e.cokiSwimming7b6a39bc7b3edf2290dcea74
+                  .equals(cokiSwimming5950383ed83f1f5a),
+        ))
+        .watch()
+        .map(
+          (cokiSwimmingB87adb36991318d1) => cokiSwimmingB87adb36991318d1
+              .map(
+                (cokiSwimming8cca92052af32eb5) => MapEntry(
+                  cokiSwimming8cca92052af32eb5.cokiSwimming9af26f21c2b33,
+                  cokiSwimming8cca92052af32eb5.cokiSwimmingE070b66af5a82465,
+                ),
+              )
+              .toList(growable: false),
+        );
+  }
+
+  Future<void> cokiSwimming5888d9ff47b1dda1fa87() async {
+    await (update(cokiSwimming73e845eb8995e10d78699)..where(
+          (cokiSwimmingE22081833d02d655) => cokiSwimmingE22081833d02d655
+              .cokiSwimming7b6a39bc7b3edf2290dcea74
+              .equals('coki_swimming_3b87beaf298701f'),
+        ))
+        .write(
+          CokiSwimming73e845eb8995e10d78699Companion(
+            cokiSwimming7b6a39bc7b3edf2290dcea74: Value(
+              cokiSwimming4ca26a05eb1ecb7acb47,
+            ),
+          ),
+        );
+    await (update(cokiSwimming73e845eb8995e10d78699)..where(
+          (cokiSwimmingE3381b5a30f5e758) => cokiSwimmingE3381b5a30f5e758
+              .cokiSwimming7b6a39bc7b3edf2290dcea74
+              .equals('coki_swimming_09f0ac088be177d6e083'),
+        ))
+        .write(
+          CokiSwimming73e845eb8995e10d78699Companion(
+            cokiSwimming7b6a39bc7b3edf2290dcea74: Value(
+              cokiSwimmingEe949f348e3201ebf685,
+            ),
+          ),
+        );
+    final cokiSwimmingE8afa7ee6f5323ffa6bd = await cokiSwimming08fc79df5890845d(
+      cokiSwimmingFfdff4098f67dc2a39b: 0,
+      cokiSwimming9ca085a1e9464611db57745: cokiSwimming4ca26a05eb1ecb7acb47,
+      cokiSwimming756b8fe9fc667a: 'coki_swimming_e721a81e925db028d6ac',
+    );
+    if (cokiSwimmingE8afa7ee6f5323ffa6bd == null) {
+      await cokiSwimming74e8b2f70fa2f5b(
+        cokiSwimming0a44fb28163763bb6ec69: 0,
+        cokiSwimming47e760ec313f586105: cokiSwimming4ca26a05eb1ecb7acb47,
+        cokiSwimmingDb6b0273792c060: 'coki_swimming_e721a81e925db028d6ac',
+        cokiSwimmingC91a15fc4d8a49ccb: jsonEncode(
+          cokiSwimmingno1co2tb6p01cbgq6w3sj9k
+              .map(
+                (cokiSwimming5dd0f24be44352d481bc) =>
+                    cokiSwimming5dd0f24be44352d481bc
+                        .cokiSwimming4e5227e43dc4c3fab6e2(),
+              )
+              .toList(growable: false),
+        ),
+      );
+    }
+    final cokiSwimmingF5eac54117c64a4e = await cokiSwimming08fc79df5890845d(
+      cokiSwimmingFfdff4098f67dc2a39b: 0,
+      cokiSwimming9ca085a1e9464611db57745: cokiSwimmingEe949f348e3201ebf685,
+      cokiSwimming756b8fe9fc667a: 'coki_swimming_36acec4984e2d325',
+    );
+    if (cokiSwimmingF5eac54117c64a4e == null) {
+      await cokiSwimming74e8b2f70fa2f5b(
+        cokiSwimming0a44fb28163763bb6ec69: 0,
+        cokiSwimming47e760ec313f586105: cokiSwimmingEe949f348e3201ebf685,
+        cokiSwimmingDb6b0273792c060: 'coki_swimming_36acec4984e2d325',
+        cokiSwimmingC91a15fc4d8a49ccb: jsonEncode(
+          cokiSwimmingno1co2tb6p01cbgq6w3sj9k
+              .where(
+                (cokiSwimming435ec1fd6cf223fb) =>
+                    cokiSwimming435ec1fd6cf223fb.zagjx458al86vlep0we1whdx,
+              )
+              .map(
+                (cokiSwimming2c71c99e27258a12) => cokiSwimming2c71c99e27258a12
+                    .cokiSwimming4e5227e43dc4c3fab6e2(),
+              )
+              .toList(growable: false),
+        ),
+      );
+    }
+  }
 
   Future<CokiSwimmingMember?> j44e71jhd7xqhl10ryivo(int q7k2ulwp3kcf2eicacch1) {
     return (select(cokiSwimmingMembers)..where(
@@ -282,6 +515,12 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
       await (delete(cokiSwimmingStoreReceipts)..where(
             (i3ccbh26s2kn) =>
                 i3ccbh26s2kn.memberId.equals(afx9lp9m1mr8u3yp4qi4),
+          ))
+          .go();
+      await (delete(cokiSwimming73e845eb8995e10d78699)..where(
+            (cokiSwimming822c4ade78fb01ac) => cokiSwimming822c4ade78fb01ac
+                .cokiSwimming374c2d33d71555c
+                .equals(afx9lp9m1mr8u3yp4qi4),
           ))
           .go();
       await (delete(cokiSwimmingMembers)..where(

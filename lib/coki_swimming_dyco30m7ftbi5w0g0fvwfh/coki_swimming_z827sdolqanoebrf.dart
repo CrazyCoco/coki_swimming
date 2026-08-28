@@ -6,11 +6,23 @@ class CokiSwimmingVvupasyjueaz51 extends StatefulWidget {
     required this.zk15gjeohhu020kkbp672567,
     required this.ajk13hh9yuq8ur,
     this.oqk39w3if3ew9k1n3,
+    required this.cokiSwimming07e00d506b1d063982,
+    required this.cokiSwimming3fb231781d1ec05862,
+    required this.cokiSwimmingae3f8f5aafbaadec33,
+    required this.cokiSwimminge5e633f15de3b537ae,
   });
 
   final bool zk15gjeohhu020kkbp672567;
   final VoidCallback ajk13hh9yuq8ur;
   final CokiSwimmingMember? oqk39w3if3ew9k1n3;
+  final bool Function(CokiSwimmingOla0gu1u5h0t2dqk0sy77kg, bool)
+  cokiSwimming07e00d506b1d063982;
+  final Future<void> Function(CokiSwimmingOla0gu1u5h0t2dqk0sy77kg, bool)
+  cokiSwimming3fb231781d1ec05862;
+  final bool Function(CokiSwimmingOla0gu1u5h0t2dqk0sy77kg, bool)
+  cokiSwimmingae3f8f5aafbaadec33;
+  final Future<bool> Function(CokiSwimmingOla0gu1u5h0t2dqk0sy77kg, bool)
+  cokiSwimminge5e633f15de3b537ae;
 
   @override
   State<CokiSwimmingVvupasyjueaz51> createState() =>
@@ -20,6 +32,48 @@ class CokiSwimmingVvupasyjueaz51 extends StatefulWidget {
 class _CokiSwimmingLiquhjo5jdm1z3e0ycf6a6rv
     extends State<CokiSwimmingVvupasyjueaz51> {
   int _fdypuz3nbfctm = 0;
+  List<CokiSwimmingOla0gu1u5h0t2dqk0sy77kg> _cokiSwimming0fcb52b255531553 =
+      const [];
+  List<CokiSwimmingOla0gu1u5h0t2dqk0sy77kg> _cokiSwimming604bd030ea65bd5a =
+      const [];
+  StreamSubscription<List<CokiSwimmingOla0gu1u5h0t2dqk0sy77kg>>?
+  _cokiSwimmingD50afcb7b7e953d2;
+  StreamSubscription<List<CokiSwimmingOla0gu1u5h0t2dqk0sy77kg>>?
+  _cokiSwimming7ac1aaebdd790b4d;
+
+  @override
+  void initState() {
+    super.initState();
+    _cokiSwimmingD50afcb7b7e953d2 =
+        CokiSwimming4b37q42lzh8qku34.cokiSwimming6d389e06f21435ce5d(
+          cokiSwimming4ca26a05eb1ecb7acb47,
+        ).listen((cokiSwimming2364c17e88f15ca6) {
+          if (mounted) {
+            setState(
+              () =>
+                  _cokiSwimming0fcb52b255531553 = cokiSwimming2364c17e88f15ca6,
+            );
+          }
+        });
+    _cokiSwimming7ac1aaebdd790b4d =
+        CokiSwimming4b37q42lzh8qku34.cokiSwimming6d389e06f21435ce5d(
+          cokiSwimmingEe949f348e3201ebf685,
+        ).listen((cokiSwimming4512ba55cce178cf) {
+          if (mounted) {
+            setState(
+              () =>
+                  _cokiSwimming604bd030ea65bd5a = cokiSwimming4512ba55cce178cf,
+            );
+          }
+        });
+  }
+
+  @override
+  void dispose() {
+    unawaited(_cokiSwimmingD50afcb7b7e953d2?.cancel());
+    unawaited(_cokiSwimming7ac1aaebdd790b4d?.cancel());
+    super.dispose();
+  }
 
   void _hna2m1xi6h2ehze53cayb(int giiig5fdbs1p9ud4bm6by) {
     if (giiig5fdbs1p9ud4bm6by >= 2) {
@@ -40,13 +94,27 @@ class _CokiSwimmingLiquhjo5jdm1z3e0ycf6a6rv
       CokiSwimmingLei4ce4d64ic4llpobyo8(
         urppm1a0b7mgzwjl90at4: widget.zk15gjeohhu020kkbp672567,
         ec5fb434456afb00f4: widget.oqk39w3if3ew9k1n3,
+        cokiSwimminge20a4ec90db331f90e: widget.cokiSwimming07e00d506b1d063982,
+        cokiSwimmingeb5ae8e8ddb6137fb9: widget.cokiSwimming3fb231781d1ec05862,
+        cokiSwimmingC1a31e3acc4e7f8c: _cokiSwimming0fcb52b255531553,
       ),
       CokiSwimmingF5656zccmafvs0qv(
         bfiaxy1tb0xj6p53k2u2636: widget.zk15gjeohhu020kkbp672567,
         f0776540f6fd94c345: widget.oqk39w3if3ew9k1n3,
+        cokiSwimming689a8c49efbf354ad8: widget.cokiSwimming07e00d506b1d063982,
+        cokiSwimming6e187fb50274026987: widget.cokiSwimming3fb231781d1ec05862,
+        cokiSwimming8d87deef5334a807ec: widget.cokiSwimmingae3f8f5aafbaadec33,
+        cokiSwimming51836eca48c23cdf8e: widget.cokiSwimminge5e633f15de3b537ae,
+        cokiSwimming484e808a96e62a86: _cokiSwimming604bd030ea65bd5a,
       ),
       const CokiSwimmingMjnvj1qmiz2bxhm6uf0n6(),
-      CokiSwimmingKlzr6l4l7f04(dpyf92bawwqefckl5295w: widget.oqk39w3if3ew9k1n3),
+      CokiSwimmingKlzr6l4l7f04(
+        dpyf92bawwqefckl5295w: widget.oqk39w3if3ew9k1n3,
+        cokiSwimming9df3412c7616f22f: [
+          ..._cokiSwimming0fcb52b255531553,
+          ..._cokiSwimming604bd030ea65bd5a,
+        ],
+      ),
     ];
     return CokiSwimmingAgdqi717f62hphbv7l95r8v(
       o1wq5mwul0ckiwligeu: Scaffold(

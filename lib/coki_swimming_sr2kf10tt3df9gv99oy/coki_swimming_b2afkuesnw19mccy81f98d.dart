@@ -3,7 +3,10 @@ part of '../main.dart';
 class CokiSwimmingEa33alie83a7ztht03ml6za {
   const CokiSwimmingEa33alie83a7ztht03ml6za._rn5cnuf3whskvouql1hhotvx();
 
-  static void v8k18e1fwcihnfevusm4iq(BuildContext xcwzo7nkaif5) {
+  static void v8k18e1fwcihnfevusm4iq(
+    BuildContext xcwzo7nkaif5, {
+    String cokiSwimming2017dfe9792f0833 = 'unknown',
+  }) {
     showGeneralDialog<void>(
       context: xcwzo7nkaif5,
       barrierDismissible: true,
@@ -40,6 +43,7 @@ class CokiSwimmingEa33alie83a7ztht03ml6za {
                             Navigator.of(xcwzo7nkaif5).pushNamed(
                               CokiSwimmingXu1hfvhsqfkovamr518kcwz
                                   .oj8msxz451vkc9,
+                              arguments: cokiSwimming2017dfe9792f0833,
                             );
                           },
                           v6j3bxo2dz4aevlmr: Container(
@@ -75,8 +79,12 @@ class CokiSwimmingEa33alie83a7ztht03ml6za {
                         height: 46,
                         child: CokiSwimmingKtoozpjuob7rods(
                           kvg85l6uieobzf: BorderRadius.circular(24),
-                          gwrsyzojtp84oco1ldhaaw90: () {
+                          gwrsyzojtp84oco1ldhaaw90: () async {
                             Navigator.of(kwdzmbvtmlcjpbfo85o).pop();
+                            await CokiSwimming4b37q42lzh8qku34.cokiSwimming06de00fa7aaf(
+                              cokiSwimming2017dfe9792f0833,
+                            );
+                            if (!xcwzo7nkaif5.mounted) return;
                             CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
                               xcwzo7nkaif5,
                               'Shielded',

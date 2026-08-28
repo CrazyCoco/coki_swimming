@@ -1,7 +1,12 @@
 part of '../main.dart';
 
 class CokiSwimmingM7x2q9v4n8z1c6p3r5t0 extends StatefulWidget {
-  const CokiSwimmingM7x2q9v4n8z1c6p3r5t0({super.key});
+  const CokiSwimmingM7x2q9v4n8z1c6p3r5t0({
+    super.key,
+    required this.cokiSwimmingF96941bf4b8461c1c32,
+  });
+
+  final int cokiSwimmingF96941bf4b8461c1c32;
 
   @override
   State<CokiSwimmingM7x2q9v4n8z1c6p3r5t0> createState() =>
@@ -14,7 +19,6 @@ class _CokiSwimmingR6p4x8n1z7m3q9v5t2
       'coki_swimming_training_plan_v1';
   static const _cokiSwimmingK4n8q1v6x3z9m2p7r5 =
       'coki_swimming_daily_swim_log_v1';
-  final _cokiSwimmingX5m9q2v7n1z4p8r6t3 = SharedPreferencesAsync();
   String _cokiSwimmingA7n3x8q1m6v9z4p2r5 = 'Endurance';
   String _cokiSwimmingB9q4m1z7x3n8v6p2r5 = 'Novice';
   int _cokiSwimmingC6x2p9n4v1m7q8z3r5 = 3;
@@ -33,9 +37,28 @@ class _CokiSwimmingR6p4x8n1z7m3q9v5t2
       '${value.year.toString().padLeft(4, '0')}-${value.month.toString().padLeft(2, '0')}-${value.day.toString().padLeft(2, '0')}';
 
   Future<void> _cokiSwimmingJ5z1q8v4n6m2x9p3r7() async {
-    final value = await _cokiSwimmingX5m9q2v7n1z4p8r6t3.getString(
-      _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
-    );
+    var value = await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming08fc79df5890845d(
+          cokiSwimmingFfdff4098f67dc2a39b:
+              widget.cokiSwimmingF96941bf4b8461c1c32,
+          cokiSwimming9ca085a1e9464611db57745: _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
+          cokiSwimming756b8fe9fc667a: _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
+        );
+    if (value == null) {
+      value = await SharedPreferencesAsync().getString(
+        _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
+      );
+      if (value != null) {
+        await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+            .cokiSwimming74e8b2f70fa2f5b(
+              cokiSwimming0a44fb28163763bb6ec69:
+                  widget.cokiSwimmingF96941bf4b8461c1c32,
+              cokiSwimming47e760ec313f586105: _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
+              cokiSwimmingDb6b0273792c060: _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
+              cokiSwimmingC91a15fc4d8a49ccb: value,
+            );
+      }
+    }
     if (value != null) {
       final decoded = jsonDecode(value);
       if (decoded is Map) {
@@ -80,18 +103,22 @@ class _CokiSwimmingR6p4x8n1z7m3q9v5t2
   Future<void> _cokiSwimmingN3v8q2m6x1z7p4r9t5() async {
     final today = _cokiSwimmingL7p2m9x5v1n8q4z6r3(DateTime.now());
     final next = {..._cokiSwimmingH2x6n9p3m7q1v8z4r5, today};
-    await _cokiSwimmingX5m9q2v7n1z4p8r6t3.setString(
-      _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
-      jsonEncode({
-        'goal': _cokiSwimmingA7n3x8q1m6v9z4p2r5,
-        'level': _cokiSwimmingB9q4m1z7x3n8v6p2r5,
-        'frequency': _cokiSwimmingC6x2p9n4v1m7q8z3r5,
-        'duration': _cokiSwimmingD8z5v2m9q1x6n4p7r3,
-        'stroke': _cokiSwimmingE1p7n3x9v5m2q8z4r6,
-        'weeks': _cokiSwimmingF4q8z1m6v3n9x2p7r5,
-        'completed': next.toList(),
-      }),
-    );
+    await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming74e8b2f70fa2f5b(
+          cokiSwimming0a44fb28163763bb6ec69:
+              widget.cokiSwimmingF96941bf4b8461c1c32,
+          cokiSwimming47e760ec313f586105: _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
+          cokiSwimmingDb6b0273792c060: _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
+          cokiSwimmingC91a15fc4d8a49ccb: jsonEncode({
+            'goal': _cokiSwimmingA7n3x8q1m6v9z4p2r5,
+            'level': _cokiSwimmingB9q4m1z7x3n8v6p2r5,
+            'frequency': _cokiSwimmingC6x2p9n4v1m7q8z3r5,
+            'duration': _cokiSwimmingD8z5v2m9q1x6n4p7r3,
+            'stroke': _cokiSwimmingE1p7n3x9v5m2q8z4r6,
+            'weeks': _cokiSwimmingF4q8z1m6v3n9x2p7r5,
+            'completed': next.toList(),
+          }),
+        );
     if (mounted) {
       setState(() {
         _cokiSwimmingH2x6n9p3m7q1v8z4r5 = next;
@@ -107,18 +134,22 @@ class _CokiSwimmingR6p4x8n1z7m3q9v5t2
   }
 
   Future<void> _cokiSwimmingY6p2n9x4v1m8q7z3r5() async {
-    await _cokiSwimmingX5m9q2v7n1z4p8r6t3.setString(
-      _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
-      jsonEncode({
-        'goal': _cokiSwimmingA7n3x8q1m6v9z4p2r5,
-        'level': _cokiSwimmingB9q4m1z7x3n8v6p2r5,
-        'frequency': _cokiSwimmingC6x2p9n4v1m7q8z3r5,
-        'duration': _cokiSwimmingD8z5v2m9q1x6n4p7r3,
-        'stroke': _cokiSwimmingE1p7n3x9v5m2q8z4r6,
-        'weeks': _cokiSwimmingF4q8z1m6v3n9x2p7r5,
-        'completed': _cokiSwimmingH2x6n9p3m7q1v8z4r5.toList(),
-      }),
-    );
+    await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming74e8b2f70fa2f5b(
+          cokiSwimming0a44fb28163763bb6ec69:
+              widget.cokiSwimmingF96941bf4b8461c1c32,
+          cokiSwimming47e760ec313f586105: _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
+          cokiSwimmingDb6b0273792c060: _cokiSwimmingQ8v2m6x9n4p1z7r3t5,
+          cokiSwimmingC91a15fc4d8a49ccb: jsonEncode({
+            'goal': _cokiSwimmingA7n3x8q1m6v9z4p2r5,
+            'level': _cokiSwimmingB9q4m1z7x3n8v6p2r5,
+            'frequency': _cokiSwimmingC6x2p9n4v1m7q8z3r5,
+            'duration': _cokiSwimmingD8z5v2m9q1x6n4p7r3,
+            'stroke': _cokiSwimmingE1p7n3x9v5m2q8z4r6,
+            'weeks': _cokiSwimmingF4q8z1m6v3n9x2p7r5,
+            'completed': _cokiSwimmingH2x6n9p3m7q1v8z4r5.toList(),
+          }),
+        );
     if (mounted) {
       CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
         context,
@@ -128,9 +159,28 @@ class _CokiSwimmingR6p4x8n1z7m3q9v5t2
   }
 
   Future<void> _cokiSwimmingP6m1x8q4v9z3n7r5() async {
-    final raw = await _cokiSwimmingX5m9q2v7n1z4p8r6t3.getString(
-      _cokiSwimmingK4n8q1v6x3z9m2p7r5,
-    );
+    var raw = await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming08fc79df5890845d(
+          cokiSwimmingFfdff4098f67dc2a39b:
+              widget.cokiSwimmingF96941bf4b8461c1c32,
+          cokiSwimming9ca085a1e9464611db57745: _cokiSwimmingK4n8q1v6x3z9m2p7r5,
+          cokiSwimming756b8fe9fc667a: _cokiSwimmingK4n8q1v6x3z9m2p7r5,
+        );
+    if (raw == null) {
+      raw = await SharedPreferencesAsync().getString(
+        _cokiSwimmingK4n8q1v6x3z9m2p7r5,
+      );
+      if (raw != null) {
+        await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+            .cokiSwimming74e8b2f70fa2f5b(
+              cokiSwimming0a44fb28163763bb6ec69:
+                  widget.cokiSwimmingF96941bf4b8461c1c32,
+              cokiSwimming47e760ec313f586105: _cokiSwimmingK4n8q1v6x3z9m2p7r5,
+              cokiSwimmingDb6b0273792c060: _cokiSwimmingK4n8q1v6x3z9m2p7r5,
+              cokiSwimmingC91a15fc4d8a49ccb: raw,
+            );
+      }
+    }
     final Map<String, dynamic> records = {};
     if (raw != null) {
       final decoded = jsonDecode(raw);
@@ -150,10 +200,14 @@ class _CokiSwimmingR6p4x8n1z7m3q9v5t2
       'stroke': _cokiSwimmingE1p7n3x9v5m2q8z4r6,
       'notes': 'Training plan',
     };
-    await _cokiSwimmingX5m9q2v7n1z4p8r6t3.setString(
-      _cokiSwimmingK4n8q1v6x3z9m2p7r5,
-      jsonEncode(records),
-    );
+    await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming74e8b2f70fa2f5b(
+          cokiSwimming0a44fb28163763bb6ec69:
+              widget.cokiSwimmingF96941bf4b8461c1c32,
+          cokiSwimming47e760ec313f586105: _cokiSwimmingK4n8q1v6x3z9m2p7r5,
+          cokiSwimmingDb6b0273792c060: _cokiSwimmingK4n8q1v6x3z9m2p7r5,
+          cokiSwimmingC91a15fc4d8a49ccb: jsonEncode(records),
+        );
   }
 
   @override

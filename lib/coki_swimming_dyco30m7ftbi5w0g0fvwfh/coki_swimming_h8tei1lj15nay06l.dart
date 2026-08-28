@@ -1,7 +1,12 @@
 part of '../main.dart';
 
 class CokiSwimmingFw9r7ttig90mv5srreeq8sj6 extends StatefulWidget {
-  const CokiSwimmingFw9r7ttig90mv5srreeq8sj6({super.key});
+  const CokiSwimmingFw9r7ttig90mv5srreeq8sj6({
+    super.key,
+    required this.cokiSwimming6a685b0ef2d8beccb47875,
+  });
+
+  final int cokiSwimming6a685b0ef2d8beccb47875;
 
   @override
   State<CokiSwimmingFw9r7ttig90mv5srreeq8sj6> createState() =>
@@ -10,6 +15,8 @@ class CokiSwimmingFw9r7ttig90mv5srreeq8sj6 extends StatefulWidget {
 
 class _CokiSwimmingNiyl6fmbgal9vxloc3d5nj
     extends State<CokiSwimmingFw9r7ttig90mv5srreeq8sj6> {
+  static const String _cokiSwimming897c23dedb987d6 =
+      'coki_swimming_3b87beaf298701f';
   static const Color _o6vnhrfu0kkm = Color(0xFF100A30);
   static const Color _ucfx3gbidahj9qb27gv795 = Color(0xFF3A3558);
   static const List<String> _xt0i2uv0qexs2 = [
@@ -84,8 +91,70 @@ class _CokiSwimmingNiyl6fmbgal9vxloc3d5nj
     }
   }
 
-  void _w425c8n25weiqiils3qjvu() {
+  Future<void> _w425c8n25weiqiils3qjvu() async {
+    final cokiSwimming5ca939fb99b9bf397a2a = _nbub2jcpb2weejwuu;
+    if (cokiSwimming5ca939fb99b9bf397a2a == null) {
+      CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
+        context,
+        'Please choose a photo',
+        isError: true,
+      );
+      return;
+    }
     FocusScope.of(context).unfocus();
+    final cokiSwimmingE74051d0a731cf5d =
+        await CokiSwimmingMoqf2x4lzqna5nuxmxu1rah5.j0gecuushzrwcqffsejytl
+            .cokiSwimming4f02cccd10f0e6f51e(
+              cokiSwimming0201c617085ad8e2: cokiSwimming5ca939fb99b9bf397a2a,
+              cokiSwimmingF829cc4fef9408bb:
+                  widget.cokiSwimming6a685b0ef2d8beccb47875,
+            );
+    final cokiSwimming77ca0e483ecdbddd3 = await CokiSwimmingDatabase
+        .hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming08fc79df5890845d(
+          cokiSwimmingFfdff4098f67dc2a39b:
+              widget.cokiSwimming6a685b0ef2d8beccb47875,
+          cokiSwimming9ca085a1e9464611db57745: cokiSwimming4ca26a05eb1ecb7acb47,
+          cokiSwimming756b8fe9fc667a: _cokiSwimming897c23dedb987d6,
+        );
+    final cokiSwimmingA6ba375473e3e91f12d =
+        cokiSwimming77ca0e483ecdbddd3 == null
+        ? <dynamic>[]
+        : (jsonDecode(cokiSwimming77ca0e483ecdbddd3) as List<dynamic>);
+    final cokiSwimmingCb9955e2cc90389a = await CokiSwimmingDatabase
+        .hxjpjp7w6ojq86l4ddyhf
+        .j44e71jhd7xqhl10ryivo(widget.cokiSwimming6a685b0ef2d8beccb47875);
+    final cokiSwimming8e8aa7fe00966f4a = DateTime.now();
+    cokiSwimmingA6ba375473e3e91f12d.insert(
+      0,
+      CokiSwimmingOla0gu1u5h0t2dqk0sy77kg(
+        y2bm5rqs3zbbqyxivjft35:
+            cokiSwimmingCb9955e2cc90389a?.displayName ?? 'Coki',
+        xkczithyrycvg26pfjjmm9:
+            cokiSwimmingCb9955e2cc90389a?.avatarPath ??
+            'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_96c3ybdtsvgb1g.png',
+        pgj8geudv74awjznrves: [cokiSwimmingE74051d0a731cf5d],
+        jw6eiwt4zt0wuycr7q: _elg6kb8vdzgnvoczsdo6i.text.trim(),
+        b7oexxik958wc: _xt0i2uv0qexs2[_c3dgbtkv29uy93wbnuz69ml6],
+        lrh0ljlgkvjv13o: cokiSwimmingCb9955e2cc90389a?.biography ?? '',
+        cokiSwimmingD6f37ea57614705817c1:
+            widget.cokiSwimming6a685b0ef2d8beccb47875,
+        cokiSwimming33bc936a74920f8954e0:
+            'coki_swimming_${cokiSwimming8e8aa7fe00966f4a.microsecondsSinceEpoch}',
+        cokiSwimming78b6e768b6acab88e197: cokiSwimming8e8aa7fe00966f4a,
+      ).cokiSwimming4e5227e43dc4c3fab6e2(),
+    );
+    await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming74e8b2f70fa2f5b(
+          cokiSwimming0a44fb28163763bb6ec69:
+              widget.cokiSwimming6a685b0ef2d8beccb47875,
+          cokiSwimming47e760ec313f586105: cokiSwimming4ca26a05eb1ecb7acb47,
+          cokiSwimmingDb6b0273792c060: _cokiSwimming897c23dedb987d6,
+          cokiSwimmingC91a15fc4d8a49ccb: jsonEncode(
+            cokiSwimmingA6ba375473e3e91f12d,
+          ),
+        );
+    if (!mounted) return;
     CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(context, 'Released');
     Navigator.of(context).maybePop();
   }

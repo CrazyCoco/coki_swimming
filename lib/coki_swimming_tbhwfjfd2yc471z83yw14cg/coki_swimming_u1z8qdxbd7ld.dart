@@ -6,11 +6,13 @@ class CokiSwimmingJc5d2zcduyoo6 extends StatelessWidget {
     required this.kd0cj7dyrevakgl2ubrpaz0,
     required this.e33s0ntq56lhg,
     this.dlnpydrcm1ubm,
+    this.cokiSwimming43c64fbf4bef9e54,
   });
 
   final String kd0cj7dyrevakgl2ubrpaz0;
   final String e33s0ntq56lhg;
   final VoidCallback? dlnpydrcm1ubm;
+  final Widget? cokiSwimming43c64fbf4bef9e54;
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +21,17 @@ class CokiSwimmingJc5d2zcduyoo6 extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            e33s0ntq56lhg,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 17,
-              height: 1.1,
-              letterSpacing: 0,
-              fontWeight: FontWeight.w900,
-            ),
-          ),
+          cokiSwimming43c64fbf4bef9e54 ??
+              Text(
+                e33s0ntq56lhg,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 17,
+                  height: 1.1,
+                  letterSpacing: 0,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
           const SizedBox(height: 4),
           Text(
             kd0cj7dyrevakgl2ubrpaz0,

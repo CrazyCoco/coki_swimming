@@ -5,10 +5,18 @@ class CokiSwimmingVkbdq84q1nw5h9ipn extends StatefulWidget {
     super.key,
     required this.lgeh2fxgazcq75g,
     this.t9ot4n3kehz3ma1zgubuqq,
+    this.ba6d1ef28c2a9db022 = false,
+    this.cokiSwimminga508081db3a0820fb5,
+    this.cokiSwimming046421ace0330b5090 = false,
+    this.cokiSwimming96ae818a94ba028b98,
   });
 
   final bool lgeh2fxgazcq75g;
   final CokiSwimmingOla0gu1u5h0t2dqk0sy77kg? t9ot4n3kehz3ma1zgubuqq;
+  final bool ba6d1ef28c2a9db022;
+  final Future<void> Function()? cokiSwimminga508081db3a0820fb5;
+  final bool cokiSwimming046421ace0330b5090;
+  final Future<bool> Function()? cokiSwimming96ae818a94ba028b98;
 
   @override
   State<CokiSwimmingVkbdq84q1nw5h9ipn> createState() =>
@@ -18,7 +26,8 @@ class CokiSwimmingVkbdq84q1nw5h9ipn extends StatefulWidget {
 class _CokiSwimmingPsg55kmkoz6nnzx7x
     extends State<CokiSwimmingVkbdq84q1nw5h9ipn>
     with WidgetsBindingObserver, RouteAware {
-  bool _td3na2tzlsl6rbbj7x3ttp5 = true;
+  late bool _td3na2tzlsl6rbbj7x3ttp5 = widget.cokiSwimming046421ace0330b5090;
+  bool _cokiSwimming47ee15967f7744e4c4 = false;
   VideoPlayerController? _iobtwblqi7i0pbv5jjfpdk;
   bool _m3xq5h7k9v2b8c4n = false;
 
@@ -28,7 +37,9 @@ class _CokiSwimmingPsg55kmkoz6nnzx7x
     WidgetsBinding.instance.addObserver(this);
     final f5qnrm05mpd4l1 = widget.t9ot4n3kehz3ma1zgubuqq?.dpz5ewc9dhgqc;
     if (f5qnrm05mpd4l1 == null) return;
-    final mb62ubcim9ltd40 = VideoPlayerController.asset(f5qnrm05mpd4l1);
+    final mb62ubcim9ltd40 = File(f5qnrm05mpd4l1).isAbsolute
+        ? VideoPlayerController.file(File(f5qnrm05mpd4l1))
+        : VideoPlayerController.asset(f5qnrm05mpd4l1);
     _iobtwblqi7i0pbv5jjfpdk = mb62ubcim9ltd40;
     mb62ubcim9ltd40.initialize().then((_) async {
       await mb62ubcim9ltd40.setLooping(true);
@@ -45,6 +56,15 @@ class _CokiSwimmingPsg55kmkoz6nnzx7x
     if (d8q4m2x7v9c5 != null) {
       cokiSwimmingRouteObserver.subscribe(this, d8q4m2x7v9c5);
       _m3xq5h7k9v2b8c4n = true;
+    }
+  }
+
+  @override
+  void didUpdateWidget(CokiSwimmingVkbdq84q1nw5h9ipn oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.cokiSwimming046421ace0330b5090 !=
+        widget.cokiSwimming046421ace0330b5090) {
+      _td3na2tzlsl6rbbj7x3ttp5 = widget.cokiSwimming046421ace0330b5090;
     }
   }
 
@@ -81,8 +101,29 @@ class _CokiSwimmingPsg55kmkoz6nnzx7x
     CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
       context,
       h5j30v6kt4ykg21tutwflx: widget.lgeh2fxgazcq75g,
-      ssqbxn8vpgdaf9emp9937fjk: () =>
-          setState(() => _td3na2tzlsl6rbbj7x3ttp5 = !_td3na2tzlsl6rbbj7x3ttp5),
+      ssqbxn8vpgdaf9emp9937fjk: () async {
+        if (_cokiSwimming47ee15967f7744e4c4) return;
+        _cokiSwimming47ee15967f7744e4c4 = true;
+        try {
+          final cokiSwimmingfdc0175a8f1ba765c6 =
+              widget.cokiSwimming96ae818a94ba028b98 == null
+              ? !_td3na2tzlsl6rbbj7x3ttp5
+              : await widget.cokiSwimming96ae818a94ba028b98!();
+          if (!mounted) return;
+          setState(
+            () => _td3na2tzlsl6rbbj7x3ttp5 = cokiSwimmingfdc0175a8f1ba765c6,
+          );
+        } catch (_) {
+          if (!mounted) return;
+          CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
+            context,
+            'Unable to update',
+            isError: true,
+          );
+        } finally {
+          _cokiSwimming47ee15967f7744e4c4 = false;
+        }
+      },
     );
   }
 
@@ -129,9 +170,9 @@ class _CokiSwimmingPsg55kmkoz6nnzx7x
                             ),
                           )
                         else
-                          Image.asset(
-                            btnvt2w2z3enc.xpgbqaoc87cxdg7jjztf!,
-                            fit: BoxFit.cover,
+                          CokiSwimmingC42e81133062ccfd(
+                            cokiSwimmingEbf673309ff7e1c4:
+                                btnvt2w2z3enc.xpgbqaoc87cxdg7jjztf!,
                           ),
                         const DecoratedBox(
                           decoration: BoxDecoration(
@@ -268,22 +309,64 @@ class _CokiSwimmingPsg55kmkoz6nnzx7x
                               Navigator.of(iff2xuif3sai8k89).maybePop(),
                         ),
                       ),
-                      Positioned(
-                        right: 18,
-                        top: 54,
-                        child: _CokiSwimmingGwxyf5trvk8o521(
-                          jw18949aiqlvka8: 'More',
-                          v541ui5iv8wpifacsk: () =>
-                              CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
-                                iff2xuif3sai8k89,
-                                h5j30v6kt4ykg21tutwflx: widget.lgeh2fxgazcq75g,
-                                ssqbxn8vpgdaf9emp9937fjk: () =>
-                                    CokiSwimmingEa33alie83a7ztht03ml6za.v8k18e1fwcihnfevusm4iq(
-                                      iff2xuif3sai8k89,
-                                    ),
+                      if (widget.ba6d1ef28c2a9db022 &&
+                          widget.cokiSwimminga508081db3a0820fb5 != null)
+                        Positioned(
+                          right: 18,
+                          top: 54,
+                          child: Semantics(
+                            button: true,
+                            label: 'Delete',
+                            child: CokiSwimmingKtoozpjuob7rods(
+                              kvg85l6uieobzf: BorderRadius.circular(22),
+                              gwrsyzojtp84oco1ldhaaw90: () =>
+                                  CokiSwimmingTq92zenanm7d.cokiSwimming9e422d9ca2b283fe4a(
+                                    iff2xuif3sai8k89,
+                                    () async {
+                                      await widget
+                                          .cokiSwimminga508081db3a0820fb5!();
+                                      if (!iff2xuif3sai8k89.mounted) return;
+                                      Navigator.of(iff2xuif3sai8k89).maybePop();
+                                    },
+                                  ),
+                              v6j3bxo2dz4aevlmr: Container(
+                                width: 44,
+                                height: 44,
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withValues(alpha: 0.84),
+                                  shape: BoxShape.circle,
+                                ),
+                                child: const Icon(
+                                  Icons.delete_outline_rounded,
+                                  color: Color(0xFF100A30),
+                                  size: 25,
+                                ),
                               ),
+                            ),
+                          ),
+                        )
+                      else if (!widget.ba6d1ef28c2a9db022)
+                        Positioned(
+                          right: 18,
+                          top: 54,
+                          child: _CokiSwimmingGwxyf5trvk8o521(
+                            jw18949aiqlvka8: 'More',
+                            v541ui5iv8wpifacsk: () =>
+                                CokiSwimmingY5kxebxyhv8gg32yly.kco1p8qja05cbsuhzrwcvesj(
+                                  iff2xuif3sai8k89,
+                                  h5j30v6kt4ykg21tutwflx:
+                                      widget.lgeh2fxgazcq75g,
+                                  ssqbxn8vpgdaf9emp9937fjk: () =>
+                                      CokiSwimmingEa33alie83a7ztht03ml6za.v8k18e1fwcihnfevusm4iq(
+                                        iff2xuif3sai8k89,
+                                        cokiSwimming2017dfe9792f0833:
+                                            btnvt2w2z3enc
+                                                ?.y2bm5rqs3zbbqyxivjft35 ??
+                                            'unknown',
+                                      ),
+                                ),
+                          ),
                         ),
-                      ),
                       Positioned(
                         left: 155,
                         top: 373,
@@ -360,9 +443,9 @@ class _CokiSwimmingPsg55kmkoz6nnzx7x
                                         ),
                                   ),
                             ),
-                            Text(
-                              '${btnvt2w2z3enc?.r8n3c6y1w5h9t2m7.length ?? 0}',
-                              style: const TextStyle(
+                            CokiSwimmingD67038e81c290baa(
+                              cokiSwimming90df3b806b3a319c: btnvt2w2z3enc,
+                              cokiSwimming2378cbe62fd97c4e: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 12,
                                 fontWeight: FontWeight.w800,
