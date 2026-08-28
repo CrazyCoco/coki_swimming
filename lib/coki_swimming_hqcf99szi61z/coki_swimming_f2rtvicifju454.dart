@@ -178,7 +178,9 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
           cokiSwimming756b8fe9fc667a:
               CokiSwimmingCihhtnn535rfht8ub._cokiSwimmingdf3496f6567fb03d21,
         );
-    Set<String> cokiSwimming8763ae63605df2fd(String? cokiSwimmingE8243cf769c94961) {
+    Set<String> cokiSwimming8763ae63605df2fd(
+      String? cokiSwimmingE8243cf769c94961,
+    ) {
       if (cokiSwimmingE8243cf769c94961 == null) return <String>{};
       try {
         final cokiSwimmingA58604f4ace26972 = jsonDecode(
@@ -368,8 +370,9 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
     final jw2vadvgw8o9n0hz8l75f42 = await CokiSwimmingDatabase
         .hxjpjp7w6ojq86l4ddyhf
         .j44e71jhd7xqhl10ryivo(zajppw5qnmax);
-    final cokiSwimmingE0979bbf16cba77d =
-        await _cokiSwimming3e25b13bcad4699f(zajppw5qnmax);
+    final cokiSwimmingE0979bbf16cba77d = await _cokiSwimming3e25b13bcad4699f(
+      zajppw5qnmax,
+    );
     if (!mounted) return;
     setState(() {
       _sjzayzcmnb3rh4 = jw2vadvgw8o9n0hz8l75f42;
@@ -426,24 +429,20 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
       for (final cokiSwimming847a4ad8f43a2dc2 in [
         (
           cokiSwimming4ca26a05eb1ecb7acb47,
-          _CokiSwimmingNiyl6fmbgal9vxloc3d5nj
-              ._cokiSwimming897c23dedb987d6,
+          _CokiSwimmingNiyl6fmbgal9vxloc3d5nj._cokiSwimming897c23dedb987d6,
         ),
         (
           cokiSwimmingEe949f348e3201ebf685,
-          _CokiSwimmingHjzxc8m5jr90asftbi
-              ._cokiSwimming1505a4e8133618060e4,
+          _CokiSwimmingHjzxc8m5jr90asftbi._cokiSwimming1505a4e8133618060e4,
         ),
       ]) {
         final cokiSwimmingF8528e26256253eb = await CokiSwimmingDatabase
             .hxjpjp7w6ojq86l4ddyhf
             .cokiSwimming08fc79df5890845d(
-              cokiSwimmingFfdff4098f67dc2a39b:
-                  wzxxiwag7tjovb2loaihyi3o.id,
+              cokiSwimmingFfdff4098f67dc2a39b: wzxxiwag7tjovb2loaihyi3o.id,
               cokiSwimming9ca085a1e9464611db57745:
                   cokiSwimming847a4ad8f43a2dc2.$1,
-              cokiSwimming756b8fe9fc667a:
-                  cokiSwimming847a4ad8f43a2dc2.$2,
+              cokiSwimming756b8fe9fc667a: cokiSwimming847a4ad8f43a2dc2.$2,
             );
         if (cokiSwimmingF8528e26256253eb == null) continue;
         final cokiSwimmingB02d8810ac6c4b48 = jsonDecode(
@@ -466,6 +465,47 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
             if (cokiSwimmingC08dac3bcd31910d.isAbsolute &&
                 await cokiSwimmingC08dac3bcd31910d.exists()) {
               await cokiSwimmingC08dac3bcd31910d.delete();
+            }
+          }
+        }
+      }
+      final cokiSwimming070cf2d256ec9400 = await CokiSwimmingDatabase
+          .hxjpjp7w6ojq86l4ddyhf
+          .cokiSwimming08fc79df5890845d(
+            cokiSwimmingFfdff4098f67dc2a39b: wzxxiwag7tjovb2loaihyi3o.id,
+            cokiSwimming9ca085a1e9464611db57745:
+                _CokiSwimmingRlviyh99dh4az0dmn52d5www
+                    ._cokiSwimmingDf4bbdd6c54c5a0b721,
+            cokiSwimming756b8fe9fc667a: _CokiSwimmingRlviyh99dh4az0dmn52d5www
+                ._cokiSwimmingDf4bbdd6c54c5a0b721,
+          );
+      if (cokiSwimming070cf2d256ec9400 != null) {
+        final cokiSwimmingCa407780cf3eb99d = jsonDecode(
+          cokiSwimming070cf2d256ec9400,
+        );
+        if (cokiSwimmingCa407780cf3eb99d is List) {
+          for (final cokiSwimmingEb80c002f169db8f
+              in cokiSwimmingCa407780cf3eb99d
+                  .map(
+                    (cokiSwimming843ad5143287033d) =>
+                        cokiSwimming843ad5143287033d.toString(),
+                  )
+                  .where(
+                    (cokiSwimming494e12bd76fcdb3e) =>
+                        cokiSwimming494e12bd76fcdb3e.startsWith(
+                          _CokiSwimmingRlviyh99dh4az0dmn52d5www
+                              ._cokiSwimming5f7db7cae7fef932,
+                        ),
+                  )) {
+            final cokiSwimmingD26ce66bd32b5b5e = File(
+              cokiSwimmingEb80c002f169db8f.substring(
+                _CokiSwimmingRlviyh99dh4az0dmn52d5www
+                    ._cokiSwimming5f7db7cae7fef932
+                    .length,
+              ),
+            );
+            if (await cokiSwimmingD26ce66bd32b5b5e.exists()) {
+              await cokiSwimmingD26ce66bd32b5b5e.delete();
             }
           }
         }

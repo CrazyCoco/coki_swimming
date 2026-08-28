@@ -17,6 +17,15 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
     extends State<CokiSwimmingNq0bdvs9uqdiayj9158w> {
   static const String _cokiSwimmingDf4bbdd6c54c5a0b721 =
       'coki_swimming_0b07453e76830afdf';
+  static const String _cokiSwimming5f7db7cae7fef932 =
+      'coki_swimming_53ab0f166745c191:';
+  static const String _cokiSwimming8m3q7v1x9p4k6r2t5n0h =
+      'coki_swimming_2f81c4d760ea93b:';
+  static const List<String> _cokiSwimming4q9m2v7x1p8k6r3t5n0h = [
+    'coki_swimming_2f81c4d760ea93b:Hello, I am interested in\nyour stuff.',
+    'OK, if you have anything you\nwant to know, you can ask me',
+    'coki_swimming_53ab0f166745c191:coki_swimming_y3qx9dqjtse69pju0/coki_swimming_jc48t9sqir04g42.png',
+  ];
   static const Color _jnlm2sle63me1d8zxiad7cs = Color(0xFF100A30);
   static const Color _ezgv195xyhgew = Color(0xFFF1F2F4);
   static const Color _urpbrps7k1hnd5cm = Color(0xFF5BCBEA);
@@ -41,8 +50,23 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
           cokiSwimming9ca085a1e9464611db57745: _cokiSwimmingDf4bbdd6c54c5a0b721,
           cokiSwimming756b8fe9fc667a: _cokiSwimmingDf4bbdd6c54c5a0b721,
         );
-    if (cokiSwimmingDbd9d5a644c9b0f == null || !mounted) return;
-    final cokiSwimmingA0dad44aab863 = jsonDecode(cokiSwimmingDbd9d5a644c9b0f);
+    final cokiSwimming6p1m8q4v9x3k7r2t5n0h =
+        cokiSwimmingDbd9d5a644c9b0f ??
+        jsonEncode(_cokiSwimming4q9m2v7x1p8k6r3t5n0h);
+    if (cokiSwimmingDbd9d5a644c9b0f == null) {
+      await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+          .cokiSwimming74e8b2f70fa2f5b(
+            cokiSwimming0a44fb28163763bb6ec69:
+                widget.cokiSwimming6d9c252a1792965a2f60221,
+            cokiSwimming47e760ec313f586105: _cokiSwimmingDf4bbdd6c54c5a0b721,
+            cokiSwimmingDb6b0273792c060: _cokiSwimmingDf4bbdd6c54c5a0b721,
+            cokiSwimmingC91a15fc4d8a49ccb: cokiSwimming6p1m8q4v9x3k7r2t5n0h,
+          );
+    }
+    if (!mounted) return;
+    final cokiSwimmingA0dad44aab863 = jsonDecode(
+      cokiSwimming6p1m8q4v9x3k7r2t5n0h,
+    );
     if (cokiSwimmingA0dad44aab863 is! List) return;
     setState(() {
       _wbrx0jgemuxppfzmdc4
@@ -89,6 +113,56 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
       _w44lr0x0kd6pemmvistd.clear();
     });
     FocusScope.of(context).unfocus();
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => _uhfcy85fcxxfg3ais5641(),
+    );
+  }
+
+  Future<void> _cokiSwimming79324c4109a32f18(
+    BuildContext cokiSwimmingB627de8701862ce2,
+  ) async {
+    final cokiSwimming513f21db12e684e6 =
+        await CokiSwimmingRtwym9wmdetuorto7.uxp9wn4bxdjeda(
+          cokiSwimmingB627de8701862ce2,
+        );
+    if (cokiSwimming513f21db12e684e6 == null || !mounted) return;
+    final cokiSwimming448949904ab2ef15 =
+        await CokiSwimmingMoqf2x4lzqna5nuxmxu1rah5.j0gecuushzrwcqffsejytl
+            .cil9vlkhbbu64x(cokiSwimming513f21db12e684e6);
+    final cokiSwimming8dd2aa6cb108045f =
+        cokiSwimming448949904ab2ef15.cl6shvp4miod1vh;
+    if (cokiSwimming448949904ab2ef15.s8ino37cgs5urhavq3k !=
+            CokiSwimmingAgu703r90i4rdun9b8a07eu1.zbp3eniyd720ii ||
+        cokiSwimming8dd2aa6cb108045f == null) {
+      return;
+    }
+    final cokiSwimmingE0619c640ed387c2 =
+        await CokiSwimmingMoqf2x4lzqna5nuxmxu1rah5.j0gecuushzrwcqffsejytl
+            .cokiSwimming4f02cccd10f0e6f51e(
+              cokiSwimming0201c617085ad8e2: cokiSwimming8dd2aa6cb108045f,
+              cokiSwimmingF829cc4fef9408bb:
+                  widget.cokiSwimming6d9c252a1792965a2f60221,
+            );
+    final cokiSwimmingC4022ee83411fc5a = [
+      ..._wbrx0jgemuxppfzmdc4,
+      '$_cokiSwimming5f7db7cae7fef932$cokiSwimmingE0619c640ed387c2',
+    ];
+    await CokiSwimmingDatabase.hxjpjp7w6ojq86l4ddyhf
+        .cokiSwimming74e8b2f70fa2f5b(
+          cokiSwimming0a44fb28163763bb6ec69:
+              widget.cokiSwimming6d9c252a1792965a2f60221,
+          cokiSwimming47e760ec313f586105: _cokiSwimmingDf4bbdd6c54c5a0b721,
+          cokiSwimmingDb6b0273792c060: _cokiSwimmingDf4bbdd6c54c5a0b721,
+          cokiSwimmingC91a15fc4d8a49ccb: jsonEncode(
+            cokiSwimmingC4022ee83411fc5a,
+          ),
+        );
+    if (!mounted) return;
+    setState(() {
+      _wbrx0jgemuxppfzmdc4
+        ..clear()
+        ..addAll(cokiSwimmingC4022ee83411fc5a);
+    });
     WidgetsBinding.instance.addPostFrameCallback(
       (_) => _uhfcy85fcxxfg3ais5641(),
     );
@@ -175,7 +249,7 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
                   'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_i4l40gq05g8x.png',
               vppa3idrvfph6p3g49u: 32,
               c7slhftcvtpl3nay: () =>
-                  CokiSwimmingRtwym9wmdetuorto7.uxp9wn4bxdjeda(wilsyk8xcdbu1z),
+                  _cokiSwimming79324c4109a32f18(wilsyk8xcdbu1z),
             ),
             _vp42vz6e9ab37gatesj(
               edzv3l0ltjdopf9ob: 'Video call',
@@ -238,24 +312,29 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
         ),
         padding: const EdgeInsets.fromLTRB(20, 24, 20, 24),
         children: [
-          _nggkzh74hvembdo98sla(),
-          const SizedBox(height: 12),
-          _j2dd1nsgj651j5huez9kje(
-            'OK, if you have anything you\nwant to know, you can ask me',
-            caemx73e871dvx3bp: true,
-          ),
-          const SizedBox(height: 7),
-          _hcmtmggl64k1l2p1err5f9gh(),
           for (final q9xuew2lofmmx in _wbrx0jgemuxppfzmdc4) ...[
             const SizedBox(height: 16),
-            _j2dd1nsgj651j5huez9kje(q9xuew2lofmmx),
+            if (q9xuew2lofmmx.startsWith(_cokiSwimming5f7db7cae7fef932))
+              _hcmtmggl64k1l2p1err5f9gh(
+                q9xuew2lofmmx.substring(_cokiSwimming5f7db7cae7fef932.length),
+              )
+            else if (q9xuew2lofmmx.startsWith(
+              _cokiSwimming8m3q7v1x9p4k6r2t5n0h,
+            ))
+              _nggkzh74hvembdo98sla(
+                q9xuew2lofmmx.substring(
+                  _cokiSwimming8m3q7v1x9p4k6r2t5n0h.length,
+                ),
+              )
+            else
+              _j2dd1nsgj651j5huez9kje(q9xuew2lofmmx),
           ],
         ],
       ),
     );
   }
 
-  Widget _nggkzh74hvembdo98sla() {
+  Widget _nggkzh74hvembdo98sla(String cokiSwimming7v2m9q4x1p8k6r3t5n0h) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -276,9 +355,9 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
                 color: _urpbrps7k1hnd5cm,
                 borderRadius: BorderRadius.circular(9),
               ),
-              child: const Text(
-                'Hello, I am interested in\nyour stuff.',
-                style: TextStyle(
+              child: Text(
+                cokiSwimming7v2m9q4x1p8k6r3t5n0h,
+                style: const TextStyle(
                   color: _jnlm2sle63me1d8zxiad7cs,
                   fontSize: 15,
                   height: 1.33,
@@ -341,7 +420,7 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
     );
   }
 
-  Widget _hcmtmggl64k1l2p1err5f9gh() {
+  Widget _hcmtmggl64k1l2p1err5f9gh([String? cokiSwimmingD43c4c192468ff8d]) {
     return Padding(
       padding: const EdgeInsets.only(right: 54),
       child: Align(
@@ -351,11 +430,13 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
-                'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_jc48t9sqir04g42.png',
-                width: 154,
-                height: 154,
-                fit: BoxFit.cover,
+              child: CokiSwimmingFp31kwqgnq7d7mmdubsu7(
+                ebv0wnhcczmsg2ytfim3iox:
+                    cokiSwimmingD43c4c192468ff8d ??
+                    'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_jc48t9sqir04g42.png',
+                mhyr7b1jr0dol34ahhd0ii9: 154,
+                mjsibeo326cy1bub95ae: 154,
+                xukd4lpmnhu8l: false,
               ),
             ),
             const SizedBox(height: 8),

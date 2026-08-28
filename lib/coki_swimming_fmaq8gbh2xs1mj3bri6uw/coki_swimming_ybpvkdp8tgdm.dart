@@ -78,6 +78,31 @@ class CokiSwimmingMoqf2x4lzqna5nuxmxu1rah5 {
     return cokiSwimming8d6e021b23c135a6.path;
   }
 
+  Future<void> cokiSwimming7h2v9k4m8q1x6p3r5t0n(
+    String cokiSwimming3m8q1v6x9p2k7r4t5n0h,
+    int cokiSwimming9x2m7q4v1k8p6r3t5n0h,
+  ) async {
+    final cokiSwimming6q1m8v3x9p4k7r2t5n0h =
+        await getApplicationDocumentsDirectory();
+    final cokiSwimming4v9m2q7x1p8k6r3t5n0h = p.join(
+      cokiSwimming6q1m8v3x9p4k7r2t5n0h.path,
+      'coki_swimming_77710f789718d228',
+      '$cokiSwimming9x2m7q4v1k8p6r3t5n0h',
+    );
+    if (!p.isWithin(
+      cokiSwimming4v9m2q7x1p8k6r3t5n0h,
+      cokiSwimming3m8q1v6x9p2k7r4t5n0h,
+    )) {
+      return;
+    }
+    final cokiSwimming8p3m6q1v9x4k7r2t5n0h = File(
+      cokiSwimming3m8q1v6x9p2k7r4t5n0h,
+    );
+    if (await cokiSwimming8p3m6q1v9x4k7r2t5n0h.exists()) {
+      await cokiSwimming8p3m6q1v9x4k7r2t5n0h.delete();
+    }
+  }
+
   Future<CokiSwimmingMaz1fx7oaujsthbrmbk> cil9vlkhbbu64x(
     CokiSwimmingGcnt0jewcf1egxi3 szpp6isbm25xgudwan353s,
   ) async {

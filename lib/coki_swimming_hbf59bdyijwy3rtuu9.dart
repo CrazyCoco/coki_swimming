@@ -31,8 +31,9 @@ class CokiSwimming4b37q42lzh8qku34 {
               for (final cokiSwimmingB0a98ffc38571d62
                   in cokiSwimming50e303a74f73ad65) {
                 if (cokiSwimmingB0a98ffc38571d62 is! Map) continue;
-                final cokiSwimming8e7ec4d02c4cce4b =
-                    Map<String, dynamic>.from(cokiSwimmingB0a98ffc38571d62);
+                final cokiSwimming8e7ec4d02c4cce4b = Map<String, dynamic>.from(
+                  cokiSwimmingB0a98ffc38571d62,
+                );
                 final cokiSwimmingF80378af9c6c2df3 =
                     cokiSwimming8e7ec4d02c4cce4b['media']?.toString();
                 if (cokiSwimmingF80378af9c6c2df3 != null &&

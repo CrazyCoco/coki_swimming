@@ -319,31 +319,27 @@ class _CokiSwimmingM4q8x2n7v1z6p9r3t5
                                   ),
                                 ),
                                 const SizedBox(height: 16),
-                                Wrap(
-                                  spacing: 7,
-                                  runSpacing: 7,
-                                  children: List.generate(
-                                    3,
-                                    (_) => Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 12,
-                                        vertical: 7,
+                                Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 7,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      gradient: const LinearGradient(
+                                        colors: [
+                                          _cokiSwimmingB7m2q9x4v8z1n6p3r5,
+                                          _cokiSwimmingC9x3n7v1m6q8z2p4r5,
+                                        ],
                                       ),
-                                      decoration: BoxDecoration(
-                                        gradient: const LinearGradient(
-                                          colors: [
-                                            _cokiSwimmingB7m2q9x4v8z1n6p3r5,
-                                            _cokiSwimmingC9x3n7v1m6q8z2p4r5,
-                                          ],
-                                        ),
-                                        borderRadius: BorderRadius.circular(18),
-                                      ),
-                                      child: Text(
-                                        '# Theme',
-                                        style: text.labelLarge?.copyWith(
-                                          color: colors.onPrimary,
-                                          fontWeight: FontWeight.w500,
-                                        ),
+                                      borderRadius: BorderRadius.circular(18),
+                                    ),
+                                    child: Text(
+                                      '# ${item.b7oexxik958wc.isEmpty ? 'Theme' : item.b7oexxik958wc}',
+                                      style: text.labelLarge?.copyWith(
+                                        color: colors.onPrimary,
+                                        fontWeight: FontWeight.w500,
                                       ),
                                     ),
                                   ),
