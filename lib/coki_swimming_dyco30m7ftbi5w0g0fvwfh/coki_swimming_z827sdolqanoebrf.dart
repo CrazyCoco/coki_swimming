@@ -135,7 +135,7 @@ class _CokiSwimmingLiquhjo5jdm1z3e0ycf6a6rv
                   CokiSwimmingP11djfo2e2i66ahbteyq0m(
                     ron36vkxy4qkpgmexrluc21: _fdypuz3nbfctm == 0
                         ? 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_fne4drmab8c3.png'
-                        : 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_yqzd5ycujj2s74bs.png',
+                        : 'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_b6n8q2v7m4x1s9d5k3.png',
                     clgp0y0wrpz4c7o109m97i7u: _fdypuz3nbfctm == 0,
                     xyii78g68wndh7x9ziz8: () => _hna2m1xi6h2ehze53cayb(0),
                   ),

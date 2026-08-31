@@ -825,7 +825,14 @@ class _CokiSwimmingF1hjhr813nczo7u3hn1q
                   : null,
             ),
           CokiSwimmingXu1hfvhsqfkovamr518kcwz.u44r7kig5pilpfg =>
-            const CokiSwimmingJcz6i330kx1m81dfpj89(),
+            CokiSwimmingJcz6i330kx1m81dfpj89(
+              cokiSwimming9ybsxn0v9gvwf:
+                  wev91tsmbk6uqwiamu2ha.arguments
+                      is CokiSwimmingOla0gu1u5h0t2dqk0sy77kg
+                  ? wev91tsmbk6uqwiamu2ha.arguments!
+                        as CokiSwimmingOla0gu1u5h0t2dqk0sy77kg
+                  : null,
+            ),
           _ => CokiSwimmingDtl14ocfskdbxyrxzmzt8xv(
             ljnwicm21qhqcyqlk7: _p658t0x3zzpwof2fbss70bu5,
           ),

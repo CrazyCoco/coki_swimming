@@ -100,6 +100,14 @@ class _CokiSwimmingNiyl6fmbgal9vxloc3d5nj
 
   Future<void> _w425c8n25weiqiils3qjvu() async {
     if (_cokiSwimming7q2m9v4x1p8k6r3t5n0h) return;
+    if (_elg6kb8vdzgnvoczsdo6i.text.trim().isEmpty) {
+      CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
+        context,
+        'Please enter post content',
+        isError: true,
+      );
+      return;
+    }
     final cokiSwimming5ca939fb99b9bf397a2a = _nbub2jcpb2weejwuu
         .take(3)
         .toList(growable: false);

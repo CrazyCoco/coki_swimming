@@ -71,6 +71,14 @@ class _CokiSwimmingHjzxc8m5jr90asftbi
 
   Future<void> _cokiSwimmingFd0c33c0ccb24525d0() async {
     if (_cokiSwimming3v8m1q6x9p2k7r4t5n0h) return;
+    if (_zepyp29k0dt8d527.text.trim().isEmpty) {
+      CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
+        context,
+        'Please enter post content',
+        isError: true,
+      );
+      return;
+    }
     final cokiSwimmingAff9f20e7c004b50b3 = _cokiSwimming6c0fc3c1fe050c3;
     if (cokiSwimmingAff9f20e7c004b50b3 == null) {
       CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
@@ -294,17 +302,95 @@ class _CokiSwimmingHjzxc8m5jr90asftbi
                               ? const CupertinoActivityIndicator(
                                   color: Color(0xFF5BCBEA),
                                 )
-                              : ColorFiltered(
-                                  colorFilter: ColorFilter.mode(
-                                    _cokiSwimming6c0fc3c1fe050c3 == null
-                                        ? const Color(0xFF5BCBEA)
-                                        : const Color(0xFFD43161),
+                              : _cokiSwimming6c0fc3c1fe050c3 == null
+                              ? ColorFiltered(
+                                  colorFilter: const ColorFilter.mode(
+                                    Color(0xFF5BCBEA),
                                     BlendMode.srcIn,
                                   ),
                                   child: Image.asset(
                                     'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_lbrxbt89w0nhi1d8bqlqtazx.png',
                                     width: 32,
                                     height: 32,
+                                  ),
+                                )
+                              : ClipRRect(
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: Stack(
+                                    fit: StackFit.expand,
+                                    children: [
+                                      CokiSwimmingC42e81133062ccfd(
+                                        cokiSwimmingEbf673309ff7e1c4:
+                                            _cokiSwimming6c0fc3c1fe050c3!,
+                                        cokiSwimming74446ee54cb30be5: 108,
+                                        cokiSwimming27b54b25ebcf5117: 108,
+                                      ),
+                                      DecoratedBox(
+                                        decoration: BoxDecoration(
+                                          color: Colors.black.withValues(
+                                            alpha: 0.12,
+                                          ),
+                                        ),
+                                      ),
+                                      Center(
+                                        child: Image.asset(
+                                          'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_f9uhejm1fo4g7oqk8dph.png',
+                                          width: 38,
+                                          height: 38,
+                                        ),
+                                      ),
+                                      Positioned(
+                                        right: 0,
+                                        top: 0,
+                                        child: Semantics(
+                                          button: true,
+                                          label: 'Remove video',
+                                          child: CokiSwimmingKtoozpjuob7rods(
+                                            kvg85l6uieobzf:
+                                                BorderRadius.circular(22),
+                                            gwrsyzojtp84oco1ldhaaw90: () =>
+                                                setState(
+                                                  () =>
+                                                      _cokiSwimming6c0fc3c1fe050c3 =
+                                                          null,
+                                                ),
+                                            v6j3bxo2dz4aevlmr: SizedBox(
+                                              width: 44,
+                                              height: 44,
+                                              child: Center(
+                                                child: Container(
+                                                  width: 28,
+                                                  height: 28,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.white
+                                                        .withValues(alpha: 0.9),
+                                                    shape: BoxShape.circle,
+                                                    boxShadow: [
+                                                      BoxShadow(
+                                                        color: Colors.black
+                                                            .withValues(
+                                                              alpha: 0.16,
+                                                            ),
+                                                        blurRadius: 8,
+                                                        offset: const Offset(
+                                                          0,
+                                                          2,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  child: const Icon(
+                                                    Icons.close_rounded,
+                                                    color: Color(0xFFD43161),
+                                                    size: 19,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                         ),

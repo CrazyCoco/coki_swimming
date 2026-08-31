@@ -717,19 +717,121 @@ class CokiSwimmingDatabase extends _$CokiSwimmingDatabase {
       );
     }
 
-    await (update(cokiSwimmingMembers)..where(
-          (p5o02d9e94hby0y4jd3llkrg) =>
-              p5o02d9e94hby0y4jd3llkrg.id.equals(jteguej9591hg1ho8),
-        ))
-        .write(
-          CokiSwimmingMembersCompanion(
-            displayName: Value(ta928s7d0ibkf4vqmrp),
-            avatarPath: Value(e2ekh1w5yvd5fahr4orkd),
-            biography: Value(_s0zt2ufvo8dphe4l(yd7sho6kfa08mm5dz4nrsrk)),
-            profileCompleted: const Value(true),
-            updatedAt: Value(DateTime.now()),
-          ),
+    final cokiSwimming425oq4zhie81 = DateTime.now();
+    await transaction(() async {
+      await (update(cokiSwimmingMembers)..where(
+            (p5o02d9e94hby0y4jd3llkrg) =>
+                p5o02d9e94hby0y4jd3llkrg.id.equals(jteguej9591hg1ho8),
+          ))
+          .write(
+            CokiSwimmingMembersCompanion(
+              displayName: Value(ta928s7d0ibkf4vqmrp),
+              avatarPath: Value(e2ekh1w5yvd5fahr4orkd),
+              biography: Value(_s0zt2ufvo8dphe4l(yd7sho6kfa08mm5dz4nrsrk)),
+              profileCompleted: const Value(true),
+              updatedAt: Value(cokiSwimming425oq4zhie81),
+            ),
+          );
+
+      final cokiSwimming5j62sfrlad41od =
+          await (select(cokiSwimming73e845eb8995e10d78699)..where(
+                (cokiSwimming9iprscsm0hw72strqufaysqr) =>
+                    cokiSwimming9iprscsm0hw72strqufaysqr
+                        .cokiSwimming374c2d33d71555c
+                        .equals(jteguej9591hg1ho8) &
+                    cokiSwimming9iprscsm0hw72strqufaysqr
+                        .cokiSwimming7b6a39bc7b3edf2290dcea74
+                        .isIn([
+                          cokiSwimming4ca26a05eb1ecb7acb47,
+                          cokiSwimmingEe949f348e3201ebf685,
+                        ]),
+              ))
+              .get();
+      for (final cokiSwimming5nvdp7hskc707fo68 in cokiSwimming5j62sfrlad41od) {
+        final cokiSwimming0olh1r7ir68ep = jsonDecode(
+          cokiSwimming5nvdp7hskc707fo68.cokiSwimmingE070b66af5a82465,
         );
+        if (cokiSwimming0olh1r7ir68ep is! List) continue;
+        final cokiSwimmingqyz81o42wm6xuwxsm = cokiSwimming0olh1r7ir68ep
+            .map((cokiSwimming5m5sbtkelobgy7oejx8) {
+              if (cokiSwimming5m5sbtkelobgy7oejx8 is! Map) {
+                return cokiSwimming5m5sbtkelobgy7oejx8;
+              }
+              return Map<String, dynamic>.from(cokiSwimming5m5sbtkelobgy7oejx8)
+                ..['coki_swimming_a33aa39e2af0e9856dfa'] = ta928s7d0ibkf4vqmrp
+                ..['coki_swimming_f6643ddc1cc353551724'] = e2ekh1w5yvd5fahr4orkd
+                ..['coki_swimming_c9d8da9a66b15cf669aa'] = _s0zt2ufvo8dphe4l(
+                  yd7sho6kfa08mm5dz4nrsrk,
+                );
+            })
+            .toList(growable: false);
+        await (update(cokiSwimming73e845eb8995e10d78699)..where(
+              (cokiSwimmingc86aukfeag5hlph601ponolm) =>
+                  cokiSwimmingc86aukfeag5hlph601ponolm
+                      .cokiSwimmingCe270c0c89ce45814c97b26d
+                      .equals(
+                        cokiSwimming5nvdp7hskc707fo68
+                            .cokiSwimmingCe270c0c89ce45814c97b26d,
+                      ),
+            ))
+            .write(
+              CokiSwimming73e845eb8995e10d78699Companion(
+                cokiSwimmingE070b66af5a82465: Value(
+                  jsonEncode(cokiSwimmingqyz81o42wm6xuwxsm),
+                ),
+                cokiSwimming33d2f31d45bcd84135: Value(cokiSwimming425oq4zhie81),
+              ),
+            );
+      }
+
+      final cokiSwimmingfdw4mjyk1dti4jvttv =
+          await (select(cokiSwimming73e845eb8995e10d78699)..where(
+                (cokiSwimming4ig66hqyvgeu) => cokiSwimming4ig66hqyvgeu
+                    .cokiSwimming7b6a39bc7b3edf2290dcea74
+                    .equals('coki_swimming_775c5d91cc33a9c'),
+              ))
+              .get();
+      for (final cokiSwimmingegplionnc8s6f08qf5ge
+          in cokiSwimmingfdw4mjyk1dti4jvttv) {
+        final cokiSwimmingqa1sfk9p4quc4xc41vdjni = jsonDecode(
+          cokiSwimmingegplionnc8s6f08qf5ge.cokiSwimmingE070b66af5a82465,
+        );
+        if (cokiSwimmingqa1sfk9p4quc4xc41vdjni is! List) continue;
+        var cokiSwimmingktgsjdqm07grx = false;
+        for (final cokiSwimmingsnoygwim0row4
+            in cokiSwimmingqa1sfk9p4quc4xc41vdjni) {
+          if (cokiSwimmingsnoygwim0row4 is! Map ||
+              cokiSwimmingsnoygwim0row4['coki_swimming_bf1bc5ec56281f1916']
+                      ?.toString() !=
+                  '$jteguej9591hg1ho8') {
+            continue;
+          }
+          cokiSwimmingsnoygwim0row4['coki_swimming_3f12826e074f3a95c4'] =
+              ta928s7d0ibkf4vqmrp;
+          cokiSwimmingsnoygwim0row4['coki_swimming_43b50310d0d2'] =
+              e2ekh1w5yvd5fahr4orkd;
+          cokiSwimmingktgsjdqm07grx = true;
+        }
+        if (!cokiSwimmingktgsjdqm07grx) continue;
+        await (update(cokiSwimming73e845eb8995e10d78699)..where(
+              (cokiSwimmingp4t2u6tkfwk6jzpn33qeejy) =>
+                  cokiSwimmingp4t2u6tkfwk6jzpn33qeejy
+                      .cokiSwimmingCe270c0c89ce45814c97b26d
+                      .equals(
+                        cokiSwimmingegplionnc8s6f08qf5ge
+                            .cokiSwimmingCe270c0c89ce45814c97b26d,
+                      ),
+            ))
+            .write(
+              CokiSwimming73e845eb8995e10d78699Companion(
+                cokiSwimmingE070b66af5a82465: Value(
+                  jsonEncode(cokiSwimmingqa1sfk9p4quc4xc41vdjni),
+                ),
+                cokiSwimming33d2f31d45bcd84135: Value(cokiSwimming425oq4zhie81),
+              ),
+            );
+      }
+    });
   }
 
   Future<void> cmbqg0f1hkrr0xp5hm0im({

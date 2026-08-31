@@ -161,6 +161,35 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
     );
   }
 
+  Future<void> cokiSwimmingR4v8n2x6m1q7s9d5(
+    BuildContext cokiSwimmingV7m3x9q1k5d8s2n6,
+  ) async {
+    var cokiSwimmingQ6n1v8m4x7s2d9k5 = await Permission.camera.status;
+    if (!cokiSwimmingQ6n1v8m4x7s2d9k5.isGranted) {
+      cokiSwimmingQ6n1v8m4x7s2d9k5 = await Permission.camera.request();
+    }
+    if (!cokiSwimmingV7m3x9q1k5d8s2n6.mounted) return;
+    var cokiSwimmingD2s7k4m9x1v6n8q5 = await Permission.microphone.status;
+    if (cokiSwimmingQ6n1v8m4x7s2d9k5.isGranted &&
+        !cokiSwimmingD2s7k4m9x1v6n8q5.isGranted) {
+      cokiSwimmingD2s7k4m9x1v6n8q5 = await Permission.microphone.request();
+    }
+    if (!cokiSwimmingV7m3x9q1k5d8s2n6.mounted) return;
+    if (!cokiSwimmingQ6n1v8m4x7s2d9k5.isGranted ||
+        !cokiSwimmingD2s7k4m9x1v6n8q5.isGranted) {
+      CokiSwimmingAy2dg3calz2y.pbp5sjg2i7oab6zl9h(
+        cokiSwimmingV7m3x9q1k5d8s2n6,
+        'Camera and microphone permissions are required for video calls',
+        isError: true,
+      );
+      return;
+    }
+    Navigator.of(cokiSwimmingV7m3x9q1k5d8s2n6).pushNamed(
+      CokiSwimmingXu1hfvhsqfkovamr518kcwz.u44r7kig5pilpfg,
+      arguments: widget.cokiSwimming584cec7f78c5fe,
+    );
+  }
+
   void _uhfcy85fcxxfg3ais5641() {
     if (!_z4b0z1mr6soc8zkyijj.hasClients) return;
     _z4b0z1mr6soc8zkyijj.animateTo(
@@ -251,9 +280,8 @@ class _CokiSwimmingRlviyh99dh4az0dmn52d5www
               f5b14gtkuqjlfozyt:
                   'coki_swimming_y3qx9dqjtse69pju0/coki_swimming_lbrxbt89w0nhi1d8bqlqtazx.png',
               vppa3idrvfph6p3g49u: 32,
-              c7slhftcvtpl3nay: () => Navigator.of(
-                wilsyk8xcdbu1z,
-              ).pushNamed(CokiSwimmingXu1hfvhsqfkovamr518kcwz.u44r7kig5pilpfg),
+              c7slhftcvtpl3nay: () =>
+                  cokiSwimmingR4v8n2x6m1q7s9d5(wilsyk8xcdbu1z),
             ),
             _vp42vz6e9ab37gatesj(
               edzv3l0ltjdopf9ob: 'More',
